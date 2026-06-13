@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0F0A">
+  <title>Stronger</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet (laedt alle anderen via @import) -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       APP-LAYOUT: Sidebar links, Content rechts
+  ══════════════════════════════════════════ -->
+  <div class="app">
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar">
+
+      <div class="sidebar__brand">
+        <span class="sidebar__brand-text">STRONGER</span>
+      </div>
+
+      <nav class="sidebar__nav" aria-label="Hauptnavigation">
+
+        <button class="nav-item is-active" data-screen="profil" aria-label="Profil">
+          <span class="nav-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 21c0-4 4-7 8-7s8 3 8 7"/>
+            </svg>
+          </span>
+          <span class="nav-item__label">Profil</span>
+        </button>
+
+        <button class="nav-item" data-screen="quiz" aria-label="Quiz">
+          <span class="nav-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <line x1="8" y1="9" x2="16" y2="9"/>
+              <line x1="8" y1="13" x2="13" y2="13"/>
+              <circle cx="16.5" cy="16" r="0.8" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="nav-item__label">Quiz</span>
+        </button>
+
+        <button class="nav-item" data-screen="stack" aria-label="Stack">
+          <span class="nav-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-30 12 12)"/>
+              <line x1="9" y1="7.5" x2="13.5" y2="15" transform="rotate(-30 12 12)"/>
+            </svg>
+          </span>
+          <span class="nav-item__label">Stack</span>
+        </button>
+
+        <button class="nav-item" data-screen="wissen" aria-label="Wissen">
+          <span class="nav-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2V5z"/>
+              <line x1="8" y1="7" x2="14" y2="7"/>
+              <line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+          </span>
+          <span class="nav-item__label">Wissen</span>
+        </button>
+
+        <button class="nav-item" data-screen="shop" aria-label="Shop">
+          <span class="nav-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 7h16l-1.5 11a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7L4 7z"/>
+              <path d="M9 7V5a3 3 0 0 1 6 0v2"/>
+            </svg>
+          </span>
+          <span class="nav-item__label">Shop</span>
+        </button>
+
+      </nav>
+
+      <div class="sidebar__footer">
+
+        <button class="nav-item nav-item--small" data-screen="settings" aria-label="Einstellungen">
+          <span class="nav-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </span>
+        </button>
+
+        <button class="nav-item nav-item--small" data-screen="logout" aria-label="Abmelden">
+          <span class="nav-item__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+              <polyline points="16 17 21 12 16 7"/>
+              <line x1="21" y1="12" x2="9" y2="12"/>
+            </svg>
+          </span>
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- ═══ HAUPT-CONTENT ═══ -->
+    <main class="content">
+
+      <!-- Platzhalter -->
+      <div class="content__placeholder">
+        <div class="content__placeholder-inner">
+          <div class="content__placeholder-label">aktiver bereich</div>
+          <div class="content__placeholder-screen" id="active-screen-name">profil</div>
+          <div class="content__placeholder-hint">
+            Hier kommt der Inhalt rein. Klick links auf die Menüpunkte<br>
+            um zwischen den Bereichen zu wechseln.
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ═══ USP-LEISTE ═══ -->
+      <div class="usp-bar" id="usp-bar">
+
+        <div class="usp-bar__track" id="usp-track">
+
+          <div class="usp-card" data-usp="01">
+            <span class="usp-card__num">01</span>
+            <div class="usp-card__icon">🎯</div>
+            <div class="usp-card__body">
+              <div class="usp-card__title">Präzise</div>
+              <div class="usp-card__sub">Genau was du brauchst. Exakt auf dich abgestimmt.</div>
+            </div>
+          </div>
+
+          <div class="usp-card" data-usp="02">
+            <span class="usp-card__num">02</span>
+            <div class="usp-card__icon">⏱</div>
+            <div class="usp-card__body">
+              <div class="usp-card__title">Einnahmeplan</div>
+              <div class="usp-card__sub">Morgens. Abends. Vor dem Training. Exakt für dich.</div>
+            </div>
+          </div>
+
+          <div class="usp-card" data-usp="03">
+            <span class="usp-card__num">03</span>
+            <div class="usp-card__icon">🏆</div>
+            <div class="usp-card__body">
+              <div class="usp-card__title">Top Brands</div>
+              <div class="usp-card__sub">ESN, Myprotein, Norsan. Wir erklären warum.</div>
+            </div>
+          </div>
+
+          <div class="usp-card" data-usp="04">
+            <span class="usp-card__num">04</span>
+            <div class="usp-card__icon">🛡️</div>
+            <div class="usp-card__body">
+              <div class="usp-card__title">MediCheck</div>
+              <div class="usp-card__sub">Medikamente und Allergien geprüft. Bevor du kaufst.</div>
+            </div>
+          </div>
+
+          <div class="usp-card" data-usp="05">
+            <span class="usp-card__num">05</span>
+            <div class="usp-card__icon">🔄</div>
+            <div class="usp-card__body">
+              <div class="usp-card__title">Dynamisch</div>
+              <div class="usp-card__sub">Ziele ändern sich. Dein Stack auch. Immer aktuell.</div>
+            </div>
+          </div>
+
+          <div class="usp-card" data-usp="06">
+            <span class="usp-card__num">06</span>
+            <div class="usp-card__icon">🌦️</div>
+            <div class="usp-card__body">
+              <div class="usp-card__title">Saisonal</div>
+              <div class="usp-card__sub">Sommer, Winter, Herbst. Anpassung an Jahreszeit.</div>
+            </div>
+          </div>
+
+          <div class="usp-card" data-usp="07">
+            <span class="usp-card__num">07</span>
+            <div class="usp-card__icon">📈</div>
+            <div class="usp-card__body">
+              <div class="usp-card__title">Fortschritt</div>
+              <div class="usp-card__sub">Wie fühlst du dich? Wir fragen. Wir optimieren.</div>
+            </div>
+          </div>
+
+          <div class="usp-card" data-usp="08">
+            <span class="usp-card__num">08</span>
+            <div class="usp-card__icon">📱</div>
+            <div class="usp-card__body">
+              <div class="usp-card__title">App &amp; Push</div>
+              <div class="usp-card__sub">Nie mehr vergessen. Erinnerung zur richtigen Zeit.</div>
+            </div>
+          </div>
+
+          <div class="usp-card" data-usp="09">
+            <span class="usp-card__num">09</span>
+            <div class="usp-card__icon">💡</div>
+            <div class="usp-card__body">
+              <div class="usp-card__title">Warum?</div>
+              <div class="usp-card__sub">Jedes Produkt erklärt. Wirkung. Nutzen. Begründet.</div>
+            </div>
+          </div>
+
+          <div class="usp-card" data-usp="10">
+            <span class="usp-card__num">10</span>
+            <div class="usp-card__icon">⚠️</div>
+            <div class="usp-card__body">
+              <div class="usp-card__title">Wechselwirkung</div>
+              <div class="usp-card__sub">Supplement trifft Medikament. Wir erkennen es.</div>
+            </div>
+          </div>
+
+          <div class="usp-card" data-usp="11">
+            <span class="usp-card__num">11</span>
+            <div class="usp-card__icon">🤖</div>
+            <div class="usp-card__body">
+              <div class="usp-card__title">KI-Chat</div>
+              <div class="usp-card__sub">Frag alles. Jederzeit. Dein persönlicher Experte.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="usp-bar__fade usp-bar__fade--left"  aria-hidden="true"></div>
+        <div class="usp-bar__fade usp-bar__fade--right" aria-hidden="true"></div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS – Reihenfolge wichtig!
+
+       1. core/        Konstanten, Helpers
+       2. state.js     Globaler State
+       3. data/        Daten-Loader
+       4. engine/      (kommt spaeter)
+       5. ui/          UI-Module
+       6. screens/     (kommt spaeter)
+       7. chat/        (kommt spaeter)
+       8. navigation.js Screen-Wechsel
+       9. main.js      Init der App
+  ══════════════════════════════════════════ -->
+
+  <!-- Core -->
+  <script src="scripts/core/konstanten.js"></script>
+  <script src="scripts/core/helpers.js"></script>
+
+  <!-- State -->
+  <script src="scripts/state.js"></script>
+
+  <!-- Data -->
+  <script src="scripts/data/normalisierung.js"></script>
+  <script src="scripts/data/produkte-loader.js"></script>
+  <script src="scripts/data/wirkstoffe-loader.js"></script>
+
+  <!-- UI -->
+  <script src="scripts/ui/sidebar.js"></script>
+  <script src="scripts/ui/usp-bar.js"></script>
+
+  <!-- Navigation -->
+  <script src="scripts/navigation.js"></script>
+
+  <!-- Init -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>

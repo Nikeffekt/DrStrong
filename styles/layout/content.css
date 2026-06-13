@@ -1,0 +1,74 @@
+/* ══════════════════════════════════════════════════════════════════
+   content.css – Hauptinhalts-Bereich (rechts von Sidebar)
+══════════════════════════════════════════════════════════════════ */
+
+.content {
+  background: var(--bg-base);
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-y: auto;
+
+  /* Subtile Hintergrund-Atmosphaere */
+  background:
+    radial-gradient(
+      circle at 70% 30%,
+      var(--mint-faint) 0%,
+      transparent 50%
+    ),
+    var(--bg-base);
+
+  /* Grid: oben Inhalt flexibel, unten USP-Leiste fix */
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+
+/* ──── Platzhalter (so lange noch keine echten Screens da sind) ──── */
+.content__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.content__placeholder-inner {
+  text-align: center;
+  max-width: 480px;
+}
+
+.content__placeholder-label {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--text-3);
+  text-transform: lowercase;
+  margin-bottom: 12px;
+}
+
+.content__placeholder-screen {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 56px;
+  letter-spacing: 0.04em;
+  color: var(--mint);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  text-shadow: 0 0 24px var(--mint-glow);
+}
+
+.content__placeholder-hint {
+  font-family: var(--f-body);
+  font-size: 14px;
+  color: var(--text-3);
+  line-height: 1.7;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   Mobile-Anpassung
+══════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .content__placeholder-screen {
+    font-size: 40px;
+  }
+}

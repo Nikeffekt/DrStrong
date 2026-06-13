@@ -1,0 +1,22 @@
+/* ══════════════════════════════════════════════════════════════════
+   app.css – Hauptlayout der App
+
+   Sidebar links (fix), Content rechts (flexibel).
+══════════════════════════════════════════════════════════════════ */
+
+.app {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   Mobile-Anpassung
+══════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  :root {
+    --sidebar-width: var(--sidebar-width-mobile);
+  }
+}

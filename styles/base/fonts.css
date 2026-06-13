@@ -1,0 +1,21 @@
+/* ══════════════════════════════════════════════════════════════════
+   fonts.css – Font-Definitionen
+
+   Aktuell: Fonts werden ueber Google Fonts CDN in index.html geladen.
+
+   Wenn du spaeter die Fonts lokal hosten willst (DSGVO, Performance),
+   kannst du hier @font-face Definitionen einbauen und die Dateien
+   in assets/fonts/ ablegen.
+══════════════════════════════════════════════════════════════════ */
+
+/*
+Beispiel fuer spaetere lokale Einbindung:
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../assets/fonts/SpaceGrotesk-Bold.woff2') format('woff2');
+}
+*/

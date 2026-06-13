@@ -1,0 +1,54 @@
+/* ══════════════════════════════════════════════════════════════════
+   tokens.css – Design Tokens
+
+   Zentrale Definition aller Design-Variablen.
+   Aenderungen hier wirken auf die gesamte App.
+══════════════════════════════════════════════════════════════════ */
+
+:root {
+
+  /* ──── Farben – Dark Lab Palette ──── */
+  --bg-deepest:     #060809;
+  --bg-base:        #0A0F0A;
+  --bg-sidebar:     #0D1410;
+  --bg-elevated:    #131A14;
+
+  --mint:           #4ADE80;
+  --mint-soft:      rgba(74, 222, 128, 0.12);
+  --mint-glow:      rgba(74, 222, 128, 0.25);
+  --mint-faint:     rgba(74, 222, 128, 0.04);
+
+  --text-1:         #E8EDE8;
+  --text-2:         rgba(232, 237, 232, 0.6);
+  --text-3:         rgba(232, 237, 232, 0.32);
+
+  --line:           rgba(255, 255, 255, 0.06);
+  --line-mint:      rgba(74, 222, 128, 0.18);
+
+
+  /* ──── Schriften ──── */
+  --f-display:      'Space Grotesk', system-ui, sans-serif;
+  --f-body:         'Inter', system-ui, sans-serif;
+  --f-mono:         'JetBrains Mono', ui-monospace, monospace;
+
+
+  /* ──── Spacing ──── */
+  --gap-xs:         4px;
+  --gap-s:          8px;
+  --gap-m:          16px;
+  --gap-l:          24px;
+  --gap-xl:         40px;
+
+
+  /* ──── Layout ──── */
+  --sidebar-width:        92px;
+  --sidebar-width-mobile: 68px;
+
+
+  /* ──── Motion ──── */
+  --ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast:         0.15s;
+  --t-base:         0.25s;
+  --t-slow:         0.4s;
+
+}

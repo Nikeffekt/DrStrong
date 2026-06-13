@@ -1,0 +1,57 @@
+/* ══════════════════════════════════════════════════════════════════
+   main.css – Style-Einstiegspunkt
+
+   Diese Datei wird in index.html geladen und importiert
+   alle anderen CSS-Dateien in der richtigen Reihenfolge.
+
+   REIHENFOLGE WICHTIG:
+   1. base/       Foundation (Tokens, Reset, Fonts, Animations)
+   2. layout/     App-Struktur (App-Grid, Sidebar, Content, USP-Bar)
+   3. components/ Wiederverwendbare UI-Elemente
+   4. screens/    Pro Screen ein File (kommen dazu)
+   5. chat/       KI-Chat-spezifisches Styling (kommen dazu)
+══════════════════════════════════════════════════════════════════ */
+
+
+/* ─── Base ─── */
+@import url('base/tokens.css');
+@import url('base/reset.css');
+@import url('base/fonts.css');
+@import url('base/animations.css');
+
+
+/* ─── Layout ─── */
+@import url('layout/app.css');
+@import url('layout/sidebar.css');
+@import url('layout/content.css');
+@import url('layout/usp-bar.css');
+
+
+/* ─── Components ─── */
+@import url('components/nav-item.css');
+/* Weitere Komponenten kommen dazu:
+   @import url('components/buttons.css');
+   @import url('components/cards.css');
+   @import url('components/modals.css');
+   @import url('components/badges.css');
+   @import url('components/progressbar.css');
+   @import url('components/toast.css');
+   @import url('components/inputs.css');
+*/
+
+
+/* ─── Screens ─── (kommen dazu sobald wir die Screens bauen)
+@import url('screens/profil.css');
+@import url('screens/quiz.css');
+@import url('screens/stack.css');
+@import url('screens/wissen.css');
+@import url('screens/shop.css');
+@import url('screens/settings.css');
+*/
+
+
+/* ─── Chat ─── (kommen dazu sobald wir den KI-Chat integrieren)
+@import url('chat/ki-chat.css');
+@import url('chat/ki-messages.css');
+@import url('chat/ki-markdown.css');
+*/

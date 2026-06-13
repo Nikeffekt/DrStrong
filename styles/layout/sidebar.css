@@ -1,0 +1,95 @@
+/* ══════════════════════════════════════════════════════════════════
+   sidebar.css – Linke Navigationsleiste
+══════════════════════════════════════════════════════════════════ */
+
+.sidebar {
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
+}
+
+/* Subtiler Mint-Glow am rechten Rand */
+.sidebar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--line-mint) 30%,
+    var(--line-mint) 70%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+
+/* ──── Brand / Logo ──── */
+.sidebar__brand {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.sidebar__brand-text {
+  display: block;
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--text-1);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: 4px 0;
+}
+
+
+/* ──── Navigation-Container ──── */
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding: 0 8px;
+  flex: 1;
+}
+
+.sidebar__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding: 0 8px;
+  margin-top: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   Mobile-Anpassung
+══════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .sidebar {
+    padding: 20px 0 16px;
+  }
+
+  .sidebar__brand {
+    margin-bottom: 24px;
+  }
+
+  .sidebar__brand-text {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+}

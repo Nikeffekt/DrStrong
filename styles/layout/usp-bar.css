@@ -1,0 +1,189 @@
+/* ══════════════════════════════════════════════════════════════════
+   usp-bar.css – Bottom-Leiste mit USPs, smooth scrollbar
+══════════════════════════════════════════════════════════════════ */
+
+.usp-bar {
+  position: relative;
+  background: var(--bg-sidebar);
+  border-top: 1px solid var(--line);
+  padding: 14px 0;
+  overflow: hidden;
+
+  box-shadow:
+    inset 0 1px 0 rgba(74, 222, 128, 0.08),
+    0 -8px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Track = scrollbarer Bereich */
+.usp-bar__track {
+  display: flex;
+  gap: 12px;
+  padding: 0 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.usp-bar__track::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ──── USP-Karte ──── */
+/* 3 Karten gleichzeitig sichtbar */
+.usp-card {
+  flex: 0 0 calc((100% - 40px - 24px) / 3);
+  min-width: 0;
+
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 16px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "icon body"
+    "icon body";
+  gap: 4px 14px;
+  align-items: center;
+
+  position: relative;
+  scroll-snap-align: start;
+
+  transition:
+    background var(--t-base) var(--ease-out),
+    border-color var(--t-base) var(--ease-out),
+    transform var(--t-base) var(--ease-out);
+}
+
+.usp-card:hover {
+  background: var(--mint-faint);
+  border-color: var(--line-mint);
+  transform: translateY(-2px);
+}
+
+
+.usp-card__num {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+
+.usp-card__icon {
+  grid-area: icon;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  background: var(--mint-soft);
+  border-radius: 10px;
+  border: 1px solid var(--line-mint);
+  flex-shrink: 0;
+}
+
+
+.usp-card__body {
+  grid-area: body;
+  min-width: 0;
+}
+
+
+.usp-card__title {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--text-1);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.usp-card__sub {
+  font-family: var(--f-body);
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: var(--text-2);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* ──── Scroll-Fades an den Raendern ──── */
+.usp-bar__fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.usp-bar__fade--left {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--bg-sidebar) 0%,
+    transparent 100%
+  );
+}
+
+.usp-bar__fade--right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--bg-sidebar) 0%,
+    transparent 100%
+  );
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   Mobile-Anpassung
+══════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .usp-card {
+    flex: 0 0 calc((100% - 40px - 12px) / 2);
+    padding: 12px 14px;
+    gap: 4px 12px;
+  }
+
+  .usp-card__icon {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .usp-card__title {
+    font-size: 13px;
+  }
+
+  .usp-card__sub {
+    font-size: 11px;
+  }
+
+  .usp-bar__track {
+    padding: 0 16px;
+    gap: 10px;
+  }
+}

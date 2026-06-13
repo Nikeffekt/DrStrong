@@ -1,0 +1,91 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "letzte_aktualisierung": "2026-06-13",
+    "beschreibung": "Kategorisierung aller 25 Wirkstoffe in 5 thematisch saubere Gruppen"
+  },
+
+  "kategorien": [
+
+    {
+      "id": "muskel-protein",
+      "label": "Muskel & Protein",
+      "emoji": "🏋️",
+      "icon": "dumbbell",
+      "beschreibung": "Bausteine fürs Muskelwachstum",
+      "farbe": "mint",
+      "wirkstoffe": [
+        "whey-protein",
+        "iso-clear",
+        "pflanzenprotein",
+        "eaas",
+        "kreatin",
+        "hmb"
+      ]
+    },
+
+    {
+      "id": "performance",
+      "label": "Performance & Training",
+      "emoji": "⚡",
+      "icon": "bolt",
+      "beschreibung": "Akut-Wirkung auf Leistung im Training",
+      "farbe": "mint",
+      "wirkstoffe": [
+        "beta-alanin",
+        "koffein",
+        "pre-workout",
+        "elektrolyte",
+        "l-carnitin"
+      ]
+    },
+
+    {
+      "id": "mikronaehrstoffe",
+      "label": "Mikronährstoffe",
+      "emoji": "💊",
+      "icon": "pill",
+      "beschreibung": "Basis-Versorgung: Vitamine, Mineralien, essenzielle Fettsäuren",
+      "farbe": "mint",
+      "wirkstoffe": [
+        "vitamin-d3",
+        "vitamin-b12",
+        "vitamin-c",
+        "magnesium",
+        "zink",
+        "multivitamin",
+        "eisen",
+        "omega3"
+      ]
+    },
+
+    {
+      "id": "regeneration",
+      "label": "Regeneration & Schlaf",
+      "emoji": "🌙",
+      "icon": "moon",
+      "beschreibung": "Erholung, Reparatur, Schlafqualität",
+      "farbe": "mint",
+      "wirkstoffe": [
+        "melatonin",
+        "zma",
+        "kollagen"
+      ]
+    },
+
+    {
+      "id": "mental-wellbeing",
+      "label": "Mental & Wellbeing",
+      "emoji": "🧠",
+      "icon": "brain",
+      "beschreibung": "Stress, mentale Performance, Anti-Inflammation",
+      "farbe": "mint",
+      "wirkstoffe": [
+        "ashwagandha",
+        "probiotika",
+        "curcumin"
+      ]
+    }
+
+  ]
+}

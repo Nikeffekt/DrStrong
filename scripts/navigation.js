@@ -17,7 +17,7 @@ window.Navigation = (function () {
 
   /* ──── DOM-Refs ──── */
   var $navItems;
-  var $screenLabel;
+  var $screens;
 
 
   /* ──── Screen wechseln ──── */
@@ -44,19 +44,30 @@ window.Navigation = (function () {
       });
     }
 
-    // Platzhalter aktualisieren
-    if ($screenLabel) {
-      $screenLabel.textContent = neuerScreen;
+    // Screens umschalten
+    if ($screens) {
+      $screens.forEach(function (screen) {
+        if (screen.dataset.screen === neuerScreen) {
+          screen.classList.add('is-active');
+        } else {
+          screen.classList.remove('is-active');
+        }
+      });
     }
 
-    // Spaeter: Screen-Module aufrufen
-    // switch (neuerScreen) {
-    //   case 'profil':  window.Profil && window.Profil.zeige(); break;
-    //   case 'quiz':    window.Quiz   && window.Quiz.zeige();   break;
-    //   case 'stack':   window.Stack  && window.Stack.zeige();  break;
-    //   case 'wissen':  window.Wissen && window.Wissen.zeige(); break;
-    //   case 'shop':    window.Shop   && window.Shop.zeige();   break;
-    // }
+    // Screen-Modul aufrufen falls vorhanden
+    switch (neuerScreen) {
+      case 'wissen':
+        if (window.WissenScreen && window.WissenScreen.zeige) {
+          window.WissenScreen.zeige();
+        }
+        break;
+      // weitere Screens kommen dazu:
+      // case 'profil': window.ProfilScreen && window.ProfilScreen.zeige(); break;
+      // case 'quiz':   window.QuizScreen   && window.QuizScreen.zeige();   break;
+      // case 'stack':  window.StackScreen  && window.StackScreen.zeige();  break;
+      // case 'shop':   window.ShopScreen   && window.ShopScreen.zeige();   break;
+    }
 
     console.log('Screen gewechselt:', neuerScreen);
   }
@@ -64,8 +75,8 @@ window.Navigation = (function () {
 
   /* ──── Init ──── */
   function init() {
-    $navItems    = document.querySelectorAll('.nav-item');
-    $screenLabel = document.getElementById('active-screen-name');
+    $navItems = document.querySelectorAll('.nav-item');
+    $screens  = document.querySelectorAll('.screens .screen');
   }
 
 

@@ -23,6 +23,26 @@
 }
 
 
+/* ──── Screen-Container ──── */
+.screens {
+  position: relative;
+}
+
+.screen {
+  display: none;
+  animation: screenFade 0.3s var(--ease-out);
+}
+
+.screen.is-active {
+  display: block;
+}
+
+@keyframes screenFade {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
 /* ──── Platzhalter (so lange noch keine echten Screens da sind) ──── */
 .content__placeholder {
   display: flex;

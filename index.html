@@ -114,16 +114,66 @@
     <!-- ═══ HAUPT-CONTENT ═══ -->
     <main class="content">
 
-      <!-- Platzhalter -->
-      <div class="content__placeholder">
-        <div class="content__placeholder-inner">
-          <div class="content__placeholder-label">aktiver bereich</div>
-          <div class="content__placeholder-screen" id="active-screen-name">profil</div>
-          <div class="content__placeholder-hint">
-            Hier kommt der Inhalt rein. Klick links auf die Menüpunkte<br>
-            um zwischen den Bereichen zu wechseln.
+      <!-- Screen-Container: zeigt jeweils den aktiven Screen -->
+      <div class="screens">
+
+        <!-- Profil-Screen (Placeholder, kommt später) -->
+        <section class="screen screen--profil is-active" id="profil-screen" data-screen="profil">
+          <div class="content__placeholder">
+            <div class="content__placeholder-inner">
+              <div class="content__placeholder-label">aktiver bereich</div>
+              <div class="content__placeholder-screen">profil</div>
+              <div class="content__placeholder-hint">
+                Hier kommt später dein Profil rein.
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Quiz-Screen (Placeholder) -->
+        <section class="screen screen--quiz" id="quiz-screen" data-screen="quiz">
+          <div class="content__placeholder">
+            <div class="content__placeholder-inner">
+              <div class="content__placeholder-label">aktiver bereich</div>
+              <div class="content__placeholder-screen">quiz</div>
+              <div class="content__placeholder-hint">
+                Hier kommt später das Quiz rein.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stack-Screen (Placeholder) -->
+        <section class="screen screen--stack" id="stack-screen" data-screen="stack">
+          <div class="content__placeholder">
+            <div class="content__placeholder-inner">
+              <div class="content__placeholder-label">aktiver bereich</div>
+              <div class="content__placeholder-screen">stack</div>
+              <div class="content__placeholder-hint">
+                Hier kommt später dein Stack rein.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Wissen-Screen (aktiv) -->
+        <section class="screen wissen" id="wissen-screen" data-screen="wissen">
+          <!-- Wird dynamisch von scripts/screens/wissen.js gefüllt -->
+        </section>
+
+        <!-- Shop-Screen (Placeholder) -->
+        <section class="screen screen--shop" id="shop-screen" data-screen="shop">
+          <div class="content__placeholder">
+            <div class="content__placeholder-inner">
+              <div class="content__placeholder-label">aktiver bereich</div>
+              <div class="content__placeholder-screen">shop</div>
+              <div class="content__placeholder-hint">
+                Hier kommt später der Shop rein.
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
 
 
@@ -272,6 +322,9 @@
   <!-- UI -->
   <script src="scripts/ui/sidebar.js"></script>
   <script src="scripts/ui/usp-bar.js"></script>
+
+  <!-- Screens -->
+  <script src="scripts/screens/wissen.js"></script>
 
   <!-- Navigation -->
   <script src="scripts/navigation.js"></script>

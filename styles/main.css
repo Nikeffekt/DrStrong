@@ -40,11 +40,12 @@
 */
 
 
-/* ─── Screens ─── (kommen dazu sobald wir die Screens bauen)
+/* ─── Screens ─── */
+@import url('screens/wissen.css');
+/* Weitere Screens kommen dazu:
 @import url('screens/profil.css');
 @import url('screens/quiz.css');
 @import url('screens/stack.css');
-@import url('screens/wissen.css');
 @import url('screens/shop.css');
 @import url('screens/settings.css');
 */

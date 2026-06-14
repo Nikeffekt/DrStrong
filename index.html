@@ -24,11 +24,24 @@
     <!-- ═══ SIDEBAR ═══ -->
     <aside class="sidebar">
 
-      <div class="sidebar__brand">
-        <span class="sidebar__brand-text">STRONGER</span>
-      </div>
-
       <nav class="sidebar__nav" aria-label="Hauptnavigation">
+
+        <button class="nav-item nav-item--brand" data-screen="stronger" aria-label="Stronger">
+          <span class="nav-item__icon">
+            <!-- Hantel-Icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <!-- linke Gewichte -->
+              <rect x="2" y="8" width="2.5" height="8" rx="0.5"/>
+              <rect x="4.5" y="6" width="2.5" height="12" rx="0.5"/>
+              <!-- Stange -->
+              <line x1="7" y1="12" x2="17" y2="12"/>
+              <!-- rechte Gewichte -->
+              <rect x="17" y="6" width="2.5" height="12" rx="0.5"/>
+              <rect x="19.5" y="8" width="2.5" height="8" rx="0.5"/>
+            </svg>
+          </span>
+          <span class="nav-item__label">Stronger</span>
+        </button>
 
         <button class="nav-item is-active" data-screen="profil" aria-label="Profil">
           <span class="nav-item__icon">
@@ -116,6 +129,19 @@
 
       <!-- Screen-Container: zeigt jeweils den aktiven Screen -->
       <div class="screens">
+
+        <!-- Stronger-Screen (Home, Placeholder fuer spaeter z.B. Doctor-Strong) -->
+        <section class="screen screen--stronger" id="stronger-screen" data-screen="stronger">
+          <div class="content__placeholder">
+            <div class="content__placeholder-inner">
+              <div class="content__placeholder-label">willkommen bei</div>
+              <div class="content__placeholder-screen">stronger</div>
+              <div class="content__placeholder-hint">
+                Hier kommt später der Home-Bereich rein.
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- Profil-Screen (Placeholder, kommt später) -->
         <section class="screen screen--profil is-active" id="profil-screen" data-screen="profil">

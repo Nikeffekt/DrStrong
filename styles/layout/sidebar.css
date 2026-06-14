@@ -38,25 +38,6 @@
 }
 
 
-/* ──── Brand / Logo ──── */
-.sidebar__brand {
-  margin-bottom: 36px;
-  text-align: center;
-}
-
-.sidebar__brand-text {
-  display: block;
-  font-family: var(--f-display);
-  font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  color: var(--text-1);
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  padding: 4px 0;
-}
-
-
 /* ──── Navigation-Container ──── */
 .sidebar__nav {
   display: flex;
@@ -85,14 +66,5 @@
 @media (max-width: 640px) {
   .sidebar {
     padding: 20px 0 16px;
-  }
-
-  .sidebar__brand {
-    margin-bottom: 24px;
-  }
-
-  .sidebar__brand-text {
-    font-size: 10px;
-    letter-spacing: 0.18em;
   }
 }

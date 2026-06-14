@@ -1,26 +1,25 @@
 /* ============================================================
    screens/wissen.js – Wissen-Screen
 
-   Aufgaben:
-   - Lädt Kategorien aus data/meta/kategorien.json
-   - Zeigt 3 Ansichten (View-States):
-     1. KATEGORIEN: Übersicht aller 5 Kategorie-Karten
-     2. LISTE:      Wirkstoffe einer ausgewählten Kategorie
-     3. DETAIL:     Detail-Ansicht eines Wirkstoffs
-   - Navigation zwischen den Views via Back-Button
+   Zwei Ansichten:
+   1. UEBERSICHT: Alle 25 Wirkstoffe gruppiert nach Kategorie
+                  - Pro Kategorie: Header (Emoji + Name)
+                  - Pro Wirkstoff: Name + Kurzbeschreibung (1 Zeile)
+                  - Klick auf Wirkstoff -> Detail-Ansicht
+   2. DETAIL:     Detail-Ansicht eines Wirkstoffs
+                  - Back-Button zurueck zur Uebersicht
 
    Abhaengigkeiten:
    - state.js              (WIRKSTOFFE_WISSEN, WIRKSTOFFE_DETAILS)
-   - data/wirkstoffe-loader.js (ladenDetail für on-demand Detail-Daten)
+   - data/wirkstoffe-loader.js (ladenDetail fuer on-demand Detail-Daten)
 ============================================================ */
 
 window.WissenScreen = (function () {
   'use strict';
 
   /* ──── STATE ──── */
-  var kategorien = [];        // aus kategorien.json
-  var aktiveAnsicht = 'kategorien';  // 'kategorien' | 'liste' | 'detail'
-  var aktiveKategorie = null;
+  var kategorien = [];
+  var aktiveAnsicht = 'uebersicht';  // 'uebersicht' | 'detail'
   var aktiverWirkstoff = null;
   var initialisiert = false;
 
@@ -47,107 +46,67 @@ window.WissenScreen = (function () {
   }
 
 
-  /* ──── RENDER: KATEGORIEN-ÜBERSICHT ──── */
-  function renderKategorien() {
+  /* ──── RENDER: UEBERSICHT (alle Wirkstoffe nach Kategorie) ──── */
+  function renderUebersicht() {
     var html = [
       '<div class="wissen__header">',
       '  <h1 class="wissen__title">Wissensbasis</h1>',
-      '  <p class="wissen__subtitle">25 Wirkstoffe · evidenzbasiert · 5 Kategorien</p>',
+      '  <p class="wissen__subtitle">25 Wirkstoffe · evidenzbasiert</p>',
       '</div>',
-      '<div class="wissen__kategorien">'
+      '<div class="wissen__kategorien-liste">'
     ];
 
     kategorien.forEach(function (kat) {
-      var anzahl = kat.wirkstoffe.length;
       html.push(
-        '<button class="kat-card" data-kategorie="' + kat.id + '">',
-        '  <div class="kat-card__icon">' + (kat.emoji || '•') + '</div>',
-        '  <div class="kat-card__body">',
-        '    <div class="kat-card__title">' + kat.label + '</div>',
-        '    <div class="kat-card__desc">' + kat.beschreibung + '</div>',
-        '    <div class="kat-card__count">' + anzahl + ' Wirkstoffe</div>',
-        '  </div>',
-        '  <div class="kat-card__arrow">→</div>',
-        '</button>'
+        '<section class="kat-section">',
+        '  <header class="kat-section__header">',
+        '    <span class="kat-section__emoji">' + (kat.emoji || '•') + '</span>',
+        '    <h2 class="kat-section__title">' + kat.label + '</h2>',
+        '  </header>',
+        '  <ul class="wirkstoff-liste">'
       );
-    });
 
-    html.push('</div>');
-    $container.innerHTML = html.join('\n');
+      kat.wirkstoffe.forEach(function (wid) {
+        var w = WIRKSTOFFE_WISSEN[wid];
+        if (!w) {
+          html.push(
+            '<li class="wirkstoff-zeile wirkstoff-zeile--missing">',
+            '  ' + wid + ' (Daten fehlen)',
+            '</li>'
+          );
+          return;
+        }
 
-    // Event-Listener auf Kategorie-Karten
-    var karten = $container.querySelectorAll('.kat-card');
-    karten.forEach(function (karte) {
-      karte.addEventListener('click', function () {
-        oeffneKategorie(karte.dataset.kategorie);
+        var name = w.name || wid;
+        var kurz = w.kurz_beschreibung || '';
+
+        // Kurzbeschreibung auf eine Zeile begrenzen
+        if (kurz.length > 100) kurz = kurz.substring(0, 97) + '…';
+
+        html.push(
+          '<li>',
+          '  <button class="wirkstoff-zeile" data-wirkstoff="' + wid + '">',
+          '    <div class="wirkstoff-zeile__body">',
+          '      <div class="wirkstoff-zeile__name">' + name + '</div>',
+          '      <div class="wirkstoff-zeile__kurz">' + kurz + '</div>',
+          '    </div>',
+          '    <div class="wirkstoff-zeile__arrow">→</div>',
+          '  </button>',
+          '</li>'
+        );
       });
-    });
-  }
 
-
-  /* ──── RENDER: WIRKSTOFF-LISTE einer Kategorie ──── */
-  function renderListe(kategorieId) {
-    var kat = kategorien.find(function (k) { return k.id === kategorieId; });
-    if (!kat) {
-      renderKategorien();
-      return;
-    }
-
-    var html = [
-      '<div class="wissen__header">',
-      '  <button class="wissen__back" data-action="zurueck-kategorien" aria-label="Zurück">',
-      '    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
-      '      <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>',
-      '    </svg>',
-      '    <span>Zurück</span>',
-      '  </button>',
-      '  <h1 class="wissen__title"><span class="wissen__title-emoji">' + kat.emoji + '</span> ' + kat.label + '</h1>',
-      '  <p class="wissen__subtitle">' + kat.beschreibung + '</p>',
-      '</div>',
-      '<div class="wissen__wirkstoffe">'
-    ];
-
-    kat.wirkstoffe.forEach(function (wid) {
-      var w = WIRKSTOFFE_WISSEN[wid];
-      if (!w) {
-        html.push('<div class="wirkstoff-card wirkstoff-card--missing">' + wid + ' (Daten fehlen)</div>');
-        return;
-      }
-
-      var name = w.name || wid;
-      var kurz = w.kurz_beschreibung || '';
-      var level = (w.evidenz && w.evidenz.level) || '?';
-
-      // Kurzbeschreibung kürzen wenn zu lang
-      if (kurz.length > 110) kurz = kurz.substring(0, 107) + '...';
-
-      html.push(
-        '<button class="wirkstoff-card" data-wirkstoff="' + wid + '">',
-        '  <div class="wirkstoff-card__head">',
-        '    <div class="wirkstoff-card__name">' + name + '</div>',
-        '    <div class="wirkstoff-card__level" title="Evidenz-Level">' + level + '</div>',
-        '  </div>',
-        '  <div class="wirkstoff-card__kurz">' + kurz + '</div>',
-        '</button>'
-      );
+      html.push('  </ul>', '</section>');
     });
 
     html.push('</div>');
     $container.innerHTML = html.join('\n');
 
-    // Back-Button
-    var backBtn = $container.querySelector('[data-action="zurueck-kategorien"]');
-    if (backBtn) backBtn.addEventListener('click', function () {
-      aktiveAnsicht = 'kategorien';
-      aktiveKategorie = null;
-      renderKategorien();
-    });
-
-    // Wirkstoff-Karten
-    var karten = $container.querySelectorAll('.wirkstoff-card[data-wirkstoff]');
-    karten.forEach(function (karte) {
-      karte.addEventListener('click', function () {
-        oeffneWirkstoff(karte.dataset.wirkstoff);
+    // Event-Listener auf Wirkstoff-Zeilen
+    var zeilen = $container.querySelectorAll('.wirkstoff-zeile[data-wirkstoff]');
+    zeilen.forEach(function (zeile) {
+      zeile.addEventListener('click', function () {
+        oeffneWirkstoff(zeile.dataset.wirkstoff);
       });
     });
   }
@@ -161,15 +120,13 @@ window.WissenScreen = (function () {
       return;
     }
 
-    var detail = WIRKSTOFFE_DETAILS[wirkstoffId];  // optional, ggf. nicht geladen
-
     var html = [
       '<div class="wissen__header">',
-      '  <button class="wissen__back" data-action="zurueck-liste" aria-label="Zurück">',
+      '  <button class="wissen__back" data-action="zurueck-uebersicht" aria-label="Zurück">',
       '    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
       '      <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>',
       '    </svg>',
-      '    <span>Zurück zur Liste</span>',
+      '    <span>Zurück zur Übersicht</span>',
       '  </button>',
       '</div>',
       '<article class="wirkstoff-detail">'
@@ -301,22 +258,18 @@ window.WissenScreen = (function () {
     $container.innerHTML = html.join('\n');
 
     // Back-Button
-    var backBtn = $container.querySelector('[data-action="zurueck-liste"]');
+    var backBtn = $container.querySelector('[data-action="zurueck-uebersicht"]');
     if (backBtn) backBtn.addEventListener('click', function () {
-      aktiveAnsicht = 'liste';
+      aktiveAnsicht = 'uebersicht';
       aktiverWirkstoff = null;
-      renderListe(aktiveKategorie);
+      renderUebersicht();
+      // Zum Anfang scrollen
+      $container.scrollTop = 0;
     });
   }
 
 
   /* ──── NAVIGATION ──── */
-  function oeffneKategorie(kategorieId) {
-    aktiveKategorie = kategorieId;
-    aktiveAnsicht = 'liste';
-    renderListe(kategorieId);
-  }
-
   function oeffneWirkstoff(wirkstoffId) {
     aktiverWirkstoff = wirkstoffId;
     aktiveAnsicht = 'detail';
@@ -325,9 +278,11 @@ window.WissenScreen = (function () {
     if (window.WirkstoffeLoader && window.WirkstoffeLoader.ladenDetail) {
       window.WirkstoffeLoader.ladenDetail(wirkstoffId).then(function () {
         renderDetail(wirkstoffId);
+        $container.scrollTop = 0;
       });
     } else {
       renderDetail(wirkstoffId);
+      $container.scrollTop = 0;
     }
   }
 
@@ -340,46 +295,38 @@ window.WissenScreen = (function () {
       return;
     }
 
-    // Beim ersten Aufruf Kategorien laden
     if (!initialisiert) {
       initialisiert = true;
-
-      // Loading-State sofort anzeigen (sonst sieht User leere Seite)
       $container.innerHTML = '<div class="wissen__loading">Lädt Wissensbasis…</div>';
 
-      // Wenn Wirkstoffe-Daten noch nicht da, auf sie warten
+      // Auf Wirkstoff-Daten warten falls noch nicht da
       var warteAufDaten = function () {
         return new Promise(function (resolve) {
-          // Check ob bereits geladen
           if (Object.keys(WIRKSTOFFE_WISSEN).length > 0) {
             resolve();
             return;
           }
-          // Sonst auf datenBereit-Event warten
           document.addEventListener('v3:datenBereit', function onReady() {
             document.removeEventListener('v3:datenBereit', onReady);
             resolve();
           });
-          // Fallback nach 5s falls Event nicht kommt
           setTimeout(resolve, 5000);
         });
       };
 
-      // Kategorien laden + auf Wirkstoff-Daten warten
       Promise.all([
         ladeKategorien(),
         warteAufDaten()
       ]).then(function () {
-        aktiveAnsicht = 'kategorien';
-        renderKategorien();
+        aktiveAnsicht = 'uebersicht';
+        renderUebersicht();
       });
 
     } else {
-      // Reset auf Übersicht beim Wieder-Reinkommen
-      aktiveAnsicht = 'kategorien';
-      aktiveKategorie = null;
+      // Beim Wiedereintritt: zur Uebersicht zurueck
+      aktiveAnsicht = 'uebersicht';
       aktiverWirkstoff = null;
-      renderKategorien();
+      renderUebersicht();
     }
   }
 

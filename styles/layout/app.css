@@ -1,36 +1,50 @@
 /* ══════════════════════════════════════════════════════════════════
    app.css – App-Shell-Layout
 
-   Das ist das HERZ der Layout-Architektur:
+   Das HERZ der Layout-Architektur:
    - Sidebar links: nimmt volle Hoehe, fixe Breite, scrollt nicht
    - Content mitte/oben: einziger Bereich der scrollt
-   - USP-Bar unten: fix am Boden, scrollt nicht
+   - USP-Bar unten: nur wenn .app die Klasse .has-usp-bar hat
 
-   GRID:
+   GRID OHNE USP-Bar (Standard):
    ┌─────────┬──────────────────────┐
    │         │                      │
-   │ sidebar │       content        │  ← 1fr (nimmt verbleibenden Platz)
+   │ sidebar │       content        │
    │         │      (scrollt)       │
    │         │                      │
+   └─────────┴──────────────────────┘
+
+   GRID MIT USP-Bar (nur auf Stronger-Home):
+   ┌─────────┬──────────────────────┐
+   │         │                      │
+   │ sidebar │       content        │
+   │         │                      │
    │         ├──────────────────────┤
-   │         │      usp-bar         │  ← auto (so hoch wie ihr Inhalt)
+   │         │      usp-bar         │
    └─────────┴──────────────────────┘
 ══════════════════════════════════════════════════════════════════ */
 
 .app {
   display: grid;
   grid-template-columns: var(--sidebar-width) 1fr;
+  /* Standard: nur eine Zeile (Content nimmt vollen Platz) */
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "sidebar content";
+
+  height: 100vh;
+  height: 100dvh;
+
+  overflow: hidden;
+}
+
+
+/* Wenn USP-Bar sichtbar ist: zweite Grid-Zeile aktivieren */
+.app.has-usp-bar {
   grid-template-rows: 1fr auto;
   grid-template-areas:
     "sidebar content"
     "sidebar usp-bar";
-
-  /* Volle Bildschirm-Hoehe, NICHT mehr */
-  height: 100vh;
-  height: 100dvh;  /* dvh = dynamic viewport height (besser auf Mobile) */
-
-  /* App scrollt NICHT - nur der content-Bereich scrollt intern */
-  overflow: hidden;
 }
 
 

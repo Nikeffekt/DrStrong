@@ -45,4 +45,4 @@ var gewaehlteAlts    = {};   /* { suppId: altIndex } – gewaehlte Alternative j
 
 
 /* ──── UI-STATE ──── */
-var aktiverScreen = 'profil';  /* aktueller Sidebar-Screen */
+var aktiverScreen = 'stronger';  /* aktueller Sidebar-Screen */

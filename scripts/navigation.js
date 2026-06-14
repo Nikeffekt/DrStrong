@@ -18,6 +18,25 @@ window.Navigation = (function () {
   /* ──── DOM-Refs ──── */
   var $navItems;
   var $screens;
+  var $uspBar;
+  var $app;
+
+  /* Screens auf denen die USP-Bar sichtbar sein soll */
+  var SCREENS_MIT_USP = ['stronger'];
+
+
+  /* ──── USP-Bar Sichtbarkeit steuern ──── */
+  function aktualisiereUspBar(screen) {
+    if (!$uspBar || !$app) return;
+
+    if (SCREENS_MIT_USP.indexOf(screen) !== -1) {
+      $uspBar.classList.add('is-visible');
+      $app.classList.add('has-usp-bar');
+    } else {
+      $uspBar.classList.remove('is-visible');
+      $app.classList.remove('has-usp-bar');
+    }
+  }
 
 
   /* ──── Screen wechseln ──── */
@@ -55,6 +74,9 @@ window.Navigation = (function () {
       });
     }
 
+    // USP-Bar je nach Screen
+    aktualisiereUspBar(neuerScreen);
+
     // Screen-Modul aufrufen falls vorhanden
     switch (neuerScreen) {
       case 'wissen':
@@ -77,6 +99,11 @@ window.Navigation = (function () {
   function init() {
     $navItems = document.querySelectorAll('.nav-item');
     $screens  = document.querySelectorAll('.screens .screen');
+    $uspBar   = document.getElementById('usp-bar');
+    $app      = document.querySelector('.app');
+
+    // Initial: USP-Bar passend zum aktiven Start-Screen
+    aktualisiereUspBar(aktiverScreen);
   }
 
 

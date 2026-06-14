@@ -15,6 +15,20 @@
   box-shadow:
     inset 0 1px 0 rgba(74, 222, 128, 0.08),
     0 -8px 24px rgba(0, 0, 0, 0.3);
+
+  /* Standardmaessig VERSTECKT - wird per JS auf passenden Screens sichtbar */
+  display: none;
+}
+
+/* Sichtbar-Zustand (gesetzt per JS auf bestimmten Screens) */
+.usp-bar.is-visible {
+  display: block;
+  animation: uspBarFadeIn 0.3s var(--ease-out);
+}
+
+@keyframes uspBarFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 

@@ -6,13 +6,14 @@
   /* Grid-Bereich: Content nimmt mittleren/oberen Bereich */
   grid-area: content;
 
-  background: var(--bg-base);
-
   /* DIES ist der EINZIGE Bereich der scrollt */
   overflow-y: auto;
   overflow-x: hidden;
 
-  /* Subtile Hintergrund-Atmosphaere */
+  /* Eigene Schicht damit Pseudo-Elemente korrekt positioniert werden */
+  position: relative;
+
+  /* Fallback-Hintergrund + subtiler Mint-Glow oben rechts */
   background:
     radial-gradient(
       circle at 70% 30%,
@@ -26,6 +27,51 @@
 
   /* Smooth-Scrolling auf iOS */
   -webkit-overflow-scrolling: touch;
+}
+
+
+/* ──── Hintergrund-Bild als fixed Layer ────
+   - position: fixed = bleibt beim Scrollen am Platz
+   - left: var(--sidebar-width) = startet rechts neben Sidebar
+   - bottom: 0 (mit auch top: 0) = volle Hoehe
+   - z-index: -1 = liegt hinter dem Content
+*/
+.content::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: var(--sidebar-width);
+  right: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: url('../../assets/images/hintergrund.png');
+  background-size: cover;
+  background-position: 60% 80%;  /* horizontal 60%, vertikal 80% (etwas hoeher als bottom) */
+  background-repeat: no-repeat;
+}
+
+
+/* ──── Dunkles Overlay ueber dem Bild ────
+   Damit der Inhalt lesbar bleibt */
+.content::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: var(--sidebar-width);
+  right: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: rgba(10, 15, 10, 0.82);
+}
+
+
+/* Content-Inhalt MUSS ueber dem Hintergrund liegen */
+.content > * {
+  position: relative;
+  z-index: 1;
 }
 
 

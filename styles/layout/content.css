@@ -75,6 +75,42 @@
 }
 
 
+/* ──── Dr.Strong-Charakter als fester Layer rechts unten ────
+   Liegt VOR dem Hintergrund-Bild und Overlay, aber HINTER dem Inhalt
+   (damit Klicks/Text nicht blockiert werden) */
+.dr-strong {
+  position: fixed;
+  bottom: 0;
+  right: 24px;
+  height: 70vh;
+  max-height: 600px;
+  width: auto;
+  z-index: 0;
+  pointer-events: none;
+  /* Subtile Schatten-Wirkung damit Charakter sich vom Hintergrund abhebt */
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.5));
+  /* Sanftes Erscheinen */
+  animation: charFadeIn 0.6s var(--ease-out);
+}
+
+@keyframes charFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Mobile: kleiner damit nicht der halbe Screen blockiert wird */
+@media (max-width: 768px) {
+  .dr-strong {
+    height: 50vh;
+    max-height: 380px;
+    right: 8px;
+    /* Auf Mobile etwas durchscheinend damit Inhalt lesbar bleibt */
+    opacity: 0.55;
+  }
+}
+
+
 /* ──── Screen-Container ──── */
 .screens {
   position: relative;

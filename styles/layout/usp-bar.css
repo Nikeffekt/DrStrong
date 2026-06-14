@@ -26,6 +26,15 @@
   animation: uspBarFadeIn 0.3s var(--ease-out);
 }
 
+/* Mobile: USP-Bar generell versteckt
+   (kommt spaeter ggf. als Sektion in Stronger-Home rein) */
+@media (max-width: 1024px) {
+  .usp-bar,
+  .usp-bar.is-visible {
+    display: none !important;
+  }
+}
+
 @keyframes uspBarFadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }

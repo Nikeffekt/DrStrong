@@ -23,6 +23,8 @@
 /* ─── Layout ─── */
 @import url('layout/app.css');
 @import url('layout/sidebar.css');
+@import url('layout/topbar.css');         /* Mobile-Topbar */
+@import url('layout/bottom-tabs.css');    /* Mobile-Bottom-Tab-Bar */
 @import url('layout/content.css');
 @import url('layout/usp-bar.css');
 

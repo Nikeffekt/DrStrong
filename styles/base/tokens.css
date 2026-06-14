@@ -44,6 +44,10 @@
   --sidebar-width:        92px;
   --sidebar-width-mobile: 68px;
 
+  /* Mobile-Layout-Tokens */
+  --topbar-height:        56px;
+  --bottom-tabs-height:   64px;
+
 
   /* ──── Motion ──── */
   --ease-out:       cubic-bezier(0.16, 1, 0.3, 1);

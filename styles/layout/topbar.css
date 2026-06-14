@@ -1,0 +1,154 @@
+/* ══════════════════════════════════════════════════════════════════
+   topbar.css – Mobile-Topbar (Logo links, Avatar rechts)
+   Nur auf Mobile sichtbar (≤1024px)
+══════════════════════════════════════════════════════════════════ */
+
+
+/* ──── Container ──── */
+.topbar {
+  grid-area: topbar;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+
+  background: var(--bg-sidebar);
+  border-bottom: 1px solid var(--line);
+
+  position: relative;
+  z-index: 100;
+}
+
+/* Desktop: Topbar komplett versteckt */
+@media (min-width: 1025px) {
+  .topbar {
+    display: none;
+  }
+}
+
+
+/* ──── Brand (Logo + Schriftzug) ──── */
+.topbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar__brand-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar__brand-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.topbar__brand-text {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  color: var(--text-1);
+  text-transform: uppercase;
+}
+
+
+/* ──── Avatar (Klick oeffnet Menue) ──── */
+.topbar__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--mint-soft);
+  border: 1px solid var(--line-mint);
+  color: var(--mint);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--t-fast) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.topbar__avatar:hover,
+.topbar__avatar:focus-visible {
+  background: var(--mint);
+  color: var(--bg-deepest);
+  outline: none;
+}
+
+.topbar__avatar-text {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+}
+
+
+/* ──── Avatar-Menu (Dropdown) ──── */
+.topbar__menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 12px;
+
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 6px;
+  min-width: 180px;
+
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+
+  z-index: 200;
+
+  animation: topbarMenuFadeIn 0.18s var(--ease-out);
+}
+
+@keyframes topbarMenuFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.topbar__menu[hidden] {
+  display: none !important;
+}
+
+
+/* Menue-Items */
+.topbar__menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+
+  font-family: var(--f-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-1);
+  text-align: left;
+  cursor: pointer;
+
+  transition: background var(--t-fast) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.topbar__menu-item:hover,
+.topbar__menu-item:focus-visible {
+  background: var(--mint-faint);
+  color: var(--mint);
+  outline: none;
+}
+
+.topbar__menu-item svg {
+  flex-shrink: 0;
+}

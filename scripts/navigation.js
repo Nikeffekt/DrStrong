@@ -17,6 +17,7 @@ window.Navigation = (function () {
 
   /* ──── DOM-Refs ──── */
   var $navItems;
+  var $bottomTabs;
   var $screens;
   var $uspBar;
   var $app;
@@ -39,6 +40,32 @@ window.Navigation = (function () {
   }
 
 
+  /* ──── Navigation-Items aktualisieren (Sidebar + Bottom-Tabs)  ──── */
+  function aktualisiereNavItems(screen) {
+    // Sidebar (Desktop)
+    if ($navItems) {
+      $navItems.forEach(function (item) {
+        if (item.dataset.screen === screen) {
+          item.classList.add('is-active');
+        } else {
+          item.classList.remove('is-active');
+        }
+      });
+    }
+
+    // Bottom-Tabs (Mobile)
+    if ($bottomTabs) {
+      $bottomTabs.forEach(function (tab) {
+        if (tab.dataset.screen === screen) {
+          tab.classList.add('is-active');
+        } else {
+          tab.classList.remove('is-active');
+        }
+      });
+    }
+  }
+
+
   /* ──── Screen wechseln ──── */
   function zeige(neuerScreen) {
     if (!neuerScreen) return;
@@ -52,16 +79,8 @@ window.Navigation = (function () {
 
     aktiverScreen = neuerScreen;
 
-    // Sidebar visuell aktualisieren
-    if ($navItems) {
-      $navItems.forEach(function (item) {
-        if (item.dataset.screen === neuerScreen) {
-          item.classList.add('is-active');
-        } else {
-          item.classList.remove('is-active');
-        }
-      });
-    }
+    // Sidebar + Bottom-Tabs visuell aktualisieren
+    aktualisiereNavItems(neuerScreen);
 
     // Screens umschalten
     if ($screens) {
@@ -84,11 +103,6 @@ window.Navigation = (function () {
           window.WissenScreen.zeige();
         }
         break;
-      // weitere Screens kommen dazu:
-      // case 'profil': window.ProfilScreen && window.ProfilScreen.zeige(); break;
-      // case 'quiz':   window.QuizScreen   && window.QuizScreen.zeige();   break;
-      // case 'stack':  window.StackScreen  && window.StackScreen.zeige();  break;
-      // case 'shop':   window.ShopScreen   && window.ShopScreen.zeige();   break;
     }
 
     console.log('Screen gewechselt:', neuerScreen);
@@ -97,12 +111,14 @@ window.Navigation = (function () {
 
   /* ──── Init ──── */
   function init() {
-    $navItems = document.querySelectorAll('.nav-item');
-    $screens  = document.querySelectorAll('.screens .screen');
-    $uspBar   = document.getElementById('usp-bar');
-    $app      = document.querySelector('.app');
+    $navItems   = document.querySelectorAll('.nav-item');
+    $bottomTabs = document.querySelectorAll('.bottom-tab');
+    $screens    = document.querySelectorAll('.screens .screen');
+    $uspBar     = document.getElementById('usp-bar');
+    $app        = document.querySelector('.app');
 
-    // Initial: USP-Bar passend zum aktiven Start-Screen
+    // Initial: alle UI-Elemente passend zum aktiven Start-Screen setzen
+    aktualisiereNavItems(aktiverScreen);
     aktualisiereUspBar(aktiverScreen);
   }
 

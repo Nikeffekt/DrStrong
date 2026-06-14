@@ -1,0 +1,111 @@
+/* ══════════════════════════════════════════════════════════════════
+   bottom-tabs.css – Mobile-Bottom-Tab-Bar (5 Items)
+   Nur auf Mobile sichtbar (≤1024px)
+══════════════════════════════════════════════════════════════════ */
+
+
+/* ──── Container ──── */
+.bottom-tabs {
+  grid-area: bottom-tabs;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: stretch;
+
+  background: var(--bg-sidebar);
+  border-top: 1px solid var(--line);
+
+  /* Safe-Area-Padding fuer iPhones mit Home-Indicator */
+  padding-bottom: env(safe-area-inset-bottom, 0);
+
+  position: relative;
+  z-index: 100;
+}
+
+/* Desktop: Bottom-Tabs komplett versteckt */
+@media (min-width: 1025px) {
+  .bottom-tabs {
+    display: none;
+  }
+}
+
+
+/* ──── Einzel-Tab ──── */
+.bottom-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 4px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  font-family: var(--f-body);
+  color: var(--text-3);
+  transition: color var(--t-fast) var(--ease-out);
+  position: relative;
+}
+
+.bottom-tab:active {
+  transform: scale(0.95);
+  transition: transform 0.1s var(--ease-out);
+}
+
+/* Aktiver Tab: Mint-Farbe */
+.bottom-tab.is-active {
+  color: var(--mint);
+}
+
+/* Hover/Focus: leichte Hervorhebung */
+.bottom-tab:hover,
+.bottom-tab:focus-visible {
+  color: var(--text-1);
+  outline: none;
+}
+
+.bottom-tab.is-active:hover,
+.bottom-tab.is-active:focus-visible {
+  color: var(--mint);
+}
+
+
+/* ──── Icon ──── */
+.bottom-tab__icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-tab__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ──── Label ──── */
+.bottom-tab__label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+
+/* ──── Active-Indicator (kleiner Strich oben am Tab) ──── */
+.bottom-tab.is-active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 30%;
+  right: 30%;
+  height: 2px;
+  background: var(--mint);
+  border-radius: 0 0 2px 2px;
+}

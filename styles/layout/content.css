@@ -30,12 +30,7 @@
 }
 
 
-/* ──── Hintergrund-Bild als fixed Layer ────
-   - position: fixed = bleibt beim Scrollen am Platz
-   - left: var(--sidebar-width) = startet rechts neben Sidebar
-   - bottom: 0 (mit auch top: 0) = volle Hoehe
-   - z-index: -1 = liegt hinter dem Content
-*/
+/* ──── Hintergrund-Bild als fixed Layer ──── */
 .content::before {
   content: '';
   position: fixed;
@@ -48,13 +43,12 @@
 
   background-image: url('../../assets/images/hintergrund.png');
   background-size: cover;
-  background-position: 60% 80%;  /* horizontal 60%, vertikal 80% (etwas hoeher als bottom) */
+  background-position: 60% 80%;
   background-repeat: no-repeat;
 }
 
 
-/* ──── Dunkles Overlay ueber dem Bild ────
-   Damit der Inhalt lesbar bleibt */
+/* ──── Dunkles Overlay ueber dem Bild ──── */
 .content::after {
   content: '';
   position: fixed;
@@ -65,6 +59,25 @@
   z-index: 0;
   pointer-events: none;
   background: rgba(10, 15, 10, 0.82);
+}
+
+
+/* Mobile: kein Sidebar-Offset, Hintergrund nimmt komplette Breite,
+   aber MUSS ueber Topbar/Bottom-Tabs liegen damit's keinen weissen Streifen gibt
+   - top: var(--topbar-height) (unter Topbar)
+   - bottom: var(--bottom-tabs-height) (ueber Bottom-Tabs) */
+@media (max-width: 1024px) {
+  .content::before,
+  .content::after {
+    left: 0;
+    top: var(--topbar-height);
+    bottom: var(--bottom-tabs-height);
+  }
+
+  /* Auf Mobile: Bildposition anders (mehr von Mitte/oben sichtbar) */
+  .content::before {
+    background-position: 50% 30%;
+  }
 }
 
 
@@ -99,14 +112,15 @@
 }
 
 
-/* Mobile: kleiner damit nicht der halbe Screen blockiert wird */
-@media (max-width: 768px) {
+/* Mobile: deutlich kleiner und tiefer transparent damit nicht stoert */
+@media (max-width: 1024px) {
   .dr-strong {
-    height: 50vh;
-    max-height: 380px;
-    right: 8px;
-    /* Auf Mobile etwas durchscheinend damit Inhalt lesbar bleibt */
-    opacity: 0.55;
+    height: 30vh;
+    max-height: 200px;
+    right: 4px;
+    /* Steht ueber den Bottom-Tabs (nicht drauf!) */
+    bottom: calc(var(--bottom-tabs-height) + 4px);
+    opacity: 0.5;
   }
 }
 

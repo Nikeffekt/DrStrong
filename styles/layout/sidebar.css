@@ -19,6 +19,14 @@
   overflow-x: hidden;
 }
 
+
+/* Mobile: Sidebar komplett versteckt */
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 /* Subtiler Mint-Glow am rechten Rand */
 .sidebar::after {
   content: '';

@@ -18,8 +18,10 @@
     console.log('Stronger startet…');
 
     /* ─── 1. UI-Module sofort initialisieren ─── */
-    if (window.Sidebar && window.Sidebar.init)  window.Sidebar.init();
-    if (window.UspBar  && window.UspBar.init)   window.UspBar.init();
+    if (window.Sidebar     && window.Sidebar.init)     window.Sidebar.init();
+    if (window.BottomTabs  && window.BottomTabs.init)  window.BottomTabs.init();
+    if (window.Topbar      && window.Topbar.init)      window.Topbar.init();
+    if (window.UspBar      && window.UspBar.init)      window.UspBar.init();
 
     console.log('✓ UI bereit');
 

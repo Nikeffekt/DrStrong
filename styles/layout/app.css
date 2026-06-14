@@ -1,36 +1,41 @@
 /* ══════════════════════════════════════════════════════════════════
-   app.css – App-Shell-Layout
+   app.css – App-Shell-Layout (responsive)
 
-   Das HERZ der Layout-Architektur:
-   - Sidebar links: nimmt volle Hoehe, fixe Breite, scrollt nicht
-   - Content mitte/oben: einziger Bereich der scrollt
-   - USP-Bar unten: nur wenn .app die Klasse .has-usp-bar hat
+   MOBILE (≤1024px):
+   ┌─────────────────────────────────┐
+   │           Topbar                │
+   ├─────────────────────────────────┤
+   │                                 │
+   │           Content               │
+   │          (scrollt)              │
+   │                                 │
+   ├─────────────────────────────────┤
+   │       Bottom-Tab-Bar            │
+   └─────────────────────────────────┘
 
-   GRID OHNE USP-Bar (Standard):
-   ┌─────────┬──────────────────────┐
-   │         │                      │
-   │ sidebar │       content        │
-   │         │      (scrollt)       │
-   │         │                      │
-   └─────────┴──────────────────────┘
-
-   GRID MIT USP-Bar (nur auf Stronger-Home):
+   DESKTOP (>1024px):
    ┌─────────┬──────────────────────┐
    │         │                      │
    │ sidebar │       content        │
    │         │                      │
    │         ├──────────────────────┤
-   │         │      usp-bar         │
+   │         │  usp-bar (optional)  │
    └─────────┴──────────────────────┘
 ══════════════════════════════════════════════════════════════════ */
 
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE-FIRST: Standard-Layout ist Mobile
+═══════════════════════════════════════════════════════════ */
+
 .app {
   display: grid;
-  grid-template-columns: var(--sidebar-width) 1fr;
-  /* Standard: nur eine Zeile (Content nimmt vollen Platz) */
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: var(--topbar-height) 1fr var(--bottom-tabs-height);
   grid-template-areas:
-    "sidebar content";
+    "topbar"
+    "content"
+    "bottom-tabs";
 
   height: 100vh;
   height: 100dvh;
@@ -39,20 +44,24 @@
 }
 
 
-/* Wenn USP-Bar sichtbar ist: zweite Grid-Zeile aktivieren */
-.app.has-usp-bar {
-  grid-template-rows: 1fr auto;
-  grid-template-areas:
-    "sidebar content"
-    "sidebar usp-bar";
-}
+/* ═══════════════════════════════════════════════════════════
+   DESKTOP-LAYOUT (ab 1025px)
+═══════════════════════════════════════════════════════════ */
 
+@media (min-width: 1025px) {
 
-/* ══════════════════════════════════════════════════════════════════
-   Mobile-Anpassung
-══════════════════════════════════════════════════════════════════ */
-@media (max-width: 640px) {
-  :root {
-    --sidebar-width: var(--sidebar-width-mobile);
+  .app {
+    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "sidebar content";
+  }
+
+  /* Wenn USP-Bar sichtbar (.has-usp-bar Klasse): zweite Zeile aktivieren */
+  .app.has-usp-bar {
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "sidebar content"
+      "sidebar usp-bar";
   }
 }

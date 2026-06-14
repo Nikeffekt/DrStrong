@@ -3,6 +3,9 @@
 ══════════════════════════════════════════════════════════════════ */
 
 .usp-bar {
+  /* Grid-Bereich: USP-Bar nimmt unteren Bereich (neben Sidebar) */
+  grid-area: usp-bar;
+
   position: relative;
   background: var(--bg-sidebar);
   border-top: 1px solid var(--line);

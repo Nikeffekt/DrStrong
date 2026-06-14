@@ -3,10 +3,14 @@
 ══════════════════════════════════════════════════════════════════ */
 
 .content {
+  /* Grid-Bereich: Content nimmt mittleren/oberen Bereich */
+  grid-area: content;
+
   background: var(--bg-base);
-  min-height: 100vh;
-  min-height: 100dvh;
+
+  /* DIES ist der EINZIGE Bereich der scrollt */
   overflow-y: auto;
+  overflow-x: hidden;
 
   /* Subtile Hintergrund-Atmosphaere */
   background:
@@ -17,9 +21,11 @@
     ),
     var(--bg-base);
 
-  /* Grid: oben Inhalt flexibel, unten USP-Leiste fix */
-  display: grid;
-  grid-template-rows: 1fr auto;
+  /* Smooth-Scroll fuer interne Links/Navigation */
+  scroll-behavior: smooth;
+
+  /* Smooth-Scrolling auf iOS */
+  -webkit-overflow-scrolling: touch;
 }
 
 
@@ -48,6 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100%;
   padding: 40px;
 }
 

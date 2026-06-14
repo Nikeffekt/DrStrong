@@ -1,14 +1,36 @@
 /* ══════════════════════════════════════════════════════════════════
-   app.css – Hauptlayout der App
+   app.css – App-Shell-Layout
 
-   Sidebar links (fix), Content rechts (flexibel).
+   Das ist das HERZ der Layout-Architektur:
+   - Sidebar links: nimmt volle Hoehe, fixe Breite, scrollt nicht
+   - Content mitte/oben: einziger Bereich der scrollt
+   - USP-Bar unten: fix am Boden, scrollt nicht
+
+   GRID:
+   ┌─────────┬──────────────────────┐
+   │         │                      │
+   │ sidebar │       content        │  ← 1fr (nimmt verbleibenden Platz)
+   │         │      (scrollt)       │
+   │         │                      │
+   │         ├──────────────────────┤
+   │         │      usp-bar         │  ← auto (so hoch wie ihr Inhalt)
+   └─────────┴──────────────────────┘
 ══════════════════════════════════════════════════════════════════ */
 
 .app {
   display: grid;
   grid-template-columns: var(--sidebar-width) 1fr;
-  min-height: 100vh;
-  min-height: 100dvh;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "sidebar content"
+    "sidebar usp-bar";
+
+  /* Volle Bildschirm-Hoehe, NICHT mehr */
+  height: 100vh;
+  height: 100dvh;  /* dvh = dynamic viewport height (besser auf Mobile) */
+
+  /* App scrollt NICHT - nur der content-Bereich scrollt intern */
+  overflow: hidden;
 }
 
 

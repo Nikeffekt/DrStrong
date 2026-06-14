@@ -13,6 +13,9 @@
 html, body {
   height: 100%;
   overscroll-behavior: none;
+  /* WICHTIG: Body scrollt NICHT mehr.
+     Scrolling passiert NUR im .content-Bereich (App-Shell-Pattern) */
+  overflow: hidden;
 }
 
 body {

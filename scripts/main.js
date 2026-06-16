@@ -22,6 +22,7 @@
     if (window.BottomTabs  && window.BottomTabs.init)  window.BottomTabs.init();
     if (window.Topbar      && window.Topbar.init)      window.Topbar.init();
     if (window.UspBar      && window.UspBar.init)      window.UspBar.init();
+    if (window.DrStrong    && window.DrStrong.init)    window.DrStrong.init();
 
     console.log('✓ UI bereit');
 

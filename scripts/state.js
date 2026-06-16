@@ -11,6 +11,7 @@
 
 /* ──── PRODUKT-DATENBANK ──── */
 /* Wird beim Start aus data/produkte.json geladen (produkte-loader.js) */
+/* IDs werden beim Laden normalisiert (Unterstrich -> Bindestrich) */
 /* Struktur: { 'kreatin': { hauptprodukt: {...}, alternativen: [...], alle: [...] } } */
 var DB = {};
 
@@ -19,6 +20,14 @@ var DB = {};
 /* Wird aus data/wirkstoffe-wissen.json geladen */
 /* Struktur: { 'kreatin': { name, evidenz, dosierung, kontraindikationen, ... } } */
 var WIRKSTOFFE_WISSEN = {};
+
+
+/* ──── WIRKSTOFF-METADATEN ──── */
+/* Wird aus data/wirkstoffe_meta.json geladen (wirkstoffe-meta-loader.js) */
+/* IDs werden beim Laden normalisiert (Unterstrich -> Bindestrich) */
+/* Struktur: { 'vitamin-d3': { id, name, emoji, tagline, kategorie, ... } } */
+/* Plus: WIRKSTOFFE_META._kategorien und WIRKSTOFFE_META._prioritaeten */
+var WIRKSTOFFE_META = {};
 
 
 /* ──── WIRKSTOFF-DETAILS ──── */

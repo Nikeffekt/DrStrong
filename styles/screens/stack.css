@@ -1,0 +1,239 @@
+/* ══════════════════════════════════════════════════════════════════
+   stack.css – Stack-Screen Styles
+
+   Zwei Bereiche:
+   1. .stack-empty       Empty-State (kein Quiz gemacht)
+   2. .stack-list/.stack-card  Flache Liste empfohlener Wirkstoffe
+
+   Stil-Anlehnung an wissen.css (gleiche Card-Sprache, Mint-Akzente).
+══════════════════════════════════════════════════════════════════ */
+
+
+/* ──── Screen-Container ──── */
+.screen--stack {
+  padding: 40px;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   HEADER (gefuellter Stack)
+══════════════════════════════════════════════════════════════════ */
+.stack__header {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.stack__title {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 38px;
+  letter-spacing: 0.005em;
+  color: var(--text-1);
+  margin: 0 0 6px 0;
+}
+
+.stack__subtitle {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  text-transform: lowercase;
+  margin: 0;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   STACK-LISTE (flach)
+══════════════════════════════════════════════════════════════════ */
+.stack-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 780px;
+}
+
+
+/* ──── Einzelne Karte ──── */
+.stack-card {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  gap: 16px;
+
+  padding: 16px 18px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  cursor: pointer;
+  transition: all var(--t-fast) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.stack-card:hover {
+  border-color: var(--line-mint);
+  background: var(--mint-faint);
+  transform: translateX(2px);
+}
+
+.stack-card:active {
+  transform: scale(0.99);
+}
+
+
+/* ──── Ikon links ──── */
+.stack-card__ikon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  line-height: 1;
+
+  background: var(--mint-soft);
+  border-radius: 10px;
+}
+
+
+/* ──── Body rechts ──── */
+.stack-card__body {
+  min-width: 0;  /* ermoeglicht Text-Ellipsis */
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.stack-card__name {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--text-1);
+  letter-spacing: 0.005em;
+}
+
+.stack-card__begruendung {
+  font-family: var(--f-body);
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.4;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   EMPTY-STATE
+══════════════════════════════════════════════════════════════════ */
+.stack-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+}
+
+.stack-empty__inner {
+  text-align: center;
+  max-width: 440px;
+}
+
+.stack-empty__label {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--text-3);
+  text-transform: lowercase;
+  margin-bottom: 14px;
+}
+
+.stack-empty__title {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 44px;
+  letter-spacing: 0.005em;
+  color: var(--text-1);
+  margin: 0 0 16px 0;
+}
+
+.stack-empty__text {
+  font-family: var(--f-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-2);
+  margin: 0 0 32px 0;
+}
+
+.stack-empty__cta {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+
+  padding: 14px 28px;
+  background: var(--mint);
+  color: var(--bg-base);
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: all var(--t-fast) var(--ease-out);
+  box-shadow: 0 0 0 0 var(--mint-glow);
+}
+
+.stack-empty__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 24px 0 var(--mint-glow);
+}
+
+.stack-empty__cta:active {
+  transform: translateY(0);
+}
+
+
+/* Variante "alt": Quiz zwar gemacht, aber leerer Stack
+   (Edge-Case, ohne CTA-Button) */
+.stack-empty--alt {
+  min-height: 40vh;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   Mobile-Anpassung
+══════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .screen--stack {
+    padding: 24px 16px;
+  }
+
+  .stack__title {
+    font-size: 28px;
+  }
+
+  .stack-card {
+    grid-template-columns: 42px 1fr;
+    padding: 14px 14px;
+    gap: 12px;
+  }
+
+  .stack-card__ikon {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+
+  .stack-card__name {
+    font-size: 15px;
+  }
+
+  .stack-card__begruendung {
+    font-size: 12px;
+  }
+
+  .stack-empty__title {
+    font-size: 32px;
+  }
+}

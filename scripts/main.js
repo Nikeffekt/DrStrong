@@ -2,7 +2,7 @@
    main.js – Stronger Hauptdatei
 
    Aufgaben:
-   - Daten laden (Wirkstoffe + Produkte)
+   - Daten laden (Wirkstoffe + Produkte + Meta)
    - UI-Module initialisieren
 
    Reihenfolge:
@@ -54,6 +54,11 @@
 
     if (window.ProdukteLoader && window.ProdukteLoader.laden) {
       ladeAufgaben.push(window.ProdukteLoader.laden());
+    }
+
+    // ── Wirkstoff-Metadaten (Emoji, Tagline, Einnahme) ──
+    if (window.WirkstoffeMetaLoader && window.WirkstoffeMetaLoader.laden) {
+      ladeAufgaben.push(window.WirkstoffeMetaLoader.laden());
     }
 
     Promise.all(ladeAufgaben).then(function () {

@@ -391,6 +391,12 @@
       "schwangerschaft": {
         "relevant": true,
         "kommentar": "Vitamin D ist essentiell für die Knochen- und Immunentwicklung des Kindes. Empfehlung: 1000-2000 IU täglich nach ärztlicher Rücksprache."
+      },
+      "rehabilitation_immobilitaet": {
+        "relevant": true,
+        "staerke": 0.85,
+        "kommentar": "Hohe Relevanz in der Reha. Vitamin D3 unterstützt Muskel-funktion, Knochengesundheit und Sturzprävention – alles Faktoren, die bei Immobilität und postoperativer Reha kritisch sind. Mangel ist in dieser Population zudem häufig (reduzierte Sonnenexposition).",
+        "quelle": "PDF Modul 11"
       }
     },
     "warnhinweise": [
@@ -596,6 +602,12 @@
         "wert": "vorhofflimmern_hochrisiko",
         "schwere": "vorsichtig",
         "hinweis": "Bei bekanntem Vorhofflimmern oder hohem Herz-Kreislauf-Risiko keine Hochdosis (>1,5 g/Tag) ohne ärztliche Begleitung – Hochdosis erhöht in dieser Gruppe das Vorhofflimmern-Risiko."
+      },
+      {
+        "art": "allergie",
+        "wert": "fischallergie",
+        "schwere": "hart",
+        "hinweis": "Bei bestätigter Fischallergie konventionelle Fischöl-Produkte NICHT verwenden – Allergenrückstände möglich. Alternative: Algenöl-basierte Omega-3-Präparate, die fischfrei sind und vergleichbare EPA/DHA-Werte liefern."
       }
     ],
     "dosierung": {
@@ -2209,6 +2221,12 @@
         "wert": "langzeit_unklar",
         "schwere": "vorsichtig",
         "hinweis": "Die Sicherheit über sehr lange Zeiträume (viele Monate bis Jahre) ist nicht umfassend untersucht. Kurz- bis mittelfristig gilt Beta-Alanin in empfohlener Dosis als sicher."
+      },
+      {
+        "art": "medizinisch",
+        "wert": "schwangerschaft",
+        "schwere": "hart",
+        "hinweis": "In Schwangerschaft und Stillzeit NICHT empfohlen – keinerlei Sicherheitsdaten verfügbar. Das charakteristische Parästhesie-Empfinden ist zudem bei betroffenen Frauen schwer einzuordnen. Vor erneuter Einnahme nach der Stillzeit Arzt fragen."
       }
     ],
     "dosierung": {
@@ -2843,6 +2861,12 @@
         "relevant": true,
         "staerke": 0.6,
         "kommentar": "Wer wenig Obst und Gemüse isst, profitiert am ehesten von einer moderaten Supplementierung zur Deckung des Grundbedarfs."
+      },
+      "rehabilitation_immobilitaet": {
+        "relevant": true,
+        "staerke": 0.7,
+        "kommentar": "Wichtig in Reha-Phasen: Vitamin C ist Co-Faktor der Kollagen-synthese und damit zentral für Wundheilung, Bindegewebe und Sehnen-Reparatur nach Operationen oder Verletzungen. Bei längerer Immobilität zusätzlich oxidative Belastung erhöht.",
+        "quelle": "PDF Modul 11"
       }
     },
     "warnhinweise": [
@@ -3006,6 +3030,12 @@
         "wert": "ausreichende_proteinzufuhr",
         "schwere": "vorsichtig",
         "hinweis": "Keine gesundheitliche Gefahr, aber: Bei bereits ausreichender Proteinzufuhr (≥1,6 g/kg) ist der Zusatznutzen minimal – das Geld ist meist besser in normale Proteinquellen investiert."
+      },
+      {
+        "art": "medizinisch",
+        "wert": "schwangerschaft",
+        "schwere": "hart",
+        "hinweis": "In Schwangerschaft und Stillzeit NICHT empfohlen, sofern keine ärztlich diagnostizierte Mangelversorgung vorliegt. EAA-Supplementierung in hohen Dosen kann den Aminosäurehaushalt verschieben; eine ausgewogene Protein-aufnahme über Lebensmittel ist im Schwangerschafts-Kontext sicherer und ausreichend."
       }
     ],
     "dosierung": {
@@ -3472,6 +3502,12 @@
         "wert": "diabetes_medikamente",
         "schwere": "vorsichtig",
         "hinweis": "Curcumin kann Blutzucker senken – in Kombination mit Insulin/Metformin Risiko einer Hypoglykämie. Engmaschiges Blutzucker-Monitoring."
+      },
+      {
+        "art": "medizinisch",
+        "wert": "schwangerschaft",
+        "schwere": "hart",
+        "hinweis": "In Schwangerschaft NICHT empfohlen – Curcumin in supplementierten Dosen kann uterotonisch wirken und ist mit erhöhtem Risiko für Komplikationen assoziiert. Auch in der Stillzeit unzureichend untersucht. Gewürz-Mengen in der Ernährung sind unbedenklich."
       }
     ],
     "dosierung": {
@@ -3736,6 +3772,12 @@
         "wert": "tmao_kardiovaskulaer",
         "schwere": "info",
         "hinweis": "L-Carnitin wird von Darmbakterien zu TMAO (Trimethylamin-N-Oxid) verstoffwechselt – einem Marker für kardiovaskuläres Risiko. Bei bekannten Herzerkrankungen: Vorsicht und ärztliche Begleitung empfohlen."
+      },
+      {
+        "art": "medizinisch",
+        "wert": "schwangerschaft",
+        "schwere": "hart",
+        "hinweis": "In Schwangerschaft und Stillzeit NICHT empfohlen. Unzureichende Sicherheitsdaten für supplementierte Dosen (2–4 g/Tag); zudem mögliche Wirkung auf den TMAO-Stoffwechsel. Der Carnitin-Bedarf wird in der Schwangerschaft physiologisch reguliert."
       }
     ],
     "dosierung": {
@@ -4217,6 +4259,12 @@
         "wert": "minderjaehrig",
         "schwere": "hart",
         "hinweis": "Für Personen unter 18 Jahren NICHT empfohlen. Pre-Workouts werden teilweise an Jugendliche vermarktet – dosis-mäßig aber nur für Erwachsene mit Krafttraining-Erfahrung sinnvoll."
+      },
+      {
+        "art": "medikament",
+        "wert": "antidepressiva_ssri",
+        "schwere": "hart",
+        "hinweis": "Bei Antidepressiva (SSRIs, SNRIs, MAO-Hemmer) NICHT empfohlen. Stimulanzien wie Koffein und andere Pre-Workout-Inhaltsstoffe können in Kombination mit serotonin-modulierenden Wirkstoffen Blutdruck, Herzfrequenz und Angstsymptome verstärken; bei MAO-Hemmern besteht erhöhtes Risiko für ein Serotonin-Syndrom. Mit behandelnder Ärztin/Arzt abklären."
       }
     ],
     "dosierung": {
@@ -4872,7 +4920,7 @@
       {
         "art": "medikament",
         "wert": "antidepressiva_ssri",
-        "schwere": "vorsichtig",
+        "schwere": "hart",
         "hinweis": "Bei SSRIs (Fluoxetin, Sertralin) und SNRIs: Wechselwirkung möglich (Serotonin-Modulation). Mit Arzt absprechen."
       },
       {
@@ -5412,7 +5460,7 @@
       {
         "art": "medizinisch",
         "wert": "niereninsuffizienz",
-        "schwere": "vorsichtig",
+        "schwere": "hart",
         "hinweis": "Bei Niereninsuffizienz kann Magnesium akkumulieren. Vor Einnahme Arzt fragen und Nierenfunktion prüfen."
       },
       {
@@ -5444,6 +5492,12 @@
         "wert": "diuretika_thiazid",
         "schwere": "vorsichtig",
         "hinweis": "Thiazid-Diuretika können den Magnesium-Spiegel beeinflussen. Bei gleichzeitiger Einnahme Arzt fragen."
+      },
+      {
+        "art": "medizinisch",
+        "wert": "schwangerschaft",
+        "schwere": "hart",
+        "hinweis": "In Schwangerschaft und Stillzeit NICHT empfohlen. Die in ZMA üblichen Zink-Dosen (30 mg+) und das enthaltene Vitamin B6 (10–15 mg) können bei Langzeit-Einnahme den mütterlichen und kindlichen Mikronährstoffhaushalt belasten. Bedarf über ein Schwangerschafts-Multivitamin decken."
       }
     ],
     "dosierung": {
@@ -5677,7 +5731,7 @@
       {
         "art": "medizinisch",
         "wert": "niereninsuffizienz_dialyse",
-        "schwere": "vorsichtig",
+        "schwere": "hart",
         "hinweis": "Calcium-HMB enthält Calcium – bei Dialysepatienten mit Calcium-Restriktionen: alternative Form (FA-HMB) oder ärztliche Rücksprache."
       },
       {
@@ -5725,8 +5779,9 @@
       },
       "rehabilitation_immobilitaet": {
         "relevant": true,
-        "staerke": 0.65,
-        "kommentar": "Bei Bettlägrigkeit, postoperativer Reha: reduziert Muskelverlust. Klinisch relevant in Krankenhäusern."
+        "staerke": 0.9,
+        "kommentar": "HAUPTINDIKATION laut ESPEN/PDF Modul 11. Bei Bettlägrigkeit, postoperativer Reha und längerer Immobilität reduziert HMB den Muskelverlust signifikant. Stark klinisch belegt – einer der wenigen Wirkstoffe mit echtem Reha-Nutzen.",
+        "quelle": "Wu 2015, Cruz-Jentoft 2017 (ESPEN)"
       },
       "anfaenger_krafttraining": {
         "relevant": true,

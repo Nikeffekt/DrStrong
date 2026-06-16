@@ -112,7 +112,7 @@
 }
 
 
-/* Mobile: deutlich kleiner und tiefer transparent damit nicht stoert */
+/* Mobile: deutlich kleiner – aber gleiche Opacity wie Desktop */
 @media (max-width: 1024px) {
   .dr-strong {
     height: 30vh;
@@ -120,7 +120,6 @@
     right: 4px;
     /* Steht ueber den Bottom-Tabs (nicht drauf!) */
     bottom: calc(var(--bottom-tabs-height) + 4px);
-    opacity: 0.5;
   }
 }
 

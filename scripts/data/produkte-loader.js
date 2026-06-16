@@ -3,8 +3,15 @@
 
    Befuellt die globale DB-Variable mit Produkten.
 
+   ID-Normalisierung:
+   produkte.json verwendet historisch Unterstrich-IDs (z.B. "iso_clear",
+   "vitamin_d3"). Damit die App einheitlich mit Bindestrich-IDs arbeitet,
+   werden die Wirkstoff-Keys beim Einlesen ueber Normalisierung.normalisiereId()
+   umgewandelt. Siehe normalisierung.js.
+
    Abhaengigkeiten:
    - state.js (DB)
+   - normalisierung.js (normalisiereId)
 ============================================================ */
 
 window.ProdukteLoader = (function () {
@@ -40,13 +47,23 @@ window.ProdukteLoader = (function () {
     var wirkstoffe = jsonDaten && jsonDaten.wirkstoffe;
     if (!wirkstoffe) return;
 
+    // Fallback wenn Normalisierung-Modul (aus welchem Grund auch immer)
+    // nicht geladen wurde: Identitaetsfunktion verwenden.
+    var normId = (window.Normalisierung && window.Normalisierung.normalisiereId)
+                  ? window.Normalisierung.normalisiereId
+                  : function (id) { return id; };
+
     Object.keys(wirkstoffe).forEach(function (jsonKey) {
       var w = wirkstoffe[jsonKey];
       if (!w.anbieter || !w.anbieter.length) return;
 
       var alleProdukte = w.anbieter.map(anbieterZuProdukt);
 
-      DB[jsonKey] = {
+      // ── ID normalisieren beim Schreiben in DB ──
+      // "iso_clear" -> "iso-clear", "vitamin_d3" -> "vitamin-d3"
+      var normalisierterKey = normId(jsonKey);
+
+      DB[normalisierterKey] = {
         hauptprodukt: alleProdukte[0],
         alternativen: alleProdukte.slice(1),
         alle:         alleProdukte

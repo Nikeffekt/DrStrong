@@ -534,16 +534,12 @@ window.QuizScreen = (function () {
       console.log('  Empfohlen: ' + stack.meta.anzahl_empfohlen);
       console.log('  Optional:  ' + stack.meta.anzahl_optional);
 
-      // ── TODO Schritt B: Navigation zum Stack-Screen ──
-      // window.Navigation.zeigeScreen('stack');
-      alert(
-        'Stack berechnet ✓\n\n' +
-        'Essential: ' + stack.meta.anzahl_essential + '\n' +
-        'Empfohlen: ' + stack.meta.anzahl_empfohlen + '\n' +
-        'Optional: '  + stack.meta.anzahl_optional + '\n\n' +
-        'Detail-Ansicht kommt in Phase 3 Schritt B.\n' +
-        'Volle Daten in Console (F12).'
-      );
+      // ── Phase 3 Schritt B: Navigation zum Stack-Screen ──
+      if (window.Navigation && window.Navigation.zeige) {
+        window.Navigation.zeige('stack');
+      } else {
+        console.warn('Navigation-Modul nicht verfuegbar');
+      }
     });
 
     var $btnNochmal = document.getElementById('quiz-nochmal');

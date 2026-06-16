@@ -108,6 +108,11 @@ window.Navigation = (function () {
           window.QuizScreen.zeige();
         }
         break;
+      case 'stack':
+        if (window.StackScreen && window.StackScreen.zeige) {
+          window.StackScreen.zeige();
+        }
+        break;
     }
 
     console.log('Screen gewechselt:', neuerScreen);

@@ -26,6 +26,25 @@
     console.log('✓ UI bereit');
 
 
+    /* ─── 1.5 Gespeicherten Stack aus localStorage laden ─── */
+    /* Wenn der User die App schon mal benutzt hat: AW und */
+    /* aktuellerStack wiederherstellen, ohne Engine neu zu rechnen. */
+    if (window.StackPersistenz && window.StackPersistenz.laden) {
+      var gespeichert = window.StackPersistenz.laden();
+      if (gespeichert) {
+        // AW wiederherstellen (in-place, weil globale Referenz)
+        if (gespeichert.aw) {
+          for (var k in gespeichert.aw) {
+            if (gespeichert.aw.hasOwnProperty(k)) AW[k] = gespeichert.aw[k];
+          }
+        }
+        window.aktuellerStack = gespeichert.stack || null;
+        console.log('✓ Gespeicherter Stack wiederhergestellt (vom ' +
+                    gespeichert.gespeichert_am + ')');
+      }
+    }
+
+
     /* ─── 2. Daten im Hintergrund laden ─── */
     var ladeAufgaben = [];
 

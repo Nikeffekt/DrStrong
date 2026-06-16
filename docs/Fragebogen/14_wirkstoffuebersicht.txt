@@ -1,0 +1,145 @@
+Stronger - Modul 14: Wirkstoff-Uebersicht Spec v2 | Juni 2026
+Stronger Quiz
+Modul 14 – Wirkstoff-Übersicht (alle 25 Wirkstoffe)
+Dieses Modul bietet eine kompakte Übersicht aller 25 Wirkstoffe der Stronger-Wissensbasis. Detaillierte
+Informationen (alle Mythen, Studien-Volltexte, Mechanismus) finden sich in den strukturierten
+JSON-Dateien der Datenbank.
+1. Proteine
+Wirkstoff Lvl Dosis Hauptevidenz Indikation / Hinweis
+Whey-Konzentrat A 20-30 g/Portion +0,30 kg Magermasse Muskelaufbau, allgemeine
+(Morton 2018) Proteinversorgung. Standard-Whey mit
+4-5 % Laktose.
+ISO Clear A 20-30 g/Portion Identische Wirkung wie WPC, Wie Whey, bei Laktoseintoleranz. NICHT
+(Whey-Isolat) 1 % Laktose bei Milcheiweiss-Allergie.
+Pflanzenprotein A 30-40 g/Portion SMD -0,02 vs. Whey (Nguo Vegan, Milchallergie, ethisch. Soja,
+2024, n.s.) Erbse-Reis-Blend optimal.
+EAA (Essentielle B 10-15 g Stimuliert MPS, redundant zu Nur bei sehr erfahrenen Athleten in Diät
+AS) pre/intra Whey sinnvoll.
+2. Performance & Krafttraining
+Wirkstoff Lvl Dosis Hauptevidenz Indikation / Hinweis
+Kreatin Monohydrat A 3-5 g/Tag +4,43 kg OK, +11,35 kg UK Muskelaufbau, Kraft, anaerobe Leistung.
+(1RM) Bestuntersuchtes Supplement.
+Beta-Alanin B 3-5 g/Tag +2,85 % Time-to-Exhaustion Hochintensive Belastungen 1-4 Min.
+(geteilt) (60-240s) Paresthesia-Hinweis.
+HMB B 3 g/Tag SMD 0,48 Gangtempo bei Senioren, Reha, Diät (NICHT jüngere –
+Sarkopenie Jakubowski 2020).
+L-Carnitin B 2-3 g/Tag -1,21 kg Gewicht (Khosravi Fettabbau-Phase, Recovery. Nur in
+2020) Kombination mit Defizit.
+Pre-Workout B 1 Portion pre +12,5 % Anaerob-Kapazität Hochintensives Training. VORSICHT
+Sicherheit (5 von 7 Kontraind.).
+Koffein A 3-6 mg/kg KG +11-12 % Ausdauer Performance pre-workout, Wachheit.
+(Meta-Analyse) Toleranzentwicklung beachten.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 14: Wirkstoff-Uebersicht Spec v2 | Juni 2026
+3. Vitamine & Mineralstoffe
+Wirkstoff Lvl Dosis Hauptevidenz Indikation / Hinweis
+Vitamin D3 (+ K2) A 1000-4000 IE -12 % Atemwegsinfekte Allgemein, Knochen, Immunsystem.
+(Martineau 2017) Mitteleuropa: praktisch immer Mangel.
+Omega-3 A 2-3 g/Tag -8 % CV-Mortalität Kardio-Prävention, Entzündung. Algenöl
+(EPA/DHA) (n=176.253) bei Veganern.
+Vitamin B12 A 500-1000 92 % Veganer mit Defizit Vegetarier/Veganer, Senioren, Frauen.
+µg/Tag (Pawlak 2014) Bei Veganern ZWINGEND.
+Magnesium-Bisglyci B 300-400 mg Schlafqualität +, Schlaf, Regeneration, Sport. Bisglycinat
+nat Krampfreduktion (Mah 2020) optimal verträglich.
+Eisen + Vitamin C B 14-18 mg + 80 Hb-Verbesserung bei Mangel Frauen prämenopausal, Sport,
+mg Vegetarier. NICHT prophylaktisch.
+Vitamin C B 500-1000 mg -50 % Erkältungsdauer bei Sport, Immunsystem, Eisen-Cofaktor,
+Sportlern Cortisol-Modulation.
+Zink C 10-25 mg T-Effekt nur bei Mangel Männer, Vegetarier, Immunsystem.
+(schwach) Marketing-Mythen!
+Multivitamin B 1 Tablette/Tag Lücken-Schliesser, kein Unsicherheit über Versorgung.
+eigener Effekt Sicherheitsnetz.
+Elektrolyte C Bedarfsorientie Verhindert Ausdauer >60 Min, Hitze, Schweiss.
+rt Dehydration/Krämpfe HART bei Niereninsuffizienz.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 14: Wirkstoff-Uebersicht Spec v2 | Juni 2026
+4. Recovery, Adaptogene & Spezialwirkstoffe
+Wirkstoff Lvl Dosis Hauptevidenz Indikation / Hinweis
+Ashwagandha B/ 300-600 Cortisol -25 %, DASS-21 Stress-Reduktion, Schlaf, Recovery.
+(KSM-66) C mg/Tag verbessert HART bei Schilddrüse/SSRIs.
+Melatonin B 0,5-2 mg -7 Min Einschlaflatenz Einschlafprobleme. DE: ab 2mg
+(Ferracioli 2013) Rx-pflichtig. HART bei Antidepressiva.
+ZMA (Zn + Mg + B6) C 30+450+11 mg Replikations-Krise: T-Effekt Schlaf/Recovery. Magnesium einzeln oft
+nicht repliziert besser. HART bei Niereninsuff.
+Kollagen-Hydrolysat B 10 g/Tag +12 % Sprungkraft 48h post Recovery, Gelenke, Haut (ab 35).
+(Bischof 2024) Industrie-finanzierte Studienlage.
+Curcumin (BCM-95) B 500-1000 mg SMD -1,63 Knie-OA-Schmerz Gelenkprobleme, Entzündung. HART bei
+Leber/Blutverdünnern.
+Probiotika B Stammspezifis Reizdarm-Verbesserung GI-Probleme, Antibiotika-Begleitung.
+ch (Stamm-abhängig) Stamm-Wahl entscheidend.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 14: Wirkstoff-Uebersicht Spec v2 | Juni 2026
+5. Aktive Mythen-Aufklärung
+Eine Besonderheit der Stronger-Wissensbasis ist, dass jeder Wirkstoff ein eigenes Feld für „Mythen“ hat.
+Diese werden dem User aktiv im Profil-Popup angezeigt – wir korrigieren so Falschvorstellungen, die der
+User möglicherweise aus dem Marketing mitbringt.
+Wirkstoff Verbreiteter Mythos Wissenschaftliche Realität
+Kreatin „Kreatin schädigt die Nieren“ Bei gesunden Nieren nephrologisch unbedenklich (ISSN
+2017)
+Kreatin „Kreatin macht aufgequollen“ Wassereinlagerung INTRAzellulär (Muskel), nicht
+subkutan
+ISO Clear „Isolat ist wirksamer als Konzentrat“ Meta-Analyse: SMD 0,0 (Castro 2019), kein Unterschied
+Whey „Whey ist genauso gut wie Bei adäquater Dosis ja, ABER pflanzlich braucht 30-40g
+Pflanzenprotein“ statt 20-25g
+ZMA „ZMA erhöht Testosteron“ Originalstudie nicht repliziert. Replikations-Krise
+HMB „HMB ist wichtig für junge Trainierende“ Jakubowski 2020: KEINE Effekte bei Jungen, nur
+Senioren
+Kollagen „Kollagen wird unverdaut absorbiert“ Wird zu Aminosäuren aufgespalten, dann re-synthetisiert
+Zink „Zink steigert massiv Testosteron“ Nur bei Mangel. Bei adäquater Versorgung kein Effekt
+L-Carnitin „L-Carnitin verbrennt Fett ohne Sport“ Wirkt nur bei gleichzeitigem Kaloriendefizit
+Curcumin „Curcumin ist immer sicher (natürlich)“ Hepatotoxizität dokumentiert (DILIN-Netzwerk)
+Pre-Workout „Pre-Workout ist nur Koffein“ Oft 5-10 Wirkstoffe inkl. potenziell riskanter Stimulanzien
+Melatonin „Melatonin macht abhängig“ Kein Abhängigkeitspotenzial dokumentiert
+Ashwagandha „Ashwagandha ist sicher für alle“ Schilddrüse, Antidepressiva: gefährliche Interaktionen
+EAA „EAA sind besser als Whey“ Bei normaler Proteinaufnahme redundant. Nur in
+Spezialsituationen sinnvoll
+BCAA „BCAA bauen Muskeln auf“ Ohne EAA und ausreichend Protein kein eigener
+anaboler Effekt
+Multivitamin „Multivitamin löst alle Mängel“ Bei spezifischen Mängeln einzelne Wirkstoffe präziser
+dosiert
+Vitamin D „Sonne reicht in Mitteleuropa“ 60 % der Bevölkerung im Winter im Mangel-Bereich
+Omega-3 „Leinsöl reicht aus“ Konversion ALA zu EPA nur 5-10 %, zu DHA nur 0,5-5 %
+Probiotika „Joghurt enthält genug Probiotika“ Joghurt-Kulturen überleben Magenpassage meist nicht.
+Spezifische Stämme nötig.
+Eisen „Eisen ist immer gut bei Müdigkeit“ Eisen-Überdosis schädigt Leber. Nur bei
+nachgewiesenem Mangel.
+Koffein „Mehr Koffein = mehr Leistung“ Plateau bei 3-6 mg/kg KG. Mehr verursacht Tachykardie
+und Schlafprobleme.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 14: Wirkstoff-Uebersicht Spec v2 | Juni 2026
+6. Vollständige Liste aller 25 Wirkstoffe
+Die folgende Liste fasst alle Wirkstoffe der Datenbank mit ihrer JSON-ID und Hauptkategorie zusammen:
+# JSON-ID Anzeigename Kategorie Evidenz
+1 kreatin_monohydrat Kreatin Monohydrat Performance A
+2 vitamin_d3_k2 Vitamin D3 + K2 Vitamine A
+3 omega_3 Omega-3 (EPA/DHA) Essenzielle Fettsäuren A
+4 magnesium_bisglycinat Magnesium-Bisglycinat Mineralstoffe B
+5 whey_protein Whey-Konzentrat Protein A
+6 iso_clear ISO Clear (Whey-Isolat) Protein A
+7 pflanzenprotein Pflanzenprotein Protein A
+8 zink Zink Mineralstoffe C
+9 ashwagandha Ashwagandha (KSM-66) Adaptogen B/C
+10 beta_alanin Beta-Alanin Performance B
+11 vitamin_b12 Vitamin B12 Vitamine A
+12 elektrolyte Elektrolyte Mineralstoffe C
+13 vitamin_c Vitamin C Vitamine B
+14 eaa EAA (Essentielle AS) Aminosäuren C
+15 kollagen Kollagen-Hydrolysat Recovery B
+16 curcumin Curcumin (BCM-95) Phytopharmaka B
+17 l_carnitin L-Carnitin Fettstoffwechsel B
+18 koffein Koffein Performance A
+19 pre_workout Pre-Workout (Multi-Kombi) Performance B
+20 eisen Eisen + Vitamin C Mineralstoffe B
+21 multivitamin Multivitamin Allgemein B
+22 melatonin Melatonin Schlaf B
+23 probiotika Probiotika GI-Gesundheit B
+24 zma ZMA (Zn + Mg + B6) Recovery C
+25 hmb HMB Muskelschutz B
+Aktuelle Anzahl: 25 Wirkstoffe in der Wissensbasis (Stand Juni 2026, Spec v2). Erweiterungen sind
+geplant, insbesondere im Bereich Nootropics (L-Theanin, Bacopa, Rhodiola), spezifischer Aminosäuren
+(Citrullin, Glycin) und weiterer Adaptogene.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5

@@ -1,0 +1,151 @@
+Stronger - Modul 8: Frage Ernaehrung Spec v2 | Juni 2026
+Stronger Quiz
+Modul 8 – Frage 7: Ernährungsweise
+1. Frage-Wortlaut
+„Deine Ernährungsweise?“
+Hilfetext im Quiz: „Beeinflusst Protein-Form, B12, Eisen und Omega-3.“
+2. Antwortoptionen
+Code Anzeige Definition
+A Alles essen Omnivore Ernährung ohne Einschränkungen
+B Flexitarisch Selten Fleisch, primär pflanzlich
+C Pescetarisch (NEU) Fisch und Meeresfrüchte, kein Fleisch
+D Vegetarisch Pflanzlich plus Milchprodukte/Eier, kein Fleisch/Fisch
+E Vegan Ausschließlich pflanzlich, keine tierischen Produkte
+Spec v2-Änderung: Pescetarisch wurde als eigene Kategorie ergänzt. Pescetarier sind keine Vegetarier
+(sie essen Fisch) und können daher Fischöl-Omega-3 zu sich nehmen. Die frühere Behandlung als
+Vegetarier führte zu unnötigen Algenöl-Empfehlungen.
+3. Klinische Begründung
+Die Ernährungsform beeinflusst die Versorgung mit mehreren kritischen Nährstoffen erheblich. Aus
+klinischer Sicht ist es essentiell, die spezifischen Bedürfnisse verschiedener Ernährungsformen zu
+kennen.
+3.1 Nährstoff-Versorgungs-Matrix
+Nährstoff Allesesser Vegetarier Veganer Klinische Relevanz
+Vitamin B12 Ausreichend Reduziert ZWINGEND Anämie, Neuropathie,
+Supplement Demenz-Risiko
+Eisen (Häm) Ausreichend Reduziert Nur Non-Häm Anämie-Risiko, besonders Frauen
+Omega-3 Über Fisch Limitiert Nur ALA (5 % Algenöl-Substitution empfohlen
+EPA/DHA Konvert.)
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 8: Frage Ernaehrung Spec v2 | Juni 2026
+Kreatin 1 g/Tag Sehr wenig Praktisch keines Supplementation hilfreich
+(Fleisch)
+Carnosin Hohe Mengen Reduziert Sehr wenig Bei Sport relevant (Beta-Alanin)
+Zink Ausreichend Reduziert Stärker reduziert Immunsystem, Wundheilung
+(Phytate)
+Hochwertiges Whey Whey Pflanzlich, 30-40 g statt 20-25 g Dosis
+Protein verfügbar verfügbar Leucin-Lücke
+Vitamin D Über Fisch Limitiert Nur durch Supplement-Pflicht bei Veganern
+Sonne/Suppl.
+Calcium Milchprodukte Milchprodukte Pflanzlich limitiert Knochengesundheit, Frauen
+Jod Fisch, Salz Salz Salz, Algen Schilddrüsenfunktion
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 8: Frage Ernaehrung Spec v2 | Juni 2026
+4. Wissenschaftlicher Hintergrund
+4.1 Vitamin-B12-Mangel bei Veganern
+Eine deutsche Studie zeigte, dass 92 Prozent der unbehandelten Veganer einen funktionellen Mangel an
+Vitamin B12 haben (Pawlak et al. 2014). Da B12-Mangel zu irreversiblen neurologischen Schäden führen
+kann, ist eine Supplementation bei Veganern medizinisch geboten, nicht optional. Bei Vegetariern liegt die
+Mangelprävalenz bei 30-40 Prozent, je nach Konsum-Muster.
+Symptome eines B12-Mangels können sich erst nach Jahren entwickeln (die Leber hat einen
+B12-Speicher von ca. 2-4 Jahren). Wenn Symptome auftreten, können die neurologischen Schäden
+bereits irreversibel sein. Daher ist die regelmäßige Blutkontrolle (B12, Holo-Transcobalamin, MMA) bei
+Veganern essentiell.
+Quelle: Pawlak R, Lester SE, Babatunde T (2014). The prevalence of cobalamin deficiency among vegetarians assessed by serum
+vitamin B12. European Journal of Clinical Nutrition, 68(5):541-548.
+4.2 Eisenmangel bei pflanzlich Ernährten
+Pflanzliches Eisen (Non-Häm) hat eine Bioverfügbarkeit von 2-20 Prozent, abhängig von Cofaktoren.
+Phytate, Polyphenole und Calcium hemmen die Resorption. Vitamin C steigert sie um den Faktor 2-3.
+Bei Frauen unter pflanzlicher Ernährung ist die Eisenmangel-Prävalenz signifikant erhöht – durch die
+Kombination aus reduzierter Bioverfügbarkeit und Menstruationsverlusten. Unser Quiz triggert bei dieser
+Konstellation eine starke Eisen-Empfehlung kombiniert mit Vitamin C.
+4.3 Pflanzenprotein und Leucin-Lücke
+Nguo et al. 2024 (Meta-Analyse, 17 RCTs) zeigten: Soja-Protein ist bei ausreichender Dosierung
+gleichwertig zu Whey für Muskelaufbau (SMD -0,02, n.s.). Bei einzelnen Pflanzenproteinen (Reis, Hafer
+ohne Blend) ist Whey aber überlegen (SMD -0,58).
+Die Lösung: Blends wie Erbse-Reis oder Soja-Isolat erreichen das vollständige Aminosäureprofil. Bei
+diesen Blends gibt es praktisch keinen Unterschied zu Whey mehr.
+4.4 Omega-3 bei pflanzlicher Ernährung
+Die Konversionsrate von Alpha-Linolensäure (ALA, aus Leinsamen, Walnüssen) zu EPA liegt bei ca. 5-10
+Prozent, zu DHA bei nur 0,5-5 Prozent. Bei Veganern ist Algenöl als direkte EPA/DHA-Quelle die einzig
+sinnvolle Option.
+Pescetarier hingegen können ihren Bedarf über Fischverzehr decken – sie benötigen kein Algenöl (es sei
+denn sie essen Fisch nur selten). Die Differenzierung Pescetarisch vs. Vegetarisch ist daher klinisch
+relevant.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 8: Frage Ernaehrung Spec v2 | Juni 2026
+5. Empfehlungs-Konsequenzen
+Die Empfehlungs-Engine differenziert alle 5 Ernährungsformen unterschiedlich:
+5.1 Bei Alles essen (A)
+Standard-Logik. Whey als bevorzugte Protein-Form, Fischöl-basiertes Omega-3, keine speziellen
+B12/Eisen-Boni. Wirkstoffauswahl folgt rein den anderen Quiz-Antworten.
+5.2 Bei Flexitarisch (B)
+Minimaler Hinweis auf B12-Versorgung als Vorsorgemaßnahme. Whey weiterhin als Standard. Bei sehr
+eingeschränktem Fleischverzehr (ca. 1x/Woche) leichter Eisen-Bonus. Kreatin etwas stärker priorisiert.
+5.3 Bei Pescetarisch (C) – NEU in Spec v2
+Analog zu D, aber Omega-3 nicht zwingend als Algenöl – Fischöl ist ja noch erlaubt. B12 und Eisen mit
+moderatem Bonus. Wichtig für ca. 2-3 Prozent der Bevölkerung in Westeuropa.
+5.4 Bei Vegetarisch (D)
+(cid:127) B12-Bonus: Empfohlen, da reduzierte Aufnahme
+(cid:127) Eisen-Bonus: Mittelstark, besonders bei Frauen
+(cid:127) Kreatin-Bonus: Empfohlen (weniger Aufnahme über Nahrung)
+(cid:127) Zink: Leichter Bonus (Phytate reduzieren Bioverfügbarkeit)
+(cid:127) Whey weiterhin nutzbar (es sei denn Milchallergie/Veganismus)
+(cid:127) Omega-3: Fischöl NICHT empfohlen, da Vegetarier kein Fisch essen – Algenöl-Variante
+5.5 Bei Vegan (E) – maximale Anpassung
+(cid:127) Pflanzenprotein ersetzt Whey komplett (Whey wird HART ausgeschlossen)
+(cid:127) Algenöl ersetzt Fischöl-basiertes Omega-3
+(cid:127) Vitamin B12 wird zu essential aufgewertet
+(cid:127) Eisen-Bonus stark erhöht (besonders bei Frauen)
+(cid:127) Zink mit moderatem Bonus
+(cid:127) Kreatin mit stärkerer Empfehlung
+(cid:127) Vitamin D3 mit verstärkter Empfehlung (kein Fisch als Quelle)
+(cid:127) Proteinfaktor um ca. 15 % erhöht (Leucin-Lücke kompensieren)
+(cid:127) ISO Clear wird automatisch ausgeschlossen (tierisch)
+(cid:127) Multivitamin wird leichter Empfehlung (Sicherheitsnetz)
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 8: Frage Ernaehrung Spec v2 | Juni 2026
+6. Sicherheitsrelevanz
+6.1 B12-Mangel ist neurologisch gefährlich
+Eine langfristige Unterversorgung kann zu irreversiblen Schäden am Nervensystem und Hirn führen, in
+schweren Fällen zu Demenz-ähnlichen Symptomen. Bei Veganern, die das Quiz machen, wird daher der
+Hinweis auf B12 extrem prominent platziert – nicht als Optional, sondern als medizinisch zwingend. Die
+ärztliche Kontrolle der Blutwerte (B12, Holo-TC, MMA) wird explizit empfohlen.
+6.2 Eisenmangel-Anämie
+Bei Frauen mit pflanzlicher Ernährung kann sich über Zeit ein klinisch relevanter Eisenmangel entwickeln.
+Symptome: Ermüdung, Belästungsintoleranz, Konzentrationsstörungen, Haarausfall. Bei Verdacht:
+Ferritin-Test beim Arzt (Zielwert > 50 ng/ml, bei Athletinnen > 70 ng/ml).
+6.3 Soja-Allergie bei veganer Ernährung
+Wenn ein Veganer (E) gleichzeitig Soja-Allergie angibt (Allergie F), wird Soja-basiertes Pflanzenprotein
+ausgeschlossen. Empfohlen wird dann ein Erbsen-Reis-Blend oder Hanfprotein.
+7. Limitationen
+7.1 Nicht erfasste Ernährungsformen
+Ernährungsformen wie „Low-Carb / Keto“, „Paleo“ oder „Carnivore“ werden vom Quiz nicht explizit erfasst.
+Sie wurden bewusst weggelassen, da:
+(cid:127) Bei Keto/Carnivore meist erhöhter Elektrolytbedarf besteht, was über die Trainings-Frage teilweise
+abgedeckt wird
+(cid:127) Paleo ist meist sehr ähnlich zu Standard-Omnivor mit Milchverzicht (könnte über Allergien-Frage erfasst
+werden)
+(cid:127) Die Optionen sollen mehrheitskompatibel bleiben
+(cid:127) Für diese spezielleren Diäten ist meist spezialisierte Beratung sinnvoller
+7.2 Vegan-trainierte Athleten
+Wichtige Limitation: Wer streng vegan und gleichzeitig hochintensiv trainiert (z.B. Bodybuilder,
+Kraftsportler), hat eine deutlich komplexere Bedarfssituation. Hier reicht das Quiz nicht aus – wir
+empfehlen in diesen Fällen eine spezialisierte Sport-Ernährungsberatung.
+7.3 Kulturelle und religiöse Restriktionen
+Halal, Koscher, religiöse Fastenzeiten werden nicht erfasst. Diese sind selten für die Wirkstoffempfehlung
+selbst kritisch (alle Wirkstoffe sind in der Regel halal/koscher), können aber die Produktauswahl
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5
+
+Stronger - Modul 8: Frage Ernaehrung Spec v2 | Juni 2026
+(Hersteller-Zertifizierung) beeinflussen.
+7.4 Gluten-freie Ernährung
+Wird über die Allergien-Frage erfasst (Code E in Frage 8), nicht über die Ernährungs-Frage. Konsequenz:
+Bei strenger Zöliakie wird ein expliziter Hinweis auf glutenfreie Produktmarken gegeben.
+Fazit: Die 5 Ernährungs-Optionen decken die große Mehrheit der Anwender ab. Die Differenzierung aller
+5 Stufen ist in Spec v2 implementiert und medizinisch sinnvoll. Edge-Cases verweisen wir auf qualifizierte
+Beratung.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 6

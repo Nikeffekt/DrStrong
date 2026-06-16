@@ -1,0 +1,175 @@
+Stronger - Modul 13: Sicherheitsmatrix Spec v2 | Juni 2026
+Stronger Quiz
+Modul 13 – Vollständige Sicherheits-Matrix
+Die Sicherheits-Matrix dokumentiert systematisch, welche Wirkstoffe bei welchen User-Eigenschaften
+ausgeschlossen oder mit Vorsicht versehen werden. Diese Matrizen sind direkt aus den
+Kontraindikations-Feldern der Wirkstoff-JSONs in unserer Wissensbasis abgeleitet.
+Legende der Schweregrade
+Symbol Schweregrad Bedeutung
+X hart Wirkstoff wird vollständig ausgeschlossen
+! vorsichtig Wirkstoff bleibt empfohlen, mit Warnhinweis
+i info Allgemeiner Hinweis ohne unmittelbare Gefahr
+– keine Keine Einschränkung
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 13: Sicherheitsmatrix Spec v2 | Juni 2026
+1. Allergien x Wirkstoffe
+Wirkstoff Laktose Milcheiweiss Fisch Gluten Soja
+Whey-Konzentrat ! X – – –
+ISO Clear (Whey-Isolat) i X – – –
+Pflanzenprotein (Soja) – – – i X
+Pflanzenprotein (Erbsen-Reis) – – – i –
+Omega-3 (Fischöl) – – X – –
+Omega-3 (Algenöl) – – – – –
+Kreatin – – – i –
+Vitamin D3 – – i i –
+Vitamin K2 – – – i –
+Magnesium-Bisglycinat – – – i –
+Vitamin B12 – – – i –
+Multivitamin i i i i i
+Pre-Workout i i – i i
+EAA – – – i –
+Beta-Alanin – – – i –
+Kollagen-Hydrolysat – – i – –
+Curcumin – – – i –
+L-Carnitin – – – i –
+Ashwagandha – – – i –
+Melatonin – – – i –
+ZMA – – – i –
+Probiotika i i – i i
+HMB – – – i –
+Vitamin C – – – i –
+Eisen – – – i –
+Zink – – – i –
+Elektrolyte – – – i –
+Koffein – – – i –
+Lesehilfe zur Allergien-Matrix:
+(cid:127) Bei Milcheiweiss-Allergie (Spalte 3) werden ALLE Whey-Produkte ausgeschlossen (auch Isolat) – nur
+Pflanzenprotein bleibt.
+(cid:127) Bei Laktoseintoleranz ist Whey-Isolat (Marker i) meist verträglich, nur Whey-Konzentrat (Marker !) wird
+mit Warnhinweis versehen.
+(cid:127) Glutenunverträglichkeit ist meist nur ein Info-Hinweis bezüglich Trägerstoffen – reine Wirkstoffe sind
+glutenfrei.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 13: Sicherheitsmatrix Spec v2 | Juni 2026
+(cid:127) Multivitamin und Pre-Workout haben breite Hinweise – diese Mehrstoff-Produkte können je nach
+Marke unterschiedliche Allergene enthalten.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 13: Sicherheitsmatrix Spec v2 | Juni 2026
+2. Medikamente / Erkrankungen x Wirkstoffe
+Wirkstoff BlutV. Schild. Herz/HD Niere Leber Diabet. Antidep.
+Whey-Konzentrat – i – ! – – –
+ISO Clear – i – ! – – –
+Pflanzenprotein (Soja) – ! – ! – – –
+Pflanzenprotein (Erbse) – – – ! – – –
+Omega-3 ! – i – – – –
+Kreatin – – – X – – –
+Vitamin D3 i – – i – – –
+Vitamin K2 X – – – – – –
+Magnesium – i i ! – i –
+Pre-Workout X X X i i X X
+Curcumin X – – – X ! –
+Ashwagandha – X – – ! – X
+Melatonin i – – – – – X
+ZMA – i – X – – –
+HMB – – – X – – –
+L-Carnitin – i i i – ! –
+EAA – – – ! – – –
+Beta-Alanin – – – ! – – –
+Kollagen – – – i – – –
+Probiotika – i – – – i –
+Eisen i i – i i – –
+Multivitamin i i i i i i i
+B12 – – – – – – –
+Vitamin C – – – i – – –
+Zink – i – i – – –
+Elektrolyte – – ! X – i –
+Koffein – – X – – i i
+Spalten-Erklärung:
+BlutV. = Blutverdünner / Gerinnungshemmer
+Schild. = Schilddrüsenerkrankung
+Herz/HD = Bluthochdruck / Herzerkrankung
+Niere = Nierenerkrankung
+Leber = Lebererkrankung
+Diabet. = Diabetes (Typ 1 und 2)
+Antidep. = Antidepressiva / Psychopharmaka
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 13: Sicherheitsmatrix Spec v2 | Juni 2026
+3. Besonders kritische Wirkstoffe
+Aus der Matrix lassen sich Wirkstoffe identifizieren, die bei mehreren Konditionen problematisch sind.
+Diese verdienen besondere Aufmerksamkeit:
+3.1 Pre-Workout (5 von 7 Konditionen ausgeschlossen)
+Pre-Workout-Produkte sind die problematischste Wirkstoff-Kategorie. Sie werden bei Blutverdünnern,
+Schilddrüsen-, Herz-/Bluthoch-druck-, Diabetes- und Antidepressiva-Patienten komplett ausgeschlossen.
+Gründe:
+(cid:127) Stimulanzien-Cocktail (Koffein, Beta-Alanin, manchmal DMHA, Yohimbin)
+(cid:127) Kardiovaskuläre Belastung
+(cid:127) Insulin-Wechselwirkungen
+(cid:127) Serotonin-Modulation
+(cid:127) Gerinnungsbeeinflussung
+3.2 Curcumin (HART bei Blutverdünnern und Leber)
+Curcumin hat trotz seines Nutzens bei Gelenkproblemen zwei kritische Kontraindikationen:
+Blutungsneigungs-Verstärkung und Hepatotoxizität. Die DILIN-Daten zur Leber sind besonders bei
+Phytosomen-Formulierungen alarmierend.
+3.3 Ashwagandha (HART bei Schilddrüse und Antidepressiva)
+Ashwagandha ist trotz starker Evidenz für Stress-Reduktion bei zwei wichtigen Populationen
+kontraindiziert: Bei Schilddrüsen-erkrankungen wegen TSH-Modulation, bei Antidepressiva-Therapie
+wegen Serotonin-Wechselwirkungen.
+3.4 Vitamin K2 (HART bei Blutverdünnern)
+Vitamin K2 wirkt als direkter Antagonist zu Warfarin/Marcumar – es kann die Wirkung des Blutverdünners
+aufheben. Bei DOAKs ist die Interaktion geringer, aber aus Sicherheitsgründen wird K2 bei jeder
+Blutverdünner-Therapie ausgeschlossen.
+3.5 Kreatin, ZMA, HMB (HART bei Nierenerkrankung)
+Alle drei Wirkstoffe belasten die Nierenfunktion oder beeinträchtigen die Nierenfunktions-Bewertung. Bei
+jeglicher Nierenerkrankung – auch in frühen Stadien – werden sie ausgeschlossen.
+3.6 Melatonin (HART bei Antidepressiva)
+Wegen Serotonin-Modulation Risiko für Serotonin-Syndrom. Zusätzlich: in Deutschland ohnehin
+verschreibungspflichtig ab 2 mg.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5
+
+Stronger - Modul 13: Sicherheitsmatrix Spec v2 | Juni 2026
+3.7 Elektrolyte (HART bei Nierenerkrankung)
+Bei Niereninsuffizienz kann die Elektrolyt-Homöostase gestört sein. Eine pauschale Elektrolyt-Substitution
+kann Hyperkaliämie verursachen. Ausschluss zur Sicherheit.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 6
+
+Stronger - Modul 13: Sicherheitsmatrix Spec v2 | Juni 2026
+4. Wichtige Wirkstoff-Wirkstoff-Interaktionen
+Neben den User-spezifischen Filtern gibt es auch Wechselwirkungen zwischen Wirkstoffen untereinander,
+die das Quiz berücksichtigt:
+Kombination Interaktion Engine-Verhalten
+Calcium + Eisen Calcium reduziert Eisen-Resorption um Empfehlung: zeitversetzte Einnahme (2 Std.
+50-60 % Abstand)
+Vitamin K2 + Vitamin Synergistisch (K2 unterstützt Bevorzugt als Kombi-Präparat empfehlen
+D3 D3-Wirkung an Knochen)
+Magnesium + Calcium Konkurrieren um Aufnahme bei hoher Tagsverteilung beachten
+Dosis
+Zink + Kupfer Zinkhochdosis kann Kupfer-Mangel Bei hohem Zink: Multivitamin mit Kupfer
+verursachen (bei >40 mg/Tag)
+Koffein + Kreatin Sehr hohe Koffeindosen (>5 mg/kg) Empfehlung: Koffein moderat halten oder
+können Kreatin-Effekt antagonisieren zeitversetzt
+Probiotika + Antibiotika töten Probiotika-Bakterien 2 Stunden zeitversetzt einnehmen
+Antibiotika
+Eisen + Curcumin Curcumin kann Eisen chelieren Zeitversetzt einnehmen (4 Std)
+(reduziert Absorption)
+Omega-3 + Vitamin E Omega-3 oxidiert leicht, Vitamin E Hochwertige Produkte enthalten Vitamin E als
+schützt Antioxidans
+Probiotika + Stamm-spezifische Effekte, mehr ist Engine empfiehlt nur EINEN Probiotika-Komplex
+Probiotika nicht besser
+Pre-Workout + Additive Wirkung – Überdosis möglich Nicht gleichzeitig empfohlen
+Stimulanzien (Koffein
+einzeln)
+Hinweis: Die Engine berücksichtigt diese Interaktionen derzeit nicht automatisch in der Auswahl-Logik,
+sondern kommuniziert sie als Hinweise im Output. Eine automatische Interaktions-Erkennung ist als
+zukünftige Erweiterung geplant.
+5. Fazit
+Die vollständige Sicherheits-Matrix dokumentiert systematisch, welche Wirkstoffe bei welchen Konditionen
+ausgeschlossen werden. Sie ist das Herzstück der Sicherheitslogik des Quiz und basiert auf
+dokumentierten klinischen Daten.
+Designprinzip: Die Matrix folgt dem konservativen Defaulting – im Zweifel lieber ausschließen als
+zulassen. Dies kann in Einzelfällen zu „überkonservativen“ Empfehlungen führen, aber niemals zu
+gefährlichen Empfehlungen.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 7

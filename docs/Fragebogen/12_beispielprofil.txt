@@ -1,0 +1,256 @@
+Stronger - Modul 12: Anwendungsbeispiel Spec v2 | Juni 2026
+Stronger Quiz
+Modul 12 – Anwendungsbeispiel: Sportlerin, 38 Jahre
+Um die Empfehlungs-Logik konkret zu illustrieren, gehen wir hier ein vollständiges Beispiel-Profil Schritt
+für Schritt durch. Wir zeigen, welche Quiz-Antworten gegeben werden, wie die Engine sie verarbeitet,
+welche Wirkstoffe gefiltert/empfohlen werden und mit welcher wissenschaftlichen Begründung.
+1. Beispiel-Profil
+Wir wählen ein realistisches Profil mittlerer Komplexität – eine Frau in den späten 30ern mit ambitionierten
+Trainings- und Gesundheitszielen, mehreren persönlichen Besonderheiten, aber ohne sicherheitskritische
+Vorerkrankungen.
+Frage Antwort Code
+1. Geburtsjahr 1988 (Alter: 38) alter=38
+2. Geschlecht Weiblich B
+3. Gewicht 68 kg 68
+4. Trainingsform Kraft 2-3x/Woche B
+5. Trainings-Erfahrung Erfahren (1-3 Jahre) fortgeschritten
+6. Ziele (max. 3) Muskelaufbau, Regeneration, Stress reduzieren A, E, G
+7. Ernährungsweise Vegetarisch D
+8. Unverträglichkeiten Laktoseintoleranz B
+9. Medikamente/Erkrankungen Keine A
+10. Situation Schlafprobleme (Durchschlafen) D + Sub=B
+Profil-Zusammenfassung in Worten:
+Eine 38-jährige Frau mit 68 kg Körpergewicht, die seit 1-3 Jahren 2-3 mal pro Woche Krafttraining betreibt.
+Sie verfolgt drei Hauptziele: Muskelaufbau, bessere Regeneration und Stress-Reduktion. Sie ernährt sich
+vegetarisch, hat eine Laktoseintoleranz und Durchschlaf-Probleme. Keine chronischen Erkrankungen oder
+Medikamente.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 12: Anwendungsbeispiel Spec v2 | Juni 2026
+2. Engine-Verarbeitung Stufe 1:
+Sicherheitsfilter
+Die Engine beginnt mit den 25 Wirkstoffen der Datenbank. Anhand der Quiz-Antworten werden harte
+Kontraindikationen geprüft:
+Wirkstoff Prüfung Filter Status
+Whey-Konzentrat Laktoseintoleranz vorhanden AUSGETAUSCHT (zu ISO Clear)
+ISO Clear Laktose-tolerable Menge (1%) Behalten (Empfehlung)
+(Whey-Isolat)
+Pflanzenprotein Vegetarier hat Whey-Alternative Behalten (niedrigere Priorität)
+Pre-Workout Keine kardiovaskuläre Kondition, kein Behalten (niedrige Priorität)
+Energie-Ziel
+Melatonin Durchschlaf-Typ – nicht primäre Niedrig priorisiert
+Indikation
+ZMA Keine Kontraindikation Behalten (kompetitiv zu Magnesium
+einzeln)
+HMB Alter 38, keine Reha, kein Senior Niedrig priorisiert (Jakubowski 2020)
+Ashwagandha Keine Schilddrüse, keine HOCH priorisiert (Stress-Ziel!)
+Antidepressiva
+Andere 17 Wirkstoffe Keine Filter aktiviert Alle behalten
+Wichtige Anpassung: Aufgrund der Laktoseintoleranz wird Whey-Konzentrat durch ISO Clear
+(Whey-Isolat) ersetzt – nicht ausgeschlossen. Dies entspricht der modernen klinischen Praxis: Bei
+Laktoseintoleranz ist Whey-Isolat mit unter 1 % Laktose meist gut verträglich.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 12: Anwendungsbeispiel Spec v2 | Juni 2026
+3. Engine-Verarbeitung Stufe 2: Scoring
+Für jeden verbliebenen Wirkstoff wird der Score berechnet. Wir zeigen exemplarisch die Berechnung für
+die 5 wichtigsten Wirkstoffe:
+3.1 ISO Clear (Whey-Isolat)
+Indikationen:
++ muskelaufbau (0,85) -> Ziel A matcht -> +85
++ regeneration (0,75) -> Ziel E matcht -> +75
++ laktose_intoleranz (0,9) -> Allergie B matcht -> +90
+Population:
++ krafttrainierende_omnivor (0,65) x 50 -> +33
+Evidenz Level A -> +30
+------------------------------------------------------------
+GESAMT-SCORE: 313 Punkte -> ESSENTIAL
+3.2 Kreatin Monohydrat
+Indikationen:
++ muskelaufbau (0,95) -> Ziel A matcht -> +95
++ kraftsteigerung (0,95) -> Training B matcht -> +95
+Population:
++ krafttrainierende (0,9) x 50 -> +45
++ vegetarier (0,7) x 50 -> +35
+Evidenz Level A -> +30
+------------------------------------------------------------
+GESAMT-SCORE: 300 Punkte -> ESSENTIAL
+3.3 Ashwagandha (KSM-66)
+Indikationen:
++ stress_angst (0,85) -> Ziel G matcht -> +85
++ regeneration (0,7) -> Ziel E matcht -> +70
++ schlafqualitaet (0,65) -> Situation D matcht -> +65
+Population:
++ erwachsene_unter_60 (0,8) x 50 -> +40
+Evidenz Level B -> +15
+------------------------------------------------------------
+GESAMT-SCORE: 275 Punkte -> ESSENTIAL
+3.4 Magnesium-Bisglycinat
+Indikationen:
++ schlafqualitaet (0,85) -> Subfrage Sub=B -> +85
++ regeneration (0,7) -> Ziel E matcht -> +70
++ stress_angst (0,6) -> Ziel G matcht -> +60
++ muskel_relaxation (0,7) -> Training B matcht -> +70
+Population:
++ frauen (0,6) x 50 -> +30
+Evidenz Level B -> +15
+------------------------------------------------------------
+GESAMT-SCORE: 330 Punkte -> ESSENTIAL
+3.5 Vitamin D3 + K2
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 12: Anwendungsbeispiel Spec v2 | Juni 2026
+Indikationen:
++ knochengesundheit (0,8) -> Frau, ab 36 -> +80
++ immunsystem (0,75) -> Allgemein -> +75
++ muskelfunktion (0,65) -> Training B matcht -> +65
+Population:
++ allgemein_mitteleuropa (0,9) x 50 -> +45
+Evidenz Level A -> +30
+------------------------------------------------------------
+GESAMT-SCORE: 295 Punkte -> ESSENTIAL
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 12: Anwendungsbeispiel Spec v2 | Juni 2026
+4. Engine-Verarbeitung Stufe 3:
+Kategorisierung
+Nach Sortierung der Scores ergibt sich folgender personalisierter Stack.
+4.1 Essentials (Score > 250)
+# Wirkstoff Score Dosis Warum?
+1 Magnesium-Bisglycinat 330 300-400 mg/Tag, abends Schlaf-Durchschlafprobleme, Krafttraining,
+Stress-Ziel
+2 ISO Clear (Whey-Isolat) 313 25-30 g, post-workout Muskelaufbau, Regeneration,
+Laktose-verträglich
+3 Kreatin Monohydrat 300 3-5 g/Tag konstant Muskelaufbau, Krafttraining,
+Vegetarier-Bonus
+4 Vitamin D3 + K2 295 2.000 IE D3 + 100 µg K2 Frauen postmenopausal-Risiko prävenieren,
+allgem. Versorgung
+5 Ashwagandha (KSM-66) 275 300-600 mg morgens Stress-Reduktion (Hauptziel G),
+Cortisol-Modulation
+4.2 Empfohlen (Score 150-250)
+# Wirkstoff Score Dosis Warum?
+6 Omega-3 (Algenöl) 230 2-3 g EPA/DHA/Tag Vegetarier, Entzündungs-Modulation,
+kardiovaskulär
+7 Vitamin B12 210 500-1000 µg/Tag Vegetarier (reduzierte Aufnahme),
+Energie-Cofaktor
+8 Eisen + Vit. C 195 14-18 mg Eisen + 80 mg Frau prämenopausal, Vegetarier, Sport
+C
+9 Kollagen-Hydrolysat 175 10 g/Tag Recovery, Frau ab 36, körpereigene
+Synthese sinkt
+4.3 Optional (Score 80-150)
+# Wirkstoff Score Dosis Warum?
+10 Beta-Alanin 130 3-4 g/Tag, geteilt Krafttraining-Intensität (Pufferung 60-240s)
+11 ZMA 110 30 mg Zn + 450 mg Mg + Schlaf-Recovery (Hinweis: Magnesium
+11 mg B6 bereits separat)
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5
+
+Stronger - Modul 12: Anwendungsbeispiel Spec v2 | Juni 2026
+5. Bewusst NICHT empfohlene Wirkstoffe
+Mindestens ebenso wichtig wie die Empfehlungen ist die Liste der NICHT empfohlenen Wirkstoffe. Hier
+mit Begründungen:
+Wirkstoff Grund für Ausschluss/niedrigen Score
+Whey-Konzentrat Laktoseintoleranz – ISO Clear ist die bessere Wahl
+Pre-Workout Frau in dieser Erfahrungsstufe, kein Energie-Ziel, Stress-Ziel sogar kontraproduktiv
+L-Carnitin Kein Fettabbau-Ziel
+EAA Bei adäquater Whey-Versorgung redundant
+L-Glutamin Schwache Evidenz, kein spezifisches Bedürfnis
+Pflanzenprotein Vegetarier kann Whey-Isolat nehmen – keine Notwendigkeit
+HMB Alter 38, kein Reha – niedrige Indikation (Jakubowski 2020)
+Melatonin Durchschlaf-Problem (nicht Einschlafen) – Magnesium besser geeignet
+Curcumin Kein spezifischer Indikator (keine Gelenkschmerzen abgefragt)
+Multivitamin Erfahrene Sportlerin mit vegetarischer Ernährung deckt B12/Eisen einzeln ab – gezieltere
+Versorgung
+Probiotika Kein spezifisches GI-Problem signalisiert
+Koffein einzeln Bereits in Pre-Workout enthalten (nicht empfohlen) – kontraproduktiv bei Schlafproblemen
+Elektrolyte Krafttraining 2-3x – nicht zwingend (Cardio-fokussiert)
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 6
+
+Stronger - Modul 12: Anwendungsbeispiel Spec v2 | Juni 2026
+6. Zusammenfassung des Stacks
+6.1 Statistik
+Kategorie Anzahl Anteil
+Prüfbare Wirkstoffe in DB 25 100 %
+Hart ausgeschlossen 0 0 %
+Substituiert (z.B. Whey-K. zu ISO Clear) 1 4 %
+Essentials 5 20 %
+Empfohlen 4 16 %
+Optional 2 8 %
+Niedriger Score (nicht angezeigt) 13 52 %
+GESAMT empfohlen 11 44 %
+6.2 Praktische Anwendung des Stacks
+Empfohlene Tagesverteilung:
+Tageszeit Wirkstoffe
+Morgens Vitamin D3 + K2, Ashwagandha (KSM-66), Eisen + Vit. C (zu Frühstück)
+Vor dem Training Optional: Beta-Alanin (falls hart trainiert)
+Nach dem Training ISO Clear (25-30 g) plus Kreatin (3-5 g)
+Nachmittags Vitamin B12 (sublingual), Omega-3 (zur Hauptmahlzeit)
+Abends Magnesium-Bisglycinat (300-400 mg), Kollagen-Hydrolysat (10 g)
+Erwarteter Effekt nach 8-12 Wochen:
+(cid:127) Schlafqualität: Spürbare Verbesserung nach 2-3 Wochen (Magnesium-Effekt). Tiefschlafphasen länger.
+(cid:127) Stress-Wahrnehmung: Subjektive Verbesserung der Stress-Resilienz nach 4-6 Wochen
+(Ashwagandha).
+(cid:127) Trainingsleistung: Kreatin zeigt Effekt nach 2-4 Wochen (Maximalkraft +5-10 % möglich).
+(cid:127) Recovery: Reduzierter Muskelkater 24-48h post-Training (Whey, Kreatin, Magnesium).
+(cid:127) Allgemeine Energie: Bei B12-Mangel-Beseitigung spürbar nach 6-8 Wochen.
+(cid:127) Knochengesundheit: Nicht spuerbar, aber langfristig präventiv (Vitamin D3 + K2).
+6.3 Reduzierter Stack
+11 Produkte sind auf den ersten Blick viel – aber alle haben eine klare wissenschaftliche Begründung.
+Praktisch könnte sich der User auf die 5 Essentials konzentrieren und 1-2 weitere ergänzen, je nach
+Budget. Die transparente Score-Logik ermöglicht es, einen reduzierten Stack ohne Verlust an Sicherheit
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 7
+
+Stronger - Modul 12: Anwendungsbeispiel Spec v2 | Juni 2026
+zusammenzustellen.
+Minimal-Stack (5 Produkte) für dieses Profil:
+1. Magnesium-Bisglycinat
+2. ISO Clear
+3. Kreatin
+4. Vitamin D3 + K2
+5. Ashwagandha
+Dieser Minimal-Stack adressiert die Kernziele (Muskelaufbau, Schlaf, Stress) mit den 5 evidenzstärksten
+Wirkstoffen.
+6.4 Was der Arzt zusätzlich prüfen sollte
+Vor Stack-Beginn empfehlen wir eine Blutuntersuchung mit Fokus auf:
+(cid:127) 25-OH-Vitamin-D3: Zielbereich 30-60 ng/ml – bei Mangel höhere Initialdosis
+(cid:127) Vitamin B12 (Holo-Transcobalamin): Zielbereich > 50 pmol/l – bei Vegetariern kritisch
+(cid:127) Ferritin: Zielbereich > 50 ng/ml (Athletinnen > 70) – bei niedrigem Wert orale Eisensubstitution
+priorisieren
+(cid:127) TSH: Schilddrüsenfunktion prüfen vor Ashwagandha-Beginn (auch wenn keine bekannte Erkrankung)
+(cid:127) Magnesium im Vollblut: Spezifischer als Serum-Magnesium
+(cid:127) Hb / Erythrozyten: Eisenmangel-Anämie ausschließen
+(cid:127) Kreatinin: Nierenfunktion vor Kreatin-Start
+Re-Evaluation: Empfohlene Blutkontrolle nach 3 Monaten Supplementation, um Werte zu überprüfen und
+ggf. Dosierungen anzupassen.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 8
+
+Stronger - Modul 12: Anwendungsbeispiel Spec v2 | Juni 2026
+7. Klinische Diskussion dieses Stacks
+Aus ärztlicher Perspektive möchten wir den Stack abschließend kommentieren und potenzielle Bedenken
+adressieren.
+7.1 Was ist gut?
+(cid:127) Evidenzbasiert: Jeder Wirkstoff hat dokumentierten Nutzen für mindestens eines der drei Hauptziele.
+(cid:127) Sicher: Keine harten Kontraindikationen, keine problematischen Wechselwirkungen zwischen
+Wirkstoffen.
+(cid:127) Realistisch dimensioniert: 5-7 Kernprodukte sind verwaltbar.
+(cid:127) Differenziert: Sub-Auswahl bei Schlafproblemen wurde korrekt umgesetzt (Magnesium statt Melatonin).
+(cid:127) Transparente Begründung: Score-Logik für jeden Wirkstoff nachvollziehbar.
+7.2 Was könnte hinterfragt werden?
+(cid:127) Vitamin D3 + K2 ohne Blutwert: Die Empfehlung erfolgt populations-basiert. Idealerweise würde der
+Blutwert die Dosierung präzisieren. Bei Werten über 60 ng/ml ist Supplementation unnötig.
+(cid:127) Ashwagandha bei Sportlerin: Es gibt vereinzelte Berichte über Schilddrüsenaktivierung auch bei
+vorher unauffälligen Personen. Bei längerer Einnahme wäre periodische Schilddrüsen-Kontrolle sinnvoll.
+(cid:127) 11 Produkte insgesamt: Compliance könnte schwierig werden. Reduktion auf Essentials zu Überlegen.
+(cid:127) Eisensupplementation ohne Ferritin-Wert: Sollte nicht pauschal erfolgen. Empfehlung explizit mit „bei
+nachgewiesenem Mangel“ verbinden.
+7.3 Was würde der Quiz NICHT erfassen?
+(cid:127) Genetische Faktoren: MTHFR-Polymorphismus (Methylierung), VDR-Polymorphismus
+(Vitamin-D-Stoffwechsel), CYP-Variationen (Koffein-Metabolismus)
+(cid:127) Mikrobiom-Zustand: Beeinflusst Absorption und Verstoffwechselung vieler Wirkstoffe
+(cid:127) Hormonelle Tagesschwankungen: Cortisol-Pattern individuell unterschiedlich
+(cid:127) Familienanamnese: Frakturrisiko, Krebsprädisposition, kardiovaskuläre Familienlast
+(cid:127) Aktuelle psychische Verfassung: Stress als chronisch oder akut, Depression-Screening
+Fazit: Der generierte Stack ist klinisch sinnvoll, sicher und evidenzbasiert. Er kann als gute
+Ausgangsbasis dienen, sollte aber durch ärztliche Konsultation und ggf. Blutuntersuchungen präzisiert
+werden. Das Quiz versteht sich genau als das – eine evidenzbasierte Erstanalyse, nicht als Ersatz der
+ärztlichen Konsultation.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 9

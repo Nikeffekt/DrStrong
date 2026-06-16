@@ -1,0 +1,154 @@
+Stronger - Modul 4: Frage Gewicht Spec v2 | Juni 2026
+Stronger Quiz
+Modul 4 – Frage 3: Körpergewicht
+1. Frage-Wortlaut
+„Wie viel wiegst du?“
+Hilfetext im Quiz: „Grundlage für exakte Proteindosierung.“
+2. Antwortoptionen
+Number-Picker mit Werten von 40 bis 200 kg in 1-kg-Schritten. Default-Wert: 75 kg. Diese Range deckt
+alle realistischen Erwachsenen-Gewichte ab, einschließlich Untergewicht (40 kg) bis schwerstes
+Adipositas-Stadium (200 kg).
+AW.gewicht = 68 // konkrete Zahl in kg
+3. Klinische Begründung
+Das Körpergewicht ist die fundamentale Berechnungsgrundlage für die Proteinbedarfsbestimmung. Die
+International Society of Sports Nutrition (ISSN) empfiehlt in ihrem aktuellen Position Stand (Jäger et al.
+2017) eine differenzierte Proteinzufuhr abhängig von Trainingsstatus und Ziel:
+Population / Ziel Empfohlene Zufuhr Beispiel 75 kg
+Sedentäre Erwachsene 0,8 g/kg KG/Tag 60 g/Tag
+Allgemein Sportler 1,4-1,8 g/kg KG/Tag 105-135 g/Tag
+Krafttraining-Phase 1,6-2,2 g/kg KG/Tag 120-165 g/Tag
+Muskelaufbau-Ziel 1,8-2,2 g/kg KG/Tag 135-165 g/Tag
+Diät / Kaloriendefizit 2,3-3,1 g/kg LBM/Tag Höher zum Muskelschutz
+Senioren (Sarkopenie-Prävention) 1,2-1,5 g/kg KG/Tag 90-115 g/Tag
+Quelle: Jäger R, Kerksick CM, Campbell BI, et al. (2017). International Society of Sports Nutrition Position Stand: protein and
+exercise. Journal of the International Society of Sports Nutrition, 14:20.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 4: Frage Gewicht Spec v2 | Juni 2026
+4. Wissenschaftlicher Hintergrund
+4.1 Morton Meta-Analyse 2018 (BJSM)
+In der bisher umfassendsten Meta-Analyse zum Thema Protein-Supplementation und Krafttraining
+(Morton et al. 2018, BJSM, n=1.863 Probanden in 49 RCTs) wurden folgende Effekte nachgewiesen:
+Parameter Effektgröße Klinische Relevanz
+Magermasse +0,30 kg Signifikante Verbesserung vs. Placebo
+Muskelquerschnitt +0,99 kg/m² Mikrostrukturelle Verbesserung im MRT-Querschnitt
+1RM Maximalkraft +2,49 kg Statistisch signifikant, in Praxis moderater Effekt
+Plateau-Dosis 1,62 g/kg KG/Tag Über dieser Dosis keine zusätzlichen Effekte (statistisch)
+Wichtige Erkenntnisse für unsere Quiz-Logik:
+(cid:127) Die Plateau-Dosis liegt bei 1,62 g/kg KG. Unser Quiz wendet differenzierte Faktoren von 1,4 bis 2,2 an,
+abhängig von Trainingsintensität. Dies entspricht der wissenschaftlichen Differenzierung.
+(cid:127) Der Effekt von 0,30 kg Magermasse klingt klein, ist aber über Studienzeiträume von 6-12 Wochen
+gemessen – kumuliert über Jahre kann das einen erheblichen Unterschied machen.
+(cid:127) Bei überdurchschnittlichen Trainingsintensitäten wurden Effekte bis 2,2 g/kg dokumentiert.
+4.2 Pinckaers 2024 – Leucin-Schwellenwert
+Pflanzenproteine haben 30-40 Prozent weniger Leucin als Whey. Da Leucin der zentrale Trigger der
+Muskelproteinsynthese (mTOR-Aktivierung) ist, müssen pflanzliche Proteine höher dosiert werden:
+(cid:127) Whey-Protein: 20-25 g pro Mahlzeit reichen für maximale MPS-Stimulation
+(cid:127) Soja-Isolat: 25-30 g pro Mahlzeit
+(cid:127) Erbsenprotein: 30-35 g pro Mahlzeit
+(cid:127) Reisprotein (single source): 35-40 g pro Mahlzeit
+(cid:127) Blend (Erbse + Reis): 25-30 g (vollständigeres Aminosäureprofil)
+Konsequenz für die Quiz-Logik: Bei veganer/vegetarischer Ernaehrung verwendet die Engine einen um
+ca. 15 % höheren Proteinfaktor, um die Leucin-Lücke zu kompensieren.
+Quelle: Pinckaers PJM, van Kranenburg J, Houben LHP, et al. (2024). Effects of plant- versus animal-based proteins on muscle
+protein synthesis. Systematic Review with Meta-Analysis.
+4.3 Bedarfsanpassung bei Senioren
+ESPEN-Leitlinien empfehlen bei Senioren eine erhöhte Proteinzufuhr (1,2-1,5 g/kg KG/Tag) zur
+Sarkopenie-Prävention. Dies basiert auf mehreren Erkenntnissen:
+(cid:127) Die anabole Resistenz nimmt mit dem Alter zu – gleiche Proteinmenge löst bei Senioren weniger MPS
+aus
+(cid:127) Die Verdauungseffizienz nimmt ab (reduzierte Magensäure, enzymatische Aktivität)
+(cid:127) Der altersbedingte Muskelmassenverlust muss aktiv kompensiert werden
+(cid:127) Krafttraining + Protein zeigt synergistische Effekte (Phillips-Gruppe McMaster)
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 4: Frage Gewicht Spec v2 | Juni 2026
+5. Empfehlungs-Konsequenzen
+Das Körpergewicht wird hauptsächlich zur Berechnung des täglichen Protein-Ziels verwendet. Die Engine
+multipliziert das Gewicht mit einem Faktor, der sich aus Trainings-Profil, Ziel und Ernährung ergibt.
+5.1 Berechnungs-Logik
+// Vereinfachte Engine-Logik (Spec v2)
+ziel_protein = gewicht_kg * faktor
+// Faktor abhaengig von:
+// - Training (Sed./Cardio/Kraft 2-3x/Kraft 4+x)
+// - Hauptziel (Muskelaufbau/Erhalt/Fettabbau)
+// - Ernaehrung (Whey ~1,8 / Pflanzlich ~2,0)
+// - Alter (Senioren ab 50: +0,3)
+// Beispiele:
+// 75 kg, Kraft 4+x/Woche, Muskelaufbau, Whey:
+// 75 * 2,2 = 165 g/Tag
+// 75 kg, Cardio mittel, Gesundheit, Omnivor:
+// 75 * 1,4 = 105 g/Tag
+// 60 kg, sedentaer, Vegan:
+// 60 * 1,3 = 78 g/Tag
+// 68 kg, Kraft 2-3x, Muskelaufbau, Vegetarisch:
+// 68 * 1,95 = 133 g/Tag
+5.2 Architektur-Verbesserung (Engine v2)
+In der neuen Engine-Architektur werden die Proteinfaktoren NICHT mehr im Code hardcoded, sondern
+aus der Wissensbasis gelesen. Konkret aus whey-protein.json und pflanzenprotein.json, Feld
+dosierung.tagesdosis_pro_kg:
+// whey-protein.json (Auszug)
+"dosierung": {
+"standard": "25-40 g pro Portion, 1-2x/Tag",
+"obergrenze": "1,6-2,2 g/kg KG/Tag (ISSN)",
+"tagesdosis_pro_kg": {
+"untrainiert": 1.2,
+"wenig_sport": 1.4,
+"kraft_2_3_pro_woche": 1.8,
+"kraft_4_plus": 2.0,
+"muskelaufbau_intensiv": 2.2
+}
+}
+Vorteile dieser Architektur:
+(cid:127) Single Source of Truth: Eine Änderung in der Wissensbasis ändert auch die Engine-Logik
+(cid:127) Wartbarkeit: Bei neuen Studien einfach Werte anpassen
+(cid:127) Konsistenz: Selbe Werte im Guide und in der Empfehlung
+(cid:127) Transparenz: User-Empfehlung kann genau auf die Quelle in der Wissensbasis verweisen
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 4: Frage Gewicht Spec v2 | Juni 2026
+6. Sicherheitsrelevanz
+6.1 Untergewicht-Erkennung
+Bei sehr niedrigem Gewicht (unter 50 kg bei Erwachsenen) wird ein Hinweis auf mögliches Untergewicht
+oder einen ungesunden BMI-Bereich eingeblendet. Das Quiz bietet in diesen Fällen KEIN aktives
+Fettabbau-Ziel an, selbst wenn der User es gewählt hat – stattdessen wird auf die Wichtigkeit einer
+gesunden Ernährung und ggf. ärztlichen Konsultation hingewiesen.
+6.2 Adipositas und Proteinberechnung
+Bei sehr hohem BMI (geschaetzt ueber 35) wird das Körpergewicht als Berechnungsbasis problematisch.
+Die wissenschaftlich präziseste Methode wäre die Berechnung pro Kilogramm fettfreier Masse (LBM) oder
+Zielgewicht.
+Beispiel: Eine 130 kg schwere Person mit Muskelaufbau-Ziel würde nach Standard-Formel 130 * 2,2 =
+286 g Protein/Tag empfohlen bekommen. Das ist unrealistisch und potentiell ungesund. In der Praxis wäre
+eine Berechnung auf Basis des Zielgewichts (z.B. 90 kg) sinnvoller: 90 * 2,2 = 198 g/Tag.
+Da das Quiz weder Körperfettanteil noch Größe erfasst (Größe wurde entfernt, da sie für Berechnungen
+nicht zwingend nötig ist), liegt hier eine bekannte Limitation vor. Die Engine kappt die maximale
+Proteinempfehlung daher bei einem absoluten Wert (ca. 220-240 g/Tag).
+6.3 Niereninsuffizienz und Proteinmenge
+Bei vorbestehender Niereninsuffizienz (Frage 9) wird die Proteinempfehlung automatisch reduziert.
+Konkret: Bei dieser Kontraindikation gibt die Engine grundsätzlich nur 0,6-0,8 g/kg KG/Tag aus den
+Supplement-Empfehlungen an und verweist explizit auf die ärztliche Festlegung der individuellen
+Eiweißmenge.
+7. Limitationen
+7.1 Körpergewicht als Surrogat
+Das Körpergewicht allein ist nicht ausreichend für eine optimale Protein-Berechnung. Die wissenschaftlich
+präziseste Methode wäre die Berechnung pro Kilogramm fettfreier Masse (LBM). Diese ist aber im Alltag
+nicht zugänglich – sie erfordert eine DEXA-Messung oder bioelektrische Impedanzanalyse (BIA).
+Das Quiz wählt bewusst die pragmatische Lösung über das Körpergewicht, weil es das einzige verlässlich
+messbare und verbreitet bekannte Maß ist. Für die meisten Anwender liefert diese Methode ausreichend
+präzise Empfehlungen.
+7.2 Körperfettanteil nicht erfasst
+Ein Bodybuilder mit 90 kg und 8 % Körperfettanteil hat einen anderen Proteinbedarf als eine Person mit 90
+kg und 35 % Körperfett. Diese Differenzierung wird vom Quiz nicht erfasst.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 4: Frage Gewicht Spec v2 | Juni 2026
+In zukünftigen Versionen wäre eine Folgefrage zum Körperfettanteil (Schätzung anhand visuelles
+Vergleichs) möglich. Dies wurde aus Gründen der Conversion-Optimierung aktuell zurückgestellt.
+7.3 Gewichtsschwankungen
+Das Quiz erfasst einen Momentaufnahme-Wert. Bei aktiver Diät oder aktivem Muskelaufbau verändert
+sich das Gewicht kontinuierlich. Der User müsste das Quiz periodisch neu machen, um aktuelle
+Empfehlungen zu erhalten.
+Fazit: Trotz dieser Limitationen ist die Gewichts-Frage einer der wenigen wirklich quantitativ
+ausgewerteten Inputs des Quiz. Sie ermöglicht eine echte Personalisierung der Proteinempfehlung – eine
+der wirksamsten und sichersten Supplementierungen überhaupt.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5

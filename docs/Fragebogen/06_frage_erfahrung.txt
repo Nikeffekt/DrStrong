@@ -1,0 +1,110 @@
+Stronger - Modul 6: Frage Erfahrung Spec v2 | Juni 2026
+Stronger Quiz
+Modul 6 – Frage 5: Trainings-Erfahrung
+1. Frage-Wortlaut
+„Wie lange trainierst du regelmäßig?“
+Hilfetext im Quiz: „Beeinflusst die Komplexität deines Stacks.“
+2. Antwortoptionen
+Code Anzeige Definition
+einsteiger Anfänger (max. 1 Jahr) Beginnende oder unregelmäßige Praxis
+fortgeschritten Erfahren (1-3 Jahre) Etablierte Trainingsroutine
+profi Sehr erfahren (3+ Jahre) Langjährige, kontinuierliche Praxis
+Hinweis zu Code-IDs: Die internen Code-IDs (einsteiger, fortgeschritten, profi) wurden aus Gründen der
+Rückwärtskompatibilität beibehalten, auch nachdem in Spec v2 die Labels aktualisiert wurden (Anfänger
+statt Einsteiger, Erfahren statt Fortgeschritten, Sehr erfahren statt Profi). Der Begriff „Profi“ war
+irreführend, da er von Vollzeit-Athleten suggerierte.
+3. Klinische Begründung
+Die Trainings-Erfahrung dient im Quiz primär als Komplexitäts-Cap für die Empfehlungen. Die
+wissenschaftliche Logik dahinter ist mehrschichtig.
+3.1 Newbie Gains und Trainings-Adaptation
+Bei Trainings-Anfängern ist die Adaptation an Belastungsreize so stark, dass die Wirkung zusätzlicher
+Wirkstoffe minimal ist im Vergleich zur Grundwirkung des Trainings. Dieses Phänomen wird als „Newbie
+Gains“ bezeichnet:
+(cid:127) Erste 12 Wochen Krafttraining: Anfänger gewinnen durchschnittlich 1-2 kg Magermasse pro Monat
+(cid:127) Nach 1 Jahr: Magermasse-Zunahme verlangsamt sich auf etwa 0,2-0,5 kg/Monat
+(cid:127) Nach 3-5 Jahren: Genetische Plateau-Phase, weiteres Wachstum nur durch optimale Periodisierung
+und ggf. Supplementation
+(cid:127) Konsequenz: Die statistische Effektgröße von Kreatin oder HMB ist bei Anfängern (relativ zur
+Gesamtprogression) deutlich kleiner als bei Fortgeschrittenen
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 6: Frage Erfahrung Spec v2 | Juni 2026
+3.2 Compliance-Logik
+Untersuchungen zeigen, dass die Compliance bei Supplement-Stacks invers zur Anzahl der Produkte
+korreliert. Konkret:
+(cid:127) 1-3 Produkte: Compliance ca. 80-90 %
+(cid:127) 4-6 Produkte: Compliance fällt auf 60-70 %
+(cid:127) 7-9 Produkte: Compliance bei 40-50 %
+(cid:127) Über 10 Produkte: Compliance oft unter 30 %
+Konsequenz: Ein Stack von 12 Produkten wird selten kontinuierlich eingenommen. Daher ist die
+Empfehlung an Anfänger eher 3-5 Produkte – kontinuierlich genommen – als 10-12 Produkte mit
+schlechter Compliance.
+3.3 Verständnis-Voraussetzung
+Spezialisierte Wirkstoffe erfordern ein Mindestmaß an Verständnis für sinnvolle Nutzung:
+(cid:127) Beta-Alanin: Paresthesia-Effekt (Hautkribbeln) erschreckt Anfänger oft – Aufklärung nötig
+(cid:127) L-Glutamin: Timing-Sensitivität, nicht mit Eiweiß kombinieren
+(cid:127) Pre-Workout: Toleranzen entwickeln sich, Stimulanzien-Verständnis nötig
+(cid:127) EAA: Sinnvoll nur in spezifischen Situationen (intra-workout, niedriger Proteinkonsum)
+(cid:127) ZMA: Timing (vor dem Schlaf), Resorptionssensitivität
+(cid:127) HMB: Erst nach mehreren Wochen Effekt spürbar
+Bei Anfängern überwiegt das Risiko der Fehlanwendung den potenziellen Nutzen. Eine sukzessive
+Erweiterung des Stacks mit wachsender Erfahrung ist die sicherere Strategie.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 6: Frage Erfahrung Spec v2 | Juni 2026
+4. Wissenschaftlicher Hintergrund
+4.1 Jakubowski 2020 zu HMB
+Die Phillips-Gruppe (McMaster University) zeigte in ihrer Meta-Analyse, dass HMB bei jungen, trainierten
+Erwachsenen keinen signifikanten Effekt auf Magermasse oder Kraft hat. Die Effektgröße (SMD) lag
+nahe 0 und war statistisch nicht signifikant. Bei Senioren mit Sarkopenie hingegen zeigten dieselben
+Studienprotokolle SMD-Werte von 0,35-0,48 – ein moderater bis starker Effekt.
+Unsere Quiz-Logik nutzt diese Erkenntnis: HMB wird Anfängern und jungen Trainierten nicht empfohlen,
+Senioren mit passender Indikation hingegen schon.
+Quelle: Jakubowski JS, Nunes EA, Teixeira FJ, et al. (2020). Supplementation with the Leucine Metabolite HMB does not Improve
+Resistance Exercise-Induced Changes in Body Composition or Strength in Young Subjects. Nutrients, 12(5):1523.
+4.2 Pre-Workout bei Anfängern
+Multi-Ingredient Pre-Workout-Supplements zeigen die stärksten Effekte bei Personen mit etablierter
+Trainingsbasis. Bei Anfängern überwiegen die Begleitrisiken:
+(cid:127) Koffein-Übergebrauch (Toleranzentwicklung, Schlafstörungen)
+(cid:127) Stimulanzien-Wechselwirkungen (DMHA, Yohimbin in einigen Produkten)
+(cid:127) Magenbeschwerden bei nicht-adaptiertem Verdauungstrakt
+(cid:127) Falsche Erwartungshaltung – Glaube an Wunderwirkung statt Trainings-Adaptation
+5. Empfehlungs-Konsequenzen
+Wirkstoff Anfänger Erfahren Sehr erfahren
+Whey/Protein essential essential essential
+Vitamin D3 essential essential essential
+Omega-3 essential essential essential
+Kreatin empfohlen (wenn Kraft) essential (wenn Kraft) essential (wenn Kraft)
+Magnesium empfohlen empfohlen essential bei Kraft 4+
+Beta-Alanin - optional empfohlen
+Pre-Workout - optional optional
+EAA - - optional
+L-Glutamin - - optional
+ZMA - optional optional
+HMB - (Ausnahme: Senioren) optional optional
+Curcumin - optional optional
+optional (bei
+L-Carnitin - optional
+Fettabbau)
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 6: Frage Erfahrung Spec v2 | Juni 2026
+Kollagen - optional (ab 36) optional
+6. Sicherheitsrelevanz
+Schutz vor Über-Supplementierung: Diese Frage ist ein wichtiger Sicherheitsfilter. Anfänger könnten
+ansonsten von einem 10-Produkt-Stack überwältigt sein – mit den Risiken: schlechte Compliance, höhere
+Wechselwirkungs-Wahrscheinlichkeit, Verlust des Überblicks bei Nebenwirkungen. Die Reduktion auf 3-5
+Kernprodukte ist eine bewusst protektive Designentscheidung.
+7. Limitationen
+Diese Frage erfasst nur Trainings-Dauer, nicht Trainings-Intensität oder Wissens-Tiefe. Ein „Sehr
+erfahrener“ Sportler mit 10 Jahren Erfahrung in lockerer Kraftroutine ist nicht gleichzusetzen mit einem
+3-Jahres-Bodybuilder im Wettkampf. Die Engine differenziert hier nicht weiter – dies wäre über zusätzliche
+Fragen oder ein Power-User-Modul später möglich.
+Wiedereinsteiger: Personen, die nach langer Pause wieder anfangen (z.B. 5 Jahre keinen Sport, davor 3
+Jahre Krafttraining), würden vermutlich „Erfahren“ wählen. Physiologisch sind sie aber Anfängern näher.
+Diese Differenzierung wird vom Quiz nicht erfasst.
+Sportartwechsler: Ein langjähriger Marathonläufer der gerade mit Krafttraining beginnt ist
+trainings-erfahren, aber kraft-spezifisch ein Anfänger. Auch diese Nuance fehlt.
+Fazit: Die Erfahrungsfrage ist eine pragmatische Näherung. Sie schafft eine sinnvolle Cap-Logik, die mehr
+nützt als schädet. Für Power-User wäre eine detailliertere Erfassung wünschenswert.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4

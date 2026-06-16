@@ -1,543 +1,603 @@
 /* ============================================================
-   quiz.js – SupplAI Quiz-Engine
-   Enthält: Fragen, Antwort-Logik, Dosierungs-Engine
-   Wird geladen von: index.html vor app.js
+   screens/quiz.js – Quiz-Engine (v3, Spec v2)
+
+   Basiert auf v2 (Juni 2026) aus altem Projekt, angepasst fuer v3:
+   - Mint-Theme statt Orange
+   - Modular als window.QuizScreen
+   - In v3-Layout integriert
+
+   Fragen (10 fix + 2 dynamisch):
+   1. Geburtsjahr (rad)
+   2. Geschlecht (M/W) -- NUR 2 Optionen, keine "k.A."!
+   3. Gewicht (rad) -- Groesse rausgenommen, von Engine nie genutzt
+   4. Training (choice)
+   5. Erfahrung (choice)
+   6. Ziele (multi, MAX 3) -- inkl. "Stress reduzieren"
+   7. Ernaehrung (choice) -- inkl. "Pescetarisch"
+   8. Unvertraeglichkeiten (multi) -- inkl. "Milcheiweiss-Allergie"
+   9. Medikamente (multi) -- inkl. "Lebererkrankung"
+   10. Situation (multi, dynamisch) -- inkl. "Reha"
+   11. Schlafproblem-Typ (choice, dynamisch wenn Schlafproblem)
+
+   Speichert in AW (state.js):
+   - AW.geburtsjahr (Zahl)
+   - AW.alter (Zahl in Jahren) -- NEU
+   - AW.intro (Kategorie A-E fuer Rueckwaertskompatibilitaet)
+   - AW.geschlecht (A=M, B=W)
+   - AW.gewicht (String, kg)
+   - AW.training, AW.erfahrung (Buchstabe / String)
+   - AW.ziele (Array) -- max 3
+   - AW.ernaehrung (Buchstabe)
+   - AW.unvertraeglichkeiten (Array)
+   - AW.medikamente (Array)
+   - AW.situation (Array) -- Multi statt Single
+   - AW.schlafproblem_typ (Buchstabe, optional)
 ============================================================ */
 
-// ── GLOBALER STATE ──
-var AW = {};                          // Antworten des Nutzers
-var NP = { name: '', email: '' };     // Nutzerprofil
-var qIdx = 0;                         // Aktueller Fragen-Index
-var multiSel = [];                    // Mehrfachauswahl Buffer
-var fQueue = [];                      // Fragen-Queue
+window.QuizScreen = (function () {
+  'use strict';
 
-// ── AVATAR ENGINE ──
-// Wählt passendes Emoji je nach Geschlecht und Alter
-function getAvatar(a) {
-  var w = a.geschlecht === 'B';
-  var alter = a.intro;
-  if (w) {
-    if (alter === 'A') return '👧';
-    if (alter === 'B' || alter === 'C') return '👩';
-    if (alter === 'D') return '👩‍🦱';
-    return '👩‍🦳';
-  } else {
-    if (alter === 'A') return '👦';
-    if (alter === 'B' || alter === 'C') return '👨';
-    if (alter === 'D') return '👨‍🦱';
-    return '👨‍🦳';
+  var fQueue = [];
+  var qIdx = 0;
+  var multiSel = [];
+  var abgeschlossen = false;
+  var $container;
+
+
+  /* ──── FRAGEN-QUEUE (v2-Spec) ──── */
+  function initQueue() {
+    fQueue = [
+      {
+        id: 'intro', typ: 'rad', tag: 'Schritt 1',
+        frage: 'Wann bist du geboren?',
+        hint: 'Beeinflusst Vitamin-D, Kollagen und Dosierungen.',
+        min: 1940, max: 2010, std: 1990, absteigend: true
+      },
+      {
+        id: 'geschlecht', typ: 'choice', tag: 'Schritt 2',
+        frage: 'Biologisches Geschlecht?',
+        hint: 'Relevant für Eisen, Magnesium und Dosierungen.',
+        opts: [
+          { k: 'A', l: 'Männlich' },
+          { k: 'B', l: 'Weiblich' }
+        ]
+      },
+      {
+        id: 'gewicht', typ: 'rad', tag: 'Schritt 3',
+        frage: 'Wie viel wiegst du?',
+        hint: 'Grundlage für exakte Proteindosierung.',
+        einheit: 'kg', min: 40, max: 200, std: 75
+      },
+      {
+        id: 'training', typ: 'choice', tag: 'Schritt 4',
+        frage: 'Deine Trainingsform?',
+        hint: 'Bestimmt deinen Supplement-Bedarf.',
+        opts: [
+          { k: 'A', l: 'Kraft 4+×/Woche' },
+          { k: 'B', l: 'Kraft 2–3×/Woche' },
+          { k: 'C', l: 'Hauptsächlich Cardio' },
+          { k: 'D', l: 'Mix (Kraft + Cardio kombiniert)' },
+          { k: 'E', l: 'Wenig Sport (≤ 1×/Woche)' }
+        ]
+      },
+      {
+        id: 'erfahrung', typ: 'choice', tag: 'Schritt 5',
+        frage: 'Wie lange trainierst du regelmäßig?',
+        hint: 'Beeinflusst die Komplexität deines Stacks.',
+        opts: [
+          { k: 'einsteiger',      l: 'Anfänger (< 1 Jahr)' },
+          { k: 'fortgeschritten', l: 'Erfahren (1–3 Jahre)' },
+          { k: 'profi',           l: 'Sehr erfahren (3+ Jahre)' }
+        ]
+      },
+      {
+        id: 'ziele', typ: 'multi', tag: 'Schritt 6',
+        frage: 'Deine Ziele?',
+        hint: 'Wähle deine 3 wichtigsten – das schärft die Empfehlungen.',
+        max: 3,
+        opts: [
+          { k: 'A', l: '💪 Muskelaufbau' },
+          { k: 'B', l: '🔥 Fettabbau' },
+          { k: 'C', l: '⚡ Mehr Energie' },
+          { k: 'D', l: '🏃 Ausdauer' },
+          { k: 'E', l: '😴 Regeneration' },
+          { k: 'F', l: '❤️ Gesundheit' },
+          { k: 'G', l: '🧘 Stress reduzieren' }
+        ]
+      },
+      {
+        id: 'ernaehrung', typ: 'choice', tag: 'Schritt 7',
+        frage: 'Deine Ernährungsweise?',
+        hint: 'Beeinflusst Protein-Form, B12, Eisen und Omega-3.',
+        opts: [
+          { k: 'A', l: 'Alles essen' },
+          { k: 'B', l: 'Flexitarisch (selten Fleisch)' },
+          { k: 'C', l: 'Pescetarisch (Fisch, kein Fleisch)' },
+          { k: 'D', l: 'Vegetarisch' },
+          { k: 'E', l: 'Vegan' }
+        ]
+      },
+      {
+        id: 'unvertraeglichkeiten', typ: 'multi', tag: 'Schritt 8',
+        frage: 'Unverträglichkeiten oder Allergien?',
+        hint: 'Wichtig für deine Sicherheit – wir filtern Produkte entsprechend.',
+        exkl: 'A',
+        opts: [
+          { k: 'A', l: 'Keine' },
+          { k: 'B', l: '🥛 Laktoseintoleranz' },
+          { k: 'C', l: '🥛 Milcheiweiß-Allergie' },
+          { k: 'D', l: '🐟 Fischallergie' },
+          { k: 'E', l: '🌾 Glutenunverträglichkeit' },
+          { k: 'F', l: '🌱 Sojaallergie' }
+        ]
+      },
+      {
+        id: 'medikamente', typ: 'multi', tag: 'Schritt 9',
+        frage: 'Erkrankungen oder regelmäßige Medikamente?',
+        hint: 'Sicherheitsrelevant. Wir empfehlen nichts was problematisch wäre.',
+        exkl: 'A',
+        opts: [
+          { k: 'A', l: 'Keine' },
+          { k: 'B', l: 'Blutverdünner / Gerinnungshemmer' },
+          { k: 'C', l: 'Schilddrüsenerkrankung' },
+          { k: 'D', l: 'Bluthochdruck / Herzerkrankung' },
+          { k: 'E', l: 'Nierenerkrankung' },
+          { k: 'F', l: 'Lebererkrankung' },
+          { k: 'G', l: 'Diabetes' },
+          { k: 'H', l: 'Antidepressiva / Psychopharmaka' }
+        ]
+      }
+      // Situations-Frage + Schlafproblem-Folgefrage werden DYNAMISCH eingefuegt
+    ];
   }
-}
 
-// ── FRAGEN-QUEUE ──
-// Definiert alle Quiz-Fragen in der richtigen Reihenfolge
-function initQueue() {
-  fQueue = [
-    {
-      id: 'intro', typ: 'rad', tag: 'Schritt 1',
-      frage: 'Wann bist du geboren?',
-      hint: 'Beeinflusst Vitamin-D, Kollagen und Dosierungen.',
-      min: 1940, max: 2010, std: 1990, absteigend: true
-    },
-    {
-      id: 'geschlecht', typ: 'choice', tag: 'Schritt 2',
-      frage: 'Biologisches Geschlecht?',
-      hint: 'Relevant für Eisen, Magnesium und Dosierungen.',
-      opts: [
-        { k: 'A', l: 'Männlich' },
-        { k: 'B', l: 'Weiblich' },
-        { k: 'C', l: 'Keine Angabe' }
-      ]
-    },
-    {
-      id: 'groesse', typ: 'rad', tag: 'Schritt 3',
-      frage: 'Wie groß bist du?',
-      hint: 'Basis für BMI-Berechnung.',
-      einheit: 'cm', min: 140, max: 220, std: 175
-    },
-    {
-      id: 'gewicht', typ: 'rad', tag: 'Schritt 4',
-      frage: 'Wie viel wiegst du?',
-      hint: 'Grundlage für exakte Proteindosierung.',
-      einheit: 'kg', min: 40, max: 200, std: 75
-    },
-    {
-      id: 'training', typ: 'choice', tag: 'Schritt 5',
-      frage: 'Deine Trainingsform?',
-      hint: 'Bestimmt deinen Supplement-Bedarf.',
-      opts: [
-        { k: 'A', l: 'Kraft 4+×/Woche' },
-        { k: 'B', l: 'Kraft 2–3×/Woche' },
-        { k: 'C', l: 'Hauptsächlich Cardio' },
-        { k: 'D', l: 'Mix' },
-        { k: 'E', l: 'Wenig Sport' }
-      ]
-    },
-    {
-      id: 'erfahrung', typ: 'choice', tag: 'Schritt 6',
-      frage: 'Deine Erfahrung?',
-      hint: 'Einsteiger brauchen einfachere Stacks.',
-      opts: [
-        { k: 'einsteiger',     l: 'Einsteiger (< 1 Jahr)' },
-        { k: 'fortgeschritten',l: 'Fortgeschritten (1–3 J.)' },
-        { k: 'profi',          l: 'Profi (> 3 Jahre)' }
-      ]
-    },
-    {
-      id: 'ziele', typ: 'multi', tag: 'Schritt 7',
-      frage: 'Deine Ziele?',
-      hint: 'Mehrfachauswahl möglich.',
-      opts: [
-        { k: 'A', l: '💪 Muskelaufbau' },
-        { k: 'B', l: '🔥 Fettabbau' },
-        { k: 'C', l: '⚡ Mehr Energie' },
-        { k: 'D', l: '🏃 Ausdauer' },
-        { k: 'E', l: '😴 Regeneration' },
-        { k: 'F', l: '❤️ Gesundheit' }
-      ]
-    },
-    {
-      id: 'ernaehrung', typ: 'choice', tag: 'Schritt 8',
-      frage: 'Deine Ernährungsweise?',
-      hint: 'Veganer brauchen andere Produkte.',
-      opts: [
-        { k: 'A', l: 'Alles' },
-        { k: 'B', l: 'Flexitarisch' },
-        { k: 'C', l: 'Vegetarisch' },
-        { k: 'D', l: 'Vegan' }
-      ]
-    },
-    {
-      id: 'unvertraeglichkeiten', typ: 'multi', tag: 'Schritt 9',
-      frage: 'Unverträglichkeiten oder Allergien?',
-      hint: 'Beeinflusst direkt welche Produkte wir empfehlen.',
-      exkl: 'A',
-      opts: [
-        { k: 'A', l: 'Keine' },
-        { k: 'B', l: '🥛 Laktoseintoleranz' },
-        { k: 'C', l: '🐟 Fischallergie' },
-        { k: 'D', l: '🌾 Glutenunverträglichkeit' },
-        { k: 'E', l: '🌱 Sojaallergie' }
-      ]
-    },
-    {
-      id: 'medikamente', typ: 'multi', tag: 'Schritt 10',
-      frage: 'Medikamente oder Erkrankungen?',
-      hint: 'Wichtig für deine Sicherheit – beeinflusst die Auswahl.',
-      exkl: 'A',
-      opts: [
-        { k: 'A', l: 'Keine' },
-        { k: 'B', l: 'Blutverdünner' },
-        { k: 'C', l: 'Schilddrüsenerkrankung' },
-        { k: 'D', l: 'Bluthochdruck' },
-        { k: 'E', l: 'Nierenerkrankung' },
-        { k: 'F', l: 'Diabetes' },
-        { k: 'G', l: 'Antidepressiva' }
-      ]
-    },
-    // Situationsfrage wird dynamisch via injectSituation() angehängt
-  ];
-}
 
-// ── SITUATIONSFRAGE DYNAMISCH EINBAUEN ──
-// Wird nach Geschlecht- und Medikamente-Frage aufgerufen
-function injectSituation() {
-  var geschlecht = AW['geschlecht'];
-  var alter      = AW['intro'];
-  var w          = geschlecht === 'B';
-  var aelteresFrau = w && (alter === 'C' || alter === 'D' || alter === 'E');
-  var jungesFrau   = w && (alter === 'A' || alter === 'B' || alter === 'C');
+  /* ──── DYNAMIK: Situations-Frage einbauen ──── */
+  function injectSituation() {
+    var geschlecht = AW['geschlecht'];
+    var alter      = AW['alter'] || 0;
+    var w          = geschlecht === 'B';
 
-  // Vorherige Situationsfrage entfernen
-  fQueue = fQueue.filter(function (f) { return f.id !== 'situation'; });
+    // Vorherige Situation + Schlafproblem-Folgefrage entfernen
+    fQueue = fQueue.filter(function (f) {
+      return f.id !== 'situation' && f.id !== 'schlafproblem_typ';
+    });
 
-  var opts = [{ k: 'A', l: 'Keine besondere Situation' }];
+    var opts = [{ k: 'A', l: 'Keine besondere Situation' }];
 
-  if (w) {
-    if (jungesFrau || alter === 'C') {
-      opts.push({ k: 'B', l: '🤰 Schwanger oder stillend' });
+    if (w && alter >= 18 && alter <= 50) {
+      opts.push({ k: 'B', l: '🤰 Schwangerschaft / Stillzeit' });
     }
-    if (aelteresFrau) {
-      opts.push({ k: 'C', l: '🌸 Wechseljahre' });
+    if (w && alter >= 40) {
+      opts.push({ k: 'C', l: '🌗 Wechseljahre' });
     }
-  }
-  opts.push({ k: 'D', l: '😴 Starke Schlafprobleme' });
+    opts.push({ k: 'D', l: '😴 Schlafprobleme' });
+    opts.push({ k: 'E', l: '💊 Reha / nach Krankheit' });
 
-  if (opts.length > 2) {
     fQueue.push({
-      id: 'situation', typ: 'choice',
+      id: 'situation', typ: 'multi',
       tag: 'Schritt ' + (fQueue.length + 1),
-      frage: 'Gibt es etwas Besonderes das wir berücksichtigen sollen?',
-      hint: 'Beeinflusst deine Supplement-Empfehlung.',
+      frage: 'Aktuelle Situation?',
+      hint: 'Beeinflusst spezielle Empfehlungen. Mehrfachauswahl möglich.',
+      exkl: 'A',
       opts: opts
     });
-  } else {
-    fQueue.push({
-      id: 'situation', typ: 'choice',
-      tag: 'Schritt ' + (fQueue.length + 1),
-      frage: 'Hast du Schlafprobleme?',
-      hint: 'Bestimmte Supplements können gezielt helfen.',
-      opts: [
-        { k: 'A', l: 'Nein, ich schlafe gut' },
-        { k: 'D', l: '😴 Ja, ich habe Schlafprobleme' }
-      ]
+  }
+
+
+  /* ──── DYNAMIK: Schlafproblem-Folgefrage ──── */
+  function injectSchlafproblemTyp() {
+    var sit = AW['situation'] || [];
+    var hatSchlafproblem = Array.isArray(sit) && sit.indexOf('D') >= 0;
+
+    fQueue = fQueue.filter(function (f) { return f.id !== 'schlafproblem_typ'; });
+
+    if (hatSchlafproblem) {
+      fQueue.push({
+        id: 'schlafproblem_typ', typ: 'choice',
+        tag: 'Schritt ' + (fQueue.length + 1),
+        frage: 'Welche Art Schlafproblem?',
+        hint: 'Bestimmt die richtige Empfehlung.',
+        opts: [
+          { k: 'A', l: 'Einschlafen (> 30 Min bis Schlaf)' },
+          { k: 'B', l: 'Durchschlafen (Aufwachen, schwer wieder einschlafen)' },
+          { k: 'C', l: 'Beides' }
+        ]
+      });
+    }
+  }
+
+
+  /* ──── RENDER FRAGE ──── */
+  function renderFrage() {
+    var f = fQueue[qIdx];
+    var tot = fQueue.length;
+    multiSel = [];
+
+    if (f.typ === 'multi' && AW[f.id]) {
+      multiSel = AW[f.id].slice();
+    }
+
+    var h = [
+      '<div class="quiz-inner">',
+      '  <div class="quiz-progress">',
+      '    <div class="quiz-progress__bar"><div class="quiz-progress__fill" style="width:' + Math.round((qIdx / tot) * 100) + '%"></div></div>',
+      '    <div class="quiz-progress__text">' + (qIdx + 1) + ' / ' + tot + '</div>',
+      '  </div>',
+      '  <div class="quiz-tag">' + f.tag + '</div>',
+      '  <h1 class="quiz-q">' + f.frage + '</h1>',
+      '  <p class="quiz-hint">' + (f.hint || '') + '</p>'
+    ];
+
+    if (f.typ === 'choice')      h.push(renderChoice(f));
+    else if (f.typ === 'multi')  h.push(renderMulti(f));
+    else if (f.typ === 'rad')    h.push(renderRad(f));
+
+    h.push('  <div class="quiz-nav">');
+    h.push(qIdx > 0
+      ? '    <button class="quiz-btn quiz-btn--ghost" id="quiz-back">← Zurück</button>'
+      : '    <span></span>');
+    h.push((f.typ === 'multi' || f.typ === 'rad')
+      ? '    <button class="quiz-btn quiz-btn--primary" id="quiz-next">Weiter →</button>'
+      : '    <span></span>');
+    h.push('  </div>');
+    h.push('</div>');
+
+    $container.innerHTML = h.join('\n');
+    bindEvents(f);
+  }
+
+
+  function renderChoice(f) {
+    var cls = f.opts.length <= 3 ? 'quiz-options' : 'quiz-options quiz-options--grid';
+    var h = ['<div class="' + cls + '">'];
+    f.opts.forEach(function (o, i) {
+      var aktiv = AW[f.id] === o.k ? ' is-selected' : '';
+      h.push(
+        '<button class="quiz-option' + aktiv + '" data-k="' + o.k + '">',
+        '  <span class="quiz-option__num">' + (i + 1) + '</span>',
+        '  <span class="quiz-option__label">' + o.l + '</span>',
+        '  <span class="quiz-option__check">✓</span>',
+        '</button>'
+      );
     });
+    h.push('</div>');
+    return h.join('\n');
   }
-}
 
-// ── QUIZ STARTEN ──
-function zeigeQuiz() {
-  qIdx = 0;
-  multiSel = [];
-  initQueue();
-  zeige('s-quiz');
-  renderFrage();
-}
 
-// ── FRAGE RENDERN ──
-// Baut die aktuelle Frage als HTML auf und injiziert sie ins DOM
-function renderFrage() {
-  var f = fQueue[qIdx];
-  var tot = fQueue.length;
-
-  // Fortschrittsbalken aktualisieren
-  document.getElementById('prog').style.width = Math.round((qIdx / tot) * 100) + '%';
-  document.getElementById('prog-txt').textContent = qIdx + ' / ' + tot;
-  multiSel = [];
-
-  var h = '<div class="quiz-tag">' + f.tag + '</div>';
-  h += '<div class="quiz-q">' + f.frage + '</div>';
-  h += '<div class="quiz-hint">' + (f.hint || '') + '</div>';
-
-  // Einfachauswahl
-  if (f.typ === 'choice') {
-    var cls = f.opts.length <= 3 ? 'aw-list' : 'aw-list grid2';
-    h += '<div class="' + cls + '" id="aw-c">';
-    for (var i = 0; i < f.opts.length; i++) {
-      var o = f.opts[i];
-      var sel = AW[f.id] === o.k ? ' sel' : '';
-      h += '<button class="aw-btn tipp' + sel + '" data-t="choice" data-k="' + o.k + '">';
-      h += '<span class="aw-key">' + (i + 1) + '</span>';
-      h += '<span>' + o.l + '</span>';
-      h += '<span class="aw-check">✓</span>';
-      h += '</button>';
+  function renderMulti(f) {
+    var h = ['<div class="quiz-options">'];
+    // Hinweis bei max-Limit
+    if (f.max) {
+      h.push('<div class="quiz-multi-hint">Max. ' + f.max + ' Auswahl · <span class="quiz-multi-count">' + multiSel.length + '/' + f.max + '</span></div>');
     }
-    h += '</div>';
-    h += '<div class="quiz-nav"><button class="btn-ghost" id="btn-z">← Zurück</button></div>';
+    f.opts.forEach(function (o, i) {
+      var aktiv = multiSel.indexOf(o.k) !== -1 ? ' is-selected' : '';
+      h.push(
+        '<button class="quiz-option' + aktiv + '" data-k="' + o.k + '" data-ex="' + (f.exkl || '') + '">',
+        '  <span class="quiz-option__num">' + (i + 1) + '</span>',
+        '  <span class="quiz-option__label">' + o.l + '</span>',
+        '  <span class="quiz-option__check">✓</span>',
+        '</button>'
+      );
+    });
+    h.push('</div>');
+    return h.join('\n');
   }
 
-  // Mehrfachauswahl
-  if (f.typ === 'multi') {
-    h += '<div class="aw-list" id="aw-c">';
-    for (var i = 0; i < f.opts.length; i++) {
-      var o = f.opts[i];
-      h += '<button class="aw-btn tipp" data-t="multi" data-k="' + o.k + '" data-ex="' + (f.exkl || '') + '">';
-      h += '<span class="aw-key">' + (i + 1) + '</span>';
-      h += '<span>' + o.l + '</span>';
-      h += '<span class="aw-check">✓</span>';
-      h += '</button>';
-    }
-    h += '</div>';
-    h += '<div class="quiz-nav">';
-    h += '<button class="btn-ghost" id="btn-z">← Zurück</button>';
-    h += '<button class="btn-primary" id="btn-w" style="width:auto;padding:12px 24px;font-size:14px;">Weiter →</button>';
-    h += '</div>';
-  }
 
-  // Wert-Rad (Geburtsjahr, Gewicht, …)
-  if (f.typ === 'rad') {
-    var radKey    = f.id === 'intro' ? 'geburtsjahr' : f.id;
-    var aktWert   = AW[radKey] || f.std;
-    var einheit   = f.einheit ? ' ' + f.einheit : '';
-    // Werte-Array aufbauen
-    var radWerte = [];
+  function renderRad(f) {
+    var werte = [];
     if (f.absteigend) {
-      for (var rv = f.max; rv >= f.min; rv--) radWerte.push(rv);
+      for (var v = f.max; v >= f.min; v--) werte.push(v);
     } else {
-      for (var rv = f.min; rv <= f.max; rv++) radWerte.push(rv);
+      for (var v = f.min; v <= f.max; v++) werte.push(v);
     }
-    var radLabel = f.id === 'intro' ? 'Geburtsjahr' : (f.einheit ? 'Gewicht in ' + f.einheit : 'Wert');
-    h += '<div class="yw-outer">';
-    h += '<div class="yw-label">' + radLabel + '</div>';
-    h += '<div class="yw-container">';
-    h += '<div class="yw-scroll" id="yw-scroll">';
-    for (var ri = 0; ri < radWerte.length; ri++) {
-      h += '<div class="yw-item" data-val="' + radWerte[ri] + '">' + radWerte[ri] + einheit + '</div>';
-    }
-    h += '</div>';
-    h += '<div class="yw-line top"></div>';
-    h += '<div class="yw-line bot"></div>';
-    h += '</div>';
-    h += '<div class="yw-selected-display" id="yw-display">' + aktWert + einheit + '</div>';
-    h += '</div>';
-    h += '<div class="quiz-nav">';
-    h += '<button class="btn-ghost" id="btn-z">← Zurück</button>';
-    h += '<button class="btn-primary" id="btn-w" style="width:auto;padding:12px 24px;font-size:14px;">Weiter →</button>';
-    h += '</div>';
+
+    var radKey = f.id === 'intro' ? 'geburtsjahr' : f.id;
+    var aktWert = AW[radKey] || f.std;
+    var aktIdx = werte.indexOf(parseInt(aktWert));
+    if (aktIdx === -1) aktIdx = werte.indexOf(f.std);
+    if (aktIdx === -1) aktIdx = 0;
+
+    var einheit = f.einheit ? ' ' + f.einheit : '';
+
+    var h = [
+      '<div class="quiz-rad" data-aktiv-idx="' + aktIdx + '">',
+      '  <div class="quiz-rad__viewport">',
+      '    <div class="quiz-rad__scroll" id="quiz-rad-scroll">',
+      '      <div class="quiz-rad__pad-top"></div>'
+    ];
+
+    werte.forEach(function (w, i) {
+      h.push('      <div class="quiz-rad__item" data-idx="' + i + '" data-wert="' + w + '">' + w + einheit + '</div>');
+    });
+
+    h.push(
+      '      <div class="quiz-rad__pad-bot"></div>',
+      '    </div>',
+      '  </div>',
+      '  <div class="quiz-rad__indicator" aria-hidden="true"></div>',
+      '</div>'
+    );
+    return h.join('\n');
   }
 
-  // Numerische Eingabe
-  if (f.typ === 'nummer') {
-    h += '<div class="num-wrap">';
-    h += '<input type="number" class="num-inp" id="num-inp" min="' + f.min + '" max="' + f.max + '" value="' + f.std + '" inputmode="numeric">';
-    h += '<span class="num-unit">' + f.einheit + '</span>';
-    h += '</div>';
-    h += '<div class="quiz-nav">';
-    h += '<button class="btn-ghost" id="btn-z">← Zurück</button>';
-    h += '<button class="btn-primary" id="btn-w" style="width:auto;padding:12px 24px;font-size:14px;">Weiter →</button>';
-    h += '</div>';
-  }
 
-  document.getElementById('quiz-box').innerHTML = h;
-  bindQuiz(f);
-}
+  /* ──── EVENTS ──── */
+  function bindEvents(f) {
+    var $back = document.getElementById('quiz-back');
+    if ($back) $back.addEventListener('click', function () {
+      if (qIdx > 0) { qIdx--; renderFrage(); }
+    });
 
-// ── EVENT BINDING ──
-// Verbindet alle Buttons der aktuellen Frage mit ihren Aktionen
-function bindQuiz(f) {
-  // Zurück-Button
-  var bz = document.getElementById('btn-z');
-  if (bz) bz.addEventListener('click', function () {
-    if (qIdx > 0) { qIdx--; renderFrage(); }
-    else zeige('s-start');
-  });
-
-  // Wert-Rad initialisieren
-  if (f.typ === 'rad') {
-    var ywScroll  = document.getElementById('yw-scroll');
-    var ywDisplay = document.getElementById('yw-display');
-    var ywItems   = ywScroll ? ywScroll.querySelectorAll('.yw-item') : [];
-    var radKeyB   = f.id === 'intro' ? 'geburtsjahr' : f.id;
-    var aktWertB  = AW[radKeyB] || f.std;
-    var einheitB  = f.einheit ? ' ' + f.einheit : '';
-    var itemH     = 52;
-
-    // Werte-Array spiegeln wie beim Rendern
-    var radWerteB = [];
-    if (f.absteigend) {
-      for (var rv = f.max; rv >= f.min; rv--) radWerteB.push(rv);
-    } else {
-      for (var rv = f.min; rv <= f.max; rv++) radWerteB.push(rv);
-    }
-
-    // Startposition auf gespeicherten/Standard-Wert setzen
-    var startIdxB = radWerteB.indexOf(aktWertB);
-    if (startIdxB < 0) startIdxB = radWerteB.indexOf(f.std);
-    if (startIdxB < 0) startIdxB = 0;
-    if (ywScroll) ywScroll.scrollTop = startIdxB * itemH;
-
-    // Highlight: Mittel-Item orange+groß, Nachbarn abgestuft
-    function ywHighlight() {
-      if (!ywScroll) return;
-      var idx = Math.round(ywScroll.scrollTop / itemH);
-      idx = Math.max(0, Math.min(idx, ywItems.length - 1));
-      var wert = radWerteB[idx];
-      if (ywDisplay) ywDisplay.textContent = wert + einheitB;
-      for (var i = 0; i < ywItems.length; i++) {
-        var dist = Math.abs(i - idx);
-        if (dist === 0) {
-          ywItems[i].style.color      = '#FF6B00';
-          ywItems[i].style.fontSize   = '28px';
-          ywItems[i].style.fontWeight = '900';
-        } else if (dist === 1) {
-          ywItems[i].style.color      = 'rgba(255,255,255,0.55)';
-          ywItems[i].style.fontSize   = '22px';
-          ywItems[i].style.fontWeight = '700';
-        } else if (dist === 2) {
-          ywItems[i].style.color      = 'rgba(255,255,255,0.25)';
-          ywItems[i].style.fontSize   = '18px';
-          ywItems[i].style.fontWeight = '600';
-        } else {
-          ywItems[i].style.color      = 'rgba(255,255,255,0.1)';
-          ywItems[i].style.fontSize   = '15px';
-          ywItems[i].style.fontWeight = '500';
-        }
+    var $next = document.getElementById('quiz-next');
+    if ($next) $next.addEventListener('click', function () {
+      if (f.typ === 'multi') {
+        if (multiSel.length === 0) { blinkenWarn(); return; }
+        AW[f.id] = multiSel.slice();
+      } else if (f.typ === 'rad') {
+        speichereRadWert(f);
       }
-    }
+      weiter();
+    });
 
-    // Klick auf Item scrollt direkt hin
-    for (var i = 0; i < ywItems.length; i++) {
-      (function(item, idx) {
-        item.addEventListener('click', function() {
-          ywScroll.scrollTo({ top: idx * itemH, behavior: 'smooth' });
-        });
-      })(ywItems[i], i);
-    }
+    if (f.typ === 'choice' || f.typ === 'multi') {
+      var $options = $container.querySelectorAll('.quiz-option');
+      $options.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var k = btn.dataset.k;
+          var exkl = btn.dataset.ex;
 
-    ywHighlight();
-    if (ywScroll) ywScroll.addEventListener('scroll', ywHighlight);
-  }
+          if (f.typ === 'choice') {
+            $options.forEach(function (b) { b.classList.remove('is-selected'); });
+            btn.classList.add('is-selected');
+            AW[f.id] = k;
+            setTimeout(weiter, 260);
 
-  // Weiter-Button (Multi, Nummer & Rad)
-  var bw = document.getElementById('btn-w');
-  if (bw) bw.addEventListener('click', function () {
-    if (f.typ === 'multi') {
-      if (!multiSel.length) { toast('Bitte wähle mindestens eine Option.'); return; }
-      AW[f.id] = multiSel.slice();
-    } else if (f.typ === 'nummer') {
-      var v = document.getElementById('num-inp').value;
-      if (!v || parseFloat(v) < f.min || parseFloat(v) > f.max) {
-        toast('Bitte ' + f.min + '–' + f.max + ' eingeben.');
-        return;
-      }
-      AW[f.id] = v;
-    } else if (f.typ === 'rad') {
-      // Aktuellen Wert aus Scroll-Position ablesen
-      var yw = document.getElementById('yw-scroll');
-      var ridx = yw ? Math.round(yw.scrollTop / 52) : 0;
-      var radWerteW = [];
-      if (f.absteigend) {
-        for (var rv = f.max; rv >= f.min; rv--) radWerteW.push(rv);
-      } else {
-        for (var rv = f.min; rv <= f.max; rv++) radWerteW.push(rv);
-      }
-      ridx = Math.max(0, Math.min(ridx, radWerteW.length - 1));
-      var gewaehlterWert = radWerteW[ridx];
+          } else if (f.typ === 'multi') {
+            var wasSelected = btn.classList.contains('is-selected');
 
-      if (f.id === 'intro') {
-        // Geburtsjahr → Alterskategorie A–E
-        AW['geburtsjahr'] = gewaehlterWert;
-        var alter = new Date().getFullYear() - gewaehlterWert;
-        AW[f.id] = alter < 18 ? 'A' : alter <= 25 ? 'B' : alter <= 35 ? 'C' : alter <= 45 ? 'D' : 'E';
-      } else {
-        // Numerischer Wert direkt speichern (z.B. Gewicht in kg)
-        AW[f.id] = String(gewaehlterWert);
-      }
-    }
-    naechste();
-  });
-
-  // Antwort-Buttons
-  var ac = document.getElementById('aw-c');
-  if (!ac) return;
-  var btns = ac.querySelectorAll('.aw-btn');
-
-  for (var i = 0; i < btns.length; i++) {
-    (function (btn) {
-      btn.addEventListener('click', function () {
-        var t  = btn.getAttribute('data-t');
-        var k  = btn.getAttribute('data-k');
-        var ex = btn.getAttribute('data-ex');
-
-        if (t === 'choice') {
-          // Einfachauswahl: alle deselektieren, diesen selektieren, sofort weiter
-          for (var j = 0; j < btns.length; j++) btns[j].classList.remove('sel');
-          btn.classList.add('sel');
-          AW[f.id] = k;
-          setTimeout(naechste, 260);
-
-        } else {
-          // Mehrfachauswahl mit Exklusiv-Option (z.B. "Keine")
-          if (ex && k === ex) {
-            for (var j = 0; j < btns.length; j++) btns[j].classList.remove('sel');
-            multiSel = [k];
-            btn.classList.add('sel');
-          } else {
-            // Exklusiv-Option deselektieren falls aktiv
-            if (ex) {
-              for (var j = 0; j < btns.length; j++) {
-                if (btns[j].getAttribute('data-k') === ex) btns[j].classList.remove('sel');
+            if (k === exkl) {
+              // Exklusiv-Option: alle anderen abwaehlen
+              $options.forEach(function (b) { b.classList.remove('is-selected'); });
+              multiSel = [];
+              if (!wasSelected) {
+                btn.classList.add('is-selected');
+                multiSel = [k];
               }
-              multiSel = multiSel.filter(function (x) { return x !== ex; });
-            }
-            // Toggle dieser Option
-            if (btn.classList.contains('sel')) {
-              btn.classList.remove('sel');
-              multiSel = multiSel.filter(function (x) { return x !== k; });
             } else {
-              btn.classList.add('sel');
-              multiSel.push(k);
+              // Andere Option: Exklusiv abwaehlen
+              $options.forEach(function (b) {
+                if (b.dataset.k === exkl) b.classList.remove('is-selected');
+              });
+              multiSel = multiSel.filter(function (x) { return x !== exkl; });
+
+              if (wasSelected) {
+                btn.classList.remove('is-selected');
+                multiSel = multiSel.filter(function (x) { return x !== k; });
+              } else {
+                // Max-Limit pruefen (z.B. Ziele max:3)
+                if (f.max && multiSel.length >= f.max) {
+                  blinkenMaxWarn(f.max);
+                  return;
+                }
+                btn.classList.add('is-selected');
+                multiSel.push(k);
+              }
+            }
+
+            // Counter aktualisieren falls max gesetzt
+            if (f.max) {
+              var $count = $container.querySelector('.quiz-multi-count');
+              if ($count) $count.textContent = multiSel.length + '/' + f.max;
             }
           }
-        }
+        });
       });
-    })(btns[i]);
+    }
+
+    if (f.typ === 'rad') initWerteRad(f);
   }
-}
 
-// ── NÄCHSTE FRAGE ──
-function naechste() {
-  var aktFrage = fQueue[qIdx];
-  // Nach Geschlecht oder Medikamente → Situationsfrage dynamisch einbauen
-  if (aktFrage && (aktFrage.id === 'geschlecht' || aktFrage.id === 'medikamente')) {
-    injectSituation();
+
+  /* ──── WERTE-RAD ──── */
+  function initWerteRad(f) {
+    var $scroll = document.getElementById('quiz-rad-scroll');
+    if (!$scroll) return;
+
+    var $items = $scroll.querySelectorAll('.quiz-rad__item');
+    var itemHeight = 52;
+
+    var aktIdx = parseInt($scroll.parentElement.parentElement.dataset.aktivIdx) || 0;
+    $scroll.scrollTop = aktIdx * itemHeight;
+
+    function aktualisiereAktivItem() {
+      var idx = Math.round($scroll.scrollTop / itemHeight);
+      $items.forEach(function (item, i) {
+        item.classList.toggle('is-active', i === idx);
+      });
+    }
+
+    aktualisiereAktivItem();
+    $scroll.addEventListener('scroll', aktualisiereAktivItem);
+
+    $items.forEach(function (item, i) {
+      item.addEventListener('click', function () {
+        $scroll.scrollTo({ top: i * itemHeight, behavior: 'smooth' });
+      });
+    });
   }
-  qIdx++;
-  if (qIdx >= fQueue.length) zeige('s-login');
-  else renderFrage();
-}
 
-// ── DOSIERUNGS-ENGINE ──
-// Gibt personalisierte Dosierung und Einnahmezeitpunkt zurück
-function dosis(id, a) {
-  var kg  = parseFloat(a.gewicht) || 75;
-  var w   = a.geschlecht === 'B';
-  var ki  = a.training === 'A';
-  var tr  = a.training !== 'E';
-  var mu  = (a.ziele || []).indexOf('A') >= 0;
 
-  // Tägliches Protein-Ziel berechnen
-  var pb = mu && ki ? Math.round(kg * 2) : mu ? Math.round(kg * 1.8) : tr ? Math.round(kg * 1.6) : Math.round(kg * 1.2);
-  var pp = w ? '20–25 g' : '25–35 g';
-  var kd = kg <= 70 ? '3 g' : '5 g';
-  var md = w ? (ki ? '300 mg' : '250 mg') : (ki ? '400 mg' : '350 mg');
-  var vd = (a.intro === 'D' || a.intro === 'E') ? '2.000–4.000 IE' : '1.000–2.000 IE';
-  var od = tr ? '2–3 g EPA/DHA' : '1–2 g EPA/DHA';
+  function speichereRadWert(f) {
+    var $scroll = document.getElementById('quiz-rad-scroll');
+    if (!$scroll) return;
 
-  var M = {
-    'whey_protein':    { d: pp + ' (Ziel: ' + pb + ' g)', z: 'Nach dem Training',
-      bsp: '🥤 Direkt nach dem Training: 1 Messlöffel mit 250–300 ml Wasser oder Milch shaken. Dein Körper nimmt Protein in den ersten 30–60 Min nach dem Training besonders effektiv auf. An trainingsfreien Tagen kannst du es als Zwischenmahlzeit oder zum Frühstück nehmen.' },
-    'iso_clear':       { d: pp + ' (Ziel: ' + pb + ' g)', z: 'Nach dem Training',
-      bsp: '🥤 Nach dem Training mit 300–400 ml Wasser mischen – Iso Clear löst sich besonders klar auf, fast wie ein Fruchtsaft. Ideal wenn dir klassische Shakes zu schwer im Magen liegen.' },
-    'pflanzenprotein': { d: pp + ' (Ziel: ' + pb + ' g)', z: 'Nach dem Training',
-      bsp: '🌱 1 Messlöffel mit 300 ml Pflanzenmilch (Hafer, Mandel oder Soja) shaken. Tipp: Etwas Banane oder Erdnussbutter dazu macht den Geschmack deutlich runder und verbessert das Aminosäureprofil zusätzlich.' },
-    'kreatin':         { d: kd + ' täglich',               z: 'Täglich – egal wann',
-      bsp: '⚡ Einfach ' + kd + ' in deinen Post-Workout-Shake oder ein Glas Wasser einrühren. Kreatin hat keine Wirkung durch das Timing – wichtig ist nur die tägliche Einnahme, auch an trainingsfreien Tagen. Nach 4–6 Wochen sind die Speicher voll.' },
-    'magnesium':       { d: md,                             z: 'Abends vor dem Schlafen',
-      bsp: '🌙 ' + md + ' Magnesiumbisglycinat ca. 30 Min vor dem Schlafen mit einem Glas Wasser einnehmen. Bisglycinat ist die schonendste Form – kein Abführeffekt wie bei billigem Magnesiumoxid. Du wirst schneller einschlafen und tiefer schlafen.' },
-    'omega3':          { d: od,                             z: 'Zu einer Mahlzeit',
-      bsp: '🐟 ' + od + ' zu einer fetthaltigen Mahlzeit einnehmen – z.B. zum Mittagessen. Das Fett im Essen verbessert die Aufnahme der Omega-3-Fettsäuren erheblich. Kapseln einfach mit dem Essen schlucken, nie auf nüchternen Magen.' },
-    'omega3_vegan':    { d: od,                             z: 'Zu einer Mahlzeit',
-      bsp: '🌿 ' + od + ' aus Algenöl zu einer Hauptmahlzeit einnehmen. Algenöl enthält direkt EPA und DHA – keine Umwandlung nötig wie bei Leinsamenöl. Gleiche Wirkung wie Fischöl, ohne Fischgeschmack und nachhaltiger.' },
-    'vitamin_d3':      { d: vd + ' D3 + 100µg K2',         z: 'Morgens zum Frühstück',
-      bsp: '☀️ Morgens zum Frühstück mit einer fetthaltigen Mahlzeit einnehmen – Vitamin D ist fettlöslich, ein Ei oder etwas Butter reicht. K2 sorgt dafür, dass das aufgenommene Calcium in die Knochen geht und nicht in die Gefäße. Niemals Vitamin D ohne K2 hochdosieren.' },
-    'vitamin_b12':     { d: '500µg Methylcobalamin',        z: 'Morgens nüchtern',
-      bsp: '🧬 500µg B12 als Methylcobalamin morgens nüchtern – am besten unter die Zunge legen (sublingual) für bessere Aufnahme. Kein Kaffee davor. B12 wird im Körper gespeichert, aber die Speicher leeren sich bei veganer Ernährung innerhalb weniger Jahre.' },
-    'eisen':           { d: (w ? '18' : '10') + ' mg Bisglycinat', z: 'Morgens nüchtern',
-      bsp: '🩸 ' + (w ? '18' : '10') + ' mg Eisen morgens nüchtern, mind. 30 Min vor dem Frühstück. Dazu ein Glas Orangensaft – Vitamin C verdoppelt die Aufnahmerate. Niemals zusammen mit Kaffee, Tee oder Milch einnehmen, das blockiert die Aufnahme vollständig.' },
-    'ashwagandha':     { d: '300–600 mg',                   z: 'Abends vor dem Schlafen',
-      bsp: '🌿 300–600 mg KSM-66 Extrakt ca. 1 Stunde vor dem Schlafen. Ashwagandha baut den Stressbotenstoff Cortisol ab – du wirst ruhiger einschlafen. Wirkung setzt meist nach 2–4 Wochen ein. Nicht morgens nehmen, kann müde machen.' },
-    'l_carnitin':      { d: '1.500–2.000 mg',               z: 'Vor dem Training',
-      bsp: '🔥 1.500–2.000 mg L-Carnitin ca. 30–45 Min vor dem Training einnehmen. Am besten als flüssige Form oder zusammen mit Kohlenhydraten – das erhöht die Aufnahme deutlich. Wirkung ist am stärksten beim Ausdauertraining mit moderater Intensität.' },
-    'beta_alanin':     { d: '3.200 mg',                     z: 'Vor dem Training',
-      bsp: '🏃 3.200 mg Beta-Alanin ca. 30 Min vor dem Training. Hinweis: Du wirst vermutlich ein Kribbeln auf der Haut spüren – das ist normal und harmlos (Parästhesie). Wirkung zeigt sich nach 2–4 Wochen kontinuierlicher Einnahme durch weniger Muskelermüdung.' },
-    'elektrolyte':     { d: '1 Portion',                    z: 'Während dem Training',
-      bsp: '💧 1 Portion in 500–750 ml Wasser auflösen und während dem Training trinken. Bei Einheiten unter 60 Min reicht normales Wasser. Ab 60 Min oder bei starkem Schwitzen sind Elektrolyte entscheidend – verhindert Krämpfe und Leistungsabfall.' },
-    'vitamin_c':       { d: '500–1.000 mg',                 z: 'Morgens zum Frühstück',
-      bsp: '🍊 500–1.000 mg Vitamin C morgens zum Frühstück. Verteile die Dosis lieber auf 2× täglich (morgens + mittags) – der Körper kann pro Mahlzeit nur ca. 500 mg gut aufnehmen. Gepuffertes Vitamin C (Calciumascorbat) ist magenfreundlicher als reine Ascorbinsäure.' },
-    'zink':            { d: '15 mg',                        z: 'Abends',
-      bsp: '🛡️ 15 mg Zink abends – mindestens 2 Stunden nach dem letzten Essen. Zink konkurriert mit anderen Mineralstoffen um die Aufnahme. Niemals auf nüchternen Magen, das kann Übelkeit auslösen. Als Zinkbisglycinat oder -picolinat hat die beste Bioverfügbarkeit.' },
-    'kollagen':        { d: '10 g',                         z: 'Morgens nüchtern',
-      bsp: '✨ 10 g Kollagenpeptide morgens nüchtern in einem Glas Wasser, Kaffee oder Saft auflösen. Dazu 250 mg Vitamin C – das ist zwingend nötig für die Kollagensynthese im Körper. Wirkung auf Haut und Gelenke nach 8–12 Wochen regelmäßiger Einnahme.' },
-    'eaas':            { d: '10–15 g',                      z: 'Während dem Training',
-      bsp: '🔬 10–15 g EAAs in 500 ml Wasser auflösen und während dem Training sip by sip trinken. Besonders wertvoll bei nüchternem Training oder wenn du keine vollständige Proteinmahlzeit vor dem Training gegessen hast.' },
-    'l_glutamin':      { d: '5 g',                          z: 'Nach dem Training',
-      bsp: '🛡️ 5 g L-Glutamin direkt nach dem Training in deinen Shake oder Wasser einrühren. Glutamin unterstützt die Darmbarriere und das Immunsystem – besonders sinnvoll in intensiven Trainingsphasen oder bei Stress.' },
-    'multivitamin':    { d: '1 Kapsel',                     z: 'Morgens zum Frühstück',
-      bsp: '🌈 1 Kapsel morgens zum Frühstück – nie auf nüchternen Magen. Die fettlöslichen Vitamine A, D, E, K brauchen etwas Fett zur Aufnahme. Trenne die Einnahme von Kaffee um mind. 30 Min, da Gerbstoffe die Mineralstoffaufnahme hemmen.' },
-    'zma':             { d: '1 Portion',                    z: 'Abends vor dem Schlafen',
-      bsp: '💤 1 Portion ZMA (Zink, Magnesium, B6) ca. 30–60 Min vor dem Schlafen, auf nüchternen Magen. Nicht zusammen mit Kalzium einnehmen (z.B. Milch) – das blockiert die Zink- und Magnesiumaufnahme. Unterstützt Schlafqualität und Testosteron-Spiegel.' },
-    'pre_workout':     { d: '1 Portion vor Training',       z: 'Vor dem Training',
-      bsp: '🚀 1 Portion in 200–250 ml Wasser auflösen, 20–30 Min vor dem Training trinken. Starte mit einer halben Portion um deine Verträglichkeit zu testen. Nicht nach 16:00 Uhr nehmen wenn du Einschlafprobleme hast. An Ruhetagen nicht einnehmen.' },
-    'curcumin':        { d: '500 mg Curcuminoide',          z: 'Zu einer Mahlzeit',
-      bsp: '🌱 500 mg Curcuminoide zu einer fetthaltigen Hauptmahlzeit. Curcumin ist kaum bioverfügbar – achte auf Produkte mit Piperin (schwarzer Pfeffer) oder liposomaler Form, diese erhöhen die Aufnahme um das 20-fache. Wirkt entzündungshemmend nach 4–8 Wochen.' },
-    'probiotika':      { d: '≥10 Mrd. CFU',                 z: 'Morgens nüchtern',
-      bsp: '🦠 ≥10 Mrd. CFU morgens nüchtern mit einem Glas Wasser, ca. 20–30 Min vor dem Frühstück. Magensäure ist nüchtern weniger aggressiv – so überleben mehr Bakterien den Weg in den Darm. Kühl lagern oder auf Raumtemperatur-stabile Stämme achten.' },
-    'melatonin':       { d: '0,5–1 mg',                     z: 'Abends vor dem Schlafen',
-      bsp: '🌙 0,5–1 mg Melatonin ca. 30 Min vor dem Schlafen. Weniger ist mehr – 0,5 mg wirkt genauso gut wie 5 mg, ohne am nächsten Morgen träge zu sein. Dimme nach der Einnahme das Licht und meide Bildschirme. Nicht für dauerhaften Gebrauch gedacht.' },
-    'hmb':             { d: '3.000 mg (3× täglich)',         z: 'Über den Tag verteilt',
-      bsp: '💎 3× täglich 1.000 mg HMB, verteilt auf Morgen, Mittag und Abend – am besten zu den Mahlzeiten. HMB hemmt den Muskelabbau, deshalb ist die gleichmäßige Verteilung über den Tag entscheidend. Wirkung zeigt sich vor allem in intensiven Trainingsphasen.' },
-  };
+    var itemHeight = 52;
+    var idx = Math.round($scroll.scrollTop / itemHeight);
 
-  return M[id] || { d: 'Laut Produktangabe', z: 'Täglich' };
-}
+    var werte = [];
+    if (f.absteigend) {
+      for (var v = f.max; v >= f.min; v--) werte.push(v);
+    } else {
+      for (var v = f.min; v <= f.max; v++) werte.push(v);
+    }
+
+    idx = Math.max(0, Math.min(idx, werte.length - 1));
+    var wert = werte[idx];
+
+    if (f.id === 'intro') {
+      // Geburtsjahr → Zahl + Alter (Zahl) + Kategorie A-E (Rueckwaertskompatibilitaet)
+      AW['geburtsjahr'] = wert;
+      var alter = new Date().getFullYear() - wert;
+      AW['alter'] = alter;
+      AW[f.id] = alter < 18 ? 'A' :
+                 alter <= 25 ? 'B' :
+                 alter <= 35 ? 'C' :
+                 alter <= 45 ? 'D' : 'E';
+    } else {
+      AW[f.id] = String(wert);
+    }
+  }
+
+
+  /* ──── NAVIGATION ──── */
+  function weiter() {
+    var f = fQueue[qIdx];
+    // Nach Geschlecht ODER Medikamente: Situations-Frage einbauen
+    if (f.id === 'geschlecht' || f.id === 'medikamente') {
+      injectSituation();
+    }
+    // Nach Situation: Schlafproblem-Folgefrage einbauen (wenn ausgewaehlt)
+    if (f.id === 'situation') {
+      injectSchlafproblemTyp();
+    }
+
+    qIdx++;
+    if (qIdx >= fQueue.length) zeigeAbschluss();
+    else { renderFrage(); $container.scrollTop = 0; }
+  }
+
+
+  function zeigeAbschluss() {
+    abgeschlossen = true;
+    $container.innerHTML = [
+      '<div class="quiz-inner">',
+      '  <div class="quiz-finish">',
+      '    <div class="quiz-finish__icon">✓</div>',
+      '    <h1 class="quiz-finish__title">Profil komplett</h1>',
+      '    <p class="quiz-finish__sub">',
+      '      Danke! Wir kennen dich jetzt und können dir passende Wirkstoffe empfehlen.',
+      '    </p>',
+      '    <button class="quiz-btn quiz-btn--primary quiz-btn--large" id="quiz-zu-empfehlungen">',
+      '      Empfehlungen ansehen →',
+      '    </button>',
+      '    <button class="quiz-btn quiz-btn--ghost" id="quiz-nochmal">',
+      '      Quiz nochmal starten',
+      '    </button>',
+      '  </div>',
+      '</div>'
+    ].join('\n');
+
+    var $btnEmpf = document.getElementById('quiz-zu-empfehlungen');
+    if ($btnEmpf) $btnEmpf.addEventListener('click', function () {
+      console.log('Quiz-Antworten:', AW);
+
+      // ── Engine aufrufen (Phase 2) ──
+      if (typeof window.Empfehlungen === 'undefined' ||
+          typeof window.Empfehlungen.berechneStack !== 'function') {
+        console.error('Empfehlungen-Engine nicht geladen!');
+        alert('Engine-Fehler – siehe Konsole.');
+        return;
+      }
+
+      var stack;
+      try {
+        stack = window.Empfehlungen.berechneStack(AW);
+      } catch (err) {
+        console.error('Engine-Fehler beim berechneStack:', err);
+        alert('Engine-Fehler – siehe Konsole.');
+        return;
+      }
+
+      // ── In State + localStorage speichern ──
+      window.aktuellerStack = stack;
+      if (window.StackPersistenz && window.StackPersistenz.speichere) {
+        var ok = window.StackPersistenz.speichere(AW, stack);
+        if (!ok) console.warn('Stack konnte nicht persistiert werden (localStorage?)');
+      }
+
+      console.log('✓ Stack berechnet:', stack);
+      console.log('  Essential: ' + stack.meta.anzahl_essential);
+      console.log('  Empfohlen: ' + stack.meta.anzahl_empfohlen);
+      console.log('  Optional:  ' + stack.meta.anzahl_optional);
+
+      // ── TODO Schritt B: Navigation zum Stack-Screen ──
+      // window.Navigation.zeigeScreen('stack');
+      alert(
+        'Stack berechnet ✓\n\n' +
+        'Essential: ' + stack.meta.anzahl_essential + '\n' +
+        'Empfohlen: ' + stack.meta.anzahl_empfohlen + '\n' +
+        'Optional: '  + stack.meta.anzahl_optional + '\n\n' +
+        'Detail-Ansicht kommt in Phase 3 Schritt B.\n' +
+        'Volle Daten in Console (F12).'
+      );
+    });
+
+    var $btnNochmal = document.getElementById('quiz-nochmal');
+    if ($btnNochmal) $btnNochmal.addEventListener('click', function () {
+      for (var k in AW) { if (AW.hasOwnProperty(k)) delete AW[k]; }
+      qIdx = 0;
+      multiSel = [];
+      abgeschlossen = false;
+      initQueue();
+      renderFrage();
+    });
+  }
+
+
+  function blinkenWarn() {
+    var $next = document.getElementById('quiz-next');
+    if (!$next) return;
+    $next.classList.add('is-warn');
+    setTimeout(function () { $next.classList.remove('is-warn'); }, 600);
+  }
+
+
+  function blinkenMaxWarn(max) {
+    // Hint-Element kurz aufleuchten lassen + Schuettel-Animation
+    var $hint = $container.querySelector('.quiz-multi-hint');
+    if (!$hint) return;
+    $hint.classList.add('is-warn');
+    setTimeout(function () { $hint.classList.remove('is-warn'); }, 600);
+  }
+
+
+  /* ──── PUBLIC ──── */
+  function zeige() {
+    $container = document.getElementById('quiz-screen');
+    if (!$container) {
+      console.error('QuizScreen: #quiz-screen Element nicht gefunden');
+      return;
+    }
+
+    if (fQueue.length === 0) {
+      initQueue();
+      // Wenn schon Situation beantwortet (Wiederaufnahme): dynamische Fragen wiederherstellen
+      if (AW['geschlecht']) {
+        // Wenn Medikamente fertig, Situation einbauen
+        if (AW['medikamente']) injectSituation();
+        // Wenn Situation fertig, evtl. Schlafproblem-Typ einbauen
+        if (AW['situation']) injectSchlafproblemTyp();
+      }
+    }
+
+    if (abgeschlossen) { zeigeAbschluss(); return; }
+    renderFrage();
+  }
+
+  return { zeige: zeige };
+
+})();

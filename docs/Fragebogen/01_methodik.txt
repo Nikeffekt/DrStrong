@@ -1,0 +1,247 @@
+Stronger - Modul 1: Methodik Spec v2 | Juni 2026
+Stronger Quiz
+Modul 1 – Methodik & Konzept
+Dieses Modul beschreibt die wissenschaftlichen Grundlagen und die Architektur des
+Stronger-Empfehlungssystems. Es ist Teil einer modularen Dokumentation, die das Quiz-Konzept zur
+fachärztlichen Begutachtung aufbereitet.
+1. Einleitung und Motivation
+1.1 Marktsituation und Problemstellung
+Der Markt für Nahrungsergänzungsmittel ist in den letzten Jahren erheblich gewachsen. In Deutschland
+werden jährlich über 2,5 Milliarden Euro umgesetzt, in Österreich rund 230 Millionen Euro. Gleichzeitig
+herrscht erhebliche Unsicherheit unter Konsumenten: Welche Präparate sind tatsächlich sinnvoll? Welche
+werden eher durch Marketing als durch Evidenz getragen? Wann sind sie ergänzend, wann ersetzen sie
+eine ärztliche Beratung?
+Verbraucher stößen häufig auf widersprüchliche Informationen: Hersteller-Marketing überhöht Wirkung,
+Social-Media Influencer verbreiten Halbwahrheiten, akademische Quellen sind schwer zugänglich oder für
+Laien unverständlich. Das Resultat ist eine Mischung aus Überkonsum sinnloser Produkte und Untervers-
+orgung bei medizinisch relevanten Nährstoffen.
+1.2 Zielsetzung des Stronger-Quiz
+Das Stronger-Quiz wurde mit dem Ziel entwickelt, diese Unsicherheit zu adressieren. Es ist kein
+Verkaufstrichter, sondern ein evidenzbasiertes Beratungsinstrument, das aus einer überschaubaren Zahl
+strukturierter Fragen personalisierte Supplement-Empfehlungen ableitet. Die Besonderheiten:
+(cid:127) Jede einzelne Empfehlung lässt sich auf wissenschaftliche Studien zurückführen
+(cid:127) Kontraindikationen werden systematisch geprüft, nicht nachträglich angefügt
+(cid:127) Marketing-Behauptungen werden offen relativiert (z.B. bei Kollagen, ZMA)
+(cid:127) Mythen werden aktiv benannt und richtiggestellt
+(cid:127) Die Empfehlungslogik ist transparent und nachvollziehbar
+(cid:127) Bei sicherheitskritischen Konstellationen erfolgt der explizite Verweis auf die ärztliche Konsultation
+Zentrales Designprinzip: Das Quiz soll nichts empfehlen, was ein verantwortungsvoller Arzt nicht auch
+empfehlen würde – aber es soll dem Anwender erklären, warum eine bestimmte Empfehlung sinnvoll ist
+und auf welcher Datengrundlage sie basiert.
+1.3 Abgrenzung zur ärztlichen Beratung
+Das Stronger-Quiz versteht sich ausdrücklich als Ergänzung, nicht als Ersatz einer ärztlichen Beratung.
+Dies wird an mehreren Stellen kommuniziert:
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 1: Methodik Spec v2 | Juni 2026
+1. Bei jeder sicherheitsrelevanten Empfehlung wird auf die Notwendigkeit einer ärztlichen Rücksprache
+hingewiesen, sobald eine relevante Komorbidität oder Medikation vorliegt.
+2. Mehrere Wirkstoffe werden bei bestimmten Bedingungen vollständig ausgeschlossen, statt unter
+Vorbehalten empfohlen zu werden. Beispiele: Curcumin bei Lebererkrankungen, ZMA und Kreatin bei
+schwerer Niereninsuffizienz, Melatonin und Ashwagandha bei SSRI-Therapie.
+3. Bei diagnostischen Fragen (z.B. „Habe ich einen Vitamin-D-Mangel?“) verweisen wir auf die
+Notwendigkeit einer Blutuntersuchung beim Arzt. Das Quiz schätzt Risiken ab, diagnostiziert aber nicht.
+4. Schwangerschaft und Stillzeit triggern eine vollständig separate Empfehlungslogik mit deutlich
+restriktiveren Optionen und expliziter Empfehlung zur Rücksprache mit der gynäkologischen Betreuung.
+Disclaimer: Vor jeder Quiz-Auswertung wird der Anwender explizit darauf hingewiesen, dass die
+Empfehlungen kein ärztlicher Rat sind. Bei Symptomen, Krankheiten oder unklaren gesundheitlichen
+Situationen ist eine ärztliche Konsultation der einzig richtige Weg.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 1: Methodik Spec v2 | Juni 2026
+2. Wissenschaftliche Grundlagen
+2.1 Aufbau der Wirkstoff-Datenbank
+Die Empfehlungslogik des Quiz basiert auf einer Wissensbasis von 25 Wirkstoffen, von denen jeder
+anhand der aktuell verfügbaren wissenschaftlichen Evidenz kuratiert wurde. Die Hauptquellen sind:
+Primäre Evidenzquellen:
+(cid:127) Cochrane Database of Systematic Reviews
+(cid:127) Meta-Analysen aus PubMed-indexierten Fachzeitschriften
+(cid:127) Position Stands wissenschaftlicher Fachgesellschaften (ISSN, AASM, EFSA, ESPEN)
+(cid:127) BMJ, JAMA, Sports Medicine, Nutrients (Q1-Journals)
+Sekundäre Quellen:
+(cid:127) NIH Office of Dietary Supplements
+(cid:127) EMA und FDA-Daten zur Sicherheit
+(cid:127) LiverTox-Datenbank (Drug-Induced Liver Injury Network) für Hepatotoxizität
+(cid:127) Umbrella Reviews zur Evidenz-Synthese
+(cid:127) DGE-Referenzwerte und EFSA Dietary Reference Values
+Jeder Wirkstoff in der Datenbank wird nach einem standardisierten Schema dokumentiert. Die
+strukturierten Felder umfassen:
+Datenfeld Inhalt
+beschreibung Was ist der Wirkstoff, wie wirkt er, warum wichtig
+fazit Top-Effekte, ideale Zielgruppe, Standard-Dosis, Mythen-Aufklärung
+evidenz Level (A/B/C), Score, Effektgrößen mit Quellenangabe
+indikationen Liste der passenden Anwendungs-Ziele mit numerischer Stärke
+kontraindikationen Allergien / Medikamente / Erkrankungen mit Schweregrad
+dosierung Standard, Range, Obergrenze, Timing, wissenschaftliche Quelle
+population_spezifisch Adjustments für Senioren, Sportler, Frauen, etc.
+warnhinweise Wichtige Sicherheits- und Praxis-Hinweise
+quellen Vollständige bibliographische Referenzen mit DOI/URL
+2.2 Evidenzklassifizierung
+Wir verwenden eine dreistufige Evidenz-Bewertung in Anlehnung an gängige evidenzbasierte
+Klassifikationssysteme:
+Lev Definition Beispiele in unserer Datenbank
+el
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 1: Methodik Spec v2 | Juni 2026
+A Multiple hochqualitative RCTs und Kreatin, Whey/ISO Clear, Vitamin D3, Omega-3, Koffein, Vitamin
+Meta-Analysen mit konsistenten B12, Pflanzenprotein
+Ergebnissen. Mehrere
+wissenschaftliche Fachgesellschaften
+empfehlen den Einsatz.
+B Solide RCT-Basis vorhanden, aber Magnesium, Beta-Alanin, Kollagen, Curcumin, L-Carnitin, Probiotika,
+methodische Heterogenität oder HMB, Pre-Workout, Vitamin C, Eisen, Multivitamin, Melatonin
+Effektgröße moderat. Wirkstoff ist mit
+Sicherheit wirksam, aber Effektgröße
+oder Anwendungsbereich noch in
+Diskussion.
+C Limitierte oder kontroverse Evidenz, Ashwagandha (Cortisol-Effekte gut belegt, andere Aussagen
+erste Studien noch nicht ausreichend weniger), Zink (Testosteron-Versprechen schwach), EAA, ZMA,
+repliziert oder methodisch Elektrolyte
+eingeschränkt. Wirkstoff wird nur mit
+klaren Limitationen empfohlen.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 1: Methodik Spec v2 | Juni 2026
+3. Architektur der Empfehlungs-Engine
+3.1 Datenfluss vom Quiz zur Empfehlung
+Die Quiz-Auswertung folgt einem dreistufigen Prozess, der bewusst transparent und nachvollziehbar
+gestaltet ist. Diese Architektur unterscheidet das Stronger-Quiz von vielen kommerziellen Lösungen, bei
+denen die Empfehlungslogik als Black Box implementiert ist.
+Drei-Stufen-Prozess
+STUFE 1 FILTER (Sicherheit)
+Wirkstoffe mit harten Kontraindikationen
+werden vollständig ausgeschlossen
+fl
+STUFE 2 SCORING (Relevanz)
+Verbleibende Wirkstoffe erhalten einen
+numerischen Score basierend auf Indikationen,
+Evidenzlevel und Population-Match
+fl
+STUFE 3 KATEGORISIERUNG (Priorität)
+Sortierte Wirkstoffe werden in essenziell,
+empfohlen und optional aufgeteilt
+3.2 Stufe 1 – Harter Sicherheitsfilter
+Jeder der 25 Wirkstoffe in der Datenbank hat eine strukturierte Liste von Kontraindikationen. Diese sind in
+drei Schweregrade unterteilt:
+Schweregrad Definition Konsequenz
+hart Klinisch dokumentierte gefährliche Interaktion Wirkstoff wird KOMPLETT aus den
+oder absolute Kontraindikation Empfehlungen entfernt
+vorsichtig Relative Kontraindikation, erfordert ärztliche Wirkstoff bleibt empfohlen, wird mit
+Rücksprache Warnhinweis versehen
+info Allgemeiner Hinweis ohne unmittelbare Gefahr Wirkstoff bleibt empfohlen, mit erklärendem
+Kontext
+3.3 Stufe 2 – Scoring-Algorithmus
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5
+
+Stronger - Modul 1: Methodik Spec v2 | Juni 2026
+Für jeden verbleibenden Wirkstoff wird ein numerischer Relevanz-Score berechnet. Die Formel ist
+transparent und auf der wissenschaftlichen Datenbasis verankert:
+score = 0
+# 1. Indikations-Matching (Hauptfaktor)
+FUER jede Indikation des Wirkstoffs:
+WENN User-Ziel matcht: score += indikation.staerke * 100
+# 2. Population-Spezifischer Bonus
+FUER jede passende Population (z.B. senioren, sportler):
+score += population.staerke * 50
+# 3. Evidenz-Bonus
+WENN evidenz_level == A: score += 30
+WENN evidenz_level == B: score += 15
+# 4. Vorhandensein-Strafe
+WENN User hat Wirkstoff bereits: score -= 200
+Diese Formel hat den Vorteil, dass jeder Score-Wert auf konkrete, wissenschaftliche Datenpunkte
+zurückführbar ist. Es gibt keine willkürlichen Gewichtungen – jeder Term hat eine inhaltliche Begründung
+in der Wissensbasis.
+3.4 Stufe 3 – Kategorisierung
+Die nach Score sortierten Wirkstoffe werden in drei Prioritäts-Kategorien aufgeteilt:
+(cid:127) Essentials (Score > 250): Wirkstoffe, die für das angegebene Profil eine starke Evidenz und mehrfache
+Indikations-Matches aufweisen. Empfohlen werden 3-5 Essentials, höchstens 7.
+(cid:127) Empfohlen (Score 150-250): Ergänzende Wirkstoffe mit klarem Nutzen für das Profil, aber etwas
+niedrigerer Priorität. 0-5 Empfehlungen.
+(cid:127) Optional (Score 80-150): Wirkstoffe mit moderatem Nutzen, oft mit speziellen Anwendungsbereichen.
+0-3 Optionen.
+Gesamtumfang eines typischen Stacks: 5-10 Produkte, abhängig von Profil. Bei sehr komplexen
+Profilen (mehrere Erkrankungen) kann der Stack auch nur 3-4 Produkte umfassen – das entspricht der
+ärztlichen Realität.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 6
+
+Stronger - Modul 1: Methodik Spec v2 | Juni 2026
+4. Sicherheitsprinzipien
+Das Quiz folgt vier Sicherheitsprinzipien, die in die Architektur eingebaut sind:
+4.1 Prinzip 1: Safety First
+Die Filterstufe wird IMMER vor der Scoring-Stufe ausgeführt. Ein Wirkstoff, der für einen User aufgrund
+einer harten Kontraindikation ausgeschlossen ist, kann nicht durch hohe Relevanz wieder ins Spiel
+kommen. Diese Hierarchie ist algorithmisch zwingend – es gibt keinen Weg, sie zu umgehen.
+4.2 Prinzip 2: Konservatives Defaulting
+Im Zweifelsfall wird ein Wirkstoff eher AUSGESCHLOSSEN als empfohlen. Beispiele:
+(cid:127) Bei Antidepressiva wird sowohl Melatonin als auch Ashwagandha komplett ausgeschlossen, obwohl in
+vielen Einzelfällen eine Kombination unproblematisch wäre – die ärztliche Rücksprache hat Vorrang.
+(cid:127) Bei jeder Lebererkrankung wird Curcumin hart ausgeschlossen, obwohl die DILIN-Daten nur bei
+Hochdosis-Phytosomen-Formulierungen eindeutig sind.
+(cid:127) Bei Schwangerschaft greift ein restriktiver Modus, der nur 4-5 Wirkstoffe zulässt.
+4.3 Prinzip 3: Transparente Kommunikation
+Bei jeder empfohlenen Substanz wird dem Anwender mitgeteilt, warum sie zu seinem Profil passt. Diese
+Begründung wird aus der Wissensbasis dynamisch generiert – nicht hardcoded. Das führt zu echten,
+patientenspezifischen Erklärungen wie z.B.:
+„Vitamin D3 wird für dich essentiell empfohlen, weil:
+(cid:127) In Mitteleuropa sind über 60% der Bevölkerung im Winter unterversorgt
+(cid:127) In deiner Altersgruppe (38 Jahre) nimmt die kutane Synthese bereits messbar ab
+(cid:127) Als Frau hast du langfristig ein erhöhtes Knochenrisiko nach der Menopause
+Studie: Martineau et al. 2017, BMJ (n=10.933)“
+4.4 Prinzip 4: Mythen aktiv benennen
+Jeder Wirkstoff in der Datenbank enthält ein Feld mit den verbreitetsten Mythen über ihn. Diese werden
+dem Anwender zugänglich gemacht – wir korrigieren aktiv Falschvorstellungen, die der User
+möglicherweise aus dem Marketing mitbringt.
+Beispiele aktiv kommunizierter Mythen-Aufklärungen:
+Wirkstoff Mythos Wissenschaftliche Realität
+Kreatin „Kreatin schädigt die Nieren“ Bei gesunden Nieren nephrologisch unbedenklich (ISSN Position
+Stand 2017)
+ISO Clear „Isolat ist wirksamer als Meta-Analyse Castro 2019: SMD 0,0 – kein Unterschied bei
+Konzentrat“ Muskelaufbau
+ZMA „ZMA erhöht Testosteron“ Originalstudie (Brilla 2000) konnte in mehreren Folgestudien
+nicht repliziert werden
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 7
+
+Stronger - Modul 1: Methodik Spec v2 | Juni 2026
+HMB „HMB ist wichtig für junge Jakubowski 2020: KEINE Effekte bei jungen Trainierenden,
+Trainierende“ positive Effekte nur bei Sarkopenie-Senioren
+Curcumin „Curcumin ist immer sicher, weil DILIN-Netzwerk dokumentiert zunehmende
+natürlich“ Hepatotoxizitäts-Fälle, besonders bei
+Phytosomen-Formulierungen
+Pre-Workout „Pre-Workout ist nur Koffein“ Oft 5-10 Wirkstoffe inklusive potentiell riskanter Stimulanzien wie
+DMHA oder Yohimbin
+Konkretes Beispiel zur Sicherheitslogik:
+Ein User gibt im Quiz Lebererkrankung an und wählt als Ziel „Gelenkgesundheit“. Curcumin hätte hier rein
+nach Indikation einen sehr hohen Score (Effektgröße bei Knie-OA: SMD -1,63). Aber: Lebererkrankung ist
+eine harte Kontraindikation für Curcumin (DILIN-Netzwerk dokumentiert Hepatotoxizitäts-Fälle). Das Quiz
+schließt Curcumin daher vollständig aus und empfiehlt stattdessen Kollagen, Omega-3 und
+gegebenenfalls L-Carnitin (sofern andere Kontraindikationen es nicht ebenfalls ausschließen).
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 8
+
+Stronger - Modul 1: Methodik Spec v2 | Juni 2026
+5. Modulare Dokumentation – Übersicht
+Diese Dokumentation ist modular aufgebaut. Jedes Modul behandelt einen thematischen Bereich
+vollständig:
+Modul Inhalt Hauptzielgruppe
+01_methodik Konzept, Architektur, Sicherheitsprinzipien (dieses Allgemeine Übersicht
+Dokument)
+02_frage_alter Wissenschaft hinter der Altersfrage Detailbegutachtung
+03_frage_geschlecht Geschlechtsspezifische Bedarfsdifferenzierung Detailbegutachtung
+04_frage_gewicht Proteinbedarfsberechnung und Gewichtslogik Detailbegutachtung
+05_frage_training Trainingsmodalität und Supplementbedarf Detailbegutachtung
+06_frage_erfahrung Erfahrungs-basiertes Komplexitäts-Capping Detailbegutachtung
+07_frage_ziele Ziel-Indikations-Mapping Detailbegutachtung
+08_frage_ernaehrung Vegetarisch/Vegan/Pesce-spezifische Logik Detailbegutachtung
+09_frage_allergien Allergie-Filter und Wirkstoffausschüsse Sicherheits-Fokus
+10_frage_medikamente Medikamenten- und Erkrankungs-Filter Sicherheits-Fokus
+11_frage_situation Schwangerschaft, Wechseljahre, Schlaf, Reha Sicherheits-Fokus
+12_beispielprofil Konkretes Anwendungsbeispiel mit Stack Plausibilitätsbeurteilung
+13_sicherheitsmatrix Vollständige Filter-Matrix (Allergie/Medikament x Klinische Referenz
+Wirkstoff)
+14_wirkstoffuebersicht Alle 25 Wirkstoffe im Überblick Klinische Referenz
+15_limitationen_quellen Was das Quiz NICHT leistet + Hauptreferenzen Ehrliche
+Selbsteinschätzung
+Empfohlene Lese-Reihenfolge: Beginnen Sie mit diesem Methodik-Dokument. Anschließend können
+Sie je nach Interesse die Detail-Module der Quiz-Fragen lesen oder direkt zum Anwendungsbeispiel
+(Modul 12) springen, um die Logik in der Praxis zu sehen.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 9

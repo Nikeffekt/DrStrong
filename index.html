@@ -200,17 +200,9 @@
           </div>
         </section>
 
-        <!-- Quiz-Screen (Placeholder) -->
-        <section class="screen screen--quiz" id="quiz-screen" data-screen="quiz">
-          <div class="content__placeholder">
-            <div class="content__placeholder-inner">
-              <div class="content__placeholder-label">aktiver bereich</div>
-              <div class="content__placeholder-screen">quiz</div>
-              <div class="content__placeholder-hint">
-                Hier kommt später das Quiz rein.
-              </div>
-            </div>
-          </div>
+        <!-- Quiz-Screen (wird dynamisch von scripts/screens/quiz.js gefuellt) -->
+        <section class="screen quiz" id="quiz-screen" data-screen="quiz">
+          <!-- Inhalt wird dynamisch eingefuegt -->
         </section>
 
         <!-- Stack-Screen (Placeholder) -->
@@ -433,7 +425,7 @@
        1. core/        Konstanten, Helpers
        2. state.js     Globaler State
        3. data/        Daten-Loader
-       4. engine/      (kommt spaeter)
+       4. engine/      Empfehlungs-Engine (Quiz -> Stack)
        5. ui/          UI-Module
        6. screens/     (kommt spaeter)
        7. chat/        (kommt spaeter)
@@ -452,6 +444,13 @@
   <script src="scripts/data/normalisierung.js"></script>
   <script src="scripts/data/produkte-loader.js"></script>
   <script src="scripts/data/wirkstoffe-loader.js"></script>
+  <script src="scripts/data/stack-persistenz.js"></script>
+
+  <!-- Engine (Phase 2: neue Empfehlungs-Engine) -->
+  <script src="scripts/engine/quiz-zu-wissen-map.js"></script>
+  <script src="scripts/engine/empfehlungen.js"></script>
+  <script src="scripts/engine/overlaps.js"></script>
+  <script src="scripts/engine/personalisierung.js"></script>
 
   <!-- UI -->
   <script src="scripts/ui/sidebar.js"></script>
@@ -461,6 +460,7 @@
 
   <!-- Screens -->
   <script src="scripts/screens/wissen.js"></script>
+  <script src="scripts/screens/quiz.js"></script>
 
   <!-- Navigation -->
   <script src="scripts/navigation.js"></script>

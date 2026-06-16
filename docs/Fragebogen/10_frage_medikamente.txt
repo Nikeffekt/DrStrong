@@ -1,0 +1,202 @@
+Stronger - Modul 10: Frage Medikamente Spec v2 | Juni 2026
+Stronger Quiz
+Modul 10 – Frage 9: Erkrankungen / Medikamente
+1. Frage-Wortlaut
+„Erkrankungen oder regelmäßige Medikamente?“
+Hilfetext im Quiz: „Sicherheitsrelevant. Wir empfehlen nichts was problematisch wäre.“
+2. Antwortoptionen
+Code Bezeichnung Beispiele / Definition
+A Keine (exklusiv) Keine Einschränkungen
+B Blutverdünner / Warfarin, ASS, DOAKs (Eliquis, Xarelto), Clopidogrel
+Gerinnungshemmer
+C Schilddrüsenerkrankung Hashimoto, Hyper-/Hypothyreose, Knoten, Levothyroxin
+D Bluthochdruck / Herzerkrankung Hypertonie, Arrhythmien, KHK, Herzinsuffizienz
+E Nierenerkrankung Niereninsuffizienz aller Stufen, Dialyse, Glomerulonephritis
+F Lebererkrankung (NEU in v2) Hepatitis (B/C), NASH, Zirrhose, Leberbelastung
+G Diabetes Typ 1 und Typ 2, mit oder ohne Medikation
+H Antidepressiva / Psychopharmaka SSRIs (Citalopram, Sertralin), SNRIs, MAOH, Lithium, Benzodiazepine
+Spec v2-Änderung: Option F (Lebererkrankung) wurde neu ergänzt. Grund: Die zunehmend
+dokumentierten Curcumin-induzierten Leberschäden (DILIN-Daten) erforderten einen expliziten Filter.
+3. Klinische Begründung
+Diese Frage ist die wichtigste Sicherheits-Frage des gesamten Quiz. Wechselwirkungen zwischen
+Supplementen und Medikamenten oder zwischen Supplementen und vorbestehenden Erkrankungen
+können schwerwiegend sein – im Extremfall lebensbedrohlich.
+Die folgende Tabelle zeigt die wichtigsten klinischen Konsequenzen pro gewählter Option.
+Erkrankung/Medikam Wechselwirkung Konsequenz
+ent
+B - Blutverdünner Curcumin, Vit. K2, Ginkgo, Fischöl AUSSCHLUSS: Curcumin, Vit. K2; Vorsicht
+hochdos. erhöhen Blutungsrisiko Omega-3 Hochdosis
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 10: Frage Medikamente Spec v2 | Juni 2026
+C - Schilddrüse Soja blockiert Levothyroxin-Aufnahme, AUSSCHLUSS: Ashwagandha; Vorsicht
+Ashwagandha aktiviert TSH Soja-Protein
+D - Stimulanzien (Pre-Workout, Koffein AUSSCHLUSS: Pre-Workout, hochdos. Koffein
+Bluthochdruck/Herz hochdos.) verursachen Blutdruck-Spitzen,
+Arrhythmie-Risiko
+E - Nierenerkrankung Kreatin, hohe Proteinmengen, ZMA, HMB AUSSCHLUSS: Kreatin, ZMA, HMB; Vorsicht
+belasten Nieren hohe Proteinzufuhr
+F - Lebererkrankung Curcumin (Hepatotoxizität AUSSCHLUSS: Curcumin; Vorsicht
+DILIN-dokumentiert), Ashwagandha, Ashwagandha
+hochdos. Vit. A
+G - Diabetes Pre-Workout, Berberin-Interaktion, AUSSCHLUSS: Pre-Workout; Vorsicht
+Insulin-Wechselwirkung mit Curcumin L-Carnitin (Hypoglykämie)
+H - Antidepressiva SSRIs + Ashwagandha AUSSCHLUSS: Ashwagandha, Melatonin
+(Serotonin-Modulation), MAOH + Melatonin
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 10: Frage Medikamente Spec v2 | Juni 2026
+4. Wissenschaftlicher Hintergrund pro
+Option
+4.1 Curcumin und Hepatotoxizität (DILIN-Daten)
+Das US-amerikanische Drug-Induced Liver Injury Network (DILIN) hat in den letzten Jahren mehrere Fälle
+von akuter Leberinsuffizienz nach Curcumin-Einnahme dokumentiert (Halegoua-DeMarzio et al. 2023,
+American Journal of Medicine).
+Konkrete Fall-Charakteristika:
+(cid:127) Hochrisiko-Formulierungen: Curcumin-Phytosomen, kombiniert mit Piperin (50-2000-facher Anstieg
+der Bioverfügbarkeit)
+(cid:127) Latenz: Erste Symptome 2-12 Wochen nach Beginn
+(cid:127) Verlauf: Akute Hepatitis, in seltenen Fällen akutes Leberversagen mit Transplantationsbedarf
+(cid:127) Reversibilität: Bei rechtzeitigem Absetzen meist reversibel
+(cid:127) HLA-B*35:01-Genotyp als möglicher Risikofaktor identifiziert
+Bei bekannter Lebererkrankung (NASH, Hepatitis, Zirrhose) ist Curcumin absolut zu vermeiden – die
+ohnehin gestresste Leber reagiert noch sensitiver auf hepatotoxische Substanzen.
+Quelle: Halegoua-DeMarzio D, Navarro V, Ahmad J, et al. (2023). Liver Injury Associated with Turmeric – A Growing Problem: Ten
+Cases from the Drug-Induced Liver Injury Network. AJM 136(2):200-206.
+4.2 Ashwagandha und Schilddrüse
+Ashwagandha hat einen aktivierenden Effekt auf die Schilddrüsen-funktion (T3, T4 Erhöhung in mehreren
+Studien beobachtet, TSH-Reduktion). Die Konsequenzen pro Schilddrüsenerkrankung:
+(cid:127) Hashimoto: Aktivierung kann den Autoimmun-Prozess verschlimmern. Antikörper-Titer (TPO, Tg)
+können ansteigen.
+(cid:127) Hyperthyreose: Verschlechterung der Symptome (Tachykardie, Tremor, Schlafstörungen).
+(cid:127) Hypothyreose mit Levothyroxin-Substitution: Wechselwirkung möglich – Dosis-Anpassung des
+Levothyroxins kann erforderlich werden.
+(cid:127) Schilddrüsenknoten: Vorsicht bei autonomen Knoten (Hyperaktivierung).
+Daher wird Ashwagandha bei jeder Form von Schilddrüsenerkrankung vollständig ausgeschlossen. Auch
+bei nur leicht veränderten Schilddrüsenwerten ist Vorsicht geboten.
+4.3 Kreatin und Nierenfunktion
+Bei gesunden Personen ist Kreatin nephrologisch unbedenklich. Der ISSN Position Stand (Kreider 2017)
+sowie eine Cochrane-Review bestätigen die Sicherheit bei Empfehlungs-Dosen (3-5 g/Tag) über lange
+Zeiträume.
+Bei vorbestehender Niereninsuffizienz aber:
+(cid:127) Kreatinin-Erhöhung durch Supplementation kann die Bewertung der Nierenfunktion
+(eGFR-Schätzung) erschweren – die Niere scheint funktional schlechter zu sein als sie tatsächlich ist
+(cid:127) Die Niere ist bereits vorbelastet – jede zusätzliche metabolische Last sollte vermieden werden
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 10: Frage Medikamente Spec v2 | Juni 2026
+(cid:127) Bei Dialyse-Patienten ist die Kreatin-Akkumulation problematisch
+Daher: vollständiger Ausschluss von Kreatin bei jeglicher Nierenerkrankung.
+4.4 Pre-Workout und Kardiovaskuläres System
+Pre-Workout-Produkte enthalten oft 250-400 mg Koffein plus weitere Stimulanzien (Beta-Alanin,
+manchmal DMHA, Yohimbin, Synephrin). Bei vorbestehendem Bluthochdruck oder Arrhythmien ist das
+Risiko erheblich:
+(cid:127) Hypertensive Krisen: Systolische Werte über 200 mmHg können auftreten
+(cid:127) Tachykardien: Bei Vorbestand-Arrhythmien Triggerung möglich
+(cid:127) Schlaganfall-Risiko: Insbesondere bei nicht eingestellter Hypertonie
+(cid:127) Herzinfarkt: In seltenen Fällen bei vorbestehender KHK
+(cid:127) Plötzlicher Herztod: Dokumentiert bei jungen Sportlern mit unentdeckten Herzerkrankungen
+Vollständiger Ausschluss ist die einzige sichere Option – auch „Pre-Workout-Lite“-Produkte werden
+nicht empfohlen.
+4.5 Melatonin und SSRIs
+Beide Substanzen modulieren den Serotonin-Stoffwechsel. Eine gleichzeitige Gabe kann das
+Serotonin-Syndrom-Risiko erhöhen mit Symptomen wie:
+(cid:127) Verwirrtheit, Agitation
+(cid:127) Tremor, Myoklonus
+(cid:127) Tachykardie, Hypertension
+(cid:127) Hyperthermie
+(cid:127) Im Extremfall: Krämpfe, Bewusstlosigkeit
+Außerdem sind in Deutschland Melatonin-Präparate ab 2 mg ohnehin verschreibungspflichtig – eine
+Selbstmedikation wäre unzulässig.
+4.6 Vitamin K2 und Blutverdünner
+Vitamin K2 (insbesondere MK-7) wirkt als Cofaktor für die Gerinnungsfaktoren II, VII, IX und X. Bei
+Patienten unter Warfarin (Coumadin, Marcumar) wirkt K2 als direkter Antagonist – es kann den Wirkstoff
+komplett aufheben.
+Bei DOAKs (direkten oralen Antikoagulantien wie Eliquis, Xarelto, Lixiana) ist die Interaktion geringer, aber
+nicht null. Aus Sicherheits-gründen wird K2 bei JEDER Blutverdünner-Therapie ausgeschlossen.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 10: Frage Medikamente Spec v2 | Juni 2026
+5. Empfehlungs-Konsequenzen
+Bei jeder gewählten Kondition werden die entsprechenden Wirkstoffe entweder komplett
+ausgeschlossen (harte Kontraindikation) oder mit Vorsichtshinweis versehen (relative
+Kontraindikation). Die vollständige Sicherheits-Matrix findet sich in Modul 13.
+5.1 Konservatives Defaulting bei Mehrfachauswahl
+Wenn ein User mehrere Konditionen angibt (z.B. Blutverdünner UND Lebererkrankung), addieren sich die
+Ausschlüsse. Die Empfehlung wird zwangsläufig kürzer, aber dafür sicher.
+Beispiel: Ein User mit Blutverdünner + Lebererkrankung + Diabetes:
+Ausgeschlossen:
+(cid:127) Curcumin (Blutung + Leber)
+(cid:127) Vitamin K2 (Blutung)
+(cid:127) Ashwagandha (Leber)
+(cid:127) Pre-Workout (Diabetes)
+(cid:127) Omega-3 Hochdosis (Blutung – nur Standarddosis erlaubt)
+(cid:127) Hohe Vitamin-A-Dosis (Leber)
+(cid:127) Hochdos. Koffein (Diabetes)
+Es verbleiben als sichere Optionen:
+(cid:127) Vitamin D3 (Standarddosis)
+(cid:127) Vitamin B12
+(cid:127) Magnesium-Bisglycinat
+(cid:127) Kollagen
+(cid:127) Whey-Protein (sofern keine Allergie)
+(cid:127) Vitamin C (moderat)
+(cid:127) Multivitamin (Standard, ohne Eisen-Hochdosis bei Leber)
+(cid:127) Probiotika
+Im Extremfall kann es passieren, dass nur noch 3-4 Basis-Supplemente verbleiben – das ist medizinisch
+korrekt und sicher.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5
+
+Stronger - Modul 10: Frage Medikamente Spec v2 | Juni 2026
+6. Sicherheitsrelevanz
+6.1 Polypharmazie-Hinweis
+Bei Senioren mit mehreren chronischen Erkrankungen ist die Wahrscheinlichkeit problematischer
+Wechselwirkungen deutlich erhöht. Das Quiz blendet bei Auswahl mehrerer Konditionen einen expliziten
+Hinweis ein:
+„Bei mehreren chronischen Erkrankungen sollten Sie vor Einnahme jedes Supplements Rücksprache mit
+Ihrem behandelnden Arzt halten. Auch scheinbar harmlose Ergänzungsmittel können mit Ihren
+Medikamenten interagieren.“
+6.2 Empfehlung zur Blutuntersuchung
+Bei mehreren Konditionen empfiehlt das Quiz vor Start einer Supplementation eine aktuelle
+Blutuntersuchung mit:
+(cid:127) Vollständiges Blutbild
+(cid:127) Leberwerte (ALT, AST, GGT, Bilirubin)
+(cid:127) Nierenwerte (Kreatinin, eGFR)
+(cid:127) Bei Diabetes: HbA1c, Nüchternglucose
+(cid:127) Bei Schilddrüsen-Konditionen: TSH, fT3, fT4
+(cid:127) Bei Blutverdünnern: INR (Quick)
+(cid:127) Vitamin D Status (25-OH-D3)
+(cid:127) Vitamin B12 (Holo-Transcobalamin)
+6.3 Notfallhinweise
+Bei Auftreten ungewöhnlicher Symptome nach Supplement-Beginn kommuniziert das Quiz explizit:
+„Brechen Sie die Einnahme sofort ab und kontaktieren Sie Ihren Arzt bei: Atemnot, Brustschmerzen,
+starker Schwindel, gelbe Augen/Haut, ungewohnte Blässe, ungewohnte Müdigkeit.“
+7. Limitationen
+Wichtige Limitationen dieser Frage:
+7.1 Keine Differenzierung Diabetes-Typ: Typ 1 und Typ 2 werden gleich behandelt. L-Carnitin könnte für
+Typ 2 sogar therapeutisch interessant sein (HbA1c-Reduktion in Meta-Analyse), wird aber pauschal als
+Vorsicht markiert. Eine Unter-Differenzierung wurde aus Komplexitätsgründen verworfen.
+7.2 Keine Differenzierung Schilddrüsen-Status: Hyper- und Hypothyreose haben unterschiedliche
+Implikationen. Das Quiz behandelt beide gleich konservativ.
+7.3 Hypertonie-Stadien nicht erfasst: Leichte Hypertonie und schwere Hypertonie haben
+unterschiedliche Stimulanzien-Toleranz. Vereinheitlicht zur Sicherheit konservativ behandelt.
+7.4 Niereninsuffizienz-Stadien nicht erfasst: Eine eGFR von 80 ist anders zu bewerten als 30. Das Quiz
+behandelt beide gleich strikt – das ist medizinisch zu konservativ, aber sicher.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 6
+
+Stronger - Modul 10: Frage Medikamente Spec v2 | Juni 2026
+7.5 Keine Erfassung anderer relevanter Konditionen: Nicht erfasst werden:
+(cid:127) Autoimmunerkrankungen (MS, Lupus, Morbus Crohn)
+(cid:127) Reizdarm / Chronisch-entzündliche Darmerkrankung
+(cid:127) Migräne
+(cid:127) Epilepsie
+(cid:127) Schwangerschaft (separat in Frage 10)
+(cid:127) Schwere Allergien (separat in Frage 8)
+(cid:127) HIV / Immunsuppression
+(cid:127) Hormonelle Therapien (außer Schilddrüse)
+(cid:127) Magen-OPs (Bariatrie)
+Diese Limitationen sind bewusst akzeptiert – mit jeder zusätzlichen Differenzierung sinkt die Conversion.
+Die wichtigsten 7 Konditionen decken die häufigsten relevanten Wechselwirkungen ab.
+Fazit: Die Medikamenten-/Erkrankungs-Frage ist die sicherheitskritischste des Quiz. Mit der Spec
+v2-Ergänzung um Lebererkrankungen ist sie deutlich vollständiger geworden. Die konservative
+Ausschluss-Logik priorisiert Sicherheit über alles – das ist medizinisch verantwortungsvoll.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 7

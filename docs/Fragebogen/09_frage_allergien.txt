@@ -1,0 +1,127 @@
+Stronger - Modul 9: Frage Allergien Spec v2 | Juni 2026
+Stronger Quiz
+Modul 9 – Frage 8: Unverträglichkeiten / Allergien
+1. Frage-Wortlaut
+„Unverträglichkeiten oder Allergien?“
+Hilfetext im Quiz: „Wichtig für deine Sicherheit – wir filtern Produkte entsprechend.“
+2. Antwortoptionen
+Code Allergie/Unverträglichkeit Ausschluss von
+A Keine (exklusiv) Kein Wirkstoff ausgeschlossen
+B Laktoseintoleranz Whey-Konzentrat (zu ISO Clear gewechselt)
+C Milcheiweiss-Allergie (NEU in v2) ALLE Whey-Produkte (auch ISO Clear)
+D Fischallergie Fischöl-basiertes Omega-3 (zu Algenöl)
+E Glutenunverträglichkeit Glutenhaltige Trägerstoffe (Hinweis)
+F Sojaallergie Soja-basiertes Pflanzenprotein
+3. Klinische Begründung
+Diese Frage ist eine der wichtigsten Sicherheits-Filter des Quiz. Allergien und Unverträglichkeiten sind
+kein „Nice-to-know“, sondern medizinisch kritische Information, die bei Falschempfehlung zu erheblichen
+gesundheitlichen Konsequenzen führen kann – bis hin zu Anaphylaxie.
+3.1 Kritische Unterscheidung: Milcheiweiss vs. Laktose
+Diese Differenzierung war ein zentraler Grund für das Spec v2-Update des Quiz. In v1 wurden beide
+Konditionen unter EINEM Code (B) abgefragt – das war medizinisch nicht korrekt.
+Aspekt Laktoseintoleranz Milcheiweiss-Allergie
+Mechanismus Enzymdefizit (Laktase) Immunologische Reaktion (IgE-vermittelt oder
+verzögert)
+Symptome GI-Beschwerden, Blähungen, Diarrhö Hautausschlag, Anaphylaxie, GI-Symptome, Atemnot
+Schweregrad Unangenehm aber nicht gefährlich Potenziell lebensbedrohlich (Anaphylaxie)
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 9: Frage Allergien Spec v2 | Juni 2026
+Whey-Isolat JA (1 % Laktose meist toleriert) NEIN (enthält Casein/Beta-Lactoglobulin)
+geeignet?
+Whey-Hydrolysat JA Meist NEIN (Allergene noch vorhanden)
+geeignet?
+Alternative ISO Clear oder Pflanzenprotein NUR Pflanzenprotein
+Prävalenz Europa 15-50 % Erwachsene 1-2 %
+Erwachsene
+Konsequenz der v2-Trennung: In v1 hätte ein User mit echter Milcheiweiss-Allergie Whey-Isolat als
+„laktosefreie Alternative“ empfohlen bekommen. Das kann lebensbedrohlich sein. In v2 sind beide
+Konditionen sauber getrennt.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 9: Frage Allergien Spec v2 | Juni 2026
+4. Wissenschaftlicher Hintergrund pro
+Allergie
+4.1 Prävalenz Laktoseintoleranz
+(cid:127) Mitteleuropa: 15-20 % der Erwachsenen
+(cid:127) Mittelmeerraum: 30-50 %
+(cid:127) Ostasien: bis 90 %
+(cid:127) Weltweite Schätzung: 65-70 % der erwachsenen Bevölkerung
+Die Toleranzschwelle variiert individuell stark. Manche Laktose-Intolerante vertragen problemlos kleine
+Mengen (bis 12 g pro Mahlzeit), andere reagieren bereits auf Spuren.
+4.2 Prävalenz Milcheiweiss-Allergie
+(cid:127) Erwachsene: 1-2 %
+(cid:127) Säuglinge: bis 7 %
+(cid:127) Spontanremission: Häufig in der Kindheit, seltener bei Erwachsenen
+Die Allergie kann sich gegen Casein (80 % der Milchproteine) oder gegen Molkenproteine
+(Beta-Lactoglobulin, Alpha-Lactalbumin) richten. Whey-Isolat enthält noch beide Komponenten – nur in
+extrem geringen Mengen Laktose. Es ist daher KEINE Alternative bei Milcheiweiss-Allergie.
+4.3 Fischallergie
+Erwachsene-Prävalenz ca. 0,5-2 %. Bei Fischallergie muss Fischöl ausgeschlossen werden (auch wenn
+das Protein-Komponent minimiert ist, kann bei Hochsensitiven eine Reaktion auftreten). Algenöl ist die
+sichere Alternative.
+Wichtige Differenzierung: Fischallergie und Schalentier-Allergie sind oft, aber nicht immer assoziiert. Bei
+reiner Schalentier-Allergie (z.B. Tropomyosin-Allergie) ist Fischöl aus Fischen meist unproblematisch. Da
+das Quiz das nicht differenziert, wählen wir die sichere Variante (Ausschluss bei beiden).
+4.4 Glutenunverträglichkeit / Zöliakie
+Prävalenz 1-3 % (Zöliakie ca. 1 %, Non-Celiac-Gluten-Sensitivity geschätzt 0,5-13 %, Studienlage
+variabel).
+Reine Wirkstoffe wie Kreatin oder Vitamin D enthalten naturgemäß kein Gluten. Aber: Trägerstoffe in
+Tabletten, Kapselhüllen und Aromastoffe in Pulvern können Gluten enthalten. Der Hinweis im Quiz ist
+daher: „Glutenfreie Marken bevorzugen, Etiketten sorgfältig prüfen“.
+4.5 Sojaallergie
+Erwachsene-Prävalenz ca. 0,4-0,5 %. Bei Sojaallergie muss Soja-Pflanzenprotein vermieden werden.
+Alternative: Erbsen-Reis-Blends ohne Soja-Anteil.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 9: Frage Allergien Spec v2 | Juni 2026
+Sojalecithin (oft als Emulgator) kann bei Hochsensitiven Reaktionen auslösen – wird im Quiz nicht explizit
+gefiltert, User mit schwerer Allergie sollten Etiketten lesen. Sojalecithin findet sich auch in Multivitaminen,
+einigen Pre-Workouts und Riegeln.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 9: Frage Allergien Spec v2 | Juni 2026
+5. Empfehlungs-Konsequenzen
+Allergien führen zu harten Ausschlüssen – nicht zu Warnhinweisen. Die Logik: Lieber einen Wirkstoff
+weniger empfehlen, als ein allergisches Ereignis riskieren.
+Quiz-Antwort Ausgeschlossen Alternative empfohlen
+B - Laktoseintoleranz Whey-Konzentrat ISO Clear (Whey-Isolat 1 % Laktose) oder
+Pflanzenprotein
+C - Milcheiweiss-Allergie ALLE Whey-Produkte (auch ISO Clear) Pflanzenprotein zwingend (Soja oder
+Erbse-Reis-Blend)
+D - Fischallergie Fischöl-basiertes Omega-3 Algenöl (omega3_vegan)
+E - Standard-Empfehlung mit Hinweis Marken mit Glutenfrei-Zertifikat empfehlen
+Glutenunverträglichkeit
+F - Sojaallergie Soja-basiertes Pflanzenprotein Erbsen-Reis-Blend oder Whey (sofern keine
+Milchallergie)
+Kombinations-Logik bei mehreren Allergien: Die Ausschlüsse summieren sich. Wenn ein User
+Laktoseintoleranz UND Sojaallergie hat, verbleiben als Protein-Optionen: Erbsen-Reis-Blend ohne Soja,
+Hanfprotein oder Reisprotein. Bei zusätzlicher Milcheiweiss-Allergie wird Whey komplett ausgeschlossen.
+6. Sicherheitsrelevanz
+Höchste Priorität: Diese Frage hat die strengste Sicherheitslogik im Quiz. Bei expliziter Angabe einer
+Allergie wird der entsprechende Wirkstoff vollständig ausgeschlossen – nicht mit Vorbehalt empfohlen.
+Eine anaphylaktische Reaktion auf ein Supplement, das das Quiz fälschlicherweise empfohlen hat, ist
+nicht akzeptabel.
+Anaphylaxie-Notfall: Bei bekannter Milcheiweiss-Allergie und versehentlicher Exposition kann eine
+Anaphylaxie auftreten. Das Quiz kommuniziert bei dieser Konstellation explizit: „Bei bekannter
+Milcheiweiss-Allergie tragen Sie immer ein Notfallset (Adrenalin-Pen) bei sich. Prüfen Sie alle Etiketten
+sorgfältig.“
+7. Limitationen
+Die 5 abgefragten Allergien decken die häufigsten Fälle ab. Nicht erfasst werden:
+(cid:127) Nussallergien (häufig, aber Trägerstoffe selten in den 25 Wirkstoffen relevant)
+(cid:127) Eierallergie (relevant für einige Multivitamine mit Lecithin)
+(cid:127) Histaminintoleranz (komplexes Thema, vor allem fermentierte Produkte wie Probiotika)
+(cid:127) Spezifische Pollenallergien mit Kreuzreaktionen (z.B. Birke-Allergie + Soja, Beifuß-Allergie + Karotte)
+(cid:127) Sulfit-Empfindlichkeit
+(cid:127) Salicylat-Intoleranz
+(cid:127) Nickel-Allergie (relevant für einige Mineralstoff-Präparate)
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5
+
+Stronger - Modul 9: Frage Allergien Spec v2 | Juni 2026
+Pragmatische Lösung: User mit seltenen Allergien werden im Output explizit dazu aufgefordert, Etiketten
+zu lesen und ggf. mit dem Arzt zu sprechen. Eine vollständige Allergie-Filterung wäre über ein Online-Quiz
+nicht leistbar.
+Fazit: Die Allergie-Frage ist mit der Spec v2-Erweiterung (Milcheiweiss-Allergie separat) deutlich sicherer
+geworden. Die harte Ausschluss-Logik priorisiert Sicherheit über Verkaufslogik – ein wichtiges
+Qualitätsmerkmal des Quiz.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 6

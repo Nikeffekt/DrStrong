@@ -1,0 +1,148 @@
+Stronger - Modul 3: Frage Geschlecht Spec v2 | Juni 2026
+Stronger Quiz
+Modul 3 – Frage 2: Biologisches Geschlecht
+1. Frage-Wortlaut
+„Biologisches Geschlecht?“
+Hilfetext im Quiz: „Relevant für Eisen, Magnesium und Dosierungen.“
+2. Antwortoptionen
+Code Anzeige
+A Männlich
+B Weiblich
+Designentscheidung: Wir erfassen das biologische Geschlecht – nicht die Geschlechtsidentität. Dies hat
+ausschließlich medizinische Gründe: Die wesentlichen Empfehlungs-Konsequenzen (Eisenbedarf,
+hormonelle Faktoren, Knochendichte, Schwangerschaftsoptionen) sind an die biologische Konstitution
+gekoppelt. Wir verzichten bewusst auf eine „Keine Angabe“-Option, da diese die Engine in einen unklaren
+Zustand versetzen würde und die Empfehlungslogik unschärfer machen würde.
+3. Klinische Begründung
+Geschlechtsspezifische Unterschiede im Mikronährstoffbedarf sind vielfach dokumentiert und in den
+DGE-Referenzwerten verankert. Die für das Quiz wichtigsten Unterschiede sind in der folgenden Tabelle
+dargestellt.
+3.1 Geschlechtsspezifische Bedarfsunterschiede
+Parameter Männlich Weiblich Klinische Relevanz
+Eisen-Bedarf 10 mg/Tag 15 mg/Tag Eisenmangel-Prävalenz bei Frauen ca. 5-15 %,
+(Menstruation) latent bis 20 %
+Magnesium-Bedar 350-400 mg/Tag 300-350 mg/Tag Bei intensivem Sport bei beiden Geschlechtern
+f erhöht
+Protein-Empfehlun 0,8 (sed.) - 2,2 g/kg 0,8 (sed.) - 2,0 g/kg Bei Frauen postmenopausal höher zur
+g (Athleten) (Athletinnen) Sarkopenie-Prävention
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 3: Frage Geschlecht Spec v2 | Juni 2026
+Knochenrisiko Niedriger bis 70+ Stark erhöht Vitamin D und Calcium-Versorgung kritischer
+postmenopausal
+Testosteron Relevant ab ca. 30 Wenig relevant Zink, ZMA werden bei Männern beworben
+(Andropause) (Marketing!)
+Vitamin B12 Standard 4 µg/Tag Standard 4 µg/Tag, Bei Veganern beide Geschlechter zwingend
+Schwangerschaft 4,5 Supplement
+µg
+Omega-3 250-500 mg 250-500 mg Bei Frauen postmenopausal kardiovaskulär
+EPA+DHA/Tag EPA+DHA/Tag prioritärer
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 3: Frage Geschlecht Spec v2 | Juni 2026
+4. Wissenschaftlicher Hintergrund
+4.1 Eisenmangel bei Frauen
+Die WHO definiert Anämie bei Frauen als Hämoglobin unter 12 g/dL. Die Prävalenz bei prämenopausalen
+Frauen in Europa liegt bei etwa 5-10 Prozent manifeste Anämie und 15-20 Prozent latenter Eisenmangel
+(Ferritin < 30 ng/mL). Bei sportlich aktiven Frauen können diese Zahlen aufgrund höherer Eisenverluste
+durch Schweiß und subklinische Hämolyse weiter steigen.
+Die monatlichen Menstruationsverluste betragen durchschnittlich 30-40 ml Blut, was etwa 15-20 mg Eisen
+entspricht. Bei Hypermenorrhö können diese Verluste auf 80-100 ml und damit 40-50 mg Eisen pro Zyklus
+ansteigen. Die Resorption von Nahrungseisen liegt bei nur 5-15 Prozent (Häm-Eisen) bzw. 2-5 Prozent
+(Non-Häm-Eisen).
+4.2 Postmenopausale Veränderungen
+Der Östrogenmangel nach der Menopause führt zu beschleunigtem Knochenabbau (bis zu 2-3 Prozent
+pro Jahr in den ersten 5-10 Jahren postmenopausal). Vitamin D und ausreichende Calciumversorgung
+werden in dieser Phase essenziell. Auch der Kollagenabbau beschleunigt sich, was die Hautalterung und
+Gelenkprobleme verstärkt.
+Mehrere Meta-Analysen zeigen einen klaren Nutzen von Vitamin-D-Supplementation bei
+postmenopausalen Frauen für die Frakturprävention. Die Kombination mit Vitamin K2 (MK-7) wird
+zunehmend empfohlen, da K2 die Calcium-Einlagerung in den Knochen unterstützt und gleichzeitig die
+Calcifizierung der Gefäße reduziert.
+4.3 Männerspezifika und Testosteron-Mythen
+Der altersbedingte Testosteronabfall (Andropause) beginnt ab ca. 30 Jahren mit etwa 1 Prozent pro Jahr.
+Symptome wie reduzierte Muskelmasse, geringere Libido oder Müdigkeit werden oft mit ZMA,
+Ashwagandha oder Zink in Verbindung gebracht.
+Wichtige Differenzierung – Marketing vs. Evidenz:
+(cid:127) Zink: Erhöht Testosteron NUR bei nachgewiesenem Zinkmangel. Bei normaler Versorgung kein Effekt.
+(cid:127) ZMA: Die ursprüngliche Studie von Brilla (2000), die Testosteron-Steigerung zeigte, konnte in mehreren
+Folgestudien nicht repliziert werden – ein klassisches Beispiel der Replikations-Krise.
+(cid:127) Ashwagandha: Zeigt in einigen Studien moderate Testosteron-Erhöhungen (10-15 %), aber
+Studienqualität durchwachsen.
+(cid:127) Das Quiz kommuniziert diese Differenzen ehrlich – Männer werden nicht mit überhöhten Erwartungen
+versorgt.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 3: Frage Geschlecht Spec v2 | Juni 2026
+5. Empfehlungs-Konsequenzen
+5.1 Bei weiblichem Geschlecht (B)
+Folgende Wirkstoffe erhalten einen Bonus oder werden priorisiert:
+Wirkstoff Anpassung Begründung
+Eisen Stärke 0,8 (statt 0,2 bei Menstruationsbedingte Verluste, Eisenmangel-Prävalenz
+Männern)
+Vitamin C +30 % Priorität bei Steigert Eisen-Resorption um Faktor 2-3
+Eisen-Ko-Empfehlung
+Magnesium Leichter Bonus, besonders bei PMS-Reduktion in mehreren RCTs nachgewiesen
+PMS-Symptomen
+Omega-3 Leicht stärker priorisiert Kardiovaskuläre Prävention nach Östrogen-Schutzverlust
+Kollagen Ab 36 Jahren stark priorisiert Beschleunigter Kollagenabbau postmenopausal
+Vitamin D + K2 Bei über 45 Jahren stark Knochendichte-Erhalt postmenopausal
+priorisiert
+Vitamin B12 Bei Vegetarierinnen besonders Höhere Prävalenz von B12-Mangel bei Frauen
+priorisiert
+5.2 Bei männlichem Geschlecht (A)
+Wirkstoff Anpassung Begründung
+Zink Leicht erhöhte Empfehlung Testosteron-Synthese (NUR bei Mangel relevant)
+Proteinfaktor Standardmäßig leicht höher Höhere Muskelmasse, höhere Trainingsbelastung
+Eisen KEIN Bonus Männer haben selten Eisenmangel
+Schwangerschaft Nicht aktivierbar Biologisch nicht relevant
+Wechseljahre Nicht aktivierbar Biologisch nicht relevant (Andropause-Logik anderswo)
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 3: Frage Geschlecht Spec v2 | Juni 2026
+6. Sicherheitsrelevanz
+6.1 Schwangerschaft und Stillzeit
+Diese Lebenssituationen sind nur bei Frauen aktivierbar (Auswahl in der Situations-Frage am Ende des
+Quiz). Sie triggern eine vollständig separate Empfehlungslogik mit deutlich restriktiveren Optionen.
+Bei aktivierter Schwangerschaft werden alle folgenden Wirkstoffe AUSGESCHLOSSEN:
+(cid:127) Kreatin (limitierte Sicherheitsdaten in Schwangerschaft)
+(cid:127) Pre-Workout (Stimulanzien)
+(cid:127) Ashwagandha (uterotone Effekte beobachtet)
+(cid:127) Curcumin (Hochdosis - uterotone Effekte)
+(cid:127) Melatonin (kein Einsatz in Schwangerschaft)
+(cid:127) ZMA (Vitamin B6 Hochdosis problematisch)
+(cid:127) HMB (keine Sicherheitsdaten)
+(cid:127) L-Carnitin (limitierte Daten)
+(cid:127) Beta-Alanin (keine Sicherheitsdaten)
+(cid:127) EAA (Hochdosis)
+Es verbleiben nur die Basis-Wirkstoffe, die in Schwangerschaft aktiv empfohlen werden:
+(cid:127) Folsäure (400-800 µg/Tag) – Neuralrohrdefekt-Prävention
+(cid:127) Vitamin D3 (1000-2000 IE) – mehrfach belegt sicher und empfohlen
+(cid:127) Omega-3 (DHA-fokussiert, 200-300 mg/Tag) – fetale Hirnentwicklung
+(cid:127) Eisen (bei nachgewiesenem Mangel) – nur nach ärztlicher Konsultation
+(cid:127) Vitamin B12 (bei Veganerinnen)
+(cid:127) Magnesium (bei Bedarfssymptomen)
+6.2 Wechseljahre
+Die Auswahl „Wechseljahre“ in der Situations-Frage ist nur für Frauen ab 40 sichtbar. Sie triggert eine
+spezialisierte Empfehlung mit Schwerpunkt auf Knochengesundheit, kardiovaskuläre Prävention und
+Beschwerdelinderung.
+7. Limitationen
+7.1 Trans-Personen und Hormontherapie
+Das Quiz erfasst keine spezielle Logik für Trans-Personen mit Hormontherapie. Dies wäre medizinisch
+hochkomplex (welches Hormonniveau? Welche Therapiephase? Wie alt war die Person bei Beginn der
+Transition?) und überschreitet den Anspruch eines Online-Quiz.
+Bei Trans-Männern in Testosteron-Therapie würde das Quiz die Empfehlungen ausschließlich auf Basis
+des biologischen Geschlechts (weiblich) geben, was in einigen Fällen nicht optimal ist. Bei Trans-Frauen
+unter Östrogen-Therapie analog. Wir empfehlen in diesen Fällen explizit eine ärztliche Beratung – der
+behandelnde Endokrinologe kennt die individuelle hormonelle Situation und kann passgenaue
+Empfehlungen aussprechen.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5
+
+Stronger - Modul 3: Frage Geschlecht Spec v2 | Juni 2026
+7.2 Intersexuelle Personen
+Bei Intersexualität mit unklarer biologischer Konstitution muss der Anwender selbst entscheiden, welche
+Option besser passt. Dies ist eine bewusste Limitation – eine umfassende Differenzierung würde den
+Rahmen eines Quiz sprengen.
+Fazit: Die binäre Geschlechtsfrage erfasst die große Mehrheit der Anwender korrekt. Für Sonderfälle
+verweisen wir auf ärztliche Beratung – eine ehrliche und medizinisch verantwortungsvolle Lösung.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 6

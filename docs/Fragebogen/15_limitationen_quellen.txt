@@ -1,0 +1,364 @@
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+Stronger Quiz
+Modul 15 – Limitationen, Methodenkritik und Quellenverzeichnis
+Dieses Abschlussmodul reflektiert ehrlich die Grenzen des Stronger Quiz, dokumentiert die getroffenen
+Designentscheidungen und ihre Konsequenzen und listet die zugrundeliegenden wissenschaftlichen
+Quellen auf. Wir halten diese Transparenz für unverzichtbar – gerade in einem Bereich, der oft von
+überzogenen Heilsversprechen geprägt ist.
+1. Was das Quiz NICHT leistet
+Eine ehrliche Aufklärung über die Grenzen des Tools ist die Grundlage für verantwortungsvolle
+Anwendung. Das Quiz ist ein evidenzbasiertes Empfehlungs-Tool, kein medizinisches Diagnostik-oder
+Therapie-Instrument.
+1.1 Keine Diagnostik
+Das Quiz kann und will keine medizinische Diagnose stellen. Es erfasst keine Blutwerte, keine körperliche
+Untersuchung, keine Anamnese im klinischen Sinne. Wenn ein User Symptome beschreibt (z.B.
+Müdigkeit), kann das Quiz Empfehlungen geben – aber nicht entscheiden, ob die Müdigkeit von
+Eisenmangel, Depression, Schilddrüsenunterfunktion oder Schlafapnoe kommt.
+Der User wird im Output explizit aufgefordert, bei anhaltenden Beschwerden ärztliche Diagnostik in
+Anspruch zu nehmen. Wirkstoffempfehlungen ohne klinische Abklärung können Symptome überdecken
+statt zu beheben.
+1.2 Keine genetischen Faktoren
+Polymorphismen, die die Wirkung vieler Wirkstoffe stark beeinflussen, werden vom Quiz nicht erfasst:
+(cid:127) MTHFR C677T und A1298C: Beeinflusst Methylierungs-kapazität und damit die Wirksamkeit von
+Folsäure (vs. aktivierte Form 5-MTHF) und B12 (vs. Methylcobalamin)
+(cid:127) VDR-Polymorphismen: Beeinflussen Vitamin-D-Rezeptor und damit die optimale Dosierung
+(cid:127) CYP1A2 (Koffein-Metabolismus): Schnelle vs. langsame Metabolisierer haben deutlich
+unterschiedliche Koffein-Toleranz
+(cid:127) APOE4-Träger: Reagieren möglicherweise anders auf Omega-3-Supplementation (Studienlage
+uneinheitlich)
+(cid:127) HLA-B*35:01: Möglicher Risikofaktor für Curcumin-induzierte Leberschäden
+(cid:127) HFE-Gen (Hämochromatose): Bei Trägern kann Eisensupplementation schadhaft sein
+Diese genetischen Tests sind zunehmend verfügbar, aber noch nicht massentauglich. Eine
+Quiz-Erweiterung um Gentest-Integration ist als Zukunftsoption denkbar.
+1.3 Keine Langzeit-Begleitung
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+Das Quiz liefert eine Momentaufnahme-Empfehlung. Es:
+(cid:127) Erfasst nicht die langfristige Wirkung der Supplementation
+(cid:127) Passt Empfehlungen nicht dynamisch an Veränderungen an
+(cid:127) Führt keine Verlaufskontrolle durch (Blutwerte, Symptome)
+(cid:127) Erkennt nicht, wenn ein Wirkstoff nach 3 Monaten abgesetzt werden sollte (z.B. bei
+Eisensupplementation nach Mangelbeseitigung)
+(cid:127) Bewertet nicht die tatsächliche Compliance des Users
+(cid:127) Bietet kein Coaching oder Motivation
+Empfehlung: Quiz periodisch (alle 3-6 Monate) erneut durchführen, um Veränderungen abzubilden.
+Langfristige Begleitung ist Aufgabe von Arzt oder Ernährungsberater.
+1.4 Keine Notfall-Erkennung
+Symptome wie plötzliche schwere Müdigkeit, Konzentrationsverlust, neurologische Ausfälle,
+Brustschmerzen, Atemnot oder plötzliche Gewichtsveränderungen werden vom Quiz NICHT als Notfall
+erkannt. Hier muss zwingend die ärztliche Akutversorgung in Anspruch genommen werden.
+Das Quiz ist explizit nicht als Triage-Tool konzipiert. Es ersetzt weder Hausarzt noch Notaufnahme.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+2. Nicht adäquat erfasste
+Bevölkerungsgruppen
+Bestimmte Bevölkerungsgruppen haben so spezielle Bedürfnisse, dass ein Online-Quiz ihnen nicht
+gerecht werden kann.
+2.1 Trans-Personen mit Hormontherapie
+Trans-Personen unter Testosteron- oder Östrogen-Therapie haben komplexe Bedürfnisse, die vom Quiz
+nicht erfasst werden. Wichtige Aspekte:
+(cid:127) Trans-Männer unter T-Therapie: Eisenversorgung kann normalisieren (Periode-Stop),
+Knochendichte-Prävention bleibt wichtig
+(cid:127) Trans-Frauen unter Östrogen: Erhöhtes Thrombose-Risiko – Vorsicht mit Vitamin K2, hochdosiertes
+Omega-3
+(cid:127) Phase der Therapie: Initialer Hormonshift erfordert andere Logik als langfristig stabile Therapie
+(cid:127) Pubertätsblocker bei Jugendlichen: spezielle Knochenversorgung nötig
+Empfehlung in diesen Fällen: Konsultation des behandelnden Endokrinologen, der die individuelle
+Hormonlage kennt.
+2.2 Profi-Sportler / Hochleistungsathleten
+Die Bedürfnisse von Profi-Sportlern (Olympia-Niveau, Profi-Liga) liegen jenseits dessen, was ein Quiz
+abdecken kann:
+(cid:127) WADA-Anti-Doping-Liste: Manche Supplements enthalten verbotene Substanzen oder sind
+kontaminiert
+(cid:127) Periodisierung: Stack ändert sich wöchentlich mit Trainingsphase, Wettkampf, Recovery
+(cid:127) Sport-spezifische Bedürfnisse: Marathon vs. Sprint vs. Bodybuilding vs. Kampfsport vs. Schwimmen
+haben unterschiedliche Profile
+(cid:127) Individuelle Toleranzen: Müssen durch Bluttests und Erfahrung etabliert werden
+(cid:127) Team-Vorgaben: Sponsoring, vorgeschriebene Marken
+Für diese Gruppe sind spezialisierte Sport-Ernährungsberater (z.B. mit IOC-Diplom Sports Nutrition) oder
+Mannschafts-Ärzte die richtigen Ansprechpartner.
+2.3 Bariatrie-Patienten (nach Magen-OP)
+Nach bariatrischen Operationen (Magenbypass, Sleeve Gastrectomy, Magenband) ist die Resorption
+fundamental verändert:
+(cid:127) Reduziertes Magenvolumen: Kleine Portionen, hochdosierte Supplemente müssen anders zugeführt
+werden (oft sublingual)
+(cid:127) Reduzierte Magensäure: Vitamin B12, Eisen werden schlechter resorbiert
+(cid:127) Verkürzte Dünndarmpassage: Fettlösliche Vitamine (A, D, E, K) können mangelhaft sein
+(cid:127) Spezielle Substitutionspläne: Die behandelnden Bariatriezentren haben spezifische
+Substitutions-Protokolle
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+Das Quiz erkennt diese Population nicht und kann zu Unterversorgung führen. Empfehlung: lebenslange
+Bariatrie-Nachsorge, spezifische Supplementation nach Bariatriezentrum-Protokoll.
+2.4 Chronisch Kranke mit komplexer Medikation
+Bei Patienten mit mehreren chronischen Erkrankungen und mehr als 5 Dauermedikamenten
+(Polypharmazie) wird die Wechselwirkungs-Matrix so komplex, dass das Quiz mit seinen 7 Kategorien an
+Konditionen nicht mehr ausreicht.
+Beispiele: Onkologische Patienten unter Chemotherapie, HIV-Patienten unter antiretroviraler Therapie,
+transplantierte Patienten unter Immunsuppression, MS-Patienten unter Immunmodulatoren, Patienten mit
+Autoimmunerkrankungen unter Biologicals.
+Für diese Gruppe ist die direkte Konsultation des behandelnden Facharztes oder klinischen
+Pharmazeuten zwingend.
+2.5 Essstörungs-Patienten
+Bei Magersucht (Anorexia nervosa), Bulimie oder Orthorexie kann das Quiz potenziell schädlich sein. Eine
+„Fettabbau“-Empfehlung kann krankhafte Muster verstärken.
+Aktuell prüft das Quiz lediglich auf sehr niedrigem Gewicht (unter 50 kg) und bietet dann keine
+Fettabbau-Strategien an. Eine echte Essstörungs-Erkennung wäre aber nur durch klinische
+Screening-Tools möglich (z.B. SCOFF-Fragebogen) – bewusst nicht implementiert, da das Quiz keine
+psychiatrische Triage darstellt.
+Bei Anzeichen einer Essstörung wird auf spezialisierte Beratung verwiesen.
+2.6 Kinder und Jugendliche
+Das Quiz ist ausdrücklich nicht für Personen unter 18 Jahren konzipiert. Die wissenschaftlichen Daten zu
+Supplementation bei Kindern und Jugendlichen sind sehr begrenzt, viele Wirkstoffe sind explizit nicht für
+diese Altersgruppe untersucht.
+Bei minderjährigen Sportlern: Konsultation des Kinderkardiologen oder Sportmediziners.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+3. Methodische Grenzen der
+zugrundeliegenden Evidenz
+Die wissenschaftliche Basis der Empfehlungen hat selbst Limitationen, die wir transparent darlegen.
+3.1 Studien-Heterogenität
+Meta-Analysen kombinieren Studien mit unterschiedlichen Protokollen, Populationen und
+Outcome-Messungen. Heterogenität (I²) ist oft hoch, was bedeutet, dass die Pooled-Effekte mit Vorsicht
+zu interpretieren sind. Beispiele:
+(cid:127) Kreatin-Studien: Variieren in Aufladephase ja/nein, Dosis 3-25 g/Tag, Trainingsstatus der Teilnehmer
+(cid:127) Vitamin-D-Studien: Ausgangswerte der Probanden sehr unterschiedlich (Mangel vs. ausreichend)
+(cid:127) Omega-3-Studien: EPA/DHA-Verhältnisse variieren stark, Dosen von 500 mg bis 5 g
+(cid:127) Curcumin-Studien: Verschiedene Formulierungen (Standard, Phytosomen, mit Piperin) mit drastisch
+verschiedener Bioverfügbarkeit
+Das Quiz verwendet konservative Schätzungen und kommuniziert Effektgrößen, die als robust gelten.
+3.2 Publikationsbias
+Studien mit positiven Ergebnissen werden häufiger publiziert als solche mit negativen oder null
+Ergebnissen. Dies kann zu einer systematischen Überschätzung von Wirkstoffeffekten führen. Trotz
+Funnel-Plot-Analysen und PRISMA-konformer Meta-Analysen bleibt dies eine Limitation der gesamten
+Sportwissenschaft.
+Konsequenz: Reale Effekte könnten kleiner sein als in Meta-Analysen ausgewiesen. Das Quiz wählt daher
+bewusst eher die unteren Schätzwerte der Effektgrößen.
+3.3 Industriefinanzierung
+Viele Studien zu Sport-Supplementen werden von Herstellern finanziert. Diese Studien zeigen statistisch
+häufiger positive Ergebnisse als unabhängige Studien. Beispiele für besonders kritisch zu bewertende
+Bereiche:
+(cid:127) Kollagen-Studien: Überwiegend von Kollagen-Herstellern (Gelita, Rousselot) finanziert
+(cid:127) Pre-Workout-Studien: Oft Hersteller-Studien
+(cid:127) Probiotika: Stamm-spezifische Studien meist von Stamm-Herstellern
+(cid:127) HMB-Studien: Lange von einem einzelnen Hersteller (Metabolic Technologies) dominiert
+Wir kennzeichnen industriefinanzierte Evidenz explizit als solche und gewichten sie konservativer. Wo
+möglich, ziehen wir unabhängige Cochrane-Reviews oder öffentlich finanzierte Studien vor.
+3.4 Kurz- vs. Langzeit-Effekte
+Die meisten Studien laufen 8-12 Wochen, wenige 6 Monate, sehr selten über Jahre. Die folgenden Fragen
+bleiben weitgehend offen:
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5
+
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+(cid:127) Toleranzentwicklung: Verlieren Wirkstoffe ihre Wirkung über Zeit?
+(cid:127) Langzeit-Sicherheit: Welche Effekte zeigen sich nach 20+ Jahren kontinuierlicher Einnahme?
+(cid:127) Compliance-Realität: Studien-Compliance ist meist über 90 % – im Alltag oft unter 50 %
+(cid:127) Generationen-Effekte: Wirkungen über Generationen (epigenetische Effekte) sind völlig unklar
+3.5 Wirkstoff-Qualität
+Studien werden meist mit hochreinen Präparaten durchgeführt. Im Handel verfügbare Produkte können:
+(cid:127) Verunreinigt sein (Schwermetalle, Pestizide bei pflanzlichen Präparaten)
+(cid:127) Unterdosiert sein (Etikettierung entspricht nicht Realität)
+(cid:127) Andere Bioverfügbarkeit haben (besonders bei Curcumin)
+(cid:127) Kontaminiert sein mit nicht deklarierten Stimulanzien (besonders Pre-Workouts)
+(cid:127) Variabel zwischen Chargen sein
+Wir empfehlen daher Marken mit unabhängiger Prüfung (NSF-Certified-for-Sport, Informed-Sport, Cologne
+List). Diese Empfehlung wird im User-Output kommuniziert.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 6
+
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+4. Bewusste Designentscheidungen mit
+Limitationen
+Bestimmte Designentscheidungen wurden bewusst getroffen, auch wenn sie nicht die theoretisch optimale
+Lösung darstellen. Diese Entscheidungen wollen wir transparent erklären.
+4.1 9 statt 14+ Fragen
+Die Conversion-Rate eines Quiz fällt etwa linear mit jeder zusätzlichen Frage. Studien zur Quiz-UX zeigen,
+dass die Abbruchrate ab Frage 12-15 signifikant ansteigt. Wir haben uns daher auf 9 Pflichtfragen plus 1
+konditionale Folgefrage beschränkt.
+Eine theoretisch bessere Granularität wäre erreichbar mit:
+(cid:127) Körpergröße (für BMI-Berechnung)
+(cid:127) Körperfettanteil (für LBM-basierte Berechnung)
+(cid:127) Trainingsintensität-Detail (Volumen, RPE)
+(cid:127) Aktuelle Blutwerte (D3, B12, Ferritin)
+(cid:127) Schlafqualität-Detail (Stunden, Tiefschlaf)
+(cid:127) Stress-Level-Skala
+(cid:127) Bisherige Supplement-Erfahrung
+(cid:127) Budget-Vorgabe
+Diese würden ein gründlicheres Profil ermöglichen, aber die Conversion vermutlich halbieren. Bewusste
+Abwägung – mit späteren Erweiterungsmöglichkeiten (z.B. optionale Profil-Vertiefung im User-Account).
+4.2 Quiz statt ärztliche Sprechstunde
+Ein automatisiertes Quiz kann niemals die Tiefe eines ärztlichen Gesprächs erreichen. Der Arzt:
+(cid:127) Sieht den Patienten (visuelle Eindrücke der Versorgungslage)
+(cid:127) Kann gezielte Rückfragen stellen
+(cid:127) Hat Blutwerte zur Verfügung
+(cid:127) Kennt die Familienanamnese und Vorgeschichte
+(cid:127) Kann körperlich untersuchen
+(cid:127) Erkennt nonverbale Hinweise (Depression, Angststörung, Substanzgebrauch)
+Vorteil des Quiz: Es ist 24/7 verfügbar, kostenlos, standardisiert, niederschwellig. Für die große Mehrheit
+der gesundheitsorientierten Erwachsenen kann es eine sinnvolle erste Einschätzung liefern, ohne
+Ersatzanspruch für ärztliche Konsultation.
+4.3 Population-Defaults statt individuelle Diagnostik
+Die Engine arbeitet mit pauschalen Population-Annahmen, z.B.:
+(cid:127) „Vegetarier haben höheres B12-Mangel-Risiko“ – stimmt statistisch, nicht individuell
+(cid:127) „Frauen prämenopausal haben höheres Eisenmangel-Risiko“ – trifft auf ca. 15-20 % zu
+(cid:127) „Mitteleuropäer haben im Winter Vitamin-D-Mangel“ – trifft auf ca. 60 % zu
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 7
+
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+Diese Defaults erhöhen die Trefferquote, generieren aber unnötige Empfehlungen für die Minderheit ohne
+Mangel. Der einzige verlässliche Weg wäre die individuelle Blutdiagnostik.
+4.4 Konservative Sicherheitslogik
+Die Engine schließt Wirkstoffe lieber aus, als sie mit komplexen Warnhinweisen zu empfehlen. Dies hat
+zwei Konsequenzen:
+(cid:127) Vorteil: Hohe Sicherheit, geringes Schadensrisiko
+(cid:127) Nachteil: Manche User bekommen weniger Wirkstoffe empfohlen, die theoretisch in ihrem individuellen
+Fall sicher wären
+Beispiel: Eine Person mit leicht erhöhtem Blutdruck (140/85), die kein Antihypertensivum nimmt, würde
+von einem Arzt möglicherweise auch Pre-Workout in Maaßen erlaubt bekommen. Das Quiz schließt
+Pre-Workout pauschal aus.
+Diese Vorsicht ist verantwortungsvolle Designentscheidung – lieber zu konservativ als gefährlich.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 8
+
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+5. Quellenverzeichnis
+Im Folgenden listen wir die wichtigsten wissenschaftlichen Quellen, die der Wissensbasis und der
+Empfehlungslogik zugrunde liegen. Die Liste ist nicht erschöpfend – vollständige Quellen pro Wirkstoff
+finden sich in den JSON-Dateien der Wissensbasis im Feld quellen.
+5.1 Position Stands und Leitlinien
+Quelle Bedeutung
+Jäger R et al. (2017) ISSN Position Stand: Protein and Exercise. Goldstandard für Protein-Empfehlungen bei
+JISSN 14:20. Athleten
+Kreider RB et al. (2017) ISSN Position Stand: Creatine. JISSN Definitive Quelle für Kreatin-Sicherheit und
+14:18. Wirksamkeit
+Trexler ET et al. (2015) ISSN Position Stand: Beta-Alanine. JISSN Beta-Alanin-Dosierung und
+12:30. Anwendungsbereiche
+Cederholm T et al. (2017) ESPEN Guideline on Clinical Nutrition in Protein-Empfehlungen Senioren,
+Sarcopenia. Clinical Nutrition. Sarkopenie-Prävention
+Goldstein ER et al. (2010) ISSN Position Stand: Caffeine and Koffein-Dosierung und Wirkung im Sport
+Performance. JISSN 7:5.
+AASM Clinical Practice Guidelines on Insomnia (2017). Schlafstörungs-Behandlung,
+Melatonin-Empfehlungen
+DGE Referenzwerte für Nährstoffzufuhr (laufende Aktualisierung) Deutsche Nährstoffempfehlungen, Mengen
+EFSA Scientific Opinions on Health Claims (laufend). Europäische Bewertung von
+Wirkstoff-Health-Claims
+5.2 Wichtige Meta-Analysen
+Quelle Wirkstoff/Thema
+Morton RW et al. (2018) British Journal of Sports Medicine Protein und Krafttraining – Effektgröße
+52:376-384. Meta-Analyse n=1.863, 49 RCTs.
+Pinckaers PJM et al. (2024) Sports Medicine. Systematic Review. Pflanzenprotein vs. tierisches Protein für MPS
+Nguo K et al. (2024) Critical Reviews in Food Science. 17 RCTs. Soja-Protein vs. Whey: Effektgleichheit bei
+adäquater Dosis
+Martineau AR et al. (2017) BMJ 356:i6583. Meta-Analyse n=10.933. Vitamin D und Atemwegsinfekte
+Castro et al. (2019) Journal of the International Society of Sports Whey-Isolat vs. Konzentrat: Kein signifikanter
+Nutrition. Unterschied
+Jakubowski JS et al. (2020) Nutrients 12(5):1523. HMB bei jungen Trainierenden: keine
+signifikanten Effekte
+Feng X et al. (2024). Sarkopenie-Meta-Analyse n=257. HMB bei Sarkopenie: positive Effekte auf
+Gangtempo
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 9
+
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+Khosravi M et al. (2020). L-Carnitin-Meta-Analyse n=2.292. L-Carnitin und Gewichtsreduktion
+Mah J, Pitre T (2020) BMC Complementary Med 20:189. 7 RCTs. Magnesium und Insomnie bei älteren
+Erwachsenen
+Pawlak R et al. (2014) European J Clinical Nutrition 68(5):541-548. B12-Mangel bei Vegetariern: 92 % Veganer mit
+Defizit
+Bischof K et al. (2024) Nutrients. Kollagen-Meta-Analyse. Kollagen und Recovery: +12 % Sprungkraft
+48h post-exercise
+Cruz-Sanabria F et al. (2024). Dose-Response Meta-Analyse Melatonin: Plateau-Effekt bei 4 mg/Tag
+Melatonin.
+Halegoua-DeMarzio D et al. (2023) American J Medicine Curcumin und Hepatotoxizität (DILIN-Daten)
+136(2):200-206.
+Ferracioli-Oda E et al. (2013). Melatonin Meta-Analyse. -7 Min Einschlaflatenz durch Melatonin
+Hobson RM et al. (2012). Beta-Alanin Meta-Analyse n=360. +2,85 % Time-to-Exhaustion bei 60-240s
+Belastung
+Brody S et al. (2002) Psychopharmacology. Vitamin C und Cortisol-Reduktion unter Stress
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 10
+
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+5.3 Verwendete Datenbanken
+Datenbank Zweck und Bedeutung
+PubMed (NCBI) Primäre Literaturrecherche, peer-reviewed Studien
+Cochrane Library Goldstandard für systematische Reviews und Meta-Analysen
+NIH Office of Dietary Behördliche Bewertungen zu Mikronährstoffen
+Supplements (ODS)
+Examine.com Aggregations-Datenbank mit Evidenz-Level pro Wirkstoff
+LiverTox (NIH) Datenbank zu Hepatotoxizität von Substanzen, einschließlich Supplementen
+EFSA (European Food Safety Europäische Bewertungen zu Lebensmittelsicherheit und Health Claims
+Authority)
+WHO Anemia Database Globale Statistiken zu Nährstoffmangel
+DGE (Deutsche Gesellschaft für Deutsche Referenzwerte für Nährstoffzufuhr
+Ernährung)
+DILIN (Drug-Induced Liver Injury US-amerikanisches Register für medikamentös/supplement-induzierte
+Network) Leberschäden
+WADA Prohibited List Anti-Doping-relevante Substanzen für Athleten
+6. Eigene Wissensstruktur
+Die Stronger-Wissensbasis ist als strukturierte JSON-Datenbank organisiert. Jeder Wirkstoff hat ein
+standardisiertes Schema mit 15 Pflichtfeldern. Diese Struktur ermöglicht die programmatische Auswertung
+durch die Empfehlungs-Engine.
+6.1 Schema-Übersicht
+Feld Beschreibung
+id Eindeutige ID des Wirkstoffs (z.B. "kreatin_monohydrat")
+name Anzeigename
+kategorie Hauptkategorie (Performance, Protein, Vitamin, etc.)
+evidenz_level A (mehrere Meta-Analysen), B (einzelne RCTs), C (begrenzt/uneindeutig)
+kurzbeschreibung 1-2 Sätze, was der Wirkstoff macht
+mechanismus Physiologisch erklärt, wie er wirkt
+dosierung Standard, Aufladephase, Tagesdosis pro kg KG (wo zutreffend)
+indikationen Liste mit Trigger-IDs (verknüpft mit Quiz-Antworten)
+populationen Für welche Gruppen passt der Wirkstoff?
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 11
+
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+kontraindikationen Allergien, Medikamente, Erkrankungen mit Schweregrad (hart/vorsichtig/info)
+wechselwirkungen Mit anderen Wirkstoffen oder Medikamenten
+nebenwirkungen Typische Nebenwirkungen und Häufigkeit
+effektgroessen Quantitative Wirkungs-Schätzungen aus Meta-Analysen
+quellen Primary references mit Studientyp und Ergebnis
+mythen Aktive Mythen-Aufklärung in Wahrheit-Mythos-Paaren
+Vorteile dieser Architektur:
+(cid:127) Single Source of Truth: Jede Änderung in der JSON wirkt auf Engine, Guide und User-Output
+(cid:127) Wartbarkeit: Neue Studien können ohne Code-Änderung eingepflegt werden
+(cid:127) Transparenz: Quiz-Output kann direkt auf die Quelle in der JSON verweisen
+(cid:127) Erweiterbarkeit: Neue Wirkstoffe können als JSON-Datei hinzugefügt werden, Engine erkennt sie
+automatisch
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 12
+
+Stronger - Modul 15: Limitationen und Quellen Spec v2 | Juni 2026
+7. Schlusswort
+Für die behandelnde Ärztin / den behandelnden Arzt:
+Wir haben dieses Quiz mit dem Anspruch entwickelt, evidenzbasierte Supplementempfehlungen
+zugänglich zu machen – und gleichzeitig die Sicherheit der Nutzerinnen und Nutzer absolut zu
+priorisieren. Wir wissen, dass ein Online-Tool Ihre Sprechstunde niemals ersetzen kann. Wir sehen es
+eher als komplementär: Es kann Patienten helfen, mit fundierteren Vorstellungen in Ihr Gespräch zu
+kommen, und unnötige Supplement-Ausgaben vermeiden.
+Wenn Sie Patienten haben, die das Quiz genutzt haben, finden Sie in den Empfehlungen die folgenden
+Stellschrauben:
+(cid:127) Transparente Score-Logik: Sie können pro Wirkstoff nachvollziehen, warum er empfohlen oder
+ausgeschlossen wurde
+(cid:127) Konservative Sicherheit: Bei bekannten Erkrankungen oder Medikamenten haben wir die
+Ausschlusslogik bewusst eng gefasst
+(cid:127) Quellenangabe: Jede Empfehlung ist mit publizierter Evidenz hinterlegt
+(cid:127) Realistische Erwartungen: Wir vermeiden überzogene Heilsversprechen und kommunizieren
+Effektgrößen transparent
+(cid:127) Aktive Mythen-Aufklärung: Patienten lernen, Marketing-Behauptungen von wissenschaftlicher Evidenz
+zu unterscheiden
+Wir freuen uns über Rückmeldung von Ihnen. Wenn Sie auf Konstellationen stoßen, in denen unsere
+Logik aus Ihrer Sicht verbessert werden sollte, können wir die Wissensbasis kontinuierlich erweitern und
+schärfen.
+Sollten Sie mit Ihrer Patientin oder Ihrem Patienten eine andere Empfehlung treffen wollen als das Quiz
+vorschlägt – egal ob auf Basis von Blutwerten, klinischer Beurteilung oder individueller Vorgeschichte –
+folgen Sie bitte unbedingt Ihrer eigenen Einschätzung. Das Quiz ist Werkzeug, nicht Vorgabe. Wir
+vertrauen darauf, dass die letztverantwortliche Entscheidung über die Supplementierung in Ihrer Hand
+bleibt.
+Versionsstand dieser Dokumentation:
+Stronger Quiz Spec v2, 25 Wirkstoffe (Stand Juni 2026)
+15 PDF-Module, vollständige wissenschaftliche Begründung der Empfehlungslogik
+Änderungshistorie zur Spec v1 dokumentiert in den jeweiligen Modulen
+Mit kollegialen Grüßen
+Das Stronger-Team
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 13
+

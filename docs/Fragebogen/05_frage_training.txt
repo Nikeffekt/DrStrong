@@ -1,0 +1,171 @@
+Stronger - Modul 5: Frage Training Spec v2 | Juni 2026
+Stronger Quiz
+Modul 5 – Frage 4: Trainingsform
+1. Frage-Wortlaut
+„Deine Trainingsform?“
+Hilfetext im Quiz: „Bestimmt deinen Supplement-Bedarf.“
+2. Antwortoptionen
+Code Anzeige Konsequenz
+A Kraft 4+x/Woche Höchste Proteinanforderung, Kreatin essential, Performance-Stack
+B Kraft 2-3x/Woche Mittlere Proteinanforderung, Kreatin sinnvoll
+C Hauptsächlich Cardio Geringere Proteinanforderung, Elektrolyte, Beta-Alanin
+D Mix (Kraft + Cardio kombiniert) Hybride Logik: Kraft 2-3x plus Cardio-Add-ons
+E Wenig Sport (max. 1x/Woche) Basis-Stack: nur Vitamin D, Omega-3, B12
+3. Klinische Begründung
+Die Trainingsform ist nach den Zielen die zweitwichtigste Information für die Empfehlungs-Engine.
+Verschiedene Trainings-Modalitäten haben fundamental unterschiedliche metabolische Anforderungen
+und damit unterschiedlichen Supplement-Bedarf.
+3.1 Metabolische Profile der Trainings-Modalitäten
+Modalität Stoffwechsel-Profil Wirkstoff-Profil
+Krafttraining Glykolytisch-aerob, anabolisch, hohe Whey/Protein, Kreatin, Beta-Alanin, ggf.
+Muskelproteinsynthese-Rate, Pre-Workout, Magnesium für Recovery
+mikrostrukturelle Schäden
+(Recovery-Bedarf)
+Ausdauer/Cardio Aerob, oxidativ, hoher Schweißverlust Elektrolyte, Eisen (bes. Frauen), Beta-Alanin,
+(1-2 Liter/Stunde), Glykogenverbrauch, L-Carnitin, Vitamin C/E
+oxidativer Stress
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 5: Frage Training Spec v2 | Juni 2026
+HIIT / Mix Hybrid: glykolytisch plus aerob, Kombination aus beiden Profilen, Magnesium
+intermittierende Hochlast, starker besonders relevant
+Recovery-Bedarf
+Sedentär Basaler Metabolismus, keine Basis-Supplementierung (D3, Omega-3, ggf. B12)
+Sport-induzierten Mehrbedürfnisse,
+aber allgemeine Versorgungslücken
+möglich
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 5: Frage Training Spec v2 | Juni 2026
+4. Wissenschaftlicher Hintergrund pro
+Modalität
+4.1 Kreatin bei Krafttraining (Evidenz-Level A)
+Die Wirksamkeit von Kreatin Monohydrat ist eine der am besten dokumentierten in der Sportwissenschaft
+– mit über 500 publizierten Studien einer der best-erforschten Wirkstoffe überhaupt. Meta-Analysen zeigen
+konsistent Effekte auf:
+Parameter Effektgröße Studienbasis
+Maximalkraft Oberkörper +4,43 kg im 1RM 38 RCTs, n über 700
+Maximalkraft Unterkörper +11,35 kg im 1RM 32 RCTs, n über 600
+Magermasse +0,3 bis 0,5 kg SMD 0,3-0,5 (moderat)
+Sprintleistung (Wingate) +5-15 % Spitzenleistung Multiple Studien
+Recovery (CK-Reduktion) Signifikante Reduktion CK-Reduktion nach exzentrischem Training
+Quelle: Kreider RB, Kalman DS, Antonio J, et al. (2017). International Society of Sports Nutrition position stand: safety and efficacy
+of creatine supplementation in exercise, sport, and medicine. JISSN 14:18.
+4.2 Beta-Alanin bei hochintensivem Training (Evidenz-Level
+B)
+Beta-Alanin erhöht die intramuskulären Carnosin-Konzentrationen und puffert die metabolische Azidose
+bei hochintensiven Belastungen. Effekte sind bei Belastungen von 1-4 Minuten Dauer am
+ausgeprägtesten:
+(cid:127) Time-to-Exhaustion: +2,85 % bei Belastungen 60-240 s (Hobson 2012, n=360)
+(cid:127) Wirkungseintritt: 4-12 Wochen Aufladephase nötig
+(cid:127) Effektgröße SMD: 0,2-0,4 (klein bis moderat)
+(cid:127) Anwendungsbereich: 400-1500m Lauf, intensive CrossFit-WODs, hochintensive Krafttraining-Sätze mit
+8-15 Wiederholungen
+Quelle: Trexler ET, Smith-Ryan AE, Stout JR, et al. (2015). International society of sports nutrition position stand: Beta-Alanine.
+JISSN 12:30.
+4.3 Elektrolyte bei Ausdauerbelastung
+Schweißverluste während intensiver Belastung können 1-2 Liter pro Stunde erreichen, mit
+Natrium-Verlusten von 500-1500 mg pro Liter. Bei Belastungen über 60-90 Minuten oder bei heißem
+Wetter wird die isotonische Rehydration kritisch. Klassische Risikokonstellationen:
+(cid:127) Marathon-Training (mehrere Stunden Belastung)
+(cid:127) Triathlon (mehrere Disziplinen, lange Dauer)
+(cid:127) Radfahren über 90 Minuten
+(cid:127) Outdoor-Training im Sommer
+(cid:127) Hot Yoga / Bikram (Saunaeffekt)
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 5: Frage Training Spec v2 | Juni 2026
+(cid:127) Für „Salz-Verlierer“ (genetische Disposition)
+Bei diesen Profilen kann unzureichende Elektrolyt-Substitution zu Hyponatriämie führen – in seltenen
+Fällen lebensbedrohlich. Pure Wassersubstitution OHNE Elektrolyte kann das Problem sogar
+verschlimmern.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 5: Frage Training Spec v2 | Juni 2026
+5. Empfehlungs-Konsequenzen pro
+Modalität
+5.1 Bei Krafttraining (Option A: 4+/Woche oder B: 2-3/Woche)
+(cid:127) Whey/Protein wird zu essential aufgewertet
+(cid:127) Kreatin wird empfohlen (bei A: essential, bei B: empfohlen)
+(cid:127) Beta-Alanin bei intensiven Sets (8-15 Wiederholungen)
+(cid:127) Magnesium für Recovery und Schlaf
+(cid:127) Bei A zusätzlich: Pre-Workout (sofern keine Kontraindikation), ggf. EAA, ZMA
+(cid:127) Proteinfaktor: 1,8-2,2 g/kg KG/Tag
+(cid:127) Bei sehr erfahrenen Athleten: HMB als Optional während Diät-Phasen
+5.2 Bei Cardio (Option C)
+(cid:127) Elektrolyte werden empfohlen (Standard-Empfehlung bei Cardio)
+(cid:127) Beta-Alanin bei hochintensiven Cardio-Phasen (Intervalle, HIIT)
+(cid:127) L-Carnitin bei Fettabbau-Ziel (Recovery-Effekt nach Belastung)
+(cid:127) Eisen bei Frauen (Verluste durch Schweiß)
+(cid:127) Vitamin C als Antioxidans bei langen Belastungen
+(cid:127) Proteinfaktor moderater: 1,4-1,6 g/kg KG/Tag
+(cid:127) KEIN Pre-Workout (selten sinnvoll bei pure Cardio)
+5.3 Bei Mix (Option D)
+Die Engine kombiniert intelligent: Sie nimmt die Empfehlungen von Kraft 2-3x und ergänzt um
+Cardio-spezifische Wirkstoffe.
+(cid:127) Whey/Protein essential
+(cid:127) Kreatin empfohlen
+(cid:127) Elektrolyte empfohlen (NEU vs. reines Krafttraining)
+(cid:127) Beta-Alanin (passt zu beiden Modalitäten)
+(cid:127) Magnesium (synergistisch bei beidem)
+(cid:127) L-Carnitin optional bei Fettabbau-Ziel
+(cid:127) Proteinfaktor: 1,6-1,8 g/kg KG/Tag
+Dies schließt die Lücke, dass bei reiner Wahl von Option B (Kraft) Cardio-Anforderungen ignoriert würden.
+5.4 Bei wenig Sport (Option E)
+(cid:127) Nur Basis-Stack: Vitamin D, Omega-3, ggf. B12
+(cid:127) KEIN Protein-Supplement (außer bei Sarkopenie-Risiko ab 50)
+(cid:127) KEIN Kreatin (Effekt-Erwartung gering ohne Training)
+(cid:127) KEINE Performance-Wirkstoffe
+(cid:127) Bei >50 Jahre: HMB als Prävention erwägen
+(cid:127) Multivitamin als Lückenfüller bei sehr einseitiger Ernährung
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5
+
+Stronger - Modul 5: Frage Training Spec v2 | Juni 2026
+Dies ist ehrlich: Nicht jeder braucht Supplementierung. Wenn jemand wenig Sport macht und keine
+spezifischen Mängel hat, ist der Stack klein. Ein 5-Produkt-Stack bei sedentärem Lebensstil wäre
+Übertherapie.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 6
+
+Stronger - Modul 5: Frage Training Spec v2 | Juni 2026
+6. Sicherheitsrelevanz
+6.1 Pre-Workout-Sicherheit
+Pre-Workout-Produkte enthalten oft 250-400 mg Koffein pro Portion sowie potenziell auch Stimulanzien
+wie Yohimbin oder DMHA. Diese werden NUR bei Option A (Kraft 4+x) als Optional empfohlen und NUR
+wenn keine kardiovaskulären Kontraindikationen vorliegen.
+Bei Bluthochdruck oder Herzerkrankungen (Frage 9, Option D) wird Pre-Workout VOLLST&AumlNDIG;
+ausgeschlossen – auch bei sehr intensivem Training. Diese harte Kontraindikation ist nicht verhandelbar.
+6.2 Hyponatriämie bei reiner Wassersubstitution
+Bei Ausdauer-Athleten (Option C) ist die Hyponatriämie-Gefahr ein oft übersehenes Sicherheitsproblem.
+Das Quiz empfiehlt aktiv Elektrolyt-Substitution – nicht nur für die Leistung, sondern für die Sicherheit.
+6.3 Übertraining und Recovery
+Bei Option A (Kraft 4+/Woche) ist die Recovery besonders kritisch. Das Quiz empfiehlt aktiv Magnesium
+und Schlaf-unterstützende Wirkstoffe, um Übertraining vorzubeugen. Bei kombinierter Auswahl von „Kraft
+4+x/Woche“ und „Schlafproblemen“ (in der Situations-Frage) wird Magnesium-Bisglycinat besonders
+priorisiert.
+7. Limitationen
+7.1 Trainingsintensität nicht erfasst
+Die fünf Optionen erfassen nicht die exakte Trainingsintensität. Ein Hobby-Jogger der 3x/Woche 5 km läuft
+fällt in dieselbe Kategorie wie ein Marathonläufer mit 80 km/Woche. Die Engine kann beide nur gleich
+behandeln.
+Eine Folgefrage zum Trainingsumfang/Intensität wurde diskutiert, aber zur Reduktion der Quiz-Länge
+zugunsten anderer Fragen verworfen.
+7.2 Sportart-spezifische Bedürfnisse
+Verschiedene Sportarten haben sehr spezifische Bedürfnisse:
+(cid:127) Bodybuilding (Wettkampfvorbereitung): Hochpräzise Diät, ISO Clear bevorzugt, HMB als
+Muskelschutz
+(cid:127) Klettern/Bouldern: Hohe Anforderungen an Griffkraft, Sehnen
+(cid:127) Mannschaftssport: Intermittierende Hochintensität, spezielle Recovery
+(cid:127) Yoga/Pilates: Andere Priätäten
+(cid:127) Kampfsport: Hohe Verletzungshäufigkeit, Kollagen priorisieren
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 7
+
+Stronger - Modul 5: Frage Training Spec v2 | Juni 2026
+Diese Differenzierung wurde aus Komplexitätsgründen nicht eingebaut. Bei sehr sportspezifischen
+Bedürfnissen empfehlen wir eine Sport-Ernährungsberatung.
+7.3 Periodisierung nicht abgebildet
+Athleten in unterschiedlichen Trainings-Phasen (Aufbau, Vorbereitung, Wettkampf, Erholung) haben
+unterschiedliche Bedürfnisse. Das Quiz erfasst einen Schnappschuss – periodische Re-Evaluation wäre
+sinnvoll.
+Fazit: Die Trainings-Frage erfasst die wichtigsten Bedürfnis-Kategorien. Für Spezialfälle verweisen wir auf
+qualifizierte Beratung.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 8

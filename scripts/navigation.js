@@ -103,6 +103,11 @@ window.Navigation = (function () {
           window.WissenScreen.zeige();
         }
         break;
+      case 'quiz':
+        if (window.QuizScreen && window.QuizScreen.zeige) {
+          window.QuizScreen.zeige();
+        }
+        break;
     }
 
     console.log('Screen gewechselt:', neuerScreen);

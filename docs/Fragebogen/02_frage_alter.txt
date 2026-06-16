@@ -1,0 +1,143 @@
+Stronger - Modul 2: Frage Alter Spec v2 | Juni 2026
+Stronger Quiz
+Modul 2 – Frage 1: Geburtsjahr (Alter)
+1. Frage-Wortlaut
+„Wann bist du geboren?“
+Hilfetext im Quiz: „Beeinflusst Vitamin-D-Bedarf, Kollagen-Empfehlungen und Dosierungen.“
+2. Antwortoptionen
+Number-Picker mit Jahreszahlen von 1940 bis 2010. Der eingegebene Wert wird in mehreren Variablen
+gespeichert, um sowohl Rückwärtskompatibilität als auch präzise Engine-Logik zu ermöglichen:
+AW.geburtsjahr = 1990 // konkrete Zahl
+AW.alter = 36 // berechnet: aktuelles Jahr minus Geburtsjahr
+AW.intro = D // Kategorie (fuer Rueckwaertskompatibilitaet)
+Wichtige Designentscheidung: Die Empfehlungs-Engine arbeitet mit der konkreten Altersangabe als
+Zahl, nicht mit Alterskategorien. Dies erlaubt eine deutlich präzisere Anpassung der Empfehlungen an
+feine Altersunterschiede.
+3. Klinische Begründung
+Das chronologische Alter ist einer der wichtigsten Modifikatoren bei der Bewertung des
+Supplementbedarfs. Mehrere physiologische Veränderungen, die alters-assoziiert auftreten, haben
+direkten Einfluss auf den Nährstoffbedarf und auf die Sicherheit bestimmter Substanzen.
+3.1 Alters-spezifische physiologische Veränderungen
+Altersgruppe Klinisch relevante Veränderungen
+18-25 Jahre Höchster anaboler Status, optimaler Vitamin-D-Stoffwechsel, geringster Bedarf an
+protektiven Wirkstoffen. Maximaler Trainings-Adaptationsdrang.
+26-35 Jahre Erste subtile Veränderungen. Die körpereigene Kollagensynthese sinkt ab ca. 25 Jahren um
+ca. 1 Prozent pro Jahr. Vitamin-D-Versorgung wird relevanter, je nach Lebensstil und
+geographischer Lage.
+36-45 Jahre Beschleunigte Sarkopenie-Tendenz, hormonelle Veränderungen werden messbar
+(Prä-Menopause bei Frauen, Andropause bei Männern), kardiovaskuläre Prävention rückt in
+den Fokus.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 2: Frage Alter Spec v2 | Juni 2026
+46-60 Jahre Knochendichte-Reduktion (besonders Frauen postmenopausal), Sarkopenie-Risiko, erhöhter
+Bedarf an Vitamin D, B12 (Absorption sinkt), Kollagen-Substraten. Erste Anzeichen von
+Polypharmazie.
+60+ Jahre Klinisch relevante Sarkopenie-Prävalenz (bis zu 30 Prozent), Polypharmazie häufig,
+B12-Resorption verringert, höhere Sturzgefahr durch Vitamin-D-Mangel.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 2: Frage Alter Spec v2 | Juni 2026
+4. Wissenschaftlicher Hintergrund
+4.1 Sarkopenie und Proteinbedarf im Alter
+Der altersbedingte Verlust an Muskelmasse beginnt ab dem 30. Lebensjahr mit ca. 0,5-1 Prozent pro Jahr
+und beschleunigt sich nach dem 60. Lebensjahr auf ca. 1-2 Prozent. Die European Society for Clinical
+Nutrition (ESPEN) hat in ihren Leitlinien zur Sarkopenie-Prävention eindeutig Stellung bezogen:
+(cid:127) Ab 50 Jahren wird eine erhöhte Proteinzufuhr empfohlen: 1,2-1,5 g/kg Körpergewicht pro Tag
+(gegenüber 0,8 g/kg bei jüngeren Erwachsenen mit gleicher Aktivität).
+(cid:127) Bei Sarkopenie-Risiko: Supplementation mit Whey-Protein, ggf. HMB und Vitamin D zur Prävention.
+(cid:127) Krafttraining wird parallel zur Supplementation als essentiell angesehen.
+Quelle: Cederholm T, Barazzoni R, Austin P, et al. (2017). ESPEN guideline on definitions and terminology of clinical nutrition.
+Clinical Nutrition, 36(1):49-64.
+4.2 Vitamin-D-Synthese im Alter
+Die kutane Vitamin-D-Synthese nimmt ab 65 Jahren um etwa 50-75 Prozent ab im Vergleich zu jungen
+Erwachsenen. Dies erklärt die extrem hohe Mangelprävalenz bei Senioren – in einigen europäischen
+Studien liegen über 80 Prozent der über 75-Jährigen im Defizit-Bereich (25-OH-D3 < 30 ng/ml).
+Die DGE-Empfehlung von 800 IE/Tag wird in der internationalen Literatur zunehmend als unzureichend
+kritisiert. Aktuelle Leitlinien der Endocrine Society empfehlen 1500-2000 IE/Tag für ältere Erwachsene und
+höhere Dosen bei nachgewiesenem Mangel.
+4.3 Vitamin-B12-Resorption im Alter
+Ab dem 50. Lebensjahr nimmt die Magensäureproduktion ab (atrophische Gastritis-Prävalenz steigt).
+Cobalamin aus tierischen Lebensmitteln benötigt aber Magensäure und Intrinsic Factor zur Resorption.
+Daher empfiehlt das Institute of Medicine (USA) ab 50 explizit Vitamin B12 in kristalliner Form – also aus
+Supplements, da diese Form keine Magensäure zur Aufspaltung benötigt.
+Quelle: Pawlak R, Lester SE, Babatunde T (2014). The prevalence of cobalamin deficiency among vegetarians assessed by serum
+vitamin B12. European Journal of Clinical Nutrition, 68(5):541-548.
+4.4 Kollagensynthese-Abbau
+Die körpereigene Kollagenproduktion sinkt ab ca. 25 Jahren um etwa 1 Prozent pro Jahr. Bei Frauen
+postmenopausal beschleunigt sich der Abbau aufgrund des Östrogenrückgangs – in den ersten 5 Jahren
+nach der Menopause kann der Kollagenverlust bis zu 30 Prozent betragen.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 2: Frage Alter Spec v2 | Juni 2026
+5. Empfehlungs-Konsequenzen je nach Alter
+Die Engine differenziert die Empfehlungen anhand des konkreten Alters. Die folgende Tabelle zeigt die
+wichtigsten Konsequenzen:
+Alter Wirkstoff Konsequenz Stärke
+< 18 Jahre Pre-Workout, ZMA, AUSGESCHLOSSEN (Sicherheit) hart
+Melatonin
+< 18 Jahre Ashwagandha AUSGESCHLOSSEN (limitierte pädiatrische hart
+Daten)
+‡ 50 Jahre Kollagen Empfohlen (postmenopausal ästhetisch und 0,7
+funktional)
+‡ 50 Jahre HMB Stark priorisiert (Sarkopenie-Prävention) 0,8
+‡ 50 Jahre Whey/Protein Priorität steigt (höherer Proteinfaktor 1,2-1,5 g/kg) +15 %
+‡ 50 Jahre Vitamin B12 Bedarf priorisiert (Resorptionsabnahme) empfohlen
+‡ 60 Jahre Vitamin D3 Dosis verdoppelt auf 2000-4000 IE essential
+‡ 60 Jahre Vitamin B12 Aufgewertet zu essential essential
+‡ 60 Jahre Multivitamin Wird aktiv empfohlen (allgemeine empfohlen
+Versorgungslücken)
+‡ 65 Jahre Calcium (in Multivitamin) Mehr Aufmerksamkeit auf Knochengesundheit empfohlen
+Frauen ‡ 45 Vitamin D + K2 Knochendichte-Prävention postmenopausal essential
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 2: Frage Alter Spec v2 | Juni 2026
+6. Sicherheitsrelevanz
+6.1 Schutz Minderjähriger
+Wichtigster Sicherheitsaspekt: Bei Minderjährigen (unter 18 Jahre) werden alle Wirkstoffe
+ausgeschlossen, deren Sicherheit oder Dosierung in dieser Population nicht ausreichend dokumentiert ist.
+Dies betrifft insbesondere:
+(cid:127) Pre-Workout: Hohe Koffeindosen (250-400 mg pro Portion), Stimulanzien-Mischungen wie DMHA oder
+Yohimbin. Bei Jugendlichen erhöhtes Risiko für Schlafprobleme, Angststörungen und kardiovaskuläre
+Belastung.
+(cid:127) ZMA: Vitamin B6 in Hochdosis kann bei langfristiger Einnahme periphere Neuropathien verursachen. Bei
+Jugendlichen ist auch die Wachstumshormon-Achse noch in Entwicklung.
+(cid:127) Melatonin: In Deutschland ab 2 mg verschreibungspflichtig. Bei Jugendlichen Eingriff in noch nicht
+ausgereiften circadianen Rhythmus problematisch.
+(cid:127) Ashwagandha: Limitierte pädiatrische Daten. Schilddrüsen-Effekte können bei in Entwicklung
+befindlichen Systemen problematisch sein.
+(cid:127) Hohe Eiweißdosen: Bei sehr jungen Sportlern ist die Nierenfunktion noch nicht ausgereift. Eiweißdosen
+über 1,5 g/kg werden nicht empfohlen.
+6.2 Polypharmazie bei Senioren
+Bei Senioren (60+) ist der häufigste Sicherheitsaspekt die Polypharmazie. Die Wahrscheinlichkeit
+relevanter Wechselwirkungen steigt mit der Anzahl der eingenommenen Medikamente. In Deutschland
+nehmen ca. 40 Prozent der über 65-Jährigen mehr als fünf Medikamente regelmäßig ein.
+Daher ist die Frage 9 (Medikamente/Erkrankungen) gerade bei dieser Altersgruppe besonders kritisch.
+Das Quiz blendet bei Auswahl mehrerer Komorbiditäten einen expliziten Hinweis ein, vor jeder neuen
+Supplement-Einnahme ärztliche Rücksprache zu halten.
+7. Limitationen dieser Frage
+7.1 Chronologisches versus biologisches Alter
+Das chronologische Alter ist nur ein Surrogat für das biologische Alter. Ein 45-jähriger
+Hochleistungssportler hat physiologisch oft andere Bedürfnisse als ein 45-jähriger mit sitzendem
+Lebensstil. Das Quiz versucht dies über die Trainings- und Erfahrungs-Fragen (Frage 4 und 5) zu
+kompensieren, kann aber biologisches Alter nicht direkt messen.
+Eine vollständige Erfassung würde Biomarker erfordern wie Telomerlänge, epigenetische Marker
+(Horvath-Clock), kardiopulmonale Fitness (VO2max) oder Knochendichte (DEXA). Diese sind über ein
+Online-Quiz nicht erfassbar.
+7.2 Default-Wert und Aktualität
+Der Default-Wert im Picker (1990) wird mit der Zeit immer älter. Mit aktuellem Stand 2026 entspricht 1990
+einem Alter von 36 Jahren – das fällt in Kategorie D (36-45). User, die schnell durchklicken ohne genauen
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5
+
+Stronger - Modul 2: Frage Alter Spec v2 | Juni 2026
+Wert einzugeben, könnten so unbeabsichtigt in eine falsche Altersgruppe geraten. Eine Verbesserung
+wäre ein mitwachsender Default (z.B. immer aktuelles Jahr minus 30).
+7.3 Wiedereinsteiger
+Personen, die nach langer Pause wieder mit Sport anfangen (z.B. 5 Jahre keinen Sport, davor 3 Jahre
+Krafttraining), werden bei der Erfahrungs-Frage vermutlich „Erfahren“ wählen. Physiologisch sind sie aber
+Anfängern näher. Diese Differenzierung wird vom Quiz nicht erfasst – eine zusätzliche Frage würde die
+Quiz-Länge weiter erhöhen.
+Fazit: Die Alter-Frage ist trotz dieser Limitationen einer der wichtigsten und wissenschaftlich am besten
+begründeten Modifikatoren der Empfehlungslogik. Die Speicherung als konkrete Zahl statt nur als
+Kategorie ist ein wichtiger Fortschritt der Spec v2.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 6

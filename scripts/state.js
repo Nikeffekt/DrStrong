@@ -32,6 +32,13 @@ var WIRKSTOFFE_DETAILS = {};
 var AW = {};
 
 
+/* ──── EMPFEHLUNGS-STACK (Phase 2 Engine-Output) ──── */
+/* Befuellt durch engine/empfehlungen.js -> berechneStack(AW) */
+/* Struktur: { essential, empfohlen, optional, entfernt, entfernt_overlaps, modi, meta } */
+/* null = noch kein Quiz gemacht (oder Stack geloescht) */
+var aktuellerStack = null;
+
+
 /* ──── NUTZERPROFIL ──── */
 /* Befuellt durch screens/profil.js oder Login */
 var NP = { name: '', email: '' };

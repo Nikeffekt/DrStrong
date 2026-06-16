@@ -1,0 +1,143 @@
+Stronger - Modul 7: Frage Ziele Spec v2 | Juni 2026
+Stronger Quiz
+Modul 7 – Frage 6: Persönliche Ziele
+1. Frage-Wortlaut
+„Deine Ziele?“
+Hilfetext im Quiz: „Wähle deine 3 wichtigsten – das schärft die Empfehlungen.“
+2. Antwortoptionen
+Multi-Select mit maximal 3 Auswahlmöglichkeiten. Diese Begrenzung ist eine bewusste
+Designentscheidung – sie zwingt den User zur Priorisierung und vermeidet diffuse Empfehlungen.
+Code Symbol Ziel Hauptassoziierte Wirkstoffe
+A n Muskelaufbau Whey/Protein, Kreatin, EAA, HMB (Senioren)
+B n Fettabbau L-Carnitin, HMB (Muskelschutz), Elektrolyte, Vitamin C
+C n Mehr Energie Vitamin B12, Eisen (Frauen), Magnesium, Vitamin D3
+D n Ausdauer Beta-Alanin, Elektrolyte, L-Carnitin, EAA
+E n Regeneration Magnesium, Ashwagandha, Kollagen, ZMA
+F ⁄ Gesundheit Vitamin D3, Omega-3, Multivitamin, Curcumin
+Stress reduzieren (NEU in Spec
+G n Ashwagandha (primär), Magnesium, Vitamin C, ZMA
+v2)
+3. Klinische Begründung
+Die Zielsetzung des Anwenders ist nach Sicherheits-Filtern (Allergien und Medikamente) der wichtigste
+Modifikator für die Empfehlungen. Sie bestimmt, welche der möglichen Wirkstoffe priorisiert werden. Jedes
+Ziel im Quiz korreliert mit einer Gruppe von Wirkstoffen, deren Wirkung in Meta-Analysen dokumentiert ist.
+3.1 Warum die Max-3-Begrenzung?
+Die Max-3-Begrenzung hat zwei wissenschaftliche Gründe:
+1. Priorisierungseffekt: Bei unbegrenzter Auswahl tendieren User zu „Klick-alles“-Verhalten – sie wählen
+alle Ziele, was die Empfehlungslogik wertlos macht. Mit Max 3 wird der User gezwungen, seine
+tatsächlichen Hauptziele zu identifizieren.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 7: Frage Ziele Spec v2 | Juni 2026
+2. Realistische Erwartungshaltung: Die wenigsten Menschen können gleichzeitig Muskelaufbau UND
+Fettabbau UND Ausdauer UND maximale Gesundheit optimieren. Diese Ziele konkurrieren teilweise um
+die gleichen Ressourcen. Eine Reduktion auf 3 Ziele entspricht der Sportwissenschaft, die ohnehin von
+Periodisierung und Phasen-spezifischen Schwerpunkten ausgeht.
+Bei Versuch eines 4. Klicks erscheint ein Toast-Hinweis: „Maximal 3 Optionen wählbar“. Der Nutzer muss
+aktiv eine vorherige Auswahl abwählen, um Platz zu schaffen.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 7: Frage Ziele Spec v2 | Juni 2026
+4. Wissenschaftlicher Hintergrund pro Ziel
+4.1 Muskelaufbau (A) – Level-A-Evidenz
+Die zentralen Wirkstoffe haben Level-A-Evidenz aus umfangreichen Meta-Analysen:
+(cid:127) Whey-Protein: +0,30 kg Magermasse (Morton 2018, BJSM, n=1.863)
+(cid:127) Kreatin: +4,43 kg Oberkörperkraft, +11,35 kg Unterkörperkraft im 1RM-Test (Kreider 2017, ISSN)
+(cid:127) EAA: Stimuliert Muskelproteinsynthese, aber redundant zu Whey bei adäquater Versorgung
+(cid:127) HMB: Nur bei Senioren mit Sarkopenie nachgewiesen (SMD 0,35-0,48)
+4.2 Fettabbau (B)
+Hier ist die Evidenz schwächer als oft kommuniziert:
+(cid:127) L-Carnitin: -1,21 kg Gewicht bei Übergewichtigen (Khosravi 2020, n=2.292) – ABER nur bei
+gleichzeitigem Kaloriendefizit. Ohne Diät praktisch wirkungslos
+(cid:127) HMB: Schützt Magermasse während Diät, verhindert keinen Fettverlust
+(cid:127) Koffein: Erhöht Energieverbrauch um 3-11 % (akuter Effekt)
+(cid:127) Vitamin C: Indirekter Effekt über Cortisol-Modulation
+Wichtig: Die Erwartungshaltung muss realistisch sein. Diese Wirkstoffe sind Hilfsmittel, kein
+Wundermittel. Das Quiz kommuniziert das ehrlich.
+4.3 Energie (C)
+Vitamin-B12-Mangel ist eine der häufigsten Ursachen für Fatigue:
+(cid:127) Vitamin B12: Bei Mangel deutlicher Energie-Effekt nach 4-8 Wochen Supplementation
+(cid:127) Eisen: Bei manifestem Eisenmangel können Frauen erhebliche Energie-Probleme haben
+(cid:127) Magnesium: Spielt im ATP-Stoffwechsel eine Schlüsselrolle
+(cid:127) Vitamin D3: Bei Mangel oft Antriebsstörungen, Winter-Depression
+Wichtig: Bei diagnostiziertem Mangel können diese Wirkstoffe deutliche Effekte zeigen. Bei adäquater
+Versorgung ist der Effekt klein bis nicht messbar.
+4.4 Ausdauer (D)
+(cid:127) Beta-Alanin: +2,85 % Time-to-Exhaustion bei Belastungen 1-4 Min (Hobson 2012)
+(cid:127) Elektrolyte: Bei Belastungen über 60-90 Minuten essentiell
+(cid:127) L-Carnitin: Moderate Effekte auf Muskelschäden post-Sport (Recovery)
+(cid:127) EAA: Bei Ultra-Ausdauer kann intra-workout-Versorgung sinnvoll sein
+4.5 Regeneration (E)
+(cid:127) Magnesium-Bisglycinat: Verbessert Schlafqualität (Mah et al. 2020, 7 RCTs)
+(cid:127) Ashwagandha: Cortisol-Reduktion 25-30 %, Schlafverbesserung
+(cid:127) Kollagen: +12 % Sprungkraft 48h post-exercise (Bischof 2024)
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 7: Frage Ziele Spec v2 | Juni 2026
+(cid:127) ZMA: Schlaf-/Recovery-Unterstützung (Originalstudie nicht repliziert, aber Magnesium-Effekt bleibt)
+4.6 Gesundheit (F)
+Dies ist das breiteste Ziel mit den umfangreichsten Evidenz-Daten:
+(cid:127) Vitamin D3: -12 % Atemwegsinfekte (Martineau 2017, BMJ, n=10.933)
+(cid:127) Omega-3: -8 % kardiovaskuläre Mortalität (n=176.253, Meta-Analyse)
+(cid:127) Multivitamin: Lückenfüller (kein eigener Effekt, aber Sicherheitsnetz)
+(cid:127) Curcumin: Entzündungshemmend, besonders bei Gelenkproblemen (SMD -1,63 bei Knie-OA)
+(cid:127) Probiotika: Mikrobiom-Unterstützung, Reizdarm-Verbesserung
+4.7 Stress reduzieren (G) – NEU in Spec v2
+Diese Option wurde in Spec v2 hinzugefügt, da Stress-Reduktion eine eigenständige Ziel-Dimension ist,
+die zuvor nur indirekt über „Regeneration“ oder „Energie“ erfasst wurde:
+(cid:127) Ashwagandha (KSM-66): Hat die konsistenteste Datenlage zur Cortisol-Reduktion und
+Stress-Symptom-Verbesserung. Mehrere Meta-Analysen mit Cohen-d-Werten von 0,5-0,8 für DASS-21
+und PSS-Skalen
+(cid:127) Magnesium-Bisglycinat: Unterstützt das Nervensystem und kann bei stressbedingten Schlafproblemen
+helfen
+(cid:127) Vitamin C: Reduziert Cortisol-Antworten unter akutem Stress (Brody et al. 2002)
+(cid:127) ZMA: Zink + Magnesium bei stressbedingter Schlafstörung
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 7: Frage Ziele Spec v2 | Juni 2026
+5. Empfehlungs-Konsequenzen
+Die Engine generiert für jedes ausgewählte Ziel einen Score-Boost für die passenden Wirkstoffe. Bei
+Mehrfach-Auswahl summieren sich die Effekte – das schafft sinnvolle Kombinationen, ohne dass eine
+einzelne Hauptkategorie die Empfehlungen dominiert.
+5.1 Score-Mapping (Auszug)
+Wirkstoff Ziel-Triggers Maximaler Score-Beitrag
+Whey-Protein A (Muskelaufbau) 95 + 30 (Evidenz A) = 125
+Kreatin A (Muskelaufbau), Training 95 + 95 + 30 = 220
+Ashwagandha G (Stress), E (Regeneration) 85 + 70 = 155
+Magnesium E (Regeneration), G (Stress) 70 + 60 = 130
+Vitamin D3 F (Gesundheit), Population 75 + 45 + 30 = 150
+L-Carnitin B (Fettabbau) 75 + 15 (Evidenz B) = 90
+Vitamin B12 C (Energie) 85 + 30 + B12-Bonus (Vegan) = bis 150
+5.2 Beispiel-Kombinationen
+Kombination „Muskelaufbau + Regeneration + Stress“: Bekommt einen Stack der typische
+Trainings-Wirkstoffe (Whey, Kreatin) mit Recovery-Boosting (Magnesium) und Stress-Modulatoren
+(Ashwagandha) kombiniert. Diese Kombination ist klinisch sinnvoll für ambitionierte Trainierende mit
+erhöhter Lebensbelastung.
+Kombination „Fettabbau + Ausdauer + Energie“: Generiert L-Carnitin (Fettstoffwechsel), Beta-Alanin
+(Ausdauer-Pufferung), B12 (Energie), Elektrolyte (Cardio). Sinnvoll für Endurance-Athleten in
+Vorbereitungs-Phase.
+Kombination „Gesundheit allein“ (1 Ziel): Konservatives Basis-Profil: Vitamin D3, Omega-3, ggf.
+Multivitamin und B12. Kein Performance-Stack.
+6. Sicherheitsrelevanz
+Ziel Fettabbau verlangt besondere Aufmerksamkeit: Bei Magersucht-Verdacht oder unerklärlichem
+Gewichtsverlust empfiehlt das Quiz NICHT primär Wirkstoffe zur weiteren Gewichtsreduktion. Aktuell wird
+dies durch die Mindestgewicht-Hinweise bei sehr niedrigem BMI abgefangen. Eine direkte „Ist dies wirklich
+gesund für dich?“-Frage wäre eine sinnvolle Ergänzung in zukünftigen Versionen.
+7. Limitationen
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5
+
+Stronger - Modul 7: Frage Ziele Spec v2 | Juni 2026
+Die 7 Optionen decken die wichtigsten Ziel-Cluster ab, aber einige spezifische Wünsche fallen durch das
+Raster:
+(cid:127) Schönere Haut/Haare/Nägel: Wäre Trigger für Biotin, Kollagen, Zink. Aktuell nicht erfasst.
+(cid:127) Besseres Sexualleben: Komplexe Materie, oft multifaktoriell. Bewusst nicht erfasst.
+(cid:127) Kognitive Leistung: Nootropics-Bereich. Bewusst weggelassen, da Evidenz gemischt und
+Marktangebot unübersichtlich.
+(cid:127) Schlaf als primäres Ziel: Wird über Situations-Frage erfasst, nicht über Ziele.
+(cid:127) Verletzungsprävention: Wird teilweise über Regeneration und Gesundheit abgedeckt.
+Außerdem: Die 7 Ziele sind oft miteinander verzahnt. Wer „Stress reduzieren“ wählt, hat oft auch
+Schlafprobleme – die nicht hier, sondern in der Situations-Frage abgefragt werden. Dies ist eine bewusste
+Trennung zwischen Zielen (was ich erreichen will) und Symptomen (was ich gerade habe).
+Fazit: Die 7 Ziel-Optionen mit Max-3-Limit sind ein guter Kompromiss zwischen Granularität und
+Quiz-Kürze. Die Ergänzung von „Stress reduzieren“ in Spec v2 schließt eine wichtige Lücke.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 6

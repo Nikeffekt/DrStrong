@@ -44,6 +44,7 @@
 
 /* ─── Screens ─── */
 @import url('screens/wissen.css');
+@import url('screens/quiz.css');
 /* Weitere Screens kommen dazu:
 @import url('screens/profil.css');
 @import url('screens/quiz.css');

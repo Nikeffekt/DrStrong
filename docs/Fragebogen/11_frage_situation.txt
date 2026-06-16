@@ -1,0 +1,213 @@
+Stronger - Modul 11: Frage Situation Spec v2 | Juni 2026
+Stronger Quiz
+Modul 11 – Bonus-Frage: Aktuelle Lebenssituation
+1. Frage-Wortlaut
+„Aktuelle Situation?“
+Hilfetext im Quiz: „Beeinflusst spezielle Empfehlungen.“
+2. Antwortoptionen
+Multi-Select mit Exklusiv-Option „Keine“. Die Optionen sind kontext-gefiltert – es werden nur die angezeigt,
+die zum Profil passen.
+Symb
+Code Situation Sichtbar für
+ol
+A — Keine besondere Situation Alle
+B n Schwangerschaft / Stillzeit Frauen 18-50 Jahre
+C n Wechseljahre Frauen ab 40 Jahre
+D n Schlafprobleme Alle (triggert Folgefrage)
+E n Reha / nach Krankheit Alle
+2.1 Folgefrage bei Schlafproblemen (D)
+Wenn der User „Schlafprobleme“ auswählt, erscheint eine konditionale Folgefrage:
+„Welche Art Schlafproblem?“
+Code Beschreibung Hauptempfehlung
+A Einschlafen (über 30 Min bis Schlaf) Melatonin (Erst-Empfehlung)
+Durchschlafen (Aufwachen, schwer wieder
+B Magnesium-Bisglycinat (priorisiert)
+einschlafen)
+C Beides Kombination: Melatonin plus Magnesium
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 1
+
+Stronger - Modul 11: Frage Situation Spec v2 | Juni 2026
+3. Klinische Begründung pro Option
+3.1 B – Schwangerschaft / Stillzeit
+Diese Lebensphase erfordert eine vollständig andere Logik. Viele Wirkstoffe sind kontraindiziert oder
+haben keine Sicherheitsdaten für diese Population. Das Quiz schaltet bei Auswahl in einen restriktiven
+Modus mit nur 4-5 evidenzbasierten Empfehlungen.
+Aktiv empfohlene Wirkstoffe in Schwangerschaft:
+Wirkstoff Dosis Evidenz / Begründung
+Folsäure 400-800 µg/Tag (ideal: 4 Neuralrohrdefekt-Prävention. Cochrane-Review.
+Wochen präkonzeptionell)
+Vitamin D3 1000-2000 IE/Tag Mehrfach belegte Sicherheit und Notwendigkeit
+Omega-3 200-300 mg DHA/Tag Fetale Hirnentwicklung, Augenentwicklung
+(DHA-fokussiert)
+Eisen (bei Mangel) Nur nach ärztlicher Konsultation Nur bei nachgewiesenem Mangel, nicht
+prophylaktisch
+Vitamin B12 500 µg/Tag bei Veganerinnen Bei tier-freier Ernährung zwingend
+Magnesium 300 mg/Tag bei Bei Wadenkrämpfen, Unruhe
+Bedarfssymptomen
+Jod 150 µg/Tag Schilddrüsenfunktion, fetale Entwicklung
+Ausgeschlossene Wirkstoffe in Schwangerschaft:
+(cid:127) Kreatin (limitierte Sicherheitsdaten)
+(cid:127) Pre-Workout (Stimulanzien, Koffein hochdos.)
+(cid:127) Ashwagandha (uterotone Effekte beobachtet)
+(cid:127) Curcumin (Hochdosis, uterotone Effekte)
+(cid:127) Melatonin (kein Einsatz in Schwangerschaft empfohlen)
+(cid:127) ZMA (Vitamin B6 Hochdosis problematisch)
+(cid:127) HMB (keine Sicherheitsdaten)
+(cid:127) L-Carnitin (limitierte Daten)
+(cid:127) Beta-Alanin (keine Sicherheitsdaten)
+(cid:127) EAA-Hochdosis (theoretische Risiken)
+(cid:127) Hochdosis-Vitamin-A (Teratogenität bei über 3000 µg/Tag)
+Stillzeit hat ähnliche Restriktionen, aber etwas mehr Flexibilität. Kreatin kann nach Rücksprache mit der
+Geburtshilfe vorsichtig aufgenommen werden, da es kaum über die Muttermilch übergeht. Das Quiz bleibt
+aber restriktiv und verweist auf die individuelle ärztliche Beratung.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 2
+
+Stronger - Modul 11: Frage Situation Spec v2 | Juni 2026
+3.2 C – Wechseljahre
+Hormonelle Veränderungen während der Peri- und Postmenopause führen zu:
+(cid:127) Beschleunigtem Knochenabbau (bis 2-3 % pro Jahr in ersten 5-10 Jahren postmenopausal)
+(cid:127) Vermehrten Gelenkbeschwerden (Östrogenrezeptoren in Knorpel)
+(cid:127) Veränderten Schlafmustern (Hitzewallungen, nächtliches Schwitzen, fragmentierter Schlaf)
+(cid:127) Stimmungsschwankungen (Serotonin-System)
+(cid:127) Erhöhtem kardiovaskulärem Risiko nach Östrogen-Schutzverlust
+Stark priorisierte Wirkstoffe in Wechseljahren:
+Wirkstoff Begründung
+Vitamin D3 + K2 Knochengesundheit, Calcium-Einlagerung in Knochen (K2)
+Kollagen-Hydrolysat Haut, Gelenke, Knochenmatrix – beschleunigter Abbau postmenopausal
+Magnesium-Bisglycinat Schlaf, Knochen, nächtliches Schwitzen, Muskelfunktion
+Omega-3 Kardiovaskuläre Prävention nach Schutzverlust
+Calcium (in Multivitamin) Knochengesundheit
+Probiotika Mikrobiom-Verschiebung bei hormoneller Veränderung
+3.3 D – Schlafprobleme (mit Folgefrage)
+Die Sub-Auswahl Einschlaf- vs. Durchschlaf-Problem ist klinisch bedeutsam, da unterschiedliche
+Wirkstoffe unterschiedliche Schlaf-Phasen adressieren:
+Melatonin wirkt primär einschlaffördernd. Es verschiebt die circadiane Phase und unterstützt das
+natürliche Hormonsignal zum Schlafen. Optimal bei Jet Lag, Schichtarbeit oder verzögerter Schlafphase.
+Bei Durchschlaf-Problemen kaum hilfreich.
+Magnesium-Bisglycinat unterstützt die Schlafarchitektur und Tiefschlafqualität (Mah et al. 2020). Es wirkt
+über das GABAerge System leicht entspannend und reduziert nächtliche Muskelspannung. Optimal bei
+Durchschlafproblemen, nächtlichem Aufwachen.
+Ashwagandha wird zusätzlich empfohlen, wenn Stress als Mitursache vermutet wird (Ziel G in Frage 6).
+Es reduziert Cortisol-Spitzen und fördert allgemein einen ausgeglicheneren Schlaf.
+3.4 E – Reha / nach Krankheit
+Diese Situation erhöht den Bedarf an Muskelerhalt-Wirkstoffen und regenerationsfördernden Substanzen.
+Klinische Konsequenzen:
+(cid:127) HMB priorisiert: Bei Bettlägrigkeit oder Bewegungsmangel ist die Sarkopenie-Gefahr besonders hoch
+(cid:127) Whey/Pflanzenprotein essential: Erhöhter Proteinbedarf (1,5 g/kg KG) zur Reparatur und Muskelerhalt
+(cid:127) Vitamin C: Wundheilung, Kollagensynthese, Immunsystem-Boost
+(cid:127) Vitamin D3: Immunsystem, oft Mangel nach langer Häuslichkeit
+(cid:127) Omega-3: Entzündungsmodulation
+(cid:127) Multivitamin: Allgemeine Versorgungssicherheit
+(cid:127) Probiotika: Bei vorausgegangener Antibiotika-Therapie
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 3
+
+Stronger - Modul 11: Frage Situation Spec v2 | Juni 2026
+(cid:127) Eisen: Bei Blutverlust oder reduzierter Aufnahme
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 4
+
+Stronger - Modul 11: Frage Situation Spec v2 | Juni 2026
+4. Wissenschaftlicher Hintergrund
+4.1 Melatonin bei Einschlafproblemen
+Eine Dose-Response-Meta-Analyse (Cruz-Sanabria et al. 2024, n=1.689) zeigte:
+(cid:127) Plateau-Effekt bei 4 mg/Tag – höhere Dosen bringen keinen Mehrwert
+(cid:127) Optimale Einnahmezeit: 3 Stunden vor gewünschter Bettzeit
+(cid:127) Wirkungseintritt: Schon ab erster Anwendung erkennbar
+(cid:127) Toleranz: Keine Toleranzentwicklung dokumentiert
+(cid:127) Effekt: -7 Minuten Einschlaflatenz (Ferracioli-Oda et al. 2013)
+Wichtig für Deutschland: Melatonin-Präparate sind ab 2 mg/Tag verschreibungspflichtig. Frei verkäuflich
+sind nur Dosen bis 1 mg (oder als Lebensmittel deklariert über den Online-Handel). Das Quiz weist auf
+diese Rechtslage hin.
+4.2 Magnesium für Durchschlafqualität
+Mah et al. 2020 (Meta-Analyse, 7 RCTs, n über 200) zeigten signifikante Verbesserung der Schlafqualität
+durch 300-400 mg Magnesium pro Tag:
+(cid:127) Subjektive Schlafqualität: +17,4 % im PSQI-Score
+(cid:127) Einschlafzeit: -17,4 Minuten
+(cid:127) Tiefschlafphase: Verlängert
+(cid:127) Wachphasen: Reduziert
+(cid:127) Form: Magnesium-Bisglycinat ist aufgrund besserer Bioverfügbarkeit und geringerer
+GI-Nebenwirkungen den Magnesium-Oxid-Formen vorzuziehen
+Quelle: Mah J, Pitre T (2020). Oral magnesium supplementation for insomnia in older adults: a systematic review & meta-analysis.
+BMC Complementary Medicine and Therapies 20:189.
+4.3 HMB in Reha-Situationen
+Feng et al. 2024 (Meta-Analyse, n=257) zeigten:
+(cid:127) Gehgeschwindigkeit: SMD 0,48 (signifikant)
+(cid:127) Muskelmassen-Erhalt: Reduzierter Muskelverlust bei Sarkopenie-Patienten
+(cid:127) Bettlägrigkeit: HMB ist eine der wenigen Wirkstoffe mit dokumentierter Reduktion des
+Muskelmassen-Verlustes bei Immobilisation
+(cid:127) Postoperativ: Schützt Magermasse während Erholungsphase
+Für Reha-Patienten ist HMB einer der wertvollsten Wirkstoffe – in dieser Population ist die Evidenz
+deutlich besser als bei jungen Trainierenden.
+4.4 Wechseljahre und Knochengesundheit
+Der Östrogenmangel postmenopausal beschleunigt den Knochenabbau massiv. Mehrere
+Cochrane-Reviews dokumentieren:
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 5
+
+Stronger - Modul 11: Frage Situation Spec v2 | Juni 2026
+(cid:127) Vitamin D allein: Reduziert Frakturrisiko um ca. 8 %
+(cid:127) Vitamin D + Calcium: Reduziert Frakturrisiko um ca. 13 %
+(cid:127) Vitamin D + K2 (MK-7): Synergistischer Effekt auf Calcium-Einlagerung in Knochen, weniger
+Gefäßverkalkung
+(cid:127) Kollagen-Hydrolysat: Mehrere RCTs zeigen verbesserte Knochendichte und
+Knochenstoffwechsel-Marker bei postmenopausalen Frauen
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 6
+
+Stronger - Modul 11: Frage Situation Spec v2 | Juni 2026
+5. Empfehlungs-Konsequenzen
+Multi-Select erlaubt Kombinationen: Die Situations-Frage ist eine Multi-Select – der User kann mehrere
+Optionen gleichzeitig wählen. Beispiele:
+Kombination „Wechseljahre + Schlafprobleme (Durchschlaf)“:
+Generiert einen Stack mit Magnesium-Bisglycinat (Schlaf), Vitamin D + K2 (Knochengesundheit), Kollagen
+(Gelenke), Omega-3 (Herz-Kreislauf), ggf. Ashwagandha (falls auch Stress-Ziel gewählt wurde). Diese
+Kombination ist klinisch sinnvoll und durch mehrere Meta-Analysen begründbar.
+Kombination „Reha + Schlafprobleme (Einschlafen)“:
+Whey/Protein essential, HMB priorisiert, Vitamin C für Wundheilung, Magnesium für Recovery, Melatonin
+für Einschlafhilfe. Vitamin D3 sehr hoch priorisiert (oft Mangel nach langer Krankheit).
+Kombination „Schwangerschaft + Schlafprobleme“:
+Schwangerschaft übersteuert alle anderen Optionen. Es werden nur sichere Wirkstoffe aus der
+Schwangerschafts-Liste empfohlen. Bei Schlafproblemen darf Magnesium (300 mg) genommen werden,
+Melatonin wird NICHT empfohlen. Verweis auf gynäkologische Beratung.
+5.1 Verzweigte Folgefrage-Logik
+Die Folgefrage bei Schlafproblemen ist die einzige konditionale Frage im aktuellen Quiz. Sie demonstriert
+das Design-Prinzip, gezielt Tiefe statt Breite zu suchen: Wenn ein Thema relevant ist, lieber eine
+Sub-Frage zur Präzisierung als fünf neue Hauptfragen.
+6. Sicherheitsrelevanz
+6.1 Schwangerschaft hat höchste Priorität
+Wird diese Option gewählt, übersteuert sie viele andere Empfehlungen. Auch bei der Auswahl von
+Muskelaufbau oder Stress-Reduktion als Ziel werden kontraindizierte Wirkstoffe vollständig blockiert.
+Die Empfehlung verweist explizit auf die gynäkologische Betreuung. Auch für die scheinbar sicheren
+Wirkstoffe (Vitamin D, Omega-3) wird Rücksprache empfohlen, da die individuelle Dosierung von Faktoren
+wie Multivitamin-Mitnahme abhängt.
+6.2 Schlafprobleme als mögliches Krankheitssymptom
+Chronische Schlafstörungen können Symptom einer Grunderkrankung sein:
+(cid:127) Schlafapnoe (Atemaussetzer)
+(cid:127) Depressionen (frühes Erwachen)
+(cid:127) Restless-Legs-Syndrom
+(cid:127) Hyperthyreose
+(cid:127) Schmerzbedingte Schlafstörungen
+(cid:127) Medikamenten-induziert
+Das Quiz weist bei längerfristigen Schlafstörungen (über 3 Monate) explizit auf die Notwendigkeit einer
+ärztlichen Abklärung hin – nicht jede Schlafstörung ist mit Supplementen behandelbar.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 7
+
+Stronger - Modul 11: Frage Situation Spec v2 | Juni 2026
+6.3 Reha-spezifische Sicherheit
+Bei Reha-Patienten wird die Empfehlung mit dem ärztlichen Plan koordiniert. Insbesondere bei:
+(cid:127) Frischer OP: Vorsicht mit Omega-3 (Blutungsneigung)
+(cid:127) Antibiotika-Therapie: Probiotika 2 Stunden zeitversetzt einnehmen
+(cid:127) Onkologischer Therapie: Mehrere Wirkstoffe können mit Chemotherapeutika interagieren –
+ausdrücklicher Hinweis auf onkologische Rücksprache
+7. Limitationen
+Die 4 Situationen plus Folgefrage decken die wichtigsten Sonderfälle ab. Nicht erfasst werden:
+(cid:127) Diät-Phase aktiv: Wird derzeit über das Ziel „Fettabbau“ abgeleitet, nicht über die Situation. Eine
+separate Option könnte präziser sein.
+(cid:127) Aufbau-Phase aktiv: Analog zu Diät, über Ziel „Muskelaufbau“ abgeleitet.
+(cid:127) Akute Erkrankung (Erkältung, Grippe): Hier wären temporäre Empfehlungen wie Vitamin C, Zink
+hochdos. interessant. Aktuell nicht erfasst.
+(cid:127) Hochstress-Phasen (z.B. Prüfungsphase, Job-Stress): Werden über Ziel G abgedeckt, aber temporär
+vs. chronisch wird nicht unterschieden.
+(cid:127) Jet Lag / Schichtarbeit: Spezifische Melatonin-Empfehlung wäre sinnvoll. Nicht erfasst.
+(cid:127) Erhöhte körperliche Belastung temporär (Umzug, Renovierung, Krisenintervention): nicht erfasst.
+Fazit: Die Situations-Frage ist als Bonus-Frage konzipiert – sie schärft die Empfehlungen, ist aber nicht
+zwingend. Die wichtigsten klinischen Sonderfälle (Schwangerschaft, Wechseljahre, Reha) werden erfasst
+und korrekt gehandhabt. Die Folgefrage bei Schlafproblemen ist ein gutes Beispiel für konditionale Tiefe.
+Stronger Supplements Vertraulich - Aerztliche Vorlage Seite 8

@@ -19,8 +19,6 @@ window.WissenScreen = (function () {
 
   /* ──── STATE ──── */
   var kategorien = [];
-  var aktiveAnsicht = 'uebersicht';  // 'uebersicht' | 'detail'
-  var aktiverWirkstoff = null;
   var initialisiert = false;
 
 
@@ -46,7 +44,29 @@ window.WissenScreen = (function () {
   }
 
 
-  /* ──── RENDER: UEBERSICHT (alle Wirkstoffe nach Kategorie) ──── */
+  /* ──── HELPER: Wirkstoff-Ikon holen (analog Stack-Screen) ──── */
+  function ikonFuer(wirkstoffId) {
+    var w = WIRKSTOFFE_WISSEN[wirkstoffId];
+    if (w && w.ikon) return w.ikon;
+    return '•';  /* dezenter Fallback */
+  }
+
+
+  /* ──── HELPER: HTML-Escape ──── */
+  function esc(s) {
+    if (s === null || s === undefined) return '';
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+
+  /* ──── RENDER: UEBERSICHT (alle Wirkstoffe nach Kategorie) ────
+     Karten-Style konsistent zum Stack-Screen:
+       Ikon links + Body rechts (Name + Kurzbeschreibung)
+     Kategorie-Sections strukturieren die Liste. */
   function renderUebersicht() {
     var html = [
       '<div class="wissen__header">',
@@ -60,18 +80,23 @@ window.WissenScreen = (function () {
       html.push(
         '<section class="kat-section">',
         '  <header class="kat-section__header">',
-        '    <span class="kat-section__emoji">' + (kat.emoji || '•') + '</span>',
-        '    <h2 class="kat-section__title">' + kat.label + '</h2>',
+        '    <span class="kat-section__emoji">' + esc(kat.emoji || '•') + '</span>',
+        '    <h2 class="kat-section__title">' + esc(kat.label) + '</h2>',
         '  </header>',
-        '  <ul class="wirkstoff-liste">'
+        '  <ul class="wissen-list">'
       );
 
       kat.wirkstoffe.forEach(function (wid) {
         var w = WIRKSTOFFE_WISSEN[wid];
+
+        // Fallback fuer fehlende Wirkstoff-Daten
         if (!w) {
           html.push(
-            '<li class="wirkstoff-zeile wirkstoff-zeile--missing">',
-            '  ' + wid + ' (Daten fehlen)',
+            '<li class="wissen-card wissen-card--missing">',
+            '  <div class="wissen-card__body">',
+            '    <div class="wissen-card__name">' + esc(wid) + '</div>',
+            '    <div class="wissen-card__kurz">Daten fehlen</div>',
+            '  </div>',
             '</li>'
           );
           return;
@@ -79,19 +104,18 @@ window.WissenScreen = (function () {
 
         var name = w.name || wid;
         var kurz = w.kurz_beschreibung || '';
-
         // Kurzbeschreibung auf eine Zeile begrenzen
         if (kurz.length > 100) kurz = kurz.substring(0, 97) + '…';
 
+        var ikon = ikonFuer(wid);
+
         html.push(
-          '<li>',
-          '  <button class="wirkstoff-zeile" data-wirkstoff="' + wid + '">',
-          '    <div class="wirkstoff-zeile__body">',
-          '      <div class="wirkstoff-zeile__name">' + name + '</div>',
-          '      <div class="wirkstoff-zeile__kurz">' + kurz + '</div>',
-          '    </div>',
-          '    <div class="wirkstoff-zeile__arrow">→</div>',
-          '  </button>',
+          '<li class="wissen-card" data-wirkstoff-id="' + esc(wid) + '">',
+          '  <div class="wissen-card__ikon" aria-hidden="true">' + ikon + '</div>',
+          '  <div class="wissen-card__body">',
+          '    <div class="wissen-card__name">' + esc(name) + '</div>',
+          '    <div class="wissen-card__kurz">' + esc(kurz) + '</div>',
+          '  </div>',
           '</li>'
         );
       });
@@ -102,49 +126,36 @@ window.WissenScreen = (function () {
     html.push('</div>');
     $container.innerHTML = html.join('\n');
 
-    // Event-Listener auf Wirkstoff-Zeilen
-    var zeilen = $container.querySelectorAll('.wirkstoff-zeile[data-wirkstoff]');
-    zeilen.forEach(function (zeile) {
-      zeile.addEventListener('click', function () {
-        oeffneWirkstoff(zeile.dataset.wirkstoff);
+    // Klick-Handler auf die Karten
+    var karten = $container.querySelectorAll('.wissen-card[data-wirkstoff-id]');
+    karten.forEach(function (karte) {
+      karte.addEventListener('click', function () {
+        oeffneWirkstoff(karte.dataset.wirkstoffId);
       });
     });
   }
 
 
-  /* ──── RENDER: DETAIL-ANSICHT ──── */
-  function renderDetail(wirkstoffId) {
+  /* ──── BAUE DETAIL-HTML (als String fuer Bottom-Sheet) ────
+     Sammelt den heutigen Inhalt der Detail-Ansicht als HTML-String,
+     damit BottomSheet.zeige({inhalt: ...}) ihn aufnehmen kann.
+     Der Sheet-Header zeigt den Titel separat - hier nur der Body. */
+  function baueDetailHTML(wirkstoffId) {
     var w = WIRKSTOFFE_WISSEN[wirkstoffId];
     if (!w) {
-      $container.innerHTML = '<div class="wissen__error">Wirkstoff "' + wirkstoffId + '" nicht in Wissensbasis</div>';
-      return;
+      return '<div class="wissen__error">Wirkstoff "' + esc(wirkstoffId) + '" nicht in Wissensbasis</div>';
     }
 
-    var html = [
-      '<div class="wissen__header">',
-      '  <button class="wissen__back" data-action="zurueck-uebersicht" aria-label="Zurück">',
-      '    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
-      '      <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>',
-      '    </svg>',
-      '    <span>Zurück zur Übersicht</span>',
-      '  </button>',
-      '</div>',
-      '<article class="wirkstoff-detail">'
-    ];
+    var html = ['<article class="wirkstoff-detail">'];
 
-    // Titel-Bereich
-    html.push(
-      '<header class="wirkstoff-detail__head">',
-      '  <h1 class="wirkstoff-detail__name">' + (w.name || wirkstoffId) + '</h1>'
-    );
+    // Kategorie als kleiner Header
     if (w.kategorie) {
-      html.push('  <div class="wirkstoff-detail__kategorie">' + w.kategorie + '</div>');
+      html.push('<div class="wirkstoff-detail__kategorie">' + esc(w.kategorie) + '</div>');
     }
-    html.push('</header>');
 
     // Kurzbeschreibung
     if (w.kurz_beschreibung) {
-      html.push('<p class="wirkstoff-detail__lead">' + w.kurz_beschreibung + '</p>');
+      html.push('<p class="wirkstoff-detail__lead">' + esc(w.kurz_beschreibung) + '</p>');
     }
 
     // Evidenz-Block
@@ -154,17 +165,17 @@ window.WissenScreen = (function () {
         '<section class="ws-section">',
         '  <h2 class="ws-section__title">Evidenz</h2>',
         '  <div class="ws-evidenz">',
-        '    <div class="ws-evidenz__level">Level ' + (e.level || '?') + '</div>'
+        '    <div class="ws-evidenz__level">Level ' + esc(e.level || '?') + '</div>'
       );
       if (e.score) {
-        html.push('    <div class="ws-evidenz__score">Score ' + e.score + '/100</div>');
+        html.push('    <div class="ws-evidenz__score">Score ' + esc(e.score) + '/100</div>');
       }
       if (e.studien_anzahl) {
-        html.push('    <div class="ws-evidenz__studien">' + e.studien_anzahl + ' Studien</div>');
+        html.push('    <div class="ws-evidenz__studien">' + esc(e.studien_anzahl) + ' Studien</div>');
       }
       html.push('  </div>');
       if (e.konsens) {
-        html.push('  <p class="ws-evidenz__konsens">' + e.konsens + '</p>');
+        html.push('  <p class="ws-evidenz__konsens">' + esc(e.konsens) + '</p>');
       }
       html.push('</section>');
     }
@@ -179,7 +190,7 @@ window.WissenScreen = (function () {
           '  <ul class="ws-list">'
         );
         f.top_effekte.forEach(function (eff) {
-          html.push('    <li>' + eff + '</li>');
+          html.push('    <li>' + esc(eff) + '</li>');
         });
         html.push('  </ul>', '</section>');
       }
@@ -188,7 +199,7 @@ window.WissenScreen = (function () {
         html.push(
           '<section class="ws-section">',
           '  <h2 class="ws-section__title">Dosierung</h2>',
-          '  <p class="ws-text">' + f.dosis + '</p>',
+          '  <p class="ws-text">' + esc(f.dosis) + '</p>',
           '</section>'
         );
       }
@@ -197,7 +208,7 @@ window.WissenScreen = (function () {
         html.push(
           '<section class="ws-section">',
           '  <h2 class="ws-section__title">Ideal für</h2>',
-          '  <p class="ws-text">' + f.ideal_fuer + '</p>',
+          '  <p class="ws-text">' + esc(f.ideal_fuer) + '</p>',
           '</section>'
         );
       }
@@ -206,7 +217,7 @@ window.WissenScreen = (function () {
         html.push(
           '<section class="ws-section ws-section--warning">',
           '  <h2 class="ws-section__title">⚠️ Vorsicht bei</h2>',
-          '  <p class="ws-text">' + f.vorsicht_bei + '</p>',
+          '  <p class="ws-text">' + esc(f.vorsicht_bei) + '</p>',
           '</section>'
         );
       }
@@ -218,7 +229,7 @@ window.WissenScreen = (function () {
           '  <ul class="ws-list ws-list--mythen">'
         );
         f.mythen.forEach(function (m) {
-          html.push('    <li>' + m + '</li>');
+          html.push('    <li>' + esc(m) + '</li>');
         });
         html.push('  </ul>', '</section>');
       }
@@ -232,9 +243,9 @@ window.WissenScreen = (function () {
         '  <ul class="ws-list">'
       );
       w.kontraindikationen.forEach(function (k) {
-        var line = (k.art || '') + ': ' + (k.wert || '');
-        if (k.schwere) line += ' [' + k.schwere + ']';
-        if (k.hinweis) line += ' – ' + k.hinweis;
+        var line = esc(k.art || '') + ': ' + esc(k.wert || '');
+        if (k.schwere) line += ' [' + esc(k.schwere) + ']';
+        if (k.hinweis) line += ' – ' + esc(k.hinweis);
         html.push('    <li>' + line + '</li>');
       });
       html.push('  </ul>', '</section>');
@@ -248,41 +259,40 @@ window.WissenScreen = (function () {
         '  <ul class="ws-list">'
       );
       w.wechselwirkungen.forEach(function (ww) {
-        var text = typeof ww === 'string' ? ww : ((ww.mit || '?') + ': ' + (ww.hinweis || ''));
-        html.push('    <li>' + text + '</li>');
+        var text = typeof ww === 'string'
+                    ? ww
+                    : ((ww.mit || '?') + ': ' + (ww.hinweis || ''));
+        html.push('    <li>' + esc(text) + '</li>');
       });
       html.push('  </ul>', '</section>');
     }
 
     html.push('</article>');
-    $container.innerHTML = html.join('\n');
-
-    // Back-Button
-    var backBtn = $container.querySelector('[data-action="zurueck-uebersicht"]');
-    if (backBtn) backBtn.addEventListener('click', function () {
-      aktiveAnsicht = 'uebersicht';
-      aktiverWirkstoff = null;
-      renderUebersicht();
-      // Zum Anfang scrollen
-      $container.scrollTop = 0;
-    });
+    return html.join('\n');
   }
 
 
-  /* ──── NAVIGATION ──── */
+  /* ──── NAVIGATION: Wirkstoff oeffnen -> Bottom-Sheet ──── */
   function oeffneWirkstoff(wirkstoffId) {
-    aktiverWirkstoff = wirkstoffId;
-    aktiveAnsicht = 'detail';
+    var w = WIRKSTOFFE_WISSEN[wirkstoffId];
+    var titel = (w && w.name) ? w.name : wirkstoffId;
 
-    // Detail on-demand laden (falls noch nicht geladen)
+    var oeffne = function () {
+      if (!window.BottomSheet || !window.BottomSheet.zeige) {
+        console.warn('BottomSheet nicht verfuegbar');
+        return;
+      }
+      // Phase C: Inhalt kommt aus WirkstoffDetail-Modul (gleich wie Stack-Sheet)
+      var inhalt = (window.WirkstoffDetail && window.WirkstoffDetail.baueHTML)
+                    ? window.WirkstoffDetail.baueHTML(wirkstoffId)
+                    : '<p>Detail-Modul nicht geladen.</p>';
+      window.BottomSheet.zeige({ titel: titel, inhalt: inhalt });
+    };
+
     if (window.WirkstoffeLoader && window.WirkstoffeLoader.ladenDetail) {
-      window.WirkstoffeLoader.ladenDetail(wirkstoffId).then(function () {
-        renderDetail(wirkstoffId);
-        $container.scrollTop = 0;
-      });
+      window.WirkstoffeLoader.ladenDetail(wirkstoffId).then(oeffne, oeffne);
     } else {
-      renderDetail(wirkstoffId);
-      $container.scrollTop = 0;
+      oeffne();
     }
   }
 
@@ -318,14 +328,11 @@ window.WissenScreen = (function () {
         ladeKategorien(),
         warteAufDaten()
       ]).then(function () {
-        aktiveAnsicht = 'uebersicht';
         renderUebersicht();
       });
 
     } else {
-      // Beim Wiedereintritt: zur Uebersicht zurueck
-      aktiveAnsicht = 'uebersicht';
-      aktiverWirkstoff = null;
+      // Beim Wiedereintritt: einfach Uebersicht neu rendern
       renderUebersicht();
     }
   }

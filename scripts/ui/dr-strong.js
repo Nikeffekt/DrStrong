@@ -87,7 +87,7 @@ window.DrStrong = (function () {
       //   delays: [200, 150, 150, 600, 150, 150, 150, 500],
       //   loop: true
       //
-      //pfadOverride: 'assets/images/dr-strong.png'
+      pfadOverride: 'assets/images/dr-strong.png'
     }
 
     // Weitere Sequenzen kommen hier rein, sobald wir sie brauchen.

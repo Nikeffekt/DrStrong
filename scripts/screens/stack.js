@@ -277,8 +277,58 @@ window.StackScreen = (function () {
     teile.push('</ul>');
     $container.innerHTML = teile.join('\n');
 
-    // Schritt C kommt: Hier wird der Klick-Handler auf .stack-card sitzen
-    // und ein Bottom-Sheet mit Details oeffnen. Aktuell: bewusst kein Handler.
+    // Phase B: Klick auf Karte oeffnet Bottom-Sheet mit Start-Inhalt.
+    // In Phase C kommt der reiche Wissensbasis-Inhalt rein (gleich wie Wissen-Sheet).
+    var karten = $container.querySelectorAll('.stack-card[data-wirkstoff-id]');
+    karten.forEach(function (karte) {
+      karte.addEventListener('click', function () {
+        var id = karte.dataset.wirkstoffId;
+        oeffneDetail(id, stack);
+      });
+    });
+  }
+
+
+  /* ══════════════════════════════════════════════════════════════
+     Detail-Sheet oeffnen
+     ──────────────────────────────────────────────────────────────
+     Phase C: Nutzt WirkstoffDetail.baueHTML – derselbe reiche Inhalt
+     wie im Wissen-Sheet. Stack-spezifisch: Match-Begruendung wird
+     oben als Highlight-Box mitgegeben.
+  ══════════════════════════════════════════════════════════════ */
+  function oeffneDetail(wirkstoffId, stack) {
+    if (!window.BottomSheet || !window.BottomSheet.zeige) return;
+
+    var alle = []
+      .concat(stack.essential || [])
+      .concat(stack.empfohlen || [])
+      .concat(stack.optional  || []);
+    var eintrag = null;
+    for (var i = 0; i < alle.length; i++) {
+      if (alle[i].id === wirkstoffId) { eintrag = alle[i]; break; }
+    }
+    if (!eintrag) return;
+
+    var w = WIRKSTOFFE_WISSEN[wirkstoffId] || {};
+    var titel = w.name || eintrag.name || wirkstoffId;
+    var begruendung = buildBegruendung(eintrag, stack);
+
+    var inhalt = (window.WirkstoffDetail && window.WirkstoffDetail.baueHTML)
+      ? window.WirkstoffDetail.baueHTML(wirkstoffId, {
+          stackEintrag:      eintrag,
+          matchBegruendung:  begruendung
+        })
+      : '<p>Detail-Modul nicht geladen.</p>';
+
+    // Detail-Daten ggf. nachladen, dann Sheet zeigen
+    var oeffne = function () {
+      window.BottomSheet.zeige({ titel: titel, inhalt: inhalt });
+    };
+    if (window.WirkstoffeLoader && window.WirkstoffeLoader.ladenDetail) {
+      window.WirkstoffeLoader.ladenDetail(wirkstoffId).then(oeffne, oeffne);
+    } else {
+      oeffne();
+    }
   }
 
 

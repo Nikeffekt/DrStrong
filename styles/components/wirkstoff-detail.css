@@ -1,0 +1,337 @@
+/* ════════════════════════════════════════════════════════════════
+   wirkstoff-detail.css – Sektions-Styles für Wirkstoff-Detail
+   (rendert im BottomSheet, von Stack + Wissen genutzt)
+══════════════════════════════════════════════════════════════════ */
+
+.wirkstoff-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* ─── Match-Begründung (nur Stack-Kontext) ─── */
+.wd-match {
+  background: var(--mint-faint);
+  border-left: 3px solid var(--mint);
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+.wd-match__label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  color: var(--mint);
+  margin-bottom: 4px;
+}
+.wd-match__text {
+  font-family: var(--f-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-1);
+}
+
+
+/* ─── Lead (Kategorie + Kurzbeschreibung) ─── */
+.wd-kategorie {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  color: var(--text-3);
+}
+.wd-lead {
+  font-family: var(--f-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-2);
+  margin: 0;
+}
+
+
+/* ─── Section (gemeinsam) ─── */
+.wd-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.wd-section__title {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-1);
+  letter-spacing: 0.005em;
+  margin: 0;
+}
+.wd-section--warn   .wd-section__title { color: #d4a000; }
+.wd-section--danger .wd-section__title { color: #d44848; }
+
+
+/* ─── Evidenz ─── */
+.wd-evidenz {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.wd-evidenz__level {
+  font-family: var(--f-display);
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  background: var(--mint-faint);
+  color: var(--mint);
+}
+.wd-evidenz--a .wd-evidenz__level { background: rgba(46,204,113,0.15); color: #2ecc71; }
+.wd-evidenz--b .wd-evidenz__level { background: rgba(46,204,113,0.10); color: var(--mint); }
+.wd-evidenz--c .wd-evidenz__level { background: rgba(241,196,15,0.15);  color: #d4a000; }
+.wd-evidenz--d .wd-evidenz__level { background: rgba(212,72,72,0.15);   color: #d44848; }
+.wd-evidenz__chip {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--text-2);
+}
+.wd-evidenz__konsens {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-2);
+  margin: 0;
+}
+
+
+/* ─── Beschreibungs-Blöcke ─── */
+.wd-block { display: flex; flex-direction: column; gap: 4px; }
+.wd-block__label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  color: var(--text-3);
+}
+.wd-block__text {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-1);
+  margin: 0;
+}
+
+
+/* ─── Dosierung (definition list) ─── */
+.wd-dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 14px;
+  margin: 0;
+  font-size: 14px;
+}
+.wd-dl dt {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  color: var(--text-3);
+  align-self: center;
+}
+.wd-dl dd {
+  margin: 0;
+  color: var(--text-1);
+}
+.wd-quelle {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--text-3);
+  margin: 0;
+}
+
+
+/* ─── Indikationen (mit Stärke-Balken) ─── */
+.wd-ind-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.wd-ind { display: flex; flex-direction: column; gap: 4px; }
+.wd-ind__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 14px;
+}
+.wd-ind__label { font-weight: 600; color: var(--text-1); }
+.wd-ind__staerke {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--text-3);
+}
+.wd-ind__bar {
+  height: 4px;
+  background: var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.wd-ind__fill {
+  height: 100%;
+  background: var(--mint);
+  border-radius: 2px;
+  transition: width 320ms var(--ease-out);
+}
+.wd-ind__kommentar {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-2);
+  margin: 4px 0 0 0;
+}
+
+
+/* ─── Population ─── */
+.wd-pop-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.wd-pop {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.wd-pop__name {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-1);
+}
+.wd-pop__kommentar {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-2);
+  margin: 4px 0 0 0;
+}
+
+
+/* ─── Warnhinweise ─── */
+.wd-warn-list, .wd-mythen, .wd-kontra-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wd-warn-list li,
+.wd-mythen li {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-2);
+  padding-left: 18px;
+  position: relative;
+}
+.wd-warn-list li::before,
+.wd-mythen li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--text-3);
+}
+
+
+/* ─── Kontraindikationen ─── */
+.wd-kontra {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.wd-kontra--hart {
+  border-color: rgba(212,72,72,0.4);
+  background: rgba(212,72,72,0.06);
+}
+.wd-kontra--vorsicht {
+  border-color: rgba(241,196,15,0.4);
+  background: rgba(241,196,15,0.06);
+}
+.wd-kontra__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+.wd-kontra__art {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  color: var(--text-3);
+}
+.wd-kontra__wert {
+  font-weight: 600;
+  color: var(--text-1);
+}
+.wd-kontra__badge {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--line);
+  color: var(--text-2);
+}
+.wd-kontra--hart .wd-kontra__badge { background: rgba(212,72,72,0.2); color: #d44848; }
+.wd-kontra--vorsicht .wd-kontra__badge { background: rgba(241,196,15,0.2); color: #d4a000; }
+.wd-kontra__hinweis {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-2);
+  margin: 6px 0 0 0;
+}
+
+
+/* ─── Quellen ─── */
+.wd-quellen-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.wd-quelle {
+  display: block;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--t-fast) var(--ease-out);
+}
+a.wd-quelle:hover {
+  border-color: var(--line-mint);
+  background: var(--mint-faint);
+}
+.wd-quelle__titel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-1);
+  line-height: 1.4;
+}
+.wd-quelle__meta {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  color: var(--text-3);
+  margin-top: 4px;
+}
+
+
+/* ─── Disclaimer ─── */
+.wd-disclaimer {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: var(--text-3);
+  text-align: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+
+/* ─── Error / Mobile-Tuning ─── */
+.wd-error {
+  padding: 24px;
+  text-align: center;
+  color: var(--text-3);
+}
+@media (max-width: 640px) {
+  .wirkstoff-detail { gap: 16px; }
+  .wd-section { padding-top: 14px; gap: 8px; }
+}

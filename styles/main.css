@@ -31,6 +31,8 @@
 
 /* ─── Components ─── */
 @import url('components/nav-item.css');
+@import url('components/bottom-sheet.css');
+@import url('components/wirkstoff-detail.css');
 /* Weitere Komponenten kommen dazu:
    @import url('components/buttons.css');
    @import url('components/cards.css');
@@ -46,6 +48,9 @@
 @import url('screens/wissen.css');
 @import url('screens/quiz.css');
 @import url('screens/stack.css');
+
+/* ─── Komponenten ─── */
+@import url('bottom-sheet.css');
 /* Weitere Screens kommen dazu:
 @import url('screens/profil.css');
 @import url('screens/shop.css');

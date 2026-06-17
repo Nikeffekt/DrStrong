@@ -237,3 +237,76 @@
     font-size: 32px;
   }
 }
+
+
+/* ══════════════════════════════════════════════════════════════════
+   STACK-SHEET (Detail-Inhalt im Bottom-Sheet, Phase B Start-Version)
+   ──────────────────────────────────────────────────────────────────
+   Wird in Phase C abgeloest sobald wir den reichen Wissen-Inhalt
+   in beide Sheets bringen.
+══════════════════════════════════════════════════════════════════ */
+.stack-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stack-sheet__begruendung {
+  font-family: var(--f-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-1);
+  padding: 14px 16px;
+  background: var(--mint-faint);
+  border-left: 3px solid var(--mint);
+  border-radius: 4px;
+}
+
+.stack-sheet__kurz {
+  font-family: var(--f-body);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-2);
+  margin: 0;
+}
+
+.stack-sheet__form {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--mint);
+  background: var(--mint-faint);
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.stack-sheet__warnungen {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.stack-sheet__warnungen-titel {
+  font-family: var(--f-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-1);
+  margin-bottom: 8px;
+}
+
+.stack-sheet__warnungen ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-2);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.stack-sheet__phase-c-hint {
+  margin-top: 12px;
+  color: var(--text-3);
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-align: center;
+}

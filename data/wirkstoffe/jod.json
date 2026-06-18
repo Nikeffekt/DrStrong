@@ -1,0 +1,248 @@
+{
+  "id": "jod",
+  "name": "Jod (Kaliumiodid)",
+  "kategorie": "gesundheit",
+  "ikon": "🦋",
+  "kurz_beschreibung": "Essentielles Spurenelement und unverzichtbarer Baustein der Schilddrüsenhormone – kritisch für Stoffwechsel, Entwicklung und besonders die kindliche Hirnreife in der Schwangerschaft.",
+  "beschreibung": {
+    "was_ist_es": "Jod ist ein essentielles Spurenelement, das der Körper nicht selbst herstellen kann und regelmäßig über die Nahrung aufnehmen muss. Seine einzige bekannte Funktion im menschlichen Körper ist der Aufbau der Schilddrüsenhormone Thyroxin (T4) und Trijodthyronin (T3). Der Körper enthält insgesamt nur 10-20 mg Jod, der Großteil davon in der Schilddrüse. Hauptquellen sind jodiertes Speisesalz, Seefisch, Meeresfrüchte, Milch und Milchprodukte. Pflanzliche Lebensmittel sind in Mitteleuropa jodarm, weil die Böden jodarm sind.",
+    "wie_wirkt_es": "Die Schilddrüse nimmt Jodid aktiv aus dem Blut auf und baut es in die Hormone T3 und T4 ein – ein T4-Molekül enthält vier Jodatome, T3 drei. Diese Hormone steuern den Grundumsatz, die Körpertemperatur, den Herzschlag und sind für Wachstum und vor allem die Gehirnentwicklung von Föten und Kleinkindern unentbehrlich. Bei Jodmangel versucht die Schilddrüse, durch Wachstum (Kropf/Struma) mehr Jod aus dem Blut zu filtern. Sowohl zu wenig als auch zu viel Jod können die Hormonproduktion stören.",
+    "warum_wichtig": "Österreich und Deutschland sind von Natur aus Jodmangelgebiete – die Böden sind jodarm, entsprechend auch Getreide, Gemüse und Obst. Österreich reichert Speisesalz deshalb gesetzlich seit 1963 mit Jod an (15-20 mg/kg). Trotzdem liegt in der Region weiterhin ein leichter bis milder Jodmangel vor, und die Versorgung hat sich bis ca. 2018 sogar wieder verschlechtert. Am kritischsten ist die Versorgung in Schwangerschaft und Stillzeit, wo der Bedarf deutlich steigt und ein Mangel die kindliche Hirnentwicklung dauerhaft schädigen kann."
+  },
+  "fazit": {
+    "top_effekte": [
+      "Unentbehrlich für Schilddrüsenhormone, Stoffwechsel und Energiehaushalt",
+      "Verhindert Kropf (Struma) und schwere Entwicklungsstörungen beim Kind",
+      "Schwerer Jodmangel kostet Kinder bis zu 12,45 IQ-Punkte – durch Versorgung weitgehend vermeidbar"
+    ],
+    "ideal_fuer": "Schwangere & Stillende (klare Empfehlung), Veganer/Vegetarier, Menschen ohne Jodsalz/Seefisch/Milch",
+    "dosis": "150 µg täglich (Erwachsene), 200 µg in Schwangerschaft & Stillzeit",
+    "vorsicht_bei": "Schilddrüsenüberfunktion, Hashimoto/autoimmune Thyreoiditis, Schilddrüsenknoten – nur nach ärztlicher Abklärung",
+    "mythen": [
+      "„Mehr Jod = bessere Schilddrüse“ – falsch. Bei Jod gilt eine U-Kurve: sowohl Mangel als auch Überschuss lösen Funktionsstörungen aus. Übermäßige Zufuhr kann eine Schilddrüsenunterfunktion auslösen (Odds Ratio 2,03-2,78 in Meta-Analysen).",
+      "„Kelp-/Algenpräparate sind eine gesunde natürliche Jodquelle“ – riskant. Braunalgen (Kombu, Sugar Kelp) enthalten extrem schwankende, oft gefährlich hohe Mengen (eine Portion kann das Tausendfache des Bedarfs liefern). Für 54 von 96 untersuchten Algenprodukten überschritt eine Portion die Tages-Obergrenze.",
+      "„Jodsalz reicht in der Schwangerschaft aus“ – nein. Fachgesellschaften (DGE, AKJ) empfehlen Schwangeren und Stillenden eine gezielte Supplementierung mit Jodtabletten zusätzlich zu Jodsalz, weil der Mehrbedarf darüber allein nicht gedeckt wird.",
+      "„Bei Hashimoto hilft viel Jod“ – im Gegenteil. Hohe Jodzufuhr kann eine bestehende Autoimmunthyreoiditis verschlechtern. Hier ist ärztliche Steuerung zwingend."
+    ]
+  },
+  "evidenz": {
+    "level": "B",
+    "score": 80,
+    "review_typ": "meta-analyse",
+    "studien_anzahl": 72,
+    "konsens": "WHO/UNICEF + DGE/ÖGE Referenzwerte 2025 + IPD-Meta-Analyse (Levie et al. 2019)",
+    "effekt_groesse": [
+      {
+        "wert": 12.45,
+        "einheit": "IQ-Punkte",
+        "kontext": "IQ-Verlust bei Kindern aus Gebieten mit SCHWEREM Jodmangel vs. jodversorgte Gebiete (8,7 Punkte durch Supplementierung wiedergewinnbar)",
+        "quelle": "Qian et al. 2005, Meta-Analyse 37 Studien (China, n=12.291)",
+        "erklaerung": {
+          "was_bedeutet": "Der IQ misst die kognitive Leistungsfähigkeit (Durchschnitt 100). Kinder, die in Regionen mit schwerem Jodmangel aufwuchsen, hatten im Schnitt einen um 12,45 Punkte niedrigeren IQ als Kinder aus jodversorgten Gebieten – das ist ein dramatischer Unterschied auf Bevölkerungsebene. Begann die Jodversorgung vor und während der Schwangerschaft, gewannen die Kinder im Schnitt 8,7 Punkte zurück. Wichtig: Diese Zahlen gelten für SCHWEREN Mangel, nicht für die milde Unterversorgung in Mitteleuropa.",
+          "studie_zeigt": "Die Analyse verglich Kinder unter 16 Jahren aus natürlich jodversorgten Regionen mit Kindern aus schwer jodarmen Regionen sowie Kinder vor und nach Einführung der Jodversorgung. Der konsistente Befund: Schwerer Jodmangel in der Entwicklung führt zu erheblichen, teils irreversiblen kognitiven Defiziten. Die wirksamste Maßnahme ist die Versorgung VOR und während der Schwangerschaft – nicht später.",
+          "studien_details": "Meta-Analyse von 37 in China durchgeführten Studien mit insgesamt 12.291 Kindern. IQ gemessen mit Binet- oder Raven-Skalen. Zufallseffektmodell. Effektgröße als Standardabweichungs-IQ-Punkte (entspricht 15 IQ-Punkten). Kontrollgruppen sozial, wirtschaftlich und bildungsmäßig vergleichbar.",
+          "zuverlaessigkeit": "Hoch für schweren Jodmangel. Dies ist eine der größten Meta-Analysen zum Thema und der Effekt ist konsistent und biologisch plausibel. ABER: Die Übertragung auf milden Mangel (Mitteleuropa) ist NICHT zulässig – dort zeigen RCTs deutlich schwächere bis keine Effekte (siehe nächste Effektgröße)."
+        }
+      },
+      {
+        "wert": 0.0,
+        "einheit": "IQ-Punkte (n.s.)",
+        "kontext": "Effekt einer Jod-Supplementierung bei MILD jod-defizienten Schwangeren auf die kindliche Kognition (RCT, kein signifikanter Effekt)",
+        "quelle": "Gowachirapant et al. 2017, Lancet Diabetes & Endocrinol., RCT (n=832, Indien/Thailand)",
+        "erklaerung": {
+          "was_bedeutet": "Bei mildem Jodmangel – wie er in Mitteleuropa typisch ist – brachte eine Supplementierung mit 200 µg Jod in der Schwangerschaft KEINEN messbaren Vorteil für die Intelligenz der Kinder. Der verbale IQ lag bei 89,5 (Jod) vs. 90,2 (Placebo) – statistisch kein Unterschied. Das heißt nicht, dass Jod unwichtig ist, sondern dass bei nur mildem Mangel der Zusatznutzen einer Supplementierung für die Kognition nicht belegt ist.",
+          "studie_zeigt": "In dieser randomisierten, doppelblinden, placebokontrollierten Studie erhielten mild jod-defiziente Schwangere täglich 200 µg Jod oder Placebo bis zur Geburt. Die Kinder wurden mit standardisierten IQ-Tests (WPPSI-III) und Exekutivfunktions-Tests untersucht. Es zeigte sich kein Unterschied in verbaler IQ, Performance-IQ oder Exekutivfunktion. Eine IPD-Meta-Analyse (Levie 2019) fand zudem, dass der kritische Zeitraum im ERSTEN Trimester liegt – eine spätere Supplementierung kommt möglicherweise zu spät.",
+          "studien_details": "Multizentrische RCT in Bangalore (Indien) und Bangkok (Thailand), 1:1-Randomisierung, computergeneriert, nach Standort stratifiziert. 200 µg Jod oral täglich vs. Placebo. Co-primäre Endpunkte: verbaler und Performance-IQ (WPPSI-III), globale Exekutivfunktion (BRIEF-P), gemessen im Kindesalter. Ergänzt durch Cochrane-basierte Systematic Reviews (Dineva 2020), die ebenfalls unzureichende Evidenz für milde Mangelgebiete feststellten.",
+          "zuverlaessigkeit": "Hoch für die Aussage 'milder Mangel'. Mehrere RCTs und systematische Reviews stimmen überein: Bei mild-moderatem Jodmangel ist der kognitive Nutzen einer Supplementierung nicht belegt. Das ist die ehrliche Differenzierung – Jod ist essentiell, aber die Supplementierung wirkt am stärksten dort, wo echter (schwerer) Mangel herrscht, und idealerweise früh in der Schwangerschaft."
+        }
+      },
+      {
+        "wert": 2.03,
+        "einheit": "Odds Ratio",
+        "kontext": "Erhöhtes Risiko für subklinische Schilddrüsenunterfunktion bei ÜBERMÄSSIGER Jodzufuhr vs. adäquater Zufuhr (Erwachsene)",
+        "quelle": "Katagiri et al. 2017, PLOS One, Meta-Analyse (50 Studien)",
+        "erklaerung": {
+          "was_bedeutet": "Eine Odds Ratio von 2,03 bedeutet: Bei dauerhaft übermäßiger Jodzufuhr ist das Risiko für eine subklinische Schilddrüsenunterfunktion etwa verdoppelt (für die offene Unterfunktion sogar 2,78-fach). Das ist der Beleg für die 'U-Kurve': Nicht nur Mangel, auch Überschuss schadet. Deshalb ist mehr Jod nicht besser – die Dosis muss im richtigen Bereich liegen.",
+          "studie_zeigt": "Die Analyse verglich Bevölkerungsgruppen mit übermäßiger vs. adäquater Jodzufuhr (gemessen über die Jodausscheidung im Urin). Übermäßige Zufuhr war konsistent mit erhöhter Rate an Schilddrüsenunterfunktion assoziiert – sowohl offen (OR 2,78) als auch subklinisch (OR 2,03). Übermäßige Zufuhr entsteht vor allem durch Algen-/Kelp-Produkte und hochdosierte Supplemente, kaum durch Jodsalz.",
+          "studien_details": "Systematische Suche in Ovid MEDLINE, PubMed, Cochrane Central, Ichushi-Web und CiNii. 50 eingeschlossene Artikel (3 Interventionsstudien, 6 Fall-Kontroll-, 6 Follow-up-, 35 Querschnittsstudien). Random-Effects-Modell, Odds Ratios mit 95%-KI. PROSPERO-registriert (CRD42015028081).",
+          "zuverlaessigkeit": "Moderat bis hoch. Überwiegend Beobachtungsstudien (begrenzt durch Studiendesign), aber der Effekt ist konsistent, biologisch plausibel und durch das bekannte Wolff-Chaikoff-Phänomen mechanistisch erklärbar. Untermauert die klare Obergrenze von 600 µg/Tag (EFSA)."
+        }
+      }
+    ]
+  },
+  "indikationen": [
+    {
+      "ziel": "schilddruesenfunktion",
+      "staerke": 0.95,
+      "kommentar": "Jod ist der unentbehrliche Baustein der Schilddrüsenhormone. Ohne ausreichend Jod keine normale Hormonproduktion – essentiell, nicht optional"
+    },
+    {
+      "ziel": "schwangerschaft_entwicklung",
+      "staerke": 0.85,
+      "kommentar": "Klare Empfehlung von DGE/ÖGE/AKJ zur Supplementierung in Schwangerschaft & Stillzeit. Schwerer Mangel schädigt die kindliche Hirnentwicklung irreversibel. Bei mildem Mangel ist der kognitive Zusatznutzen in RCTs allerdings nicht belegt"
+    },
+    {
+      "ziel": "kropf_praevention",
+      "staerke": 0.8,
+      "kommentar": "Ausreichende Jodversorgung verhindert die Bildung von Kropf (Struma) und Schilddrüsenknoten – gut belegt auf Bevölkerungsebene durch Salzjodierungsprogramme"
+    },
+    {
+      "ziel": "energiestoffwechsel",
+      "staerke": 0.5,
+      "kommentar": "Über die Schilddrüsenhormone reguliert Jod den Grundumsatz. Bei bestehendem Mangel kann Müdigkeit/Leistungsabfall gebessert werden – bei bereits Versorgten KEIN Zusatznutzen"
+    },
+    {
+      "ziel": "kognition_kind",
+      "staerke": 0.4,
+      "kommentar": "Großer Effekt bei SCHWEREM Mangel (bis 12 IQ-Punkte). Bei mild-moderatem Mangel zeigen RCTs jedoch KEINEN klaren kognitiven Vorteil der Supplementierung. Kritisches Zeitfenster: 1. Trimester"
+    }
+  ],
+  "kontraindikationen": [
+    {
+      "art": "medizinisch",
+      "wert": "schilddruesenueberfunktion",
+      "schwere": "hart",
+      "hinweis": "Bei Hyperthyreose (z.B. Morbus Basedow) oder autonomen Schilddrüsenknoten kann zusätzliches Jod die Überfunktion verstärken (jodinduzierte Hyperthyreose). Supplementierung nur nach ärztlicher Abklärung."
+    },
+    {
+      "art": "medizinisch",
+      "wert": "hashimoto_autoimmun",
+      "schwere": "vorsichtig",
+      "hinweis": "Bei Hashimoto-Thyreoiditis kann hohe Jodzufuhr die Autoimmunreaktion und Unterfunktion verschlechtern. Normale Versorgung (150 µg) meist unproblematisch, hohe Dosen/Algenprodukte meiden. Ärztliche Rücksprache."
+    },
+    {
+      "art": "medizinisch",
+      "wert": "schilddruesenknoten",
+      "schwere": "vorsichtig",
+      "hinweis": "Bei bestehenden (autonomen) Schilddrüsenknoten kann plötzlich hohe Jodzufuhr eine Überfunktion auslösen. Vor Supplementierung abklären lassen."
+    }
+  ],
+  "dosierung": {
+    "standard": "150 µg täglich (Erwachsene)",
+    "bereich": {
+      "min": 100,
+      "max": 200,
+      "einheit": "µg"
+    },
+    "obergrenze": "EFSA: Tolerierbare Obergrenze (UL) 600 µg/Tag für Erwachsene (basierend auf NOAEL 1.800 µg/Tag). Nahrungsergänzungsmittel in der EU oft auf 150 µg/Dosis begrenzt. Algen-/Kelp-Produkte können diese Grenze schnell überschreiten.",
+    "loading_optional": {
+      "dosierung": "Schwangerschaft & Stillzeit: 200 µg täglich (Supplement zusätzlich zu Jodsalz)",
+      "danach": "150 µg täglich nach dem Abstillen",
+      "kommentar": "Idealerweise bereits präkonzeptionell (vor der Schwangerschaft) und ab dem 1. Trimester beginnen – das kritische Zeitfenster für die kindliche Hirnentwicklung"
+    },
+    "timing": "Tageszeit unwichtig. Als Kaliumiodid gut bioverfügbar. Konsistente tägliche Zufuhr zählt, nicht der Zeitpunkt.",
+    "quelle": "WHO/UNICEF + DGE/ÖGE Referenzwerte 2025 + EFSA Tolerable Upper Intake Level"
+  },
+  "population_spezifisch": {
+    "schwangerschaft": {
+      "relevant": true,
+      "staerke": 0.85,
+      "kommentar": "Wichtigste Zielgruppe. Bedarf steigt auf 200 µg. DGE, ÖGE und Arbeitskreis Jodmangel empfehlen gezielte Supplementierung mit Jodtabletten zusätzlich zu Jodsalz, idealerweise schon vor der Schwangerschaft. Jodsalz allein deckt den Mehrbedarf nicht.",
+      "quelle": "Gesund ins Leben / BfR Handlungsempfehlungen 2024/2025"
+    },
+    "stillzeit": {
+      "relevant": true,
+      "staerke": 0.85,
+      "kommentar": "Bedarf bleibt erhöht (200 µg), da die Jodkonzentration der Muttermilch direkt vom Status der Mutter abhängt. Ein Mangel der Mutter wird auf den Säugling übertragen.",
+      "quelle": "DGE/AKJ 2025"
+    },
+    "veganer_vegetarier": {
+      "relevant": true,
+      "staerke": 0.8,
+      "kommentar": "Erhöhtes Mangelrisiko, da Milch, Eier und Seefisch (Hauptquellen) wegfallen und pflanzliche Lebensmittel in Mitteleuropa jodarm sind. Supplementierung oft sinnvoll – aber VORSICHT mit Kelp/Algen wegen unkontrollierbarer Überdosierung. Kontrolliertes Kaliumiodid bevorzugen."
+    },
+    "senioren_50plus": {
+      "relevant": false,
+      "kommentar": "Häufiger autonome Schilddrüsenknoten – hier kann plötzlich hohe Jodzufuhr eine Überfunktion auslösen. Normale Versorgung wichtig, hohe Dosen vorher ärztlich abklären."
+    }
+  },
+  "warnhinweise": [
+    "U-Kurve beachten: Sowohl Mangel ALS AUCH Überschuss schaden der Schilddrüse. Mehr ist nicht besser.",
+    "Kelp- und Algenpräparate sind die Hauptursache für gefährliche Jod-Überdosierungen – der Gehalt schwankt extrem und ist oft falsch deklariert. Eine einzige Portion kann das Tausendfache des Bedarfs liefern.",
+    "Bei Schilddrüsenerkrankungen (Über-/Unterfunktion, Hashimoto, Knoten) niemals ohne ärztliche Abklärung supplementieren.",
+    "Jodsalz im Haushalt ist die einfachste Basismaßnahme – ein gehäufter Teelöffel Jodsalz liefert ca. 100 µg Jod. Eine Überversorgung über Lebensmittel/Jodsalz ist praktisch nicht möglich.",
+    "Selen, Eisen und Vitamin A sind am Schilddrüsenhormon-Stoffwechsel beteiligt – ein gleichzeitiger Selenmangel kann die Jodverwertung beeinträchtigen.",
+    "Bei Verdacht auf Mangel oder Schilddrüsenproblemen ist eine ärztliche Diagnostik (TSH, ggf. Urin-Jod) sinnvoller als Selbstmedikation."
+  ],
+  "quellen": [
+    {
+      "titel": "Association of Maternal Iodine Status With Child IQ: A Meta-Analysis of Individual Participant Data",
+      "autoren": "Levie D, Korevaar TIM, Bath SC, et al.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6804415/",
+      "jahr": 2019,
+      "typ": "meta-analyse",
+      "doi": "10.1210/jc.2018-02559"
+    },
+    {
+      "titel": "Effect of iodine supplementation in pregnant women on child neurodevelopment: a randomised, double-blind, placebo-controlled trial",
+      "autoren": "Gowachirapant S, Jaiswal N, Melse-Boonstra A, et al.",
+      "url": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(17)30332-7/abstract",
+      "jahr": 2017,
+      "typ": "rct",
+      "doi": "10.1016/S2213-8587(17)30332-7"
+    },
+    {
+      "titel": "The effects of iodine on intelligence in children: a meta-analysis of studies conducted in China",
+      "autoren": "Qian M, Wang D, Watkins WE, et al.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15734706/",
+      "jahr": 2005,
+      "typ": "meta-analyse"
+    },
+    {
+      "titel": "Effect of excess iodine intake on thyroid diseases in different populations: A systematic review and meta-analyses including observational studies",
+      "autoren": "Katagiri R, Yuan X, Kobayashi S, Sasaki S",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0173722",
+      "jahr": 2017,
+      "typ": "meta-analyse",
+      "doi": "10.1371/journal.pone.0173722"
+    },
+    {
+      "titel": "Systematic review and meta-analysis of the effects of iodine supplementation on thyroid function and child neurodevelopment in mildly-to-moderately iodine-deficient pregnant women",
+      "autoren": "Dineva M, Fishpool H, Rayman MP, Mendis J, Bath SC",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32320029/",
+      "jahr": 2020,
+      "typ": "meta-analyse",
+      "doi": "10.1093/ajcn/nqaa071"
+    },
+    {
+      "titel": "Association of Mild-to-Moderate Iodine Deficiency With Thyroid Function – A Systematic Review and Meta-analysis",
+      "autoren": "Verburg FA, et al.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12351339/",
+      "jahr": 2025,
+      "typ": "meta-analyse"
+    },
+    {
+      "titel": "Commercially available kelp and seaweed products – valuable iodine source or risk of excess intake?",
+      "autoren": "Aakre I, Tveito Evensen L, Kjellevold M, et al.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8035890/",
+      "jahr": 2021,
+      "typ": "review",
+      "doi": "10.29219/fnr.v65.7584"
+    },
+    {
+      "titel": "Neue Referenzwerte für die Jodzufuhr (DGE/ÖGE Referenzwerte für die Nährstoffzufuhr)",
+      "autoren": "Deutsche Gesellschaft für Ernährung (DGE), Österreichische Gesellschaft für Ernährung (ÖGE)",
+      "url": "https://www.dge.de/presse/meldungen/2025/neue-referenzwerte-fuer-die-jodzufuhr/",
+      "jahr": 2025,
+      "typ": "position-stand"
+    },
+    {
+      "titel": "Jod, Folat/Folsäure und Schwangerschaft (Handlungsempfehlungen)",
+      "autoren": "Bundesinstitut für Risikobewertung (BfR)",
+      "url": "https://www.bfr.bund.de/cm/350/jod-folat-folsaeure-und-schwangerschaft.pdf",
+      "jahr": 2024,
+      "typ": "position-stand"
+    },
+    {
+      "titel": "Consequences of acute and long-term excessive iodine intake: A literature review focusing on seaweed as a potential dietary iodine source (EFSA UL 600 µg/Tag)",
+      "autoren": "Blikra MJ, Henjum S, Aakre I, et al.",
+      "url": "https://ift.onlinelibrary.wiley.com/doi/10.1111/1541-4337.70037",
+      "jahr": 2024,
+      "typ": "review",
+      "doi": "10.1111/1541-4337.70037"
+    }
+  ],
+  "inhalt": [
+    "jod"
+  ]
+}

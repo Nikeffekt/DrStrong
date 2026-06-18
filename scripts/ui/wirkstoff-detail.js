@@ -47,6 +47,14 @@ window.WirkstoffDetail = (function () {
     schlafprobleme: 'Schlafprobleme', stress_chronisch: 'Chronischer Stress'
   };
 
+  /* Mapping fuer form_hinweis -> Label + Begruendungs-Text fuer User */
+  var FORM_LABEL = {
+    'algenoel':           { label: 'Algenöl-Variante',           grund: 'fischfrei – passt zu deinem Profil' },
+    'fischoel':           { label: 'Standard-Fischöl',           grund: '' },
+    'isolat_bei_laktose': { label: 'Whey-Isolat (ISO Clear)',    grund: 'laktosearm – passt zu deinem Profil' },
+    'ohne-k2':            { label: 'D3 ohne K2',                 grund: 'K2-frei – passt bei Blutverdünnern' }
+  };
+
 
   /* ──── Helpers ──── */
   function esc(s) {
@@ -90,6 +98,25 @@ window.WirkstoffDetail = (function () {
       '<div class="wd-match">' +
         '<div class="wd-match__label">Empfohlen weil</div>' +
         '<div class="wd-match__text">' + esc(opts.matchBegruendung) + '</div>' +
+      '</div>'
+    );
+  }
+
+  /* Form-Hinweis (nur im Stack-Kontext, wenn form_hinweis vom Default abweicht) */
+  function sektForm(opts) {
+    if (!opts.stackEintrag || !opts.stackEintrag.form_hinweis) return '';
+    var fh = opts.stackEintrag.form_hinweis;
+
+    // Defaults nicht anzeigen (z.B. fischoel ist Standard, keine Erwaehnung noetig)
+    if (fh === 'fischoel') return '';
+
+    var def = FORM_LABEL[fh] || { label: fh, grund: '' };
+    var grundHTML = def.grund ? ('<div class="wd-form__grund">' + esc(def.grund) + '</div>') : '';
+    return (
+      '<div class="wd-form">' +
+        '<div class="wd-form__label">Empfohlene Form</div>' +
+        '<div class="wd-form__wert">' + esc(def.label) + '</div>' +
+        grundHTML +
       '</div>'
     );
   }
@@ -337,6 +364,7 @@ window.WirkstoffDetail = (function () {
 
     var teile = ['<article class="wirkstoff-detail">'];
     teile.push(sektMatch(opts));        // nur im Stack-Kontext sichtbar
+    teile.push(sektForm(opts));         // nur im Stack-Kontext, nur bei Non-Default-Form
     teile.push(sektLead(w));
     teile.push(sektEvidenz(w));
     teile.push(sektBeschreibung(w));

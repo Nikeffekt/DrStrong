@@ -49,8 +49,6 @@
 @import url('screens/quiz.css');
 @import url('screens/stack.css');
 
-/* ─── Komponenten ─── */
-@import url('bottom-sheet.css');
 /* Weitere Screens kommen dazu:
 @import url('screens/profil.css');
 @import url('screens/shop.css');

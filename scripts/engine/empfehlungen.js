@@ -79,47 +79,45 @@ window.Empfehlungen = (function () {
     'C': { 'melatonin': 150, 'magnesium': 150 }
   };
 
+
+  /* ============================================================
+     FORM_OVERRIDES – alternative Formen die harte Kontras umgehen
+     ──────────────────────────────────────────────────────────
+     Wenn ein Wirkstoff eine harte Kontraindikation hat, ABER
+     eine alternative Form ohne diese Kontra existiert, dann
+     wird der Wirkstoff NICHT komplett ausgefiltert. Stattdessen
+     wird die alternative Form als form_hinweis gesetzt.
+
+     Struktur:
+       { wirkstoff_id: { 'art.wert': 'form-string' } }
+
+     Beispiele:
+       Omega-3 + Fischallergie  -> Algenoel-Form ist OK
+       (Spaeter: Vit D3 + Blutverduenner -> K2-freie Form)
+  ============================================================ */
+  var FORM_OVERRIDES = {
+    'omega3': {
+      'allergie.fischallergie': 'algenoel'
+    },
+    'vitamin-d3': {
+      'medikament.blutverduenner': 'ohne-k2'
+    }
+  };
+
   // Schwangerschafts-Whitelist (PDF Modul 11)
   // Nur diese Wirkstoffe werden im Schwangerschaftsmodus zugelassen.
-  // Folsaeure + Jod werden als Pseudo-Wirkstoffe ergaenzt (TODO_NACHPFLEGEN).
+  // Folsaeure + Jod sind seit Wissensbasis-Update Teil der Whitelist.
   var SCHWANGERSCHAFT_WHITELIST = [
     'vitamin-d3',
     'omega3',
     'magnesium',
     'vitamin-b12',
     'eisen',
-    'multivitamin'
+    'multivitamin',
+    'folsaeure',
+    'jod'
   ];
 
-  // Pseudo-Wirkstoffe fuer Schwangerschaft (PDF Modul 11)
-  // TODO_NACHPFLEGEN: Folsaeure + Jod als vollwertige Eintraege
-  // in wirkstoffe-wissen.json hinzufuegen.
-  var SCHWANGERSCHAFT_EXTRA = [
-    {
-      id: 'folsaeure',
-      name: 'Folsäure',
-      prioritaet: 'essential',
-      score: 999,
-      form_hinweis: null,
-      matched_ziele: ['neuralrohrdefekt_praevention'],
-      matched_populationen: ['schwangerschaft'],
-      warnhinweise: [],
-      TODO_NACHPFLEGEN: true,
-      hinweis: '400-800 µg/Tag, idealerweise 4 Wochen praekonzeptionell'
-    },
-    {
-      id: 'jod',
-      name: 'Jod',
-      prioritaet: 'essential',
-      score: 998,
-      form_hinweis: null,
-      matched_ziele: ['schilddruesenfunktion_schwangerschaft'],
-      matched_populationen: ['schwangerschaft'],
-      warnhinweise: [],
-      TODO_NACHPFLEGEN: true,
-      hinweis: '150 µg/Tag fuer Schilddruesenfunktion + fetale Entwicklung'
-    }
-  ];
 
 
   /* ============================================================
@@ -299,6 +297,21 @@ window.Empfehlungen = (function () {
 
         if (ctx.kontra.indexOf(artWert) >= 0) {
           if (ki.schwere === 'hart') {
+
+            // ── FORM-OVERRIDE-AUSNAHME ──
+            // Gibt es eine alternative Form, die diesen Ausschluss umgeht?
+            // Wenn ja: Wirkstoff NICHT entfernen, sondern als info-Hinweis
+            // sammeln. waehleVarianten() setzt spaeter den form_hinweis.
+            var override = FORM_OVERRIDES[id] && FORM_OVERRIDES[id][artWert];
+            if (override) {
+              warnhinweise.push({
+                schwere: 'info',
+                grund:   artWert,
+                text:    ki.hinweis || ''
+              });
+              continue;  // naechste Kontra pruefen, kein Ausschluss
+            }
+
             // Harter Ausschluss → Wirkstoff komplett raus
             ausschluss = {
               id: id,
@@ -488,12 +501,22 @@ window.Empfehlungen = (function () {
       // Omega-3 Variante
       if (item.id === 'omega3') {
         var braucht_vegan = ctx.modi.vegan === true;
-        var fisch_aus = ctx.kontra.indexOf('allergie.fisch_schalentiere') >= 0;
+        var fisch_aus = ctx.kontra.indexOf('allergie.fischallergie') >= 0;
         if (braucht_vegan || fisch_aus) {
           item.form_hinweis = 'algenoel';
         } else {
           item.form_hinweis = 'fischoel';
         }
+      }
+
+      // Vitamin D3 Variante: bei Blutverduennern -> K2-freie Form
+      // (verhindert Interaktion mit Cumarin-basierten Mitteln wie Marcumar)
+      if (item.id === 'vitamin-d3') {
+        var blutverduenner_aus = ctx.kontra.indexOf('medikament.blutverduenner') >= 0;
+        if (blutverduenner_aus) {
+          item.form_hinweis = 'ohne-k2';
+        }
+        // sonst: kein form_hinweis (Standard-D3 ist Default, kann mit oder ohne K2 sein)
       }
 
       // Bei Laktose: ISO Clear bevorzugen
@@ -549,8 +572,8 @@ window.Empfehlungen = (function () {
      STUFE 6: Schwangerschafts-Modus (PDF Modul 11)
      
      Wenn modi.schwangerschaft aktiv: nur die Whitelist behalten,
-     alles andere raus. Folsaeure + Jod als Pseudo-Wirkstoffe
-     ergaenzen (TODO_NACHPFLEGEN).
+     alles andere raus. Folsaeure + Jod sind seit Wissensbasis-
+     Update Teil der Whitelist und laufen normal durch die Engine.
   ============================================================ */
   function restriktiverSchwangerschaftsModus(stack) {
     function nurWhitelist(arr) {
@@ -559,16 +582,11 @@ window.Empfehlungen = (function () {
       });
     }
 
-    var neuerStack = {
+    return {
       essential: nurWhitelist(stack.essential),
       empfohlen: nurWhitelist(stack.empfohlen),
       optional: []  // Keine Optional-Empfehlungen in Schwangerschaft
     };
-
-    // Pseudo-Wirkstoffe Folsaeure + Jod oben einfuegen
-    neuerStack.essential = SCHWANGERSCHAFT_EXTRA.concat(neuerStack.essential);
-
-    return neuerStack;
   }
 
 

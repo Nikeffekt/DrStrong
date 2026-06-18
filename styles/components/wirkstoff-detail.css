@@ -335,3 +335,31 @@ a.wd-quelle:hover {
   .wirkstoff-detail { gap: 16px; }
   .wd-section { padding-top: 14px; gap: 8px; }
 }
+
+
+/* ─── Form-Hinweis (Stack-Kontext: alternative Form) ─── */
+.wd-form {
+  background: rgba(46, 204, 113, 0.08);
+  border-left: 3px solid var(--mint);
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+.wd-form__label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  color: var(--mint);
+  margin-bottom: 4px;
+}
+.wd-form__wert {
+  font-family: var(--f-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-1);
+}
+.wd-form__grund {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-top: 4px;
+}

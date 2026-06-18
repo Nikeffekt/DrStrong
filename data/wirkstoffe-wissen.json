@@ -9,7 +9,7 @@
     "id": "kreatin",
     "name": "Kreatin Monohydrat",
     "kategorie": "performance",
-    "ikon": "⚡",
+    "ikon": "💪",
     "kurz_beschreibung": "Das wissenschaftlich am besten erforschte Sportsupplement weltweit – steigert Kraft, Muskelmasse und kognitive Leistung.",
     "beschreibung": {
       "was_ist_es": "Kreatin ist eine körpereigene Substanz aus den Aminosäuren Arginin, Glycin und Methionin. Etwa 95% des Kreatins wird in den Muskeln gespeichert – als Phosphokreatin. Aus der Nahrung kommt es vor allem über rotes Fleisch und Fisch (ca. 1-2g/Tag), zusätzlich produziert der Körper selbst ca. 1g/Tag.",
@@ -340,7 +340,7 @@
       {
         "art": "medikament",
         "wert": "blutverduenner",
-        "schwere": "vorsichtig_k2",
+        "schwere": "hart",
         "hinweis": "WICHTIG: Bei Einnahme von Cumarin-basierten Blutverdünnern (Marcumar, Warfarin) NUR D3 OHNE K2 einnehmen. K2 ist ein Gegenspieler dieser Medikamente. DOAKs (z.B. Eliquis) sind nicht betroffen. Im Zweifel: Arzt fragen."
       },
       {
@@ -1165,7 +1165,7 @@
     "id": "iso_clear",
     "name": "ISO Clear (Whey Protein Isolat)",
     "kategorie": "performance",
-    "ikon": "💧",
+    "ikon": "💎",
     "kurz_beschreibung": "Hochreines Whey-Isolat (>90% Protein, kaum Laktose, kaum Fett). Wirkstoffidentisch zu Whey Konzentrat – aber ideal bei Laktose-Intoleranz, Kalorienreduktion und für Personen mit empfindlichem Magen.",
     "beschreibung": {
       "was_ist_es": "Whey Protein Isolat (WPI) ist eine weiter verarbeitete Form von Molkeprotein. Durch zusätzliche Filtrationsschritte (Mikrofiltration, Ionenaustausch oder Crossflow-Membran-Filtration) werden Laktose, Fette und Kohlenhydrate weitgehend entfernt. Das Resultat: ein Pulver mit über 90% reinem Protein, weniger als 1% Laktose und unter 1% Fett. Im Gegensatz dazu enthält Whey Konzentrat (WPC) 70-80% Protein, 4-8% Laktose und 1-8% Fett. 'ISO Clear' bezieht sich oft auf eine besonders klare, geschmacksneutrale Variante, die in Wasser kristallklar bleibt (statt cremig wie WPC).",
@@ -2114,7 +2114,7 @@
     "id": "beta_alanin",
     "name": "Beta-Alanin",
     "kategorie": "performance",
-    "ikon": "⚡",
+    "ikon": "🌶️",
     "kurz_beschreibung": "Aminosäure, die als Vorstufe von Carnosin den Muskel gegen Übersäuerung puffert. Verbessert die Leistung bei intensiven Belastungen von 1–4 Minuten – mit kleinem, aber gut belegtem Effekt.",
     "beschreibung": {
       "was_ist_es": "Beta-Alanin ist eine nicht-essentielle Aminosäure, die der Körper selbst bildet und die in Fleisch und Fisch vorkommt. Sie ist der geschwindigkeitsbestimmende Baustein für Carnosin – ein Dipeptid, das in hoher Konzentration in den Muskeln gespeichert wird. Durch eine Supplementierung lässt sich der Carnosingehalt der Muskulatur deutlich erhöhen.",
@@ -5355,7 +5355,7 @@
     "id": "zma",
     "name": "ZMA (Zink + Magnesium + B6)",
     "kategorie": "performance",
-    "ikon": "🌙",
+    "ikon": "💤",
     "kurz_beschreibung": "Klassisches Kombi-Produkt aus Zink, Magnesium und Vitamin B6 für Schlaf und Recovery. Ursprüngliche Testosteron-Studien wurden in späteren RCTs nicht repliziert – die Versprechen sind oft überzogen.",
     "beschreibung": {
       "was_ist_es": "ZMA steht für 'Zinc Monomethionine and Magnesium Aspartate' und ist ein patentiertes Supplement-Konzept, entwickelt 1997 von Victor Conte (BALCO). Standardformel pro Portion: 30 mg Zink (270% RDI), 450 mg Magnesium (110% RDI) und 10.5 mg Vitamin B6 (650% RDI). Die spezifischen Formen (Zink-Monomethionin-Aspartat und Magnesium-Aspartat) wurden gewählt, um theoretisch bessere Bioverfügbarkeit zu erreichen.",
@@ -5866,6 +5866,508 @@
         "jahr": 2017,
         "typ": "position_stand"
       }
+    ]
+  },
+  "folsaeure": {
+    "id": "folsaeure",
+    "name": "Folsäure (Vitamin B9)",
+    "kategorie": "gesundheit",
+    "ikon": "🥬",
+    "kurz_beschreibung": "B-Vitamin und Schlüsselfaktor für Zellteilung und DNA-Synthese – die periconceptionelle Einnahme verhindert nachweislich schwere Neuralrohrdefekte beim ungeborenen Kind.",
+    "beschreibung": {
+      "was_ist_es": "Folsäure ist die synthetische, stabile Form von Vitamin B9, wie sie in Supplementen und angereicherten Lebensmitteln vorkommt. 'Folat' bezeichnet die natürlich vorkommenden Formen aus der Nahrung (Folium = lat. Blatt – zuerst aus Spinat isoliert). Gute Nahrungsquellen sind grünes Blattgemüse, Hülsenfrüchte, Vollkorn, Eier und Leber. Folat aus der Nahrung ist allerdings hitze- und lichtempfindlich und schlechter bioverfügbar als synthetische Folsäure. Der Körper kann B9 nicht selbst herstellen.",
+      "wie_wirkt_es": "Folat/Folsäure ist als Coenzym zentral im sogenannten Ein-Kohlenstoff-Stoffwechsel (One-Carbon-Metabolism): Es ist unverzichtbar für die DNA-Synthese, DNA-Reparatur und DNA-Methylierung sowie für die Bildung roter Blutkörperchen. Besonders in Phasen schneller Zellteilung – etwa bei der Schließung des Neuralrohrs des Embryos in den ersten 28 Tagen der Schwangerschaft – ist der Bedarf hoch. Folsäure muss über das Enzym MTHFR in die aktive Form 5-Methyltetrahydrofolat (5-MTHF) umgewandelt werden, das u.a. den Abbau von Homocystein steuert.",
+      "warum_wichtig": "Das Neuralrohr schließt sich bis zum 28. Tag der Schwangerschaft – also oft bevor eine Frau überhaupt weiß, dass sie schwanger ist. Deshalb muss der Folatspeicher bereits VOR der Empfängnis gefüllt sein; ein Beginn erst nach Feststellung der Schwangerschaft kommt für die NTD-Prävention meist zu spät. Da etwa die Hälfte aller Schwangerschaften ungeplant ist und natürliches Nahrungsfolat den erhöhten Bedarf selten deckt, ist die gezielte Supplementierung bei Frauen mit Kinderwunsch eine der am besten belegten präventiven Maßnahmen der Medizin."
+    },
+    "fazit": {
+      "top_effekte": [
+        "Verhindert bis zu 70-90% der Neuralrohrdefekte (Spina bifida, Anenzephalie) bei periconceptioneller Einnahme",
+        "72% weniger NTD-Wiederholungsrisiko bei Frauen mit vorheriger betroffener Schwangerschaft (MRC-Studie 1991)",
+        "Senkt Homocystein und reduziert moderat das Schlaganfallrisiko (~10-18%, v.a. ohne Lebensmittelanreicherung)"
+      ],
+      "ideal_fuer": "Frauen mit Kinderwunsch & Schwangere (klare Empfehlung), Veganer, Menschen mit nachgewiesenem Mangel, bei bestimmten Medikamenten",
+      "dosis": "400 µg täglich für Frauen mit Kinderwunsch (mind. 4 Wochen vor Konzeption beginnen)",
+      "vorsicht_bei": "Unerkannter Vitamin-B12-Mangel (Maskierungsgefahr), bestehende Krebserkrankung – ärztliche Abklärung",
+      "mythen": [
+        "„5-MTHF (Methylfolat) ist immer besser als Folsäure“ – differenziert zu sehen. 5-MTHF hat theoretische Vorteile (keine Umwandlung nötig, weniger unmetabolisierte Folsäure). ABER: Nur für klassische FOLSÄURE ist die NTD-Prävention klinisch in RCTs bewiesen. Für 5-MTHF gibt es bislang KEINE Studien, die eine NTD-Prävention belegen.",
+        "„Bei MTHFR-Mutation MUSS man Methylfolat nehmen“ – überzogen. Studien zeigen, dass Folsäure auch bei MTHFR-Varianten vergleichbare Blut-Folatspiegel erzeugt. Eine RCT bei wiederholten Fehlgeburten fand keinen Vorteil von 5-MTHF gegenüber Folsäure – unabhängig vom MTHFR-Genotyp.",
+        "„Folsäure verursacht Krebs“ – durch Meta-Analysen (bis n=49.406) weitgehend entkräftet: kein signifikanter Effekt auf Gesamt-Krebs oder Kolorektalkrebs (RR 1,00-1,05). Einzelne Langzeitsignale (>3 Jahre, Adenom-Rezidive) bleiben Gegenstand der Forschung, sind aber nicht bestätigt.",
+        "„Mehr Folsäure = besser“ – nein. Über dem Bedarf bringt mehr keinen Zusatznutzen, kann aber einen B12-Mangel verschleiern. Die Obergrenze liegt bei 1.000 µg/Tag aus Supplementen."
+      ]
+    },
+    "evidenz": {
+      "level": "A",
+      "score": 88,
+      "review_typ": "meta-analyse",
+      "studien_anzahl": 21,
+      "konsens": "WHO + USPSTF + DGE/ÖGE Referenzwerte + MRC Vitamin Study 1991",
+      "effekt_groesse": [
+        {
+          "wert": 72,
+          "einheit": "%",
+          "kontext": "Reduktion des NTD-Wiederholungsrisikos durch periconceptionelle Folsäure (Frauen mit vorheriger betroffener Schwangerschaft)",
+          "quelle": "MRC Vitamin Study Research Group 1991, randomisierte kontrollierte Studie",
+          "erklaerung": {
+            "was_bedeutet": "NTD steht für 'Neuralrohrdefekte' – schwere angeborene Fehlbildungen des zentralen Nervensystems wie Spina bifida ('offener Rücken') oder Anenzephalie. Sie entstehen, wenn sich das embryonale Neuralrohr in den ersten Wochen nicht vollständig schließt. Bei Frauen, die bereits ein betroffenes Kind hatten (hohes Wiederholungsrisiko), senkte Folsäure dieses Risiko um 72%. Das ist ein dramatischer Schutzeffekt für eine einfache Maßnahme.",
+            "studie_zeigt": "Die MRC-Studie von 1991 gilt als Meilenstein-Studie, die den Zusammenhang endgültig bewies. Frauen mit vorheriger NTD-Schwangerschaft erhielten randomisiert Folsäure oder Placebo vor und während der Frühschwangerschaft. Spätere Analysen bestätigen: 69% Reduktion bei Intention-to-treat, bis zu 87% bei Frauen, die tatsächlich vor der Schwangerschaft begannen. Für Frauen ohne Vorgeschichte (Ersttauftreten) zeigte die ungarische RCT von Czeizel eine Reduktion von ~90% mit folsäurehaltigen Multivitaminen.",
+            "studien_details": "Randomisierte, doppelblinde, placebokontrollierte Multicenter-Studie des britischen Medical Research Council (MRC). Frauen mit hohem NTD-Risiko (vorherige betroffene Schwangerschaft). Folsäure (4 mg/Tag, Hochdosis bei Hochrisiko) vor Konzeption und in der Frühschwangerschaft. Ergänzt durch die ungarische RCT (Czeizel & Dudás, 800 µg, ~90% Reduktion bei Ersttauftreten) und USPSTF-Evidenzberichte.",
+            "zuverlaessigkeit": "Höchste. Dies ist eine der am besten belegten Interventionen der gesamten Ernährungsmedizin. RCT-Evidenz, durch zahlreiche Beobachtungsstudien und nationale Anreicherungsprogramme (signifikanter NTD-Rückgang nach Einführung) untermauert. Gilt als eine der erfolgreichsten Public-Health-Maßnahmen der modernen Medizin."
+          }
+        },
+        {
+          "wert": 10,
+          "einheit": "%",
+          "kontext": "Reduktion des Schlaganfallrisikos durch Folsäure-Supplementierung (größte Meta-Analyse, 21 RCTs)",
+          "quelle": "Folic acid stroke prevention Meta-Analyse 2024 (21 RCTs, n=115.559)",
+          "erklaerung": {
+            "was_bedeutet": "Folsäure senkt den Homocystein-Spiegel im Blut – ein erhöhter Homocysteinwert gilt als Risikofaktor für Gefäßerkrankungen. In der bislang größten Meta-Analyse senkte Folsäure das Schlaganfallrisiko um 10%. Wichtige Einschränkung: Der Effekt war NUR in Regionen OHNE gesetzliche Lebensmittel-Anreicherung deutlich (dort 17%), in Ländern mit Anreicherung praktisch null – weil die Bevölkerung dort schon gut versorgt ist.",
+            "studie_zeigt": "Die Analyse von 21 RCTs mit über 115.000 Teilnehmern zeigte einen moderaten, aber realen Schutzeffekt vor Schlaganfall – am stärksten bei Menschen ohne Vorerkrankung und in nicht-angereicherten Regionen. Eine frühere Lancet-Meta-Analyse (Wang 2007) fand 18% Reduktion. Wichtig: Auf Herzinfarkt und kardiovaskuläre Gesamtmortalität hat Folsäure KEINEN belegten Effekt – der Nutzen beschränkt sich auf Schlaganfall.",
+            "studien_details": "Systematischer Review und Meta-Analyse von 21 RCTs, n=115.559. Random-Effects-Modell, relatives Risiko mit 95%-KI. Subgruppen nach Anreicherungsstatus, Vorerkrankung, Folsäuredosis, B12-Status. Konsistent mit früheren Analysen (Lee 2010 Stroke; Wang 2007 Lancet).",
+            "zuverlaessigkeit": "Moderat. RCT-basiert und große Stichprobe, aber der Effekt ist klein, grenzwertig signifikant und stark vom regionalen Anreicherungsstatus abhängig. In gut versorgten Bevölkerungen (z.B. mit Folsäure-angereichertem Mehl) ist kaum Zusatznutzen zu erwarten. Keine generelle Empfehlung zur kardiovaskulären Prävention."
+          }
+        },
+        {
+          "wert": 1.0,
+          "einheit": "RR (kein Effekt)",
+          "kontext": "Effekt der Folsäure-Supplementierung auf das Kolorektalkrebs-Risiko (Meta-Analyse, kein signifikanter Effekt)",
+          "quelle": "Qin et al. 2015, Scientific Reports, Meta-Analyse (8 RCTs)",
+          "erklaerung": {
+            "was_bedeutet": "Ein relatives Risiko (RR) von 1,00 bedeutet: kein Unterschied zwischen Folsäure- und Placebogruppe. Die häufige Sorge, Folsäure könnte Krebs fördern, wird durch die RCT-Datenlage weitgehend entkräftet. Über alle untersuchten Krebsarten (Gesamtkrebs, Darm, Prostata, Lunge, Brust) zeigte sich kein signifikanter Anstieg.",
+            "studie_zeigt": "Die Meta-Analyse fand kein erhöhtes Kolorektalkrebs-Risiko (RR 1,00; 95%-KI 0,82-1,22). Eine größere Analyse (Vollset/Wien, n=49.406) bestätigte: kein Effekt auf Gesamtkrebs (RR 1,05). EHRLICHE EINSCHRÄNKUNG: Einzelne Studien deuten bei sehr langer Einnahme (>3 Jahre) und bei Menschen mit bereits bestehenden Darmadenomen auf ein leicht erhöhtes Adenom-Rezidivrisiko hin – das ist nicht abschließend geklärt und betrifft eine spezielle Risikogruppe.",
+            "studien_details": "Meta-Analyse von 8 RCTs (PubMed/Embase bis 2014). RR mit 95%-KI, Fixed-Effects-Modell, keine signifikante Heterogenität. Subgruppen nach Ethnie, Geschlecht, BMI, Dosis. Ergänzt durch CDC-Sicherheitsbewertung zu unmetabolisierter Folsäure (keine bestätigten Gesundheitsrisiken).",
+            "zuverlaessigkeit": "Hoch für die Allgemeinaussage 'kein Krebsrisiko'. Mehrere unabhängige RCT-Meta-Analysen stimmen überein. Die Langzeit-/Hochrisiko-Signale sind hypothesengenerierend, nicht bestätigt. Insgesamt gilt Folsäure in empfohlenen Dosen als sicher."
+          }
+        }
+      ]
+    },
+    "indikationen": [
+      {
+        "ziel": "neuralrohrdefekt_praevention",
+        "staerke": 1.0,
+        "kommentar": "Höchste Evidenz. Periconceptionelle Folsäure verhindert 70-90% der Neuralrohrdefekte. Klare, einhellige Empfehlung aller Fachgesellschaften für Frauen mit Kinderwunsch"
+      },
+      {
+        "ziel": "schwangerschaft_allgemein",
+        "staerke": 0.9,
+        "kommentar": "Essentiell für Zellteilung und Entwicklung; reduziert auch bestimmte Herzfehlbildungen (~40%) und unterstützt die Blutbildung der Mutter"
+      },
+      {
+        "ziel": "folatmangel_anaemie",
+        "staerke": 0.85,
+        "kommentar": "Behebt megaloblastäre Anämie durch Folatmangel zuverlässig. Bei nachgewiesenem Mangel klar indiziert"
+      },
+      {
+        "ziel": "homocystein_senkung",
+        "staerke": 0.7,
+        "kommentar": "Senkt Homocystein dosisabhängig um ~20-27%. Klinische Relevanz dieser Senkung allein ist allerdings begrenzt"
+      },
+      {
+        "ziel": "schlaganfall_praevention",
+        "staerke": 0.4,
+        "kommentar": "Moderate Reduktion (~10-18%), aber NUR in nicht-angereicherten Regionen und bei Personen ohne Vorerkrankung relevant. Kein Effekt auf Herzinfarkt"
+      },
+      {
+        "ziel": "stimmung_depression",
+        "staerke": 0.3,
+        "kommentar": "Schwache Evidenz für 5-MTHF als Zusatz zu Antidepressiva, v.a. bei nachgewiesenem niedrigem Folatstatus. Nicht als alleinige Maßnahme belegt"
+      }
+    ],
+    "kontraindikationen": [
+      {
+        "art": "medizinisch",
+        "wert": "vitamin_b12_mangel",
+        "schwere": "vorsichtig",
+        "hinweis": "Hochdosierte Folsäure kann die Blutbild-Veränderungen (Anämie) eines unerkannten Vitamin-B12-Mangels maskieren, während die neurologischen Schäden fortschreiten. Bei unklarem Status B12 mitbestimmen/mitsupplementieren. Moderne Labortests können B12-Mangel aber zuverlässig erkennen."
+      },
+      {
+        "art": "medizinisch",
+        "wert": "bestehende_krebserkrankung",
+        "schwere": "vorsichtig",
+        "hinweis": "Bei bestehender Krebserkrankung oder Adenom-Vorgeschichte des Darms hochdosierte Folsäure nur nach ärztlicher Rücksprache – theoretisch könnte sie das Wachstum bestehender Läsionen fördern (nicht abschließend belegt)."
+      },
+      {
+        "art": "medikament",
+        "wert": "methotrexat_antiepileptika",
+        "schwere": "vorsichtig",
+        "hinweis": "Folsäure interagiert mit Folat-Antagonisten (z.B. Methotrexat) und einigen Antiepileptika. Dosierung und Timing immer ärztlich abstimmen – nicht eigenmächtig kombinieren oder absetzen."
+      }
+    ],
+    "dosierung": {
+      "standard": "300-400 µg täglich (Erwachsene)",
+      "bereich": {
+        "min": 300,
+        "max": 400,
+        "einheit": "µg"
+      },
+      "obergrenze": "EFSA/DGE: Tolerierbare Obergrenze (UL) 1.000 µg/Tag aus Supplementen und angereicherten Lebensmitteln (nicht aus natürlichem Nahrungsfolat). Höhere Dosen nur ärztlich (z.B. 4-5 mg bei NTD-Hochrisiko).",
+      "loading_optional": {
+        "dosierung": "Kinderwunsch & Schwangerschaft (1. Trimester): 400 µg täglich zusätzlich",
+        "danach": "Fortführung mind. bis Ende des 1. Trimesters; Hochrisiko (vorherige NTD-Schwangerschaft): 4.000-5.000 µg ärztlich verordnet",
+        "kommentar": "Mindestens 4 Wochen VOR der geplanten Konzeption beginnen – das Neuralrohr schließt sich bis Tag 28, oft vor Kenntnis der Schwangerschaft. Späterer Beginn ist für die NTD-Prävention meist zu spät."
+      },
+      "timing": "Tageszeit unwichtig, gut bioverfügbar (synthetische Folsäure besser als Nahrungsfolat). Konsistente tägliche Einnahme zählt.",
+      "quelle": "WHO + USPSTF Recommendation + DGE/ÖGE Referenzwerte + EFSA Tolerable Upper Intake Level"
+    },
+    "population_spezifisch": {
+      "kinderwunsch_schwangerschaft": {
+        "relevant": true,
+        "staerke": 1.0,
+        "kommentar": "Wichtigste Zielgruppe mit der klarsten Evidenz. 400 µg täglich, beginnend mind. 4 Wochen vor Konzeption bis Ende 1. Trimester. Bei vorheriger NTD-Schwangerschaft Hochdosis (ärztlich).",
+        "quelle": "USPSTF + DGE/ÖGE + MRC 1991"
+      },
+      "veganer_vegetarier": {
+        "relevant": true,
+        "staerke": 0.5,
+        "kommentar": "Pflanzenbetonte Ernährung ist oft folatreich (Blattgemüse, Hülsenfrüchte), daher Mangelrisiko geringer als bei B12. Trotzdem auf ausreichende Zufuhr achten, v.a. bei Kinderwunsch."
+      },
+      "senioren_50plus": {
+        "relevant": false,
+        "kommentar": "Vorsicht: Bei Älteren ist B12-Mangel häufiger. Hochdosierte Folsäure kann ihn maskieren. Folatstatus und B12 idealerweise zusammen betrachten."
+      },
+      "mthfr_variante": {
+        "relevant": true,
+        "staerke": 0.4,
+        "kommentar": "Träger von MTHFR-Varianten (C677T/A1298C) wandeln Folsäure langsamer um. 5-MTHF (Methylfolat) ist eine bioverfügbare Alternative, aber ein klinischer Vorteil gegenüber Folsäure ist NICHT belegt – auch nicht für die NTD-Prävention. Routinetests werden nicht empfohlen."
+      }
+    },
+    "warnhinweise": [
+      "Für die NTD-Prävention ist der ZEITPUNKT entscheidend: vor der Konzeption beginnen, nicht erst nach festgestellter Schwangerschaft – dann ist das kritische Fenster (Tag 28) meist verpasst.",
+      "Hochdosierte Folsäure kann einen Vitamin-B12-Mangel verschleiern. Bei unklarem Status beide Werte prüfen.",
+      "Nur Folsäure (nicht 5-MTHF) ist klinisch für die NTD-Prävention belegt – bei Kinderwunsch ist Folsäure die evidenzbasierte Standardwahl.",
+      "Obergrenze 1.000 µg/Tag aus Supplementen beachten; mehr bringt keinen Zusatznutzen.",
+      "Bei Einnahme von Methotrexat, Antiepileptika oder bei Krebserkrankung: immer ärztliche Rücksprache.",
+      "Natürliches Nahrungsfolat ist hitze- und lichtempfindlich – schonende Zubereitung (kurz garen, nicht lange wässern) erhält mehr Folat."
+    ],
+    "quellen": [
+      {
+        "titel": "Prevention of neural tube defects: results of the Medical Research Council Vitamin Study",
+        "autoren": "MRC Vitamin Study Research Group (Wald N, et al.)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/1677062/",
+        "jahr": 1991,
+        "typ": "rct",
+        "doi": "10.1016/0140-6736(91)90133-A"
+      },
+      {
+        "titel": "Folic Acid Supplementation for the Prevention of Neural Tube Defects: An Updated Evidence Report and Systematic Review for the US Preventive Services Task Force",
+        "autoren": "Viswanathan M, Treiman KA, Kish-Doto J, et al.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28097361/",
+        "jahr": 2017,
+        "typ": "meta-analyse",
+        "doi": "10.1001/jama.2016.19193"
+      },
+      {
+        "titel": "Folic acid supplementation and neural tube defect recurrence prevention",
+        "autoren": "Grosse SD, Collins JS",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17990333/",
+        "jahr": 2007,
+        "typ": "meta-analyse",
+        "doi": "10.1002/bdra.20405"
+      },
+      {
+        "titel": "Folic acid supplementation for stroke prevention: A systematic review and meta-analysis of 21 randomized clinical trials worldwide",
+        "autoren": "Yang J, et al.",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0261561424001808",
+        "jahr": 2024,
+        "typ": "meta-analyse"
+      },
+      {
+        "titel": "Efficacy of folic acid supplementation in stroke prevention: a meta-analysis",
+        "autoren": "Wang X, Qin X, Demirtas H, et al.",
+        "url": "https://www.thelancet.com/journals/lancet/article/PIIS014067360760854X/abstract",
+        "jahr": 2007,
+        "typ": "meta-analyse",
+        "doi": "10.1016/S0140-6736(07)60854-X"
+      },
+      {
+        "titel": "Folic acid supplements and colorectal cancer risk: meta-analysis of randomized controlled trials",
+        "autoren": "Qin T, Du M, Du H, et al.",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4487230/",
+        "jahr": 2015,
+        "typ": "meta-analyse",
+        "doi": "10.1038/srep12044"
+      },
+      {
+        "titel": "Folic acid supplementation and cancer risk: a meta-analysis of randomized controlled trials",
+        "autoren": "Qin X, Cui Y, Shen L, et al.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23338728/",
+        "jahr": 2013,
+        "typ": "meta-analyse",
+        "doi": "10.1002/ijc.27828"
+      },
+      {
+        "titel": "Supplementation with Folic Acid or 5-Methyltetrahydrofolate and Prevention of Neural Tube Defects: An Evidence-Based Narrative Review",
+        "autoren": "Cavalli P, et al.",
+        "url": "https://www.mdpi.com/2072-6643/16/18/3154",
+        "jahr": 2024,
+        "typ": "review",
+        "doi": "10.3390/nu16183154"
+      },
+      {
+        "titel": "Methyltetrahydrofolate vs Folic Acid Supplementation in Idiopathic Recurrent Miscarriage with Respect to MTHFR C677T and A1298C Polymorphisms: A Randomized Controlled Trial",
+        "autoren": "Hekmatdoost A, Vahid F, Yari Z, et al.",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4668025/",
+        "jahr": 2015,
+        "typ": "rct",
+        "doi": "10.1371/journal.pone.0143569"
+      },
+      {
+        "titel": "Folic Acid Safety, Interactions, and Health Outcomes (Unmetabolized folic acid, B12 masking)",
+        "autoren": "Centers for Disease Control and Prevention (CDC)",
+        "url": "https://www.cdc.gov/folic-acid/about/safety.html",
+        "jahr": 2025,
+        "typ": "position-stand"
+      }
+    ],
+    "inhalt": [
+      "folsaeure"
+    ]
+  },
+  "jod": {
+    "id": "jod",
+    "name": "Jod (Kaliumiodid)",
+    "kategorie": "gesundheit",
+    "ikon": "🦋",
+    "kurz_beschreibung": "Essentielles Spurenelement und unverzichtbarer Baustein der Schilddrüsenhormone – kritisch für Stoffwechsel, Entwicklung und besonders die kindliche Hirnreife in der Schwangerschaft.",
+    "beschreibung": {
+      "was_ist_es": "Jod ist ein essentielles Spurenelement, das der Körper nicht selbst herstellen kann und regelmäßig über die Nahrung aufnehmen muss. Seine einzige bekannte Funktion im menschlichen Körper ist der Aufbau der Schilddrüsenhormone Thyroxin (T4) und Trijodthyronin (T3). Der Körper enthält insgesamt nur 10-20 mg Jod, der Großteil davon in der Schilddrüse. Hauptquellen sind jodiertes Speisesalz, Seefisch, Meeresfrüchte, Milch und Milchprodukte. Pflanzliche Lebensmittel sind in Mitteleuropa jodarm, weil die Böden jodarm sind.",
+      "wie_wirkt_es": "Die Schilddrüse nimmt Jodid aktiv aus dem Blut auf und baut es in die Hormone T3 und T4 ein – ein T4-Molekül enthält vier Jodatome, T3 drei. Diese Hormone steuern den Grundumsatz, die Körpertemperatur, den Herzschlag und sind für Wachstum und vor allem die Gehirnentwicklung von Föten und Kleinkindern unentbehrlich. Bei Jodmangel versucht die Schilddrüse, durch Wachstum (Kropf/Struma) mehr Jod aus dem Blut zu filtern. Sowohl zu wenig als auch zu viel Jod können die Hormonproduktion stören.",
+      "warum_wichtig": "Österreich und Deutschland sind von Natur aus Jodmangelgebiete – die Böden sind jodarm, entsprechend auch Getreide, Gemüse und Obst. Österreich reichert Speisesalz deshalb gesetzlich seit 1963 mit Jod an (15-20 mg/kg). Trotzdem liegt in der Region weiterhin ein leichter bis milder Jodmangel vor, und die Versorgung hat sich bis ca. 2018 sogar wieder verschlechtert. Am kritischsten ist die Versorgung in Schwangerschaft und Stillzeit, wo der Bedarf deutlich steigt und ein Mangel die kindliche Hirnentwicklung dauerhaft schädigen kann."
+    },
+    "fazit": {
+      "top_effekte": [
+        "Unentbehrlich für Schilddrüsenhormone, Stoffwechsel und Energiehaushalt",
+        "Verhindert Kropf (Struma) und schwere Entwicklungsstörungen beim Kind",
+        "Schwerer Jodmangel kostet Kinder bis zu 12,45 IQ-Punkte – durch Versorgung weitgehend vermeidbar"
+      ],
+      "ideal_fuer": "Schwangere & Stillende (klare Empfehlung), Veganer/Vegetarier, Menschen ohne Jodsalz/Seefisch/Milch",
+      "dosis": "150 µg täglich (Erwachsene), 200 µg in Schwangerschaft & Stillzeit",
+      "vorsicht_bei": "Schilddrüsenüberfunktion, Hashimoto/autoimmune Thyreoiditis, Schilddrüsenknoten – nur nach ärztlicher Abklärung",
+      "mythen": [
+        "„Mehr Jod = bessere Schilddrüse“ – falsch. Bei Jod gilt eine U-Kurve: sowohl Mangel als auch Überschuss lösen Funktionsstörungen aus. Übermäßige Zufuhr kann eine Schilddrüsenunterfunktion auslösen (Odds Ratio 2,03-2,78 in Meta-Analysen).",
+        "„Kelp-/Algenpräparate sind eine gesunde natürliche Jodquelle“ – riskant. Braunalgen (Kombu, Sugar Kelp) enthalten extrem schwankende, oft gefährlich hohe Mengen (eine Portion kann das Tausendfache des Bedarfs liefern). Für 54 von 96 untersuchten Algenprodukten überschritt eine Portion die Tages-Obergrenze.",
+        "„Jodsalz reicht in der Schwangerschaft aus“ – nein. Fachgesellschaften (DGE, AKJ) empfehlen Schwangeren und Stillenden eine gezielte Supplementierung mit Jodtabletten zusätzlich zu Jodsalz, weil der Mehrbedarf darüber allein nicht gedeckt wird.",
+        "„Bei Hashimoto hilft viel Jod“ – im Gegenteil. Hohe Jodzufuhr kann eine bestehende Autoimmunthyreoiditis verschlechtern. Hier ist ärztliche Steuerung zwingend."
+      ]
+    },
+    "evidenz": {
+      "level": "B",
+      "score": 80,
+      "review_typ": "meta-analyse",
+      "studien_anzahl": 72,
+      "konsens": "WHO/UNICEF + DGE/ÖGE Referenzwerte 2025 + IPD-Meta-Analyse (Levie et al. 2019)",
+      "effekt_groesse": [
+        {
+          "wert": 12.45,
+          "einheit": "IQ-Punkte",
+          "kontext": "IQ-Verlust bei Kindern aus Gebieten mit SCHWEREM Jodmangel vs. jodversorgte Gebiete (8,7 Punkte durch Supplementierung wiedergewinnbar)",
+          "quelle": "Qian et al. 2005, Meta-Analyse 37 Studien (China, n=12.291)",
+          "erklaerung": {
+            "was_bedeutet": "Der IQ misst die kognitive Leistungsfähigkeit (Durchschnitt 100). Kinder, die in Regionen mit schwerem Jodmangel aufwuchsen, hatten im Schnitt einen um 12,45 Punkte niedrigeren IQ als Kinder aus jodversorgten Gebieten – das ist ein dramatischer Unterschied auf Bevölkerungsebene. Begann die Jodversorgung vor und während der Schwangerschaft, gewannen die Kinder im Schnitt 8,7 Punkte zurück. Wichtig: Diese Zahlen gelten für SCHWEREN Mangel, nicht für die milde Unterversorgung in Mitteleuropa.",
+            "studie_zeigt": "Die Analyse verglich Kinder unter 16 Jahren aus natürlich jodversorgten Regionen mit Kindern aus schwer jodarmen Regionen sowie Kinder vor und nach Einführung der Jodversorgung. Der konsistente Befund: Schwerer Jodmangel in der Entwicklung führt zu erheblichen, teils irreversiblen kognitiven Defiziten. Die wirksamste Maßnahme ist die Versorgung VOR und während der Schwangerschaft – nicht später.",
+            "studien_details": "Meta-Analyse von 37 in China durchgeführten Studien mit insgesamt 12.291 Kindern. IQ gemessen mit Binet- oder Raven-Skalen. Zufallseffektmodell. Effektgröße als Standardabweichungs-IQ-Punkte (entspricht 15 IQ-Punkten). Kontrollgruppen sozial, wirtschaftlich und bildungsmäßig vergleichbar.",
+            "zuverlaessigkeit": "Hoch für schweren Jodmangel. Dies ist eine der größten Meta-Analysen zum Thema und der Effekt ist konsistent und biologisch plausibel. ABER: Die Übertragung auf milden Mangel (Mitteleuropa) ist NICHT zulässig – dort zeigen RCTs deutlich schwächere bis keine Effekte (siehe nächste Effektgröße)."
+          }
+        },
+        {
+          "wert": 0.0,
+          "einheit": "IQ-Punkte (n.s.)",
+          "kontext": "Effekt einer Jod-Supplementierung bei MILD jod-defizienten Schwangeren auf die kindliche Kognition (RCT, kein signifikanter Effekt)",
+          "quelle": "Gowachirapant et al. 2017, Lancet Diabetes & Endocrinol., RCT (n=832, Indien/Thailand)",
+          "erklaerung": {
+            "was_bedeutet": "Bei mildem Jodmangel – wie er in Mitteleuropa typisch ist – brachte eine Supplementierung mit 200 µg Jod in der Schwangerschaft KEINEN messbaren Vorteil für die Intelligenz der Kinder. Der verbale IQ lag bei 89,5 (Jod) vs. 90,2 (Placebo) – statistisch kein Unterschied. Das heißt nicht, dass Jod unwichtig ist, sondern dass bei nur mildem Mangel der Zusatznutzen einer Supplementierung für die Kognition nicht belegt ist.",
+            "studie_zeigt": "In dieser randomisierten, doppelblinden, placebokontrollierten Studie erhielten mild jod-defiziente Schwangere täglich 200 µg Jod oder Placebo bis zur Geburt. Die Kinder wurden mit standardisierten IQ-Tests (WPPSI-III) und Exekutivfunktions-Tests untersucht. Es zeigte sich kein Unterschied in verbaler IQ, Performance-IQ oder Exekutivfunktion. Eine IPD-Meta-Analyse (Levie 2019) fand zudem, dass der kritische Zeitraum im ERSTEN Trimester liegt – eine spätere Supplementierung kommt möglicherweise zu spät.",
+            "studien_details": "Multizentrische RCT in Bangalore (Indien) und Bangkok (Thailand), 1:1-Randomisierung, computergeneriert, nach Standort stratifiziert. 200 µg Jod oral täglich vs. Placebo. Co-primäre Endpunkte: verbaler und Performance-IQ (WPPSI-III), globale Exekutivfunktion (BRIEF-P), gemessen im Kindesalter. Ergänzt durch Cochrane-basierte Systematic Reviews (Dineva 2020), die ebenfalls unzureichende Evidenz für milde Mangelgebiete feststellten.",
+            "zuverlaessigkeit": "Hoch für die Aussage 'milder Mangel'. Mehrere RCTs und systematische Reviews stimmen überein: Bei mild-moderatem Jodmangel ist der kognitive Nutzen einer Supplementierung nicht belegt. Das ist die ehrliche Differenzierung – Jod ist essentiell, aber die Supplementierung wirkt am stärksten dort, wo echter (schwerer) Mangel herrscht, und idealerweise früh in der Schwangerschaft."
+          }
+        },
+        {
+          "wert": 2.03,
+          "einheit": "Odds Ratio",
+          "kontext": "Erhöhtes Risiko für subklinische Schilddrüsenunterfunktion bei ÜBERMÄSSIGER Jodzufuhr vs. adäquater Zufuhr (Erwachsene)",
+          "quelle": "Katagiri et al. 2017, PLOS One, Meta-Analyse (50 Studien)",
+          "erklaerung": {
+            "was_bedeutet": "Eine Odds Ratio von 2,03 bedeutet: Bei dauerhaft übermäßiger Jodzufuhr ist das Risiko für eine subklinische Schilddrüsenunterfunktion etwa verdoppelt (für die offene Unterfunktion sogar 2,78-fach). Das ist der Beleg für die 'U-Kurve': Nicht nur Mangel, auch Überschuss schadet. Deshalb ist mehr Jod nicht besser – die Dosis muss im richtigen Bereich liegen.",
+            "studie_zeigt": "Die Analyse verglich Bevölkerungsgruppen mit übermäßiger vs. adäquater Jodzufuhr (gemessen über die Jodausscheidung im Urin). Übermäßige Zufuhr war konsistent mit erhöhter Rate an Schilddrüsenunterfunktion assoziiert – sowohl offen (OR 2,78) als auch subklinisch (OR 2,03). Übermäßige Zufuhr entsteht vor allem durch Algen-/Kelp-Produkte und hochdosierte Supplemente, kaum durch Jodsalz.",
+            "studien_details": "Systematische Suche in Ovid MEDLINE, PubMed, Cochrane Central, Ichushi-Web und CiNii. 50 eingeschlossene Artikel (3 Interventionsstudien, 6 Fall-Kontroll-, 6 Follow-up-, 35 Querschnittsstudien). Random-Effects-Modell, Odds Ratios mit 95%-KI. PROSPERO-registriert (CRD42015028081).",
+            "zuverlaessigkeit": "Moderat bis hoch. Überwiegend Beobachtungsstudien (begrenzt durch Studiendesign), aber der Effekt ist konsistent, biologisch plausibel und durch das bekannte Wolff-Chaikoff-Phänomen mechanistisch erklärbar. Untermauert die klare Obergrenze von 600 µg/Tag (EFSA)."
+          }
+        }
+      ]
+    },
+    "indikationen": [
+      {
+        "ziel": "schilddruesenfunktion",
+        "staerke": 0.95,
+        "kommentar": "Jod ist der unentbehrliche Baustein der Schilddrüsenhormone. Ohne ausreichend Jod keine normale Hormonproduktion – essentiell, nicht optional"
+      },
+      {
+        "ziel": "schwangerschaft_entwicklung",
+        "staerke": 0.85,
+        "kommentar": "Klare Empfehlung von DGE/ÖGE/AKJ zur Supplementierung in Schwangerschaft & Stillzeit. Schwerer Mangel schädigt die kindliche Hirnentwicklung irreversibel. Bei mildem Mangel ist der kognitive Zusatznutzen in RCTs allerdings nicht belegt"
+      },
+      {
+        "ziel": "kropf_praevention",
+        "staerke": 0.8,
+        "kommentar": "Ausreichende Jodversorgung verhindert die Bildung von Kropf (Struma) und Schilddrüsenknoten – gut belegt auf Bevölkerungsebene durch Salzjodierungsprogramme"
+      },
+      {
+        "ziel": "energiestoffwechsel",
+        "staerke": 0.5,
+        "kommentar": "Über die Schilddrüsenhormone reguliert Jod den Grundumsatz. Bei bestehendem Mangel kann Müdigkeit/Leistungsabfall gebessert werden – bei bereits Versorgten KEIN Zusatznutzen"
+      },
+      {
+        "ziel": "kognition_kind",
+        "staerke": 0.4,
+        "kommentar": "Großer Effekt bei SCHWEREM Mangel (bis 12 IQ-Punkte). Bei mild-moderatem Mangel zeigen RCTs jedoch KEINEN klaren kognitiven Vorteil der Supplementierung. Kritisches Zeitfenster: 1. Trimester"
+      }
+    ],
+    "kontraindikationen": [
+      {
+        "art": "medizinisch",
+        "wert": "schilddruesenueberfunktion",
+        "schwere": "hart",
+        "hinweis": "Bei Hyperthyreose (z.B. Morbus Basedow) oder autonomen Schilddrüsenknoten kann zusätzliches Jod die Überfunktion verstärken (jodinduzierte Hyperthyreose). Supplementierung nur nach ärztlicher Abklärung."
+      },
+      {
+        "art": "medizinisch",
+        "wert": "hashimoto_autoimmun",
+        "schwere": "vorsichtig",
+        "hinweis": "Bei Hashimoto-Thyreoiditis kann hohe Jodzufuhr die Autoimmunreaktion und Unterfunktion verschlechtern. Normale Versorgung (150 µg) meist unproblematisch, hohe Dosen/Algenprodukte meiden. Ärztliche Rücksprache."
+      },
+      {
+        "art": "medizinisch",
+        "wert": "schilddruesenknoten",
+        "schwere": "vorsichtig",
+        "hinweis": "Bei bestehenden (autonomen) Schilddrüsenknoten kann plötzlich hohe Jodzufuhr eine Überfunktion auslösen. Vor Supplementierung abklären lassen."
+      }
+    ],
+    "dosierung": {
+      "standard": "150 µg täglich (Erwachsene)",
+      "bereich": {
+        "min": 100,
+        "max": 200,
+        "einheit": "µg"
+      },
+      "obergrenze": "EFSA: Tolerierbare Obergrenze (UL) 600 µg/Tag für Erwachsene (basierend auf NOAEL 1.800 µg/Tag). Nahrungsergänzungsmittel in der EU oft auf 150 µg/Dosis begrenzt. Algen-/Kelp-Produkte können diese Grenze schnell überschreiten.",
+      "loading_optional": {
+        "dosierung": "Schwangerschaft & Stillzeit: 200 µg täglich (Supplement zusätzlich zu Jodsalz)",
+        "danach": "150 µg täglich nach dem Abstillen",
+        "kommentar": "Idealerweise bereits präkonzeptionell (vor der Schwangerschaft) und ab dem 1. Trimester beginnen – das kritische Zeitfenster für die kindliche Hirnentwicklung"
+      },
+      "timing": "Tageszeit unwichtig. Als Kaliumiodid gut bioverfügbar. Konsistente tägliche Zufuhr zählt, nicht der Zeitpunkt.",
+      "quelle": "WHO/UNICEF + DGE/ÖGE Referenzwerte 2025 + EFSA Tolerable Upper Intake Level"
+    },
+    "population_spezifisch": {
+      "schwangerschaft": {
+        "relevant": true,
+        "staerke": 0.85,
+        "kommentar": "Wichtigste Zielgruppe. Bedarf steigt auf 200 µg. DGE, ÖGE und Arbeitskreis Jodmangel empfehlen gezielte Supplementierung mit Jodtabletten zusätzlich zu Jodsalz, idealerweise schon vor der Schwangerschaft. Jodsalz allein deckt den Mehrbedarf nicht.",
+        "quelle": "Gesund ins Leben / BfR Handlungsempfehlungen 2024/2025"
+      },
+      "stillzeit": {
+        "relevant": true,
+        "staerke": 0.85,
+        "kommentar": "Bedarf bleibt erhöht (200 µg), da die Jodkonzentration der Muttermilch direkt vom Status der Mutter abhängt. Ein Mangel der Mutter wird auf den Säugling übertragen.",
+        "quelle": "DGE/AKJ 2025"
+      },
+      "veganer_vegetarier": {
+        "relevant": true,
+        "staerke": 0.8,
+        "kommentar": "Erhöhtes Mangelrisiko, da Milch, Eier und Seefisch (Hauptquellen) wegfallen und pflanzliche Lebensmittel in Mitteleuropa jodarm sind. Supplementierung oft sinnvoll – aber VORSICHT mit Kelp/Algen wegen unkontrollierbarer Überdosierung. Kontrolliertes Kaliumiodid bevorzugen."
+      },
+      "senioren_50plus": {
+        "relevant": false,
+        "kommentar": "Häufiger autonome Schilddrüsenknoten – hier kann plötzlich hohe Jodzufuhr eine Überfunktion auslösen. Normale Versorgung wichtig, hohe Dosen vorher ärztlich abklären."
+      }
+    },
+    "warnhinweise": [
+      "U-Kurve beachten: Sowohl Mangel ALS AUCH Überschuss schaden der Schilddrüse. Mehr ist nicht besser.",
+      "Kelp- und Algenpräparate sind die Hauptursache für gefährliche Jod-Überdosierungen – der Gehalt schwankt extrem und ist oft falsch deklariert. Eine einzige Portion kann das Tausendfache des Bedarfs liefern.",
+      "Bei Schilddrüsenerkrankungen (Über-/Unterfunktion, Hashimoto, Knoten) niemals ohne ärztliche Abklärung supplementieren.",
+      "Jodsalz im Haushalt ist die einfachste Basismaßnahme – ein gehäufter Teelöffel Jodsalz liefert ca. 100 µg Jod. Eine Überversorgung über Lebensmittel/Jodsalz ist praktisch nicht möglich.",
+      "Selen, Eisen und Vitamin A sind am Schilddrüsenhormon-Stoffwechsel beteiligt – ein gleichzeitiger Selenmangel kann die Jodverwertung beeinträchtigen.",
+      "Bei Verdacht auf Mangel oder Schilddrüsenproblemen ist eine ärztliche Diagnostik (TSH, ggf. Urin-Jod) sinnvoller als Selbstmedikation."
+    ],
+    "quellen": [
+      {
+        "titel": "Association of Maternal Iodine Status With Child IQ: A Meta-Analysis of Individual Participant Data",
+        "autoren": "Levie D, Korevaar TIM, Bath SC, et al.",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6804415/",
+        "jahr": 2019,
+        "typ": "meta-analyse",
+        "doi": "10.1210/jc.2018-02559"
+      },
+      {
+        "titel": "Effect of iodine supplementation in pregnant women on child neurodevelopment: a randomised, double-blind, placebo-controlled trial",
+        "autoren": "Gowachirapant S, Jaiswal N, Melse-Boonstra A, et al.",
+        "url": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(17)30332-7/abstract",
+        "jahr": 2017,
+        "typ": "rct",
+        "doi": "10.1016/S2213-8587(17)30332-7"
+      },
+      {
+        "titel": "The effects of iodine on intelligence in children: a meta-analysis of studies conducted in China",
+        "autoren": "Qian M, Wang D, Watkins WE, et al.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15734706/",
+        "jahr": 2005,
+        "typ": "meta-analyse"
+      },
+      {
+        "titel": "Effect of excess iodine intake on thyroid diseases in different populations: A systematic review and meta-analyses including observational studies",
+        "autoren": "Katagiri R, Yuan X, Kobayashi S, Sasaki S",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0173722",
+        "jahr": 2017,
+        "typ": "meta-analyse",
+        "doi": "10.1371/journal.pone.0173722"
+      },
+      {
+        "titel": "Systematic review and meta-analysis of the effects of iodine supplementation on thyroid function and child neurodevelopment in mildly-to-moderately iodine-deficient pregnant women",
+        "autoren": "Dineva M, Fishpool H, Rayman MP, Mendis J, Bath SC",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32320029/",
+        "jahr": 2020,
+        "typ": "meta-analyse",
+        "doi": "10.1093/ajcn/nqaa071"
+      },
+      {
+        "titel": "Association of Mild-to-Moderate Iodine Deficiency With Thyroid Function – A Systematic Review and Meta-analysis",
+        "autoren": "Verburg FA, et al.",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12351339/",
+        "jahr": 2025,
+        "typ": "meta-analyse"
+      },
+      {
+        "titel": "Commercially available kelp and seaweed products – valuable iodine source or risk of excess intake?",
+        "autoren": "Aakre I, Tveito Evensen L, Kjellevold M, et al.",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8035890/",
+        "jahr": 2021,
+        "typ": "review",
+        "doi": "10.29219/fnr.v65.7584"
+      },
+      {
+        "titel": "Neue Referenzwerte für die Jodzufuhr (DGE/ÖGE Referenzwerte für die Nährstoffzufuhr)",
+        "autoren": "Deutsche Gesellschaft für Ernährung (DGE), Österreichische Gesellschaft für Ernährung (ÖGE)",
+        "url": "https://www.dge.de/presse/meldungen/2025/neue-referenzwerte-fuer-die-jodzufuhr/",
+        "jahr": 2025,
+        "typ": "position-stand"
+      },
+      {
+        "titel": "Jod, Folat/Folsäure und Schwangerschaft (Handlungsempfehlungen)",
+        "autoren": "Bundesinstitut für Risikobewertung (BfR)",
+        "url": "https://www.bfr.bund.de/cm/350/jod-folat-folsaeure-und-schwangerschaft.pdf",
+        "jahr": 2024,
+        "typ": "position-stand"
+      },
+      {
+        "titel": "Consequences of acute and long-term excessive iodine intake: A literature review focusing on seaweed as a potential dietary iodine source (EFSA UL 600 µg/Tag)",
+        "autoren": "Blikra MJ, Henjum S, Aakre I, et al.",
+        "url": "https://ift.onlinelibrary.wiley.com/doi/10.1111/1541-4337.70037",
+        "jahr": 2024,
+        "typ": "review",
+        "doi": "10.1111/1541-4337.70037"
+      }
+    ],
+    "inhalt": [
+      "jod"
     ]
   }
 }

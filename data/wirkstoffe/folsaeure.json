@@ -1,0 +1,254 @@
+{
+  "id": "folsaeure",
+  "name": "Folsäure (Vitamin B9)",
+  "kategorie": "gesundheit",
+  "ikon": "🥬",
+  "kurz_beschreibung": "B-Vitamin und Schlüsselfaktor für Zellteilung und DNA-Synthese – die periconceptionelle Einnahme verhindert nachweislich schwere Neuralrohrdefekte beim ungeborenen Kind.",
+  "beschreibung": {
+    "was_ist_es": "Folsäure ist die synthetische, stabile Form von Vitamin B9, wie sie in Supplementen und angereicherten Lebensmitteln vorkommt. 'Folat' bezeichnet die natürlich vorkommenden Formen aus der Nahrung (Folium = lat. Blatt – zuerst aus Spinat isoliert). Gute Nahrungsquellen sind grünes Blattgemüse, Hülsenfrüchte, Vollkorn, Eier und Leber. Folat aus der Nahrung ist allerdings hitze- und lichtempfindlich und schlechter bioverfügbar als synthetische Folsäure. Der Körper kann B9 nicht selbst herstellen.",
+    "wie_wirkt_es": "Folat/Folsäure ist als Coenzym zentral im sogenannten Ein-Kohlenstoff-Stoffwechsel (One-Carbon-Metabolism): Es ist unverzichtbar für die DNA-Synthese, DNA-Reparatur und DNA-Methylierung sowie für die Bildung roter Blutkörperchen. Besonders in Phasen schneller Zellteilung – etwa bei der Schließung des Neuralrohrs des Embryos in den ersten 28 Tagen der Schwangerschaft – ist der Bedarf hoch. Folsäure muss über das Enzym MTHFR in die aktive Form 5-Methyltetrahydrofolat (5-MTHF) umgewandelt werden, das u.a. den Abbau von Homocystein steuert.",
+    "warum_wichtig": "Das Neuralrohr schließt sich bis zum 28. Tag der Schwangerschaft – also oft bevor eine Frau überhaupt weiß, dass sie schwanger ist. Deshalb muss der Folatspeicher bereits VOR der Empfängnis gefüllt sein; ein Beginn erst nach Feststellung der Schwangerschaft kommt für die NTD-Prävention meist zu spät. Da etwa die Hälfte aller Schwangerschaften ungeplant ist und natürliches Nahrungsfolat den erhöhten Bedarf selten deckt, ist die gezielte Supplementierung bei Frauen mit Kinderwunsch eine der am besten belegten präventiven Maßnahmen der Medizin."
+  },
+  "fazit": {
+    "top_effekte": [
+      "Verhindert bis zu 70-90% der Neuralrohrdefekte (Spina bifida, Anenzephalie) bei periconceptioneller Einnahme",
+      "72% weniger NTD-Wiederholungsrisiko bei Frauen mit vorheriger betroffener Schwangerschaft (MRC-Studie 1991)",
+      "Senkt Homocystein und reduziert moderat das Schlaganfallrisiko (~10-18%, v.a. ohne Lebensmittelanreicherung)"
+    ],
+    "ideal_fuer": "Frauen mit Kinderwunsch & Schwangere (klare Empfehlung), Veganer, Menschen mit nachgewiesenem Mangel, bei bestimmten Medikamenten",
+    "dosis": "400 µg täglich für Frauen mit Kinderwunsch (mind. 4 Wochen vor Konzeption beginnen)",
+    "vorsicht_bei": "Unerkannter Vitamin-B12-Mangel (Maskierungsgefahr), bestehende Krebserkrankung – ärztliche Abklärung",
+    "mythen": [
+      "„5-MTHF (Methylfolat) ist immer besser als Folsäure“ – differenziert zu sehen. 5-MTHF hat theoretische Vorteile (keine Umwandlung nötig, weniger unmetabolisierte Folsäure). ABER: Nur für klassische FOLSÄURE ist die NTD-Prävention klinisch in RCTs bewiesen. Für 5-MTHF gibt es bislang KEINE Studien, die eine NTD-Prävention belegen.",
+      "„Bei MTHFR-Mutation MUSS man Methylfolat nehmen“ – überzogen. Studien zeigen, dass Folsäure auch bei MTHFR-Varianten vergleichbare Blut-Folatspiegel erzeugt. Eine RCT bei wiederholten Fehlgeburten fand keinen Vorteil von 5-MTHF gegenüber Folsäure – unabhängig vom MTHFR-Genotyp.",
+      "„Folsäure verursacht Krebs“ – durch Meta-Analysen (bis n=49.406) weitgehend entkräftet: kein signifikanter Effekt auf Gesamt-Krebs oder Kolorektalkrebs (RR 1,00-1,05). Einzelne Langzeitsignale (>3 Jahre, Adenom-Rezidive) bleiben Gegenstand der Forschung, sind aber nicht bestätigt.",
+      "„Mehr Folsäure = besser“ – nein. Über dem Bedarf bringt mehr keinen Zusatznutzen, kann aber einen B12-Mangel verschleiern. Die Obergrenze liegt bei 1.000 µg/Tag aus Supplementen."
+    ]
+  },
+  "evidenz": {
+    "level": "A",
+    "score": 88,
+    "review_typ": "meta-analyse",
+    "studien_anzahl": 21,
+    "konsens": "WHO + USPSTF + DGE/ÖGE Referenzwerte + MRC Vitamin Study 1991",
+    "effekt_groesse": [
+      {
+        "wert": 72,
+        "einheit": "%",
+        "kontext": "Reduktion des NTD-Wiederholungsrisikos durch periconceptionelle Folsäure (Frauen mit vorheriger betroffener Schwangerschaft)",
+        "quelle": "MRC Vitamin Study Research Group 1991, randomisierte kontrollierte Studie",
+        "erklaerung": {
+          "was_bedeutet": "NTD steht für 'Neuralrohrdefekte' – schwere angeborene Fehlbildungen des zentralen Nervensystems wie Spina bifida ('offener Rücken') oder Anenzephalie. Sie entstehen, wenn sich das embryonale Neuralrohr in den ersten Wochen nicht vollständig schließt. Bei Frauen, die bereits ein betroffenes Kind hatten (hohes Wiederholungsrisiko), senkte Folsäure dieses Risiko um 72%. Das ist ein dramatischer Schutzeffekt für eine einfache Maßnahme.",
+          "studie_zeigt": "Die MRC-Studie von 1991 gilt als Meilenstein-Studie, die den Zusammenhang endgültig bewies. Frauen mit vorheriger NTD-Schwangerschaft erhielten randomisiert Folsäure oder Placebo vor und während der Frühschwangerschaft. Spätere Analysen bestätigen: 69% Reduktion bei Intention-to-treat, bis zu 87% bei Frauen, die tatsächlich vor der Schwangerschaft begannen. Für Frauen ohne Vorgeschichte (Ersttauftreten) zeigte die ungarische RCT von Czeizel eine Reduktion von ~90% mit folsäurehaltigen Multivitaminen.",
+          "studien_details": "Randomisierte, doppelblinde, placebokontrollierte Multicenter-Studie des britischen Medical Research Council (MRC). Frauen mit hohem NTD-Risiko (vorherige betroffene Schwangerschaft). Folsäure (4 mg/Tag, Hochdosis bei Hochrisiko) vor Konzeption und in der Frühschwangerschaft. Ergänzt durch die ungarische RCT (Czeizel & Dudás, 800 µg, ~90% Reduktion bei Ersttauftreten) und USPSTF-Evidenzberichte.",
+          "zuverlaessigkeit": "Höchste. Dies ist eine der am besten belegten Interventionen der gesamten Ernährungsmedizin. RCT-Evidenz, durch zahlreiche Beobachtungsstudien und nationale Anreicherungsprogramme (signifikanter NTD-Rückgang nach Einführung) untermauert. Gilt als eine der erfolgreichsten Public-Health-Maßnahmen der modernen Medizin."
+        }
+      },
+      {
+        "wert": 10,
+        "einheit": "%",
+        "kontext": "Reduktion des Schlaganfallrisikos durch Folsäure-Supplementierung (größte Meta-Analyse, 21 RCTs)",
+        "quelle": "Folic acid stroke prevention Meta-Analyse 2024 (21 RCTs, n=115.559)",
+        "erklaerung": {
+          "was_bedeutet": "Folsäure senkt den Homocystein-Spiegel im Blut – ein erhöhter Homocysteinwert gilt als Risikofaktor für Gefäßerkrankungen. In der bislang größten Meta-Analyse senkte Folsäure das Schlaganfallrisiko um 10%. Wichtige Einschränkung: Der Effekt war NUR in Regionen OHNE gesetzliche Lebensmittel-Anreicherung deutlich (dort 17%), in Ländern mit Anreicherung praktisch null – weil die Bevölkerung dort schon gut versorgt ist.",
+          "studie_zeigt": "Die Analyse von 21 RCTs mit über 115.000 Teilnehmern zeigte einen moderaten, aber realen Schutzeffekt vor Schlaganfall – am stärksten bei Menschen ohne Vorerkrankung und in nicht-angereicherten Regionen. Eine frühere Lancet-Meta-Analyse (Wang 2007) fand 18% Reduktion. Wichtig: Auf Herzinfarkt und kardiovaskuläre Gesamtmortalität hat Folsäure KEINEN belegten Effekt – der Nutzen beschränkt sich auf Schlaganfall.",
+          "studien_details": "Systematischer Review und Meta-Analyse von 21 RCTs, n=115.559. Random-Effects-Modell, relatives Risiko mit 95%-KI. Subgruppen nach Anreicherungsstatus, Vorerkrankung, Folsäuredosis, B12-Status. Konsistent mit früheren Analysen (Lee 2010 Stroke; Wang 2007 Lancet).",
+          "zuverlaessigkeit": "Moderat. RCT-basiert und große Stichprobe, aber der Effekt ist klein, grenzwertig signifikant und stark vom regionalen Anreicherungsstatus abhängig. In gut versorgten Bevölkerungen (z.B. mit Folsäure-angereichertem Mehl) ist kaum Zusatznutzen zu erwarten. Keine generelle Empfehlung zur kardiovaskulären Prävention."
+        }
+      },
+      {
+        "wert": 1.0,
+        "einheit": "RR (kein Effekt)",
+        "kontext": "Effekt der Folsäure-Supplementierung auf das Kolorektalkrebs-Risiko (Meta-Analyse, kein signifikanter Effekt)",
+        "quelle": "Qin et al. 2015, Scientific Reports, Meta-Analyse (8 RCTs)",
+        "erklaerung": {
+          "was_bedeutet": "Ein relatives Risiko (RR) von 1,00 bedeutet: kein Unterschied zwischen Folsäure- und Placebogruppe. Die häufige Sorge, Folsäure könnte Krebs fördern, wird durch die RCT-Datenlage weitgehend entkräftet. Über alle untersuchten Krebsarten (Gesamtkrebs, Darm, Prostata, Lunge, Brust) zeigte sich kein signifikanter Anstieg.",
+          "studie_zeigt": "Die Meta-Analyse fand kein erhöhtes Kolorektalkrebs-Risiko (RR 1,00; 95%-KI 0,82-1,22). Eine größere Analyse (Vollset/Wien, n=49.406) bestätigte: kein Effekt auf Gesamtkrebs (RR 1,05). EHRLICHE EINSCHRÄNKUNG: Einzelne Studien deuten bei sehr langer Einnahme (>3 Jahre) und bei Menschen mit bereits bestehenden Darmadenomen auf ein leicht erhöhtes Adenom-Rezidivrisiko hin – das ist nicht abschließend geklärt und betrifft eine spezielle Risikogruppe.",
+          "studien_details": "Meta-Analyse von 8 RCTs (PubMed/Embase bis 2014). RR mit 95%-KI, Fixed-Effects-Modell, keine signifikante Heterogenität. Subgruppen nach Ethnie, Geschlecht, BMI, Dosis. Ergänzt durch CDC-Sicherheitsbewertung zu unmetabolisierter Folsäure (keine bestätigten Gesundheitsrisiken).",
+          "zuverlaessigkeit": "Hoch für die Allgemeinaussage 'kein Krebsrisiko'. Mehrere unabhängige RCT-Meta-Analysen stimmen überein. Die Langzeit-/Hochrisiko-Signale sind hypothesengenerierend, nicht bestätigt. Insgesamt gilt Folsäure in empfohlenen Dosen als sicher."
+        }
+      }
+    ]
+  },
+  "indikationen": [
+    {
+      "ziel": "neuralrohrdefekt_praevention",
+      "staerke": 1.0,
+      "kommentar": "Höchste Evidenz. Periconceptionelle Folsäure verhindert 70-90% der Neuralrohrdefekte. Klare, einhellige Empfehlung aller Fachgesellschaften für Frauen mit Kinderwunsch"
+    },
+    {
+      "ziel": "schwangerschaft_allgemein",
+      "staerke": 0.9,
+      "kommentar": "Essentiell für Zellteilung und Entwicklung; reduziert auch bestimmte Herzfehlbildungen (~40%) und unterstützt die Blutbildung der Mutter"
+    },
+    {
+      "ziel": "folatmangel_anaemie",
+      "staerke": 0.85,
+      "kommentar": "Behebt megaloblastäre Anämie durch Folatmangel zuverlässig. Bei nachgewiesenem Mangel klar indiziert"
+    },
+    {
+      "ziel": "homocystein_senkung",
+      "staerke": 0.7,
+      "kommentar": "Senkt Homocystein dosisabhängig um ~20-27%. Klinische Relevanz dieser Senkung allein ist allerdings begrenzt"
+    },
+    {
+      "ziel": "schlaganfall_praevention",
+      "staerke": 0.4,
+      "kommentar": "Moderate Reduktion (~10-18%), aber NUR in nicht-angereicherten Regionen und bei Personen ohne Vorerkrankung relevant. Kein Effekt auf Herzinfarkt"
+    },
+    {
+      "ziel": "stimmung_depression",
+      "staerke": 0.3,
+      "kommentar": "Schwache Evidenz für 5-MTHF als Zusatz zu Antidepressiva, v.a. bei nachgewiesenem niedrigem Folatstatus. Nicht als alleinige Maßnahme belegt"
+    }
+  ],
+  "kontraindikationen": [
+    {
+      "art": "medizinisch",
+      "wert": "vitamin_b12_mangel",
+      "schwere": "vorsichtig",
+      "hinweis": "Hochdosierte Folsäure kann die Blutbild-Veränderungen (Anämie) eines unerkannten Vitamin-B12-Mangels maskieren, während die neurologischen Schäden fortschreiten. Bei unklarem Status B12 mitbestimmen/mitsupplementieren. Moderne Labortests können B12-Mangel aber zuverlässig erkennen."
+    },
+    {
+      "art": "medizinisch",
+      "wert": "bestehende_krebserkrankung",
+      "schwere": "vorsichtig",
+      "hinweis": "Bei bestehender Krebserkrankung oder Adenom-Vorgeschichte des Darms hochdosierte Folsäure nur nach ärztlicher Rücksprache – theoretisch könnte sie das Wachstum bestehender Läsionen fördern (nicht abschließend belegt)."
+    },
+    {
+      "art": "medikament",
+      "wert": "methotrexat_antiepileptika",
+      "schwere": "vorsichtig",
+      "hinweis": "Folsäure interagiert mit Folat-Antagonisten (z.B. Methotrexat) und einigen Antiepileptika. Dosierung und Timing immer ärztlich abstimmen – nicht eigenmächtig kombinieren oder absetzen."
+    }
+  ],
+  "dosierung": {
+    "standard": "300-400 µg täglich (Erwachsene)",
+    "bereich": {
+      "min": 300,
+      "max": 400,
+      "einheit": "µg"
+    },
+    "obergrenze": "EFSA/DGE: Tolerierbare Obergrenze (UL) 1.000 µg/Tag aus Supplementen und angereicherten Lebensmitteln (nicht aus natürlichem Nahrungsfolat). Höhere Dosen nur ärztlich (z.B. 4-5 mg bei NTD-Hochrisiko).",
+    "loading_optional": {
+      "dosierung": "Kinderwunsch & Schwangerschaft (1. Trimester): 400 µg täglich zusätzlich",
+      "danach": "Fortführung mind. bis Ende des 1. Trimesters; Hochrisiko (vorherige NTD-Schwangerschaft): 4.000-5.000 µg ärztlich verordnet",
+      "kommentar": "Mindestens 4 Wochen VOR der geplanten Konzeption beginnen – das Neuralrohr schließt sich bis Tag 28, oft vor Kenntnis der Schwangerschaft. Späterer Beginn ist für die NTD-Prävention meist zu spät."
+    },
+    "timing": "Tageszeit unwichtig, gut bioverfügbar (synthetische Folsäure besser als Nahrungsfolat). Konsistente tägliche Einnahme zählt.",
+    "quelle": "WHO + USPSTF Recommendation + DGE/ÖGE Referenzwerte + EFSA Tolerable Upper Intake Level"
+  },
+  "population_spezifisch": {
+    "kinderwunsch_schwangerschaft": {
+      "relevant": true,
+      "staerke": 1.0,
+      "kommentar": "Wichtigste Zielgruppe mit der klarsten Evidenz. 400 µg täglich, beginnend mind. 4 Wochen vor Konzeption bis Ende 1. Trimester. Bei vorheriger NTD-Schwangerschaft Hochdosis (ärztlich).",
+      "quelle": "USPSTF + DGE/ÖGE + MRC 1991"
+    },
+    "veganer_vegetarier": {
+      "relevant": true,
+      "staerke": 0.5,
+      "kommentar": "Pflanzenbetonte Ernährung ist oft folatreich (Blattgemüse, Hülsenfrüchte), daher Mangelrisiko geringer als bei B12. Trotzdem auf ausreichende Zufuhr achten, v.a. bei Kinderwunsch."
+    },
+    "senioren_50plus": {
+      "relevant": false,
+      "kommentar": "Vorsicht: Bei Älteren ist B12-Mangel häufiger. Hochdosierte Folsäure kann ihn maskieren. Folatstatus und B12 idealerweise zusammen betrachten."
+    },
+    "mthfr_variante": {
+      "relevant": true,
+      "staerke": 0.4,
+      "kommentar": "Träger von MTHFR-Varianten (C677T/A1298C) wandeln Folsäure langsamer um. 5-MTHF (Methylfolat) ist eine bioverfügbare Alternative, aber ein klinischer Vorteil gegenüber Folsäure ist NICHT belegt – auch nicht für die NTD-Prävention. Routinetests werden nicht empfohlen."
+    }
+  },
+  "warnhinweise": [
+    "Für die NTD-Prävention ist der ZEITPUNKT entscheidend: vor der Konzeption beginnen, nicht erst nach festgestellter Schwangerschaft – dann ist das kritische Fenster (Tag 28) meist verpasst.",
+    "Hochdosierte Folsäure kann einen Vitamin-B12-Mangel verschleiern. Bei unklarem Status beide Werte prüfen.",
+    "Nur Folsäure (nicht 5-MTHF) ist klinisch für die NTD-Prävention belegt – bei Kinderwunsch ist Folsäure die evidenzbasierte Standardwahl.",
+    "Obergrenze 1.000 µg/Tag aus Supplementen beachten; mehr bringt keinen Zusatznutzen.",
+    "Bei Einnahme von Methotrexat, Antiepileptika oder bei Krebserkrankung: immer ärztliche Rücksprache.",
+    "Natürliches Nahrungsfolat ist hitze- und lichtempfindlich – schonende Zubereitung (kurz garen, nicht lange wässern) erhält mehr Folat."
+  ],
+  "quellen": [
+    {
+      "titel": "Prevention of neural tube defects: results of the Medical Research Council Vitamin Study",
+      "autoren": "MRC Vitamin Study Research Group (Wald N, et al.)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1677062/",
+      "jahr": 1991,
+      "typ": "rct",
+      "doi": "10.1016/0140-6736(91)90133-A"
+    },
+    {
+      "titel": "Folic Acid Supplementation for the Prevention of Neural Tube Defects: An Updated Evidence Report and Systematic Review for the US Preventive Services Task Force",
+      "autoren": "Viswanathan M, Treiman KA, Kish-Doto J, et al.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28097361/",
+      "jahr": 2017,
+      "typ": "meta-analyse",
+      "doi": "10.1001/jama.2016.19193"
+    },
+    {
+      "titel": "Folic acid supplementation and neural tube defect recurrence prevention",
+      "autoren": "Grosse SD, Collins JS",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17990333/",
+      "jahr": 2007,
+      "typ": "meta-analyse",
+      "doi": "10.1002/bdra.20405"
+    },
+    {
+      "titel": "Folic acid supplementation for stroke prevention: A systematic review and meta-analysis of 21 randomized clinical trials worldwide",
+      "autoren": "Yang J, et al.",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0261561424001808",
+      "jahr": 2024,
+      "typ": "meta-analyse"
+    },
+    {
+      "titel": "Efficacy of folic acid supplementation in stroke prevention: a meta-analysis",
+      "autoren": "Wang X, Qin X, Demirtas H, et al.",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS014067360760854X/abstract",
+      "jahr": 2007,
+      "typ": "meta-analyse",
+      "doi": "10.1016/S0140-6736(07)60854-X"
+    },
+    {
+      "titel": "Folic acid supplements and colorectal cancer risk: meta-analysis of randomized controlled trials",
+      "autoren": "Qin T, Du M, Du H, et al.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4487230/",
+      "jahr": 2015,
+      "typ": "meta-analyse",
+      "doi": "10.1038/srep12044"
+    },
+    {
+      "titel": "Folic acid supplementation and cancer risk: a meta-analysis of randomized controlled trials",
+      "autoren": "Qin X, Cui Y, Shen L, et al.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23338728/",
+      "jahr": 2013,
+      "typ": "meta-analyse",
+      "doi": "10.1002/ijc.27828"
+    },
+    {
+      "titel": "Supplementation with Folic Acid or 5-Methyltetrahydrofolate and Prevention of Neural Tube Defects: An Evidence-Based Narrative Review",
+      "autoren": "Cavalli P, et al.",
+      "url": "https://www.mdpi.com/2072-6643/16/18/3154",
+      "jahr": 2024,
+      "typ": "review",
+      "doi": "10.3390/nu16183154"
+    },
+    {
+      "titel": "Methyltetrahydrofolate vs Folic Acid Supplementation in Idiopathic Recurrent Miscarriage with Respect to MTHFR C677T and A1298C Polymorphisms: A Randomized Controlled Trial",
+      "autoren": "Hekmatdoost A, Vahid F, Yari Z, et al.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4668025/",
+      "jahr": 2015,
+      "typ": "rct",
+      "doi": "10.1371/journal.pone.0143569"
+    },
+    {
+      "titel": "Folic Acid Safety, Interactions, and Health Outcomes (Unmetabolized folic acid, B12 masking)",
+      "autoren": "Centers for Disease Control and Prevention (CDC)",
+      "url": "https://www.cdc.gov/folic-acid/about/safety.html",
+      "jahr": 2025,
+      "typ": "position-stand"
+    }
+  ],
+  "inhalt": [
+    "folsaeure"
+  ]
+}

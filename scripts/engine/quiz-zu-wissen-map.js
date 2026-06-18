@@ -225,7 +225,7 @@ window.QuizZuWissenMap = (function () {
   var ALLERGIEN = {
     'B': ['medizinisch.laktose_intoleranz'],
     'C': ['allergie.milcheiweiss_allergie', 'allergie.milcheiweiss'],
-    'D': ['allergie.fisch_schalentiere'],
+    'D': ['allergie.fischallergie'],
     'E': [],  // Gluten: nur Marken-Hinweis, kein Kontra-Eintrag in DB
     'F': ['allergie.soja_allergie']
   };

@@ -4,9 +4,7 @@
     "letzte_aktualisierung": "2026-06-13",
     "beschreibung": "Kategorisierung aller 25 Wirkstoffe in 5 thematisch saubere Gruppen"
   },
-
   "kategorien": [
-
     {
       "id": "muskel-protein",
       "label": "Muskel & Protein",
@@ -23,7 +21,6 @@
         "hmb"
       ]
     },
-
     {
       "id": "performance",
       "label": "Performance & Training",
@@ -39,7 +36,6 @@
         "l-carnitin"
       ]
     },
-
     {
       "id": "mikronaehrstoffe",
       "label": "Mikronährstoffe",
@@ -50,15 +46,16 @@
       "wirkstoffe": [
         "vitamin-d3",
         "vitamin-b12",
+        "folsaeure",
         "vitamin-c",
         "magnesium",
         "zink",
-        "multivitamin",
+        "jod",
         "eisen",
+        "multivitamin",
         "omega3"
       ]
     },
-
     {
       "id": "regeneration",
       "label": "Regeneration & Schlaf",
@@ -72,7 +69,6 @@
         "kollagen"
       ]
     },
-
     {
       "id": "mental-wellbeing",
       "label": "Mental & Wellbeing",
@@ -86,6 +82,5 @@
         "curcumin"
       ]
     }
-
   ]
 }
